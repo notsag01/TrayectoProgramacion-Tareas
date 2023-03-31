@@ -1,0 +1,78 @@
+<mxfile host="app.diagrams.net" modified="2023-03-31T19:59:55.787Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36" etag="2TVaeEpa6vbC2m1G7m_o" version="21.1.2" type="google">
+  <diagram name="Página-1" id="0GyZu6ul4n5s7vYHopm_">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="ajsNdiBuEP1Id3X9KbEq-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="ajsNdiBuEP1Id3X9KbEq-1" target="ajsNdiBuEP1Id3X9KbEq-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ajsNdiBuEP1Id3X9KbEq-1" value="INICIO LAMPARA VELADOR" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="180" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="ajsNdiBuEP1Id3X9KbEq-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="ajsNdiBuEP1Id3X9KbEq-2" target="ajsNdiBuEP1Id3X9KbEq-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ajsNdiBuEP1Id3X9KbEq-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="ajsNdiBuEP1Id3X9KbEq-2" target="ajsNdiBuEP1Id3X9KbEq-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ajsNdiBuEP1Id3X9KbEq-2" value="LA LAMPARA ESTA DESENCHUFADA" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="290" y="340" width="180" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="ajsNdiBuEP1Id3X9KbEq-4" value="ENCHUFAR LA LAMPARA" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;" vertex="1" parent="1">
+          <mxGeometry x="540" y="340" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="ajsNdiBuEP1Id3X9KbEq-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="ajsNdiBuEP1Id3X9KbEq-6" target="ajsNdiBuEP1Id3X9KbEq-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ajsNdiBuEP1Id3X9KbEq-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="ajsNdiBuEP1Id3X9KbEq-6" target="ajsNdiBuEP1Id3X9KbEq-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ajsNdiBuEP1Id3X9KbEq-6" value="LA LAMPARITA ESTA QUEMADA" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="290" y="500" width="180" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="ajsNdiBuEP1Id3X9KbEq-8" value="CAMBIAR LA LAMPARITA" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;" vertex="1" parent="1">
+          <mxGeometry x="540" y="500" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="ajsNdiBuEP1Id3X9KbEq-13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="ajsNdiBuEP1Id3X9KbEq-10" target="ajsNdiBuEP1Id3X9KbEq-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ajsNdiBuEP1Id3X9KbEq-20" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="ajsNdiBuEP1Id3X9KbEq-10">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="380" y="790" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ajsNdiBuEP1Id3X9KbEq-10" value="LA LLAVE ESTA APAGADA" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="290" y="660" width="180" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="ajsNdiBuEP1Id3X9KbEq-12" value="PRENDER LA LLAVE" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;" vertex="1" parent="1">
+          <mxGeometry x="540" y="660" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="ajsNdiBuEP1Id3X9KbEq-23" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="ajsNdiBuEP1Id3X9KbEq-21" target="ajsNdiBuEP1Id3X9KbEq-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ajsNdiBuEP1Id3X9KbEq-21" value="COMPRAR UNA NUEVA LAMPARA" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="790" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="ajsNdiBuEP1Id3X9KbEq-14" value="V" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="475" y="345" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ajsNdiBuEP1Id3X9KbEq-15" value="V" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="475" y="500" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ajsNdiBuEP1Id3X9KbEq-16" value="V" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="475" y="660" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ajsNdiBuEP1Id3X9KbEq-17" value="F" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="350" y="440" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ajsNdiBuEP1Id3X9KbEq-18" value="F" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="350" y="610" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ajsNdiBuEP1Id3X9KbEq-22" value="FIN&amp;nbsp;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="285" y="950" width="190" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
