@@ -64,8 +64,14 @@ System.out.println("Variable M es igual a " + M);
 int sumar= X+Y;
 int restar= Y-X;
 int multiplicar=Y*X;
-double dividir=X/N;
-double resto=X%N;
+double dividir=X/Y;
+double resto=X%Y;
+double sumaReales= N + M;
+double restaReales= N - M;
+double multipiclarReales= N * M;
+double dividirReales= N / M;
+double restoReales= N % M;
+
 
 System.out.println("X + Y = " + sumar);
 System.out.println("Y + X = " + restar );
