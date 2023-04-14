@@ -110,10 +110,8 @@ public class EjercicioN6CondicionalesIF {
         
         int temperatura = 10;
         
-        if( tempearatura < 5){
-            System.out.println("A estquiar");
-        }else{
-            System.out.println(" A Dormir");
+        if( tempearatura < 15){
+            
         }
     
 
