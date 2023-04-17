@@ -91,28 +91,22 @@ public class EjercicioN6CondicionalesIF {
         
         //EJERCICIO 9
         
-//        int temperatura = 10;
-//        boolean nevado= true;
-//        
-//        if(temperatura >= 25){
-//            System.out.println("A la playa");
-//        }else if(temperatura >= 15){
-//            System.out.println("A la montaña");
-//        }else if(temperatura >= 5 && nevado){
-//            System.out.println("A esquiar");
-//        }else{
-//            System.out.println("A dormit");
-//        }
+        int temperatura = 10;
+        boolean nevado= true;
+        
+        if(temperatura >= 25){
+            System.out.println("A la playa");
+        }else if(temperatura >= 15){
+            System.out.println("A la montaña");
+        }else if(temperatura >= 5 && nevado){
+            System.out.println("A esquiar");
+        }else{
+            System.out.println("A dormit");
+        }
 
         //*****************************************
         
-        // EJERCICIO 10
         
-        int temperatura = 10;
-        
-        if( tempearatura < 15){
-            
-        }
     
 
 
