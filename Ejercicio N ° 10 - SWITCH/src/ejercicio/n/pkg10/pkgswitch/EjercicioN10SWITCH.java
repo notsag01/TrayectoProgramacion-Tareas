@@ -12,7 +12,9 @@ public class EjercicioN10SWITCH {
         Scanner leerFormaPago= new Scanner(System.in);
         
         double importe;
+        double total;
         int formaPago;
+        int numeroTarjeta;
         
         System.out.print("Ingrese un importe: ");
         importe = leer.nextDouble();
@@ -23,7 +25,21 @@ public class EjercicioN10SWITCH {
         System.out.println("-- 3 Tarjeta de débito  -- ");
         formaPago= leerFormaPago.nextInt();
         
-        
+        switch(formaPago){
+            case 1:
+                total= importe / 1.4;
+                System.out.println(total);
+                break;
+            case 2:
+                total= importe * 1.2;
+                System.out.println(total);
+                System.out.print("Ingrese el numero de tarjeta: ");
+                numeroTarjeta= leerFormaPago.nextInt();
+            case 3:
+                
+            default:
+            break;
+        }
     }
     
 }
