@@ -135,7 +135,7 @@ public class SwitchClase1904 {
             System.out.println("Es una vocal cerrada");
         break;
         default:
-            System.out.println("Sea lo que sea que haya ingresado, no es una vocal o lo ingresó en minúscula.");
+            System.out.println("Sea lo que sea que haya ingresado o no es una vocal o lo ingresó en minúscula.");
         break;
     }
     
