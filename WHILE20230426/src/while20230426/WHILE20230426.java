@@ -22,12 +22,12 @@ public class WHILE20230426 {
         
         String usuario="";
         
-        while(contador <= 3){
+        while(contador <= 2){
             System.out.print("Ingrese el usuario: ");
             usuario= leer.nextLine();
             if(usuario.equals("pepe")){
                 System.out.println("Usuario Correcto");
-                break;
+            break;
             }else{
                 System.out.println("Usuario Incorrecto");
             }
