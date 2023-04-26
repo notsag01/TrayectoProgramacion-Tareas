@@ -27,6 +27,7 @@ public class WHILE20230426 {
             usuario= leer.nextLine();
             if(usuario.equals("pepe")){
                 System.out.println("Usuario Correcto");
+                break;
             }else{
                 System.out.println("Usuario Incorrecto");
             }
