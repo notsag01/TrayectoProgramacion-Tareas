@@ -23,15 +23,17 @@ public class WHILE20230426 {
         String usuario="";
         
         while(contador <= 3){
-        System.out.print("Ingrese el usuario: ");
-        usuario= leer.nextLine();
-        if(usuario.equals("pepe")){
-            System.out.println("Usuario Correcto");
-        }else{
-            System.out.println("Usuario Incorrecto");
+            System.out.print("Ingrese el usuario: ");
+            usuario= leer.nextLine();
+            if(usuario.equals("pepe")){
+                System.out.println("Usuario Correcto");
+            }else{
+                System.out.println("Usuario Incorrecto");
+            }
+                contador++;
         }
-        contador++;
-        }
+        
+        
     }
     
 }
