@@ -54,6 +54,12 @@ public class RANDOMPIEDRA_PAPEL_TIJERA {
         int cantidadVueltas=1;
         int jugadasGanadorasJ1=0;
         int jugadasGanadorasJ2=0;
+        String jugada1jugador1="";
+        String jugada1jugador2="";
+        String jugada2jugador1="";
+        String jugada2jugador2="";
+        String jugada3jugador1="";
+        String jugada3jugador2="";
        
         //INICIO DEL JUEGO
        
