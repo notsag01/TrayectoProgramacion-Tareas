@@ -54,6 +54,7 @@ public class RANDOMPIEDRA_PAPEL_TIJERA {
         int cantidadVueltas=1;
         int jugadasGanadorasJ1=0;
         int jugadasGanadorasJ2=0;
+        
         String jugada1jugador1="";
         String jugada1jugador2="";
         String jugada2jugador1="";
@@ -88,11 +89,17 @@ public class RANDOMPIEDRA_PAPEL_TIJERA {
                 case 1 -> resp2="P";
                 case 2 -> resp2="L";
                 case 3 -> resp2="T";
-
             }
 
             System.out.println("\n La opcion de  " + jugador2 + " fue: " + resp2);
-
+            if(cantidadVueltas==1){
+                jugada1jugador2=resp2;
+            }else if(cantidadVueltas==2){
+                jugada2jugador2=resp2;
+            }else{
+                jugada3jugador2=resp2;
+            }
+            
             if(resp1.equals("P") && resp2.equals("P")){
                 System.out.println("Empate!!!");
             }
@@ -130,6 +137,8 @@ public class RANDOMPIEDRA_PAPEL_TIJERA {
             System.out.println(jugador1 + ": " + jugadasGanadorasJ1);
             System.out.println(jugador2 + ": " + jugadasGanadorasJ2);
         }
+        
+        //MUESTRA LOS GANADORES
         if(jugadasGanadorasJ1 > jugadasGanadorasJ2){
             System.out.println("******************************");
             System.out.println("******************************");
@@ -149,6 +158,9 @@ public class RANDOMPIEDRA_PAPEL_TIJERA {
             System.out.println("******************************");
             System.out.println("******************************"); 
         }
+        
+        System.out.println(jugada1jugador2 + jugada2jugador2);
+
             
    }
 }
