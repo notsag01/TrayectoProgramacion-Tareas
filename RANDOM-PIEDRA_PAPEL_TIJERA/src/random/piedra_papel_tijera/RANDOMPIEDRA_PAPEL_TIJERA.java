@@ -48,7 +48,7 @@ public class RANDOMPIEDRA_PAPEL_TIJERA {
         Scanner leer=new Scanner(System.in);
         String resp1=" ";
         String resp2 = " ";
-        String jugador1=" ";
+        String jugador1="           ";
         String jugador2="COMPUTADORA";
         int numeroRandon= rand.nextInt(3) + 1;
         int cantidadVueltas=1;
@@ -150,6 +150,18 @@ public class RANDOMPIEDRA_PAPEL_TIJERA {
             System.out.println(jugador2 + ": " + jugadasGanadorasJ2);
         }
         
+        
+        
+        //RESUMEN DEL PATIDO--------------------------------------------
+        System.out.println("---  RESUMEN DE LA PARTIDA  ---");
+        System.out.print("Vuelta n°:      ");
+        System.out.println("1° --- 2° --- 3° ---");
+        System.out.print(jugador1 + ": ");
+        System.out.println("        "+jugada1jugador1 +"-------" + jugada2jugador1 +"------" + jugada3jugador1);
+        System.out.print(jugador2 + ": ");
+        System.out.println("   "+jugada1jugador2 +"-------"+ jugada2jugador2 +"-------"+ jugada3jugador2);
+        System.out.println("-----------------------------------------------");
+        
         //MUESTRA LOS GANADORES
         if(jugadasGanadorasJ1 > jugadasGanadorasJ2){
             System.out.println("******************************");
@@ -170,15 +182,6 @@ public class RANDOMPIEDRA_PAPEL_TIJERA {
             System.out.println("******************************");
             System.out.println("******************************"); 
         }
-        
-        //RESUMEN DEL PATIDO--------------------------------------------
-        System.out.print("Vuelta n°: ");
-        System.out.println("--- 1° --- 2° --- 3° ---");
-        System.out.print(jugador1 + ": ");
-        System.out.println("          "+jugada1jugador1 +"---" + jugada2jugador1 +"---" + jugada3jugador1);
-        System.out.print(jugador2 + ": ");
-        System.out.println("   "+jugada1jugador2 +"---"+ jugada2jugador2 +"---"+ jugada3jugador2);
-
             
    }
 }
