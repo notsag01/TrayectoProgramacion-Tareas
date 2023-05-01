@@ -166,7 +166,7 @@ public class RANDOMPIEDRA_PAPEL_TIJERA {
         if(jugadasGanadorasJ1 > jugadasGanadorasJ2){
             System.out.println("******************************");
             System.out.println("******************************");
-            System.out.println("\n \n \n    GANADOR, "+ jugador1);
+            System.out.println("   GANADOR, "+ jugador1);
             System.out.println("******************************");
             System.out.println("******************************");
         }else if (jugadasGanadorasJ1 < jugadasGanadorasJ2){
