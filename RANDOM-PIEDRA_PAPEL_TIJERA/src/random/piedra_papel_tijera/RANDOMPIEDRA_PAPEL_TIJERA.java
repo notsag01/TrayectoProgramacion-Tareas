@@ -159,7 +159,7 @@ public class RANDOMPIEDRA_PAPEL_TIJERA {
             System.out.println("******************************"); 
         }
         
-        System.out.println(jugada1jugador2 + jugada2jugador2);
+        System.out.println(jugada1jugador2 + jugada2jugador2 + jugada3jugador2);
 
             
    }
