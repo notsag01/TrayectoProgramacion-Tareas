@@ -173,11 +173,11 @@ public class RANDOMPIEDRA_PAPEL_TIJERA {
         
         //RESUMEN DEL PATIDO--------------------------------------------
         System.out.print("Vuelta n°: ");
-        System.out.println("1°---2°---3°");
+        System.out.println("--- 1° --- 2° --- 3° ---");
         System.out.print(jugador1 + ": ");
-        System.out.println(jugada1jugador1 + jugada2jugador1 + jugada3jugador1);
+        System.out.println("          "+jugada1jugador1 +"---" + jugada2jugador1 +"---" + jugada3jugador1);
         System.out.print(jugador2 + ": ");
-        System.out.println(jugada1jugador2 + jugada2jugador2 + jugada3jugador2);
+        System.out.println("   "+jugada1jugador2 +"---"+ jugada2jugador2 +"---"+ jugada3jugador2);
 
             
    }
