@@ -84,6 +84,15 @@ public class RANDOMPIEDRA_PAPEL_TIJERA {
 
             System.out.println("INTRUDUCIR SU OPCION, " + jugador1 + ": ");
             resp1=leer.next();
+            
+            if(cantidadVueltas==1){
+                jugada1jugador1=resp1;
+            }else if(cantidadVueltas==2){
+                jugada2jugador1=resp1;
+            }else{
+                jugada3jugador1=resp1;
+            }
+            
 
             switch(numeroRandon){
                 case 1 -> resp2="P";
@@ -92,6 +101,8 @@ public class RANDOMPIEDRA_PAPEL_TIJERA {
             }
 
             System.out.println("\n La opcion de  " + jugador2 + " fue: " + resp2);
+            
+            //GUARDO LAS RESPUESTAS DE LA COMPUTADORA POR CADA RONDA
             if(cantidadVueltas==1){
                 jugada1jugador2=resp2;
             }else if(cantidadVueltas==2){
@@ -100,6 +111,7 @@ public class RANDOMPIEDRA_PAPEL_TIJERA {
                 jugada3jugador2=resp2;
             }
             
+            //RESULTADOS--------------------------------------------
             if(resp1.equals("P") && resp2.equals("P")){
                 System.out.println("Empate!!!");
             }
@@ -159,6 +171,12 @@ public class RANDOMPIEDRA_PAPEL_TIJERA {
             System.out.println("******************************"); 
         }
         
+        //RESUMEN DEL PATIDO--------------------------------------------
+        System.out.print("Vuelta n°: ");
+        System.out.println("1°---2°---3°");
+        System.out.print(jugador1 + ": ");
+        System.out.println(jugada1jugador1 + jugada2jugador1 + jugada3jugador1);
+        System.out.print(jugador2 + ": ");
         System.out.println(jugada1jugador2 + jugada2jugador2 + jugada3jugador2);
 
             
