@@ -82,7 +82,7 @@ public class RANDOMPIEDRA_PAPEL_TIJERA {
             System.out.println("L - PAPEL*************");
             System.out.println("T - TIJERA************");
 
-            System.out.println("INTRUDUCIR SU OPCION, " + jugador1 + ": ");
+            System.out.print("INTRUDUCIR SU OPCION, " + jugador1 + ": ");
             resp1=leer.next();
             
             if(cantidadVueltas==1){
@@ -100,7 +100,7 @@ public class RANDOMPIEDRA_PAPEL_TIJERA {
                 case 3 -> resp2="T";
             }
 
-            System.out.println("\n La opcion de  " + jugador2 + " fue: " + resp2);
+            System.out.println("La opcion de  " + jugador2 + " fue: " + resp2);
             
             //GUARDO LAS RESPUESTAS DE LA COMPUTADORA POR CADA RONDA
             if(cantidadVueltas==1){
@@ -166,7 +166,7 @@ public class RANDOMPIEDRA_PAPEL_TIJERA {
         if(jugadasGanadorasJ1 > jugadasGanadorasJ2){
             System.out.println("******************************");
             System.out.println("******************************");
-            System.out.println("GANADOR, "+ jugador1);
+            System.out.println("\n \n \n    GANADOR, "+ jugador1);
             System.out.println("******************************");
             System.out.println("******************************");
         }else if (jugadasGanadorasJ1 < jugadasGanadorasJ2){
