@@ -1,6 +1,7 @@
 
 package servicio.aumotmores;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 
@@ -46,6 +47,10 @@ public class SERVICIOAUMOTMORES {
         //VARIABLES
         String tickets [][]= new String [12] [5];
         
+        tickets[0][0]="NOMBRE";
+        tickets[1][0]="TELEFNO";
+        tickets[2][0]="DOMINIO";
+        
         String nombre= " ";
         String telefono=" ";
         String dominio=" ";
@@ -63,7 +68,12 @@ public class SERVICIOAUMOTMORES {
         System.out.print("dominio: ");
         dominio=datos.nextLine();
         tickets [0][3]= dominio;
-        System.out.println(tickets[0][1]+ tickets[0][2] + tickets[0][3]);
+
+        
+        for (int i=0; i<tickets.length; i++){
+            System.out.println(tickets[i]);
+            
+        }
        
         System.out.println("***   MARCA   ***");
         System.out.println("1- FORD    ");
