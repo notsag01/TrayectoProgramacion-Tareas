@@ -44,9 +44,11 @@ public class SERVICIOAUMOTMORES {
         Scanner datos= new Scanner(System.in);
        
         //VARIABLES
-        String nombre="";
-        String telefono="";
-        String dominio="";
+        String tickets [][]= new String [12] [5];
+        
+        String nombre= " ";
+        String telefono=" ";
+        String dominio=" ";
         String marca="";
         int servicio;
         String servicios ="";
@@ -54,10 +56,14 @@ public class SERVICIOAUMOTMORES {
        
         System.out.print("nombre: ");
         nombre=datos.nextLine();
+        tickets[0][1]= nombre;
         System.out.print("telefono: ");
         telefono=datos.nextLine();
+        tickets[0][2]= telefono;
         System.out.print("dominio: ");
         dominio=datos.nextLine();
+        tickets [0][3]= dominio;
+        System.out.println(tickets[0][1]+ tickets[0][2] + tickets[0][3]);
        
         System.out.println("***   MARCA   ***");
         System.out.println("1- FORD    ");
