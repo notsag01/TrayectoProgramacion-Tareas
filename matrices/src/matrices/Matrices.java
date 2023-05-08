@@ -33,7 +33,7 @@ public class Matrices {
         System.out.print("Indique la cantidad de filas: ");
         filas=leer.nextInt();
         System.out.print("Ingrese la cantidad de columnas: ");
-        filas=leer.nextInt();
+        columnas=leer.nextInt();
         int numeros[][]= new int [filas][columnas];
        
         for(int i=0; i<filas; i++){
