@@ -45,11 +45,11 @@ public class SERVICIOAUMOTMORES {
         Scanner datos= new Scanner(System.in);
        
         //VARIABLES
-        String tickets [][]= new String [12] [5];
+        String tickets [][]= new String [2] [3];
         
         tickets[0][0]="NOMBRE";
-        tickets[1][0]="TELEFNO";
-        tickets[2][0]="DOMINIO";
+        tickets[0][1]="TELEFNO";
+        tickets[0][2]="DOMINIO";
         
         String nombre= " ";
         String telefono=" ";
@@ -61,56 +61,64 @@ public class SERVICIOAUMOTMORES {
        
         System.out.print("nombre: ");
         nombre=datos.nextLine();
-        tickets[0][1]= nombre;
+        tickets[1][0]= nombre;
         System.out.print("telefono: ");
         telefono=datos.nextLine();
-        tickets[0][2]= telefono;
+        tickets[1][1]= telefono;
         System.out.print("dominio: ");
         dominio=datos.nextLine();
-        tickets [0][3]= dominio;
-       
-        System.out.println("***   MARCA   ***");
-        System.out.println("1- FORD    ");
-        System.out.println("2- PEUGEOT      ");
-        System.out.println("3- RENAULT       ");
-        System.out.println("4- NISSAN     ");
-        System.out.println("5- FIAT     ");
-        System.out.print("LA MARCA DEL AUTO((numero): ");
-        marca=datos.nextLine();
-       
-        switch (marca){
-            case "1" : marca= "FORD";
-            break;
-            case "2": marca="PEUGEOT";
-            break;
-            case "3": marca=" RENAULT";
-            break;
-            case "4": marca=" NISSAN";
-            break;
-            default: System.out.print("no ha elegido un servicio.");
-            break;
+        tickets [1][2]= dominio;
+        
+        for(int i=0; i<tickets.length;i++){
+            for(int j=0; j<tickets[i].length;j++){
+                System.out.println(tickets[i][j]);
+            }
         }
+        
+        
        
-        System.out.println("***   SERVICIOS   ***");
-        System.out.println("1- ALINEACION    ");
-        System.out.println("2- BALANCEO      ");
-        System.out.println("3- ACEITE        ");
-        System.out.println("4- CUBIERTAS     ");
-        System.out.print("Elija un servicio((numero): ");
-        servicio=datos.nextInt();
-       
-        switch (servicio){
-            case 1 : servicios= "ALINEACION";
-            break;
-            case 2: servicios="BALANCEO";
-            break;
-            case 3: servicios=" ACEITE";
-            break;
-            case 4: servicios=" CUBIERTAS";
-            break;
-            default: System.out.print("no ha elegido un servicio.");
-            break;
-        }
+//        System.out.println("***   MARCA   ***");
+//        System.out.println("1- FORD    ");
+//        System.out.println("2- PEUGEOT      ");
+//        System.out.println("3- RENAULT       ");
+//        System.out.println("4- NISSAN     ");
+//        System.out.println("5- FIAT     ");
+//        System.out.print("LA MARCA DEL AUTO((numero): ");
+//        marca=datos.nextLine();
+//       
+//        switch (marca){
+//            case "1" : marca= "FORD";
+//            break;
+//            case "2": marca="PEUGEOT";
+//            break;
+//            case "3": marca=" RENAULT";
+//            break;
+//            case "4": marca=" NISSAN";
+//            break;
+//            default: System.out.print("no ha elegido un servicio.");
+//            break;
+//        }
+//       
+//        System.out.println("***   SERVICIOS   ***");
+//        System.out.println("1- ALINEACION    ");
+//        System.out.println("2- BALANCEO      ");
+//        System.out.println("3- ACEITE        ");
+//        System.out.println("4- CUBIERTAS     ");
+//        System.out.print("Elija un servicio((numero): ");
+//        servicio=datos.nextInt();
+//       
+//        switch (servicio){
+//            case 1 : servicios= "ALINEACION";
+//            break;
+//            case 2: servicios="BALANCEO";
+//            break;
+//            case 3: servicios=" ACEITE";
+//            break;
+//            case 4: servicios=" CUBIERTAS";
+//            break;
+//            default: System.out.print("no ha elegido un servicio.");
+//            break;
+//        }
 
        
         //System.out.print(tickets);
