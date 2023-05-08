@@ -40,7 +40,7 @@ public class Matrices {
             for(int j=0; j<columnas; j++){
                 numeros [i][j]=contador;
                 contador++;
-                System.out.print(numeros[i][j]);
+                System.out.println(numeros[i][j]);
             }
                
         }
