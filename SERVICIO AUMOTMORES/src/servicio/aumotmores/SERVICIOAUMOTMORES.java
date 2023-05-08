@@ -45,12 +45,13 @@ public class SERVICIOAUMOTMORES {
         Scanner datos= new Scanner(System.in);
        
         //VARIABLES
-        String tickets [][]= new String [2] [4];
+        String tickets [][]= new String [2] [5];
         
         tickets[0][0]="NOMBRE";
         tickets[0][1]="TELEFNO";
         tickets[0][2]="DOMINIO";
         tickets[0][3]="MARCA";
+        tickets[0][4]="SERVICIO1";
         
         String nombre= " ";
         String telefono=" ";
@@ -94,32 +95,32 @@ public class SERVICIOAUMOTMORES {
             default: System.out.print("no ha elegido un servicio.");
             break;
         }
+       
+        System.out.println("***   SERVICIOS   ***");
+        System.out.println("1- ALINEACION    ");
+        System.out.println("2- BALANCEO      ");
+        System.out.println("3- ACEITE        ");
+        System.out.println("4- CUBIERTAS     ");
+        System.out.print("Elija un servicio((numero): ");
+        servicio=datos.nextInt();
+       
+        switch (servicio){
+            case 1 : tickets[1][4]= "ALINEACION";
+            break;
+            case 2: tickets[1][4]="BALANCEO";
+            break;
+            case 3: tickets[1][4]=" ACEITE";
+            break;
+            case 4: tickets[1][4]=" CUBIERTAS";
+            break;
+            default: System.out.print("no ha elegido un servicio.");
+            break;
+        }
         for(int i=0; i<tickets.length;i++){
             for(int j=0; j<tickets[i].length;j++){
                 System.out.println(tickets[i][j]);
             }            
         }
-//       
-//        System.out.println("***   SERVICIOS   ***");
-//        System.out.println("1- ALINEACION    ");
-//        System.out.println("2- BALANCEO      ");
-//        System.out.println("3- ACEITE        ");
-//        System.out.println("4- CUBIERTAS     ");
-//        System.out.print("Elija un servicio((numero): ");
-//        servicio=datos.nextInt();
-//       
-//        switch (servicio){
-//            case 1 : servicios= "ALINEACION";
-//            break;
-//            case 2: servicios="BALANCEO";
-//            break;
-//            case 3: servicios=" ACEITE";
-//            break;
-//            case 4: servicios=" CUBIERTAS";
-//            break;
-//            default: System.out.print("no ha elegido un servicio.");
-//            break;
-//        }
 
        
         //System.out.print(tickets);
