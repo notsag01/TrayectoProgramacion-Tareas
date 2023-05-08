@@ -45,25 +45,32 @@ public class SERVICIOAUMOTMORES {
         Scanner datos= new Scanner(System.in);
        
         //VARIABLES
-        String tickets [][]= new String [2] [5];
+        String tickets [][]= new String [3] [6];
         
         tickets[0][0]="NOMBRE";
         tickets[0][1]="TELEFNO";
+        tickets[0][5]="DNI";
         tickets[0][2]="DOMINIO";
         tickets[0][3]="MARCA";
         tickets[0][4]="SERVICIO1";
         
+        
         String nombre= " ";
+        String dni=" ";
         String telefono=" ";
         String dominio=" ";
         String marca="";
         int servicio;
         String servicios ="";
+        String cantidadCubiertas="";
        
        
         System.out.print("nombre: ");
         nombre=datos.nextLine();
         tickets[1][0]= nombre;
+        System.out.print("Numero DNI: ");
+        dni=datos.nextLine();
+        tickets[1][5]=dni;
         System.out.print("telefono: ");
         telefono=datos.nextLine();
         tickets[1][1]= telefono;
@@ -72,8 +79,7 @@ public class SERVICIOAUMOTMORES {
         tickets [1][2]= dominio;
         
         
-        
-       
+                  
         System.out.println("***   MARCA   ***");
         System.out.println("1- FORD    ");
         System.out.println("2- PEUGEOT      ");
@@ -95,6 +101,7 @@ public class SERVICIOAUMOTMORES {
             default: System.out.print("no ha elegido un servicio.");
             break;
         }
+        
        
         System.out.println("***   SERVICIOS   ***");
         System.out.println("1- ALINEACION    ");
@@ -103,11 +110,16 @@ public class SERVICIOAUMOTMORES {
         System.out.println("4- CUBIERTAS     ");
         System.out.print("Elija un servicio((numero): ");
         servicio=datos.nextInt();
+        
+       
        
         switch (servicio){
             case 1 : tickets[1][4]= "ALINEACION";
             break;
             case 2: tickets[1][4]="BALANCEO";
+                    System.out.print("Cantidad: ");
+                    cantidadCubiertas=datos.nextLine();
+                    //tickets[2][4]=cantidadCubiertas;
             break;
             case 3: tickets[1][4]=" ACEITE";
             break;
@@ -116,14 +128,18 @@ public class SERVICIOAUMOTMORES {
             default: System.out.print("no ha elegido un servicio.");
             break;
         }
-        for(int i=0; i<tickets.length;i++){
-            for(int j=0; j<tickets[i].length;j++){
-                System.out.println(tickets[i][j]);
-            }            
-        }
+        
+        
+        
+        
+//        for(int i=0; i<tickets.length;i++){
+//            for(int j=0; j<tickets[i].length;j++){
+//                System.out.println(tickets[i][j]);
+//            }            
+//        }
 
        
-        //System.out.print(tickets);
+//        System.out.print(tickets[0].length);
     }
     
 }
