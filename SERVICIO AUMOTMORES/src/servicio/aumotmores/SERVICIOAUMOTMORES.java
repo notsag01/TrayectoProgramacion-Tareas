@@ -45,11 +45,12 @@ public class SERVICIOAUMOTMORES {
         Scanner datos= new Scanner(System.in);
        
         //VARIABLES
-        String tickets [][]= new String [2] [3];
+        String tickets [][]= new String [2] [4];
         
         tickets[0][0]="NOMBRE";
         tickets[0][1]="TELEFNO";
         tickets[0][2]="DOMINIO";
+        tickets[0][3]="MARCA";
         
         String nombre= " ";
         String telefono=" ";
@@ -69,35 +70,35 @@ public class SERVICIOAUMOTMORES {
         dominio=datos.nextLine();
         tickets [1][2]= dominio;
         
-        for(int i=0; i<tickets.length;i++){
-            for(int j=0; j<tickets[i].length;j++){
-                System.out.println(tickets[i][j]);
-            }
-        }
         
         
        
-//        System.out.println("***   MARCA   ***");
-//        System.out.println("1- FORD    ");
-//        System.out.println("2- PEUGEOT      ");
-//        System.out.println("3- RENAULT       ");
-//        System.out.println("4- NISSAN     ");
-//        System.out.println("5- FIAT     ");
-//        System.out.print("LA MARCA DEL AUTO((numero): ");
-//        marca=datos.nextLine();
-//       
-//        switch (marca){
-//            case "1" : marca= "FORD";
-//            break;
-//            case "2": marca="PEUGEOT";
-//            break;
-//            case "3": marca=" RENAULT";
-//            break;
-//            case "4": marca=" NISSAN";
-//            break;
-//            default: System.out.print("no ha elegido un servicio.");
-//            break;
-//        }
+        System.out.println("***   MARCA   ***");
+        System.out.println("1- FORD    ");
+        System.out.println("2- PEUGEOT      ");
+        System.out.println("3- RENAULT       ");
+        System.out.println("4- NISSAN     ");
+        System.out.println("5- FIAT     ");
+        System.out.print("LA MARCA DEL AUTO((numero): ");
+        marca=datos.nextLine();
+       
+        switch (marca){
+            case "1" : tickets[1][3]= "FORD";
+            break;
+            case "2": tickets[1][3]="PEUGEOT";
+            break;
+            case "3": tickets[1][3]=" RENAULT";
+            break;
+            case "4": tickets[1][3]=" NISSAN";
+            break;
+            default: System.out.print("no ha elegido un servicio.");
+            break;
+        }
+        for(int i=0; i<tickets.length;i++){
+            for(int j=0; j<tickets[i].length;j++){
+                System.out.println(tickets[i][j]);
+            }            
+        }
 //       
 //        System.out.println("***   SERVICIOS   ***");
 //        System.out.println("1- ALINEACION    ");
