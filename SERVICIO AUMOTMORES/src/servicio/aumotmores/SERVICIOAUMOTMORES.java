@@ -62,7 +62,6 @@ public class SERVICIOAUMOTMORES {
         String marca="";
         int servicio;
         String servicios ="";
-        String cantidadCubiertas="";
        
        
         System.out.print("nombre: ");
@@ -118,8 +117,9 @@ public class SERVICIOAUMOTMORES {
             break;
             case 2: tickets[1][4]="BALANCEO";
                     System.out.print("Cantidad: ");
+                    String cantidadCubiertas="";
                     cantidadCubiertas=datos.nextLine();
-                    //tickets[2][4]=cantidadCubiertas;
+                    tickets[2][4]=cantidadCubiertas;
             break;
             case 3: tickets[1][4]=" ACEITE";
             break;
@@ -132,11 +132,11 @@ public class SERVICIOAUMOTMORES {
         
         
         
-//        for(int i=0; i<tickets.length;i++){
-//            for(int j=0; j<tickets[i].length;j++){
-//                System.out.println(tickets[i][j]);
-//            }            
-//        }
+        for(int f=0; f<tickets.length;f++){
+            for(int c=0; c<tickets[f].length;c++){
+                System.out.println(tickets[f][c]);
+            }            
+        }
 
        
 //        System.out.print(tickets[0].length);
