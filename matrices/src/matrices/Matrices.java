@@ -1,15 +1,14 @@
 
 package matrices;
 
+import java.util.Scanner;
+
 
 public class Matrices {
 
     
     public static void main(String[] args) {
-        
-GASTON CORDOBA <gcordoba1981@gmail.com>
-vie, 5 may, 20:02 (hace 1 día)
-para mí
+
 
 //        String estaciones[][] = new String[2][2];
 //        

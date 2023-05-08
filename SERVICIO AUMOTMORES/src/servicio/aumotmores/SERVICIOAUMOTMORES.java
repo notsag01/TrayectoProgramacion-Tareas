@@ -68,12 +68,6 @@ public class SERVICIOAUMOTMORES {
         System.out.print("dominio: ");
         dominio=datos.nextLine();
         tickets [0][3]= dominio;
-
-        
-        for (int i=0; i<tickets.length; i++){
-            System.out.println(tickets[i]);
-            
-        }
        
         System.out.println("***   MARCA   ***");
         System.out.println("1- FORD    ");
