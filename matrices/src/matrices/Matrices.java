@@ -8,6 +8,7 @@ public class Matrices {
 
     
     public static void main(String[] args) {
+        Scanner leer=new Scanner(System.in);
 
 
 //        String estaciones[][] = new String[2][2];
@@ -24,26 +25,61 @@ public class Matrices {
        
 //*****************************************************************************
        
-        Scanner leer=new Scanner(System.in);
-       
-        int filas=0;
-        int columnas=0;
-        int contador=1;
-
-        System.out.print("Indique la cantidad de filas: ");
-        filas=leer.nextInt();
-        System.out.print("Ingrese la cantidad de columnas: ");
-        columnas=leer.nextInt();
-        int numeros[][]= new int [filas][columnas];
-       
-        for(int i=0; i<filas; i++){
-            for(int j=0; j<columnas; j++){
-                numeros [i][j]=contador;
-                contador++;
-                System.out.println(numeros[i][j]);
+        //**********  RECORRER MATRIZ ***********************
+//        int filas=0;
+//        int columnas=0;
+//        int contador=1;
+//
+//        System.out.print("Indique la cantidad de filas: ");
+//        filas=leer.nextInt();
+//        System.out.print("Ingrese la cantidad de columnas: ");
+//        columnas=leer.nextInt();
+//        int numeros[][]= new int [filas][columnas];
+//       
+//        for(int i=0; i<filas; i++){
+//            for(int j=0; j<columnas; j++){
+//                numeros [i][j]=contador;
+//                contador++;
+//                System.out.println(numeros[i][j]);
+//            }
+//          } 
+//****************************************************************************
+            
+        int mat [][]= new int [3][5];
+        for (int[] mat1 : mat) {
+            for (int c = 0; c<mat.length; c++) {
+                System.out.print("Ingrese un componente: ");
+                mat1[c] = leer.nextInt();
+                System.out.println(mat[c]);
             }
-               
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
     }
     
 }
