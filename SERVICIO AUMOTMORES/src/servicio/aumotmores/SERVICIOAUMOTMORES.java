@@ -2,6 +2,7 @@
 package servicio.aumotmores;
 
 import java.util.Arrays;
+import java.util.Random;
 import java.util.Scanner;
 
 
@@ -43,6 +44,7 @@ public class SERVICIOAUMOTMORES {
        
         //VARIABLES
         Scanner datos= new Scanner(System.in);
+        Random nRandom= new Random();
        
         //VARIABLES
         String tickets [][]= new String [3] [6];
@@ -62,7 +64,7 @@ public class SERVICIOAUMOTMORES {
         String marca="";
         int servicio;
         String servicios ="";
-       
+        int numeroEspera=nRandom.nextInt(100)+1;
        
         System.out.print("nombre: ");
         nombre=datos.nextLine();
@@ -132,14 +134,31 @@ public class SERVICIOAUMOTMORES {
         
         
         
-        for(int f=0; f<tickets.length;f++){
-            for(int c=0; c<tickets[f].length;c++){
-                System.out.println(tickets[f][c]);
-            }            
-        }
+//        for(int f=0; f<tickets.length;f++){
+//            for(int c=0; c<tickets[f].length;c++){
+//                System.out.println(tickets[f][c]);
+//            }            
+//        }
+        
+          System.out.println("\n==================================");
+          System.out.println("======== Bienvenido ==============");
+          System.out.println("Centro de Servicios Automotor CFP N°36\nZavaleta 204, C1437EYF, CABA");
+          System.out.println("=====Nº ORDEN: " + numeroEspera + "===========================");
+          System.out.println("Nombre del Cliente: " + tickets[1][0]);
+          System.out.println("DNI del cliente: " + tickets[1][5]);
+//        System.out.println("Marca del Vehiculo: " + marca);
+//        System.out.println("Dominio del Vehiculo: " + domVehiculo);
+//        System.out.println("==================================");
+//        System.out.println("Cantidad de servicios: " + cont);
+//       
+//System.out.println("Los servicios son : " + cont2);
+//        System.out.println("==================================");
+        
+//******************************************************************************      
+//******************************************************************************      
 
        
-//        System.out.print(tickets[0].length);
+
     }
     
 }

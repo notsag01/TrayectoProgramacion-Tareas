@@ -45,14 +45,14 @@ public class Matrices {
 //          } 
 //****************************************************************************
             
-        int mat [][]= new int [3][5];
-        for (int[] mat1 : mat) {
-            for (int c = 0; c<mat.length; c++) {
-                System.out.print("Ingrese un componente: ");
-                mat1[c] = leer.nextInt();
-                System.out.println(mat[c]);
-            }
-        }
+//        int mat [][]= new int [3][5];
+//        for (int[] mat1 : mat) {
+//            for (int c = 0; c<mat.length; c++) {
+//                System.out.print("Ingrese un componente: ");
+//                mat1[c] = leer.nextInt();
+//                System.out.println(mat[c]);
+//            }
+//        }
 
 
 
