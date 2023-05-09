@@ -54,6 +54,43 @@ public class Matrices {
 //            }
 //        }
 
+//**************************************************************************
+
+        int matriz [][]= new int[3][3];
+        
+        matriz[0][0]=1;
+        matriz[0][1]=2;
+        matriz[0][2]=3;
+        
+        matriz[1][0]=1;
+        matriz[1][1]=2;
+        matriz[1][2]=3;
+        
+        matriz[2][0]=1;
+        matriz[2][1]=2;
+        matriz[2][2]=3;
+        
+//        for(int posX=0; posX<matriz.length;posX++){
+//            for(int posY=0; posY<matriz[posX].length;posY++){
+//                System.out.println(matriz[posX] [posY]);
+//            }
+//        }
+        
+//        for(int posX=0; posX<matriz.length;posX++){
+//            for(int posY=0; posY<matriz[posX].length;posY++){
+//                matriz[posX] [posY]= posY + 1;
+//            }
+//        }
+        //Esto de arriba no compila nada.
+        
+        
+        for(int fila : matriz ){
+            System.out.prinln(fila);
+            for(int[] celda : matriz){
+                System.out.println(celda);
+            }
+        }
+
 
 
 
