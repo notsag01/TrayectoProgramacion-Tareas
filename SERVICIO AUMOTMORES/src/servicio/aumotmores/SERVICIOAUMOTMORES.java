@@ -146,10 +146,10 @@ public class SERVICIOAUMOTMORES {
           System.out.println("=====Nº ORDEN: " + numeroEspera + "===========================");
           System.out.println("Nombre del Cliente: " + tickets[1][0]);
           System.out.println("DNI del cliente: " + tickets[1][5]);
-//        System.out.println("Marca del Vehiculo: " + marca);
-//        System.out.println("Dominio del Vehiculo: " + domVehiculo);
-//        System.out.println("==================================");
-//        System.out.println("Cantidad de servicios: " + cont);
+          System.out.println("Marca del Vehiculo: " + tickets[1][3]);
+          System.out.println("Dominio del Vehiculo: " + tickets[1][2]);
+          System.out.println("==================================");
+//          System.out.println("Cantidad de servicios: " + cont);
 //       
 //System.out.println("Los servicios son : " + cont2);
 //        System.out.println("==================================");
