@@ -117,9 +117,10 @@ public class SERVICIOAUMOTMORES {
         switch (servicio){
             case 1 : tickets[1][4]= "ALINEACION";
             break;
-            case 2: tickets[1][4]="BALANCEO";
-                    System.out.print("Cantidad: ");
+            case 2: 
+                    tickets[1][4]="BALANCEO";
                     String cantidadCubiertas="";
+                    System.out.print("Cantidad: ");
                     cantidadCubiertas=datos.nextLine();
                     tickets[2][4]=cantidadCubiertas;
             break;
