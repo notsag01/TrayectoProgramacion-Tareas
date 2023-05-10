@@ -84,7 +84,7 @@ public class Matrices {
         //Esto de arriba no compila nada.
         
         
-        for(int fila : matriz ){
+        for(int[] fila : matriz ){
             System.out.prinln(fila);
             for(int[] celda : matriz){
                 System.out.println(celda);
