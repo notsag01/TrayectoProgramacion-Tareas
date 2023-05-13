@@ -70,26 +70,31 @@ public class Matrices {
         matriz[2][1]=2;
         matriz[2][2]=3;
         
-//        for(int posX=0; posX<matriz.length;posX++){
-//            for(int posY=0; posY<matriz[posX].length;posY++){
-//                System.out.println(matriz[posX] [posY]);
-//            }
-//        }
-        
-//        for(int posX=0; posX<matriz.length;posX++){
-//            for(int posY=0; posY<matriz[posX].length;posY++){
-//                matriz[posX] [posY]= posY + 1;
-//            }
-//        }
-        //Esto de arriba no compila nada.
-        
-        
-        for(int[] fila : matriz ){
-            System.out.prinln(fila);
-            for(int[] celda : matriz){
-                System.out.println(celda);
+        for(int posX=0; posX<matriz.length;posX++){
+            for(int posY=0; posY<matriz[posX].length;posY++){
+                System.out.print(matriz[posX] [posY]);
+                System.out.println(" - ");
+                System.out.println("\n");
+                
             }
         }
+        
+//        for(int posX=0; posX<matriz.length;posX++){
+//            for(int posY=0; posY<matriz[posX].length;posY++){
+//               System.out.print(matriz[posX] [posY]= posY + 1);
+//               System.out.print(" - ");
+//               System.out.print("\n ");               
+//            }
+//        }
+        
+        //********************************************************************
+        //COMPILA MAL !!!***
+//        for(int[] fila : matriz ){
+//            System.out.println(fila);
+//            for(int[] celda : matriz){
+//                System.out.println(fila);
+//            }
+//        }
 
 
 
