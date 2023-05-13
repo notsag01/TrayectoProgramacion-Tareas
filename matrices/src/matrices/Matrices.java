@@ -96,7 +96,27 @@ public class Matrices {
 //            }
 //        }
 
+//**********   MATRICES IRREGULARES  *********************************
 
+        int mat [][];
+        mat = new int [3][];
+        mat [0] = new int [2];
+        mat [1] = new int [3];
+        mat [2] = new int [4];
+        
+        System.out.println("Cantidad: " + mat.length);
+        System.out.println("Cantidad: " + mat[0].length);
+        System.out.println("Cantidad: " + mat[1].length);
+        System.out.println("Cantidad: " + mat[2].length);
+        
+        mat [0][0]= 10;
+        mat [0][1]= 20;
+        
+        for(int f=0; f<mat.length;f++){
+            for(int y=0; y<mat[f].length;y++){
+                System.out.println(mat [f][y]);
+            }
+        }
 
 
 
