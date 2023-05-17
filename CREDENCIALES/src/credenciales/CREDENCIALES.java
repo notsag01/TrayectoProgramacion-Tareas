@@ -28,7 +28,7 @@ public class CREDENCIALES {
         System.out.println(idVerificar);
         
         if(nombre.equals(nombreVerificar)){
-            JOptionPane.showMessageDialog(null,"ACCESO CONCEDIDO","Mensaje de Informacion",JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(null,"ACCESO ","Mensaje de Informacion",JOptionPane.INFORMATION_MESSAGE);
         }
         
         
