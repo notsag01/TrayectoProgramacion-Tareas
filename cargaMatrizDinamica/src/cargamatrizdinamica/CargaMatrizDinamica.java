@@ -19,10 +19,12 @@ public class CargaMatrizDinamica {
             matriz[x][y] = consola.nextInt();
         }
         }
-    // mostrar matriz         
-        for (int x=0; x < matriz.length; x++) {
-            for (int y=0; y < matriz[x].length; y++) {
-            System.out.println ("[" + x + "," + y + "] = " + matriz[x][y]);
+        // mostrar matriz
+        for (int[] matriz1 : matriz) {
+            for (int y = 0; y < matriz1.length; y++) {
+                //System.out.println ("[" + x + "," + y + "] = " + matriz[x][y]);
+                System.out.print(matriz1[y]);
+                System.out.print("-");
             }
         }
     }
