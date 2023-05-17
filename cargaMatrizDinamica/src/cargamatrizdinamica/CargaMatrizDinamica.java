@@ -28,12 +28,19 @@ public class CargaMatrizDinamica {
 //            }
 //        }
 
-        String nombres[][]= new String [3][3];
+        String nombres[][]= new String [2][2];
         
         for(int x=0; x<nombres.length; x++){
             for(int y=0; y<nombres[x].length; y++){
-                System.out.print(nombres[x][y]);
-                System.out.print("-");
+                //System.out.print(nombres[x][y]);
+                //System.out.print("-");
+                System.out.print("Introduzca un nombre a la matriz[" + x + "," + y + "]  ");
+                nombres[x][y]=consola.nextLine();
+            }
+        }
+        for(int x=0; x<nombres.length; x++){
+            for(int y=0; y<nombres[x].length;y++){
+            System.out.print(nombres[x][y] + "-");
             }
         }
 
