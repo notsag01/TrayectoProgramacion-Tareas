@@ -13,7 +13,7 @@ public class CREDENCIALES {
         String idVerificar="";
         int contador=0;
         
-        while( contador < 3 && (!usuario.equals(usuarioVerificar)  || !id.equals(idVerificar))){
+        while( contador <= 3){
             usuarioVerificar= JOptionPane.showInputDialog(null,"Ingrese su nombre ","INPUT",JOptionPane.QUESTION_MESSAGE).toUpperCase();        
             System.out.println(usuarioVerificar);
             idVerificar = JOptionPane.showInputDialog(null,"Ingrese su nombre ","INPUT",JOptionPane.QUESTION_MESSAGE).toUpperCase();        
@@ -21,6 +21,7 @@ public class CREDENCIALES {
 
             if(usuario.equals(usuarioVerificar) && id.equals(idVerificar) ){
                 JOptionPane.showMessageDialog(null,"ACCESO ","Mensaje de Informacion",JOptionPane.INFORMATION_MESSAGE);
+                break;
             }else if(usuario.equals(usuarioVerificar)  && !id.equals(idVerificar)){
                 JOptionPane.showMessageDialog(null,"ACCESO DENEGADO \n El ID es incorrecto" ,"Mensaje de Informacion",JOptionPane.INFORMATION_MESSAGE);                    
                 contador++;
