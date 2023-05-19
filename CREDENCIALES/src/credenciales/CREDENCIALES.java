@@ -7,11 +7,14 @@ public class CREDENCIALES {
 
 
     public static void main(String[] args) {
+        
+        //VARIABLES***
         final String usuario="GASTON";
         final String id="123A";
         String usuarioVerificar="";
         String idVerificar="";
         int contador=0;
+        
         
         while( contador <= 3){
             usuarioVerificar= JOptionPane.showInputDialog(null,"Ingrese su nombre ","INPUT",JOptionPane.QUESTION_MESSAGE).toUpperCase();        
@@ -23,21 +26,21 @@ public class CREDENCIALES {
                 JOptionPane.showMessageDialog(null,"ACCESO ","Mensaje de Informacion",JOptionPane.INFORMATION_MESSAGE);
                 break;
             }else if(usuario.equals(usuarioVerificar)  && !id.equals(idVerificar)){
-                JOptionPane.showMessageDialog(null,"ACCESO DENEGADO \n El ID es incorrecto" ,"Mensaje de Informacion",JOptionPane.ERROR_MESSAGE);                    
+                JOptionPane.showMessageDialog(null,"ACCESO DENEGADO \n El ID es incorrecto" ,"Mensaje de ERROR",JOptionPane.ERROR_MESSAGE);                    
                 contador++;
                 System.out.println(contador);
             }else if(!usuario.equals(usuarioVerificar)  && id.equals(idVerificar)){
-                JOptionPane.showMessageDialog(null,"ACCESO DENEGADO \n El Usuario es incorrecto" ,"Mensaje de Informacion",JOptionPane.ERROR_MESSAGE);            
+                JOptionPane.showMessageDialog(null,"ACCESO DENEGADO \n El Usuario es incorrecto" ,"Mensaje de ERROR",JOptionPane.ERROR_MESSAGE);            
                 contador++;
                 System.out.println(contador);
             }else{
-                JOptionPane.showMessageDialog(null,"ACCESO DENEGADO \n Verifique sus credenciales" ,"Mensaje de Informacion",JOptionPane.ERROR_MESSAGE);                        
+                JOptionPane.showMessageDialog(null,"ACCESO DENEGADO \n Verifique sus credenciales" ,"Mensaje de ERROR",JOptionPane.ERROR_MESSAGE);                        
                 contador++;
                 System.out.println(contador);
             }
         }
         if(contador==4){
-                JOptionPane.showMessageDialog(null,"El usuario ha sido bloqueado" ,"Mensaje de Informacion",JOptionPane.ERROR_MESSAGE);                                    
+                JOptionPane.showMessageDialog(null,"El usuario ha sido bloqueado" ,"Mensaje de ERROR",JOptionPane.ERROR_MESSAGE);                                    
         }
         
         
