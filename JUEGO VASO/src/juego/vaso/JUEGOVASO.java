@@ -85,14 +85,14 @@ public class JUEGOVASO {
             }
             
             if(pelotita== seleccionJ1 && pelotita==seleccionJ2){
-                JOptionPane.showMessageDialog(null, "Felicitaciones! \n Ambos han Acertado! /n Punto para los dos", "Juego del Vaso",
+                JOptionPane.showMessageDialog(null, "Felicitaciones! \n Ambos han Acertado! \n Punto para los dos", "Juego del Vaso",
                         JOptionPane.INFORMATION_MESSAGE, Bien);
             }else if(pelotita== seleccionJ1 && (pelotita <seleccionJ2|| pelotita>seleccionJ2)){
-                JOptionPane.showMessageDialog(null, "Felicitaciones!" + jugadores[0] +  "\n Has Acertado! /n Punto para los " + jugadores[0] , "Juego del Vaso",
+                JOptionPane.showMessageDialog(null, "Felicitaciones!" + jugadores[0] +  "\n Has Acertado! \n Punto para " + jugadores[0] , "Juego del Vaso",
                         JOptionPane.INFORMATION_MESSAGE, Bien);
                 JOptionPane.showMessageDialog(null, "MUY MAL" + jugadores[1], "Juego del Vaso", JOptionPane.INFORMATION_MESSAGE, Mal);
             }else if(pelotita== seleccionJ2 && (pelotita <seleccionJ1|| pelotita>seleccionJ1)){
-                JOptionPane.showMessageDialog(null, "Felicitaciones!" + jugadores[1] +  "\n Has Acertado! /n Punto para los " + jugadores[1] , "Juego del Vaso",
+                JOptionPane.showMessageDialog(null, "Felicitaciones!" + jugadores[1] +  "\n Has Acertado! \n Punto para " + jugadores[1] , "Juego del Vaso",
                         JOptionPane.INFORMATION_MESSAGE, Bien);
                 JOptionPane.showMessageDialog(null, "MUY MAL" + jugadores[0], "Juego del Vaso", JOptionPane.INFORMATION_MESSAGE, Mal);
             }else{
@@ -106,6 +106,20 @@ public class JUEGOVASO {
                 + jugadores[0] + ": " + contadorPuntosJ1 + "\n" 
                 + jugadores[1] + ": " + contadorPuntosJ2 + "\n"
                 , "Juego del Vaso", JOptionPane.INFORMATION_MESSAGE, Icono);
+        
+        if(contadorPuntosJ1 > contadorPuntosJ2){
+            JOptionPane.showMessageDialog(null, "FELICITCIONES, "+ jugadores[0] + "\n Has Ganado!",
+                    "Juego del Vaso",
+                    JOptionPane.INFORMATION_MESSAGE, Icono);
+        }else if(contadorPuntosJ1 < contadorPuntosJ2){
+            JOptionPane.showMessageDialog(null, "FELICITCIONES, " + jugadores[1] + "\n Has Ganado!",
+                    "Juego del Vaso",
+                    JOptionPane.INFORMATION_MESSAGE, Icono);                
+        }else{
+            JOptionPane.showMessageDialog(null, "Qué triste EMPATE",
+                    "Juego del Vaso",
+                    JOptionPane.INFORMATION_MESSAGE, Icono);
+        }
         
         
         
