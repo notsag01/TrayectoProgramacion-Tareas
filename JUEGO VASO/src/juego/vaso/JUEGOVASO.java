@@ -84,6 +84,7 @@ public class JUEGOVASO {
                 contadorPuntosJ2++;
             }
             
+            //NOS FIJAMOS QUIÉN ACERTÓ Y LO MOSTRAMOS POR PANTALLA
             if(pelotita== seleccionJ1 && pelotita==seleccionJ2){
                 JOptionPane.showMessageDialog(null, "Felicitaciones! \n Ambos han Acertado! \n Punto para los dos", "Juego del Vaso",
                         JOptionPane.INFORMATION_MESSAGE, Bien);
@@ -107,6 +108,7 @@ public class JUEGOVASO {
                 + jugadores[1] + ": " + contadorPuntosJ2 + "\n"
                 , "Juego del Vaso", JOptionPane.INFORMATION_MESSAGE, Icono);
         
+        //NOS FIJAMOS QUIÉN GANÓ. CONTAMOS LOS PUNTOS.
         if(contadorPuntosJ1 > contadorPuntosJ2){
             JOptionPane.showMessageDialog(null, "FELICITCIONES, "+ jugadores[0] + "\n Has Ganado!",
                     "Juego del Vaso",
