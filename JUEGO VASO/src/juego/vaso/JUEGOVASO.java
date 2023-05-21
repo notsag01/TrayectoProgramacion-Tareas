@@ -98,16 +98,14 @@ public class JUEGOVASO {
             }else{
                 JOptionPane.showMessageDialog(null, "Muy mal los dos! \n Si siguen así, les sacaré puntos a ambos", "Juego del Vaso",
                         JOptionPane.INFORMATION_MESSAGE, Mal);
-            }
-            
+                }            
            }   
-        
-//        if (pelotita == seleccion) {
-//            JOptionPane.showMessageDialog(null, "MUY BIEN", "Juego del Vaso", JOptionPane.INFORMATION_MESSAGE, Bien);
-//        } else {
-//            JOptionPane.showMessageDialog(null, "MUY MAL", "Juego del Vaso", JOptionPane.INFORMATION_MESSAGE, Mal);
-//        }      
-        
+           
+        //MOSTRAMOS LOS PUNTOS
+        JOptionPane.showMessageDialog(null, "REUSLTADO FINAL \n"
+                + jugadores[0] + ": " + contadorPuntosJ1 + "\n" 
+                + jugadores[1] + ": " + contadorPuntosJ2 + "\n"
+                , "Juego del Vaso", JOptionPane.INFORMATION_MESSAGE, Icono);
         
         
         
