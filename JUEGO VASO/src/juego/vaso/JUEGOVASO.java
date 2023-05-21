@@ -53,6 +53,8 @@ public class JUEGOVASO {
         JOptionPane.showMessageDialog(null, "JUGUEMOS!", "Juego del Vaso", JOptionPane.INFORMATION_MESSAGE, Icono);
         
         for(int i=0; i<contadorVueltas; i++ ){
+             
+            //JUGAS DEL JUGADOR 1 ----------------------------------
         int seleccionJ1 = JOptionPane.showOptionDialog(null,
                 jugadores[0] + ", \n encuentra la pelotita en los vasos!",
                 "JUGADOR 1",
@@ -61,6 +63,8 @@ public class JUEGOVASO {
                 new Object[]{"VASO 1", "VASO 2", "VASO 3"}, "VASO1");                
             jugadasJugador1[i]=seleccionJ1;
             System.out.println(jugadasJugador1[i]); //BORRAR ***
+            
+            //JUGAS DEL JUGADOR 2 --------------------------------------
         int seleccionJ2 = JOptionPane.showOptionDialog(null,
                 jugadores[1] + ", \n encuentra la pelotita en los vasos!",
                 "JUGADOR 2",
