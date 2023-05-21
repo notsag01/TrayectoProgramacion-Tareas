@@ -41,13 +41,15 @@ public class JUEGOVASO {
         int jugadasJugador1[]= new int[3];        
         int jugadasJugador2[]= new int[3];        
         int contadorVueltas=3;
+        int contadorPuntosJ1=0;
+        int contadorPuntosJ2=0;
 
         ImageIcon Icono = new ImageIcon("src/imagenes/juego.png");
         ImageIcon Bien = new ImageIcon("src/imagenes/bien.png");
         ImageIcon Mal = new ImageIcon("src/imagenes/mal.png");
         
-        jugadores[0]= JOptionPane.showInputDialog(null,"JUGADOR Nª1","Juego del Vaso",JOptionPane.QUESTION_MESSAGE);
-        jugadores[1]= JOptionPane.showInputDialog(null,"JUGADOR Nª2","Juego del Vaso",JOptionPane.QUESTION_MESSAGE);
+        jugadores[0]= JOptionPane.showInputDialog(null,"JUGADOR Nª1","Juego del Vaso",JOptionPane.QUESTION_MESSAGE).toUpperCase();
+        jugadores[1]= JOptionPane.showInputDialog(null,"JUGADOR Nª2","Juego del Vaso",JOptionPane.QUESTION_MESSAGE).toUpperCase();
         //System.out.println(jugadores[0] + jugadores[1]);
         
         JOptionPane.showMessageDialog(null, "JUGUEMOS!", "Juego del Vaso", JOptionPane.INFORMATION_MESSAGE, Icono);
@@ -61,8 +63,12 @@ public class JUEGOVASO {
                 JOptionPane.YES_NO_CANCEL_OPTION,
                 JOptionPane.INFORMATION_MESSAGE, Icono,
                 new Object[]{"VASO 1", "VASO 2", "VASO 3"}, "VASO1");                
-            jugadasJugador1[i]=seleccionJ1;
-            System.out.println(jugadasJugador1[i]); //BORRAR ***
+            jugadasJugador1[i]=seleccionJ1;            
+            
+            //ACIERTOS JUGADOR 1
+            if(pelotita == seleccionJ1){
+                contadorPuntosJ1++;
+            }
             
             //JUGAS DEL JUGADOR 2 --------------------------------------
         int seleccionJ2 = JOptionPane.showOptionDialog(null,
@@ -72,7 +78,28 @@ public class JUEGOVASO {
                 JOptionPane.INFORMATION_MESSAGE, Icono,
                 new Object[]{"VASO 1", "VASO 2", "VASO 3"}, "VASO1");                
             jugadasJugador2[i]=seleccionJ2;   
-            System.out.print(jugadasJugador2[i]); //BORRAR ***
+            
+            //ACIERTOS JUGADOR 2
+            if(pelotita == seleccionJ2){
+                contadorPuntosJ2++;
+            }
+            
+            if(pelotita== seleccionJ1 && pelotita==seleccionJ2){
+                JOptionPane.showMessageDialog(null, "Felicitaciones! \n Ambos han Acertado! /n Punto para los dos", "Juego del Vaso",
+                        JOptionPane.INFORMATION_MESSAGE, Bien);
+            }else if(pelotita== seleccionJ1 && (pelotita <seleccionJ2|| pelotita>seleccionJ2)){
+                JOptionPane.showMessageDialog(null, "Felicitaciones!" + jugadores[0] +  "\n Has Acertado! /n Punto para los " + jugadores[0] , "Juego del Vaso",
+                        JOptionPane.INFORMATION_MESSAGE, Bien);
+                JOptionPane.showMessageDialog(null, "MUY MAL" + jugadores[1], "Juego del Vaso", JOptionPane.INFORMATION_MESSAGE, Mal);
+            }else if(pelotita== seleccionJ2 && (pelotita <seleccionJ1|| pelotita>seleccionJ1)){
+                JOptionPane.showMessageDialog(null, "Felicitaciones!" + jugadores[1] +  "\n Has Acertado! /n Punto para los " + jugadores[1] , "Juego del Vaso",
+                        JOptionPane.INFORMATION_MESSAGE, Bien);
+                JOptionPane.showMessageDialog(null, "MUY MAL" + jugadores[0], "Juego del Vaso", JOptionPane.INFORMATION_MESSAGE, Mal);
+            }else{
+                JOptionPane.showMessageDialog(null, "Muy mal los dos! \n Si siguen así, les sacaré puntos a ambos", "Juego del Vaso",
+                        JOptionPane.INFORMATION_MESSAGE, Mal);
+            }
+            
            }   
         
 //        if (pelotita == seleccion) {
