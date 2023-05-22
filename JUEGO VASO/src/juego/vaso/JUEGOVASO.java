@@ -44,10 +44,16 @@ public class JUEGOVASO {
         int contadorPuntosJ1=0;
         int contadorPuntosJ2=0;
 
+        //IMAGENES  ***
         ImageIcon Icono = new ImageIcon("src/imagenes/juego.png");
         ImageIcon Bien = new ImageIcon("src/imagenes/bien.png");
         ImageIcon Mal = new ImageIcon("src/imagenes/mal.png");
+        ImageIcon Llorando = new ImageIcon("src/imagenes/llorando.png");
+        ImageIcon Triste = new ImageIcon("src/imagenes/triste.png");
+        ImageIcon Apreton = new ImageIcon("src/imagenes/apreton.png");
+        ImageIcon Campeon = new ImageIcon("src/imagenes/campeon.png");
         
+         //OPCIONES DE JUEGO MULTIJUGADOR / COMPUTADORA
         JOptionPane.showMessageDialog(null, "Bienvenidos al JUEGO DEL VASO", "BIENVENIDA", JOptionPane.INFORMATION_MESSAGE , Icono);
         int modo = JOptionPane.showOptionDialog(null, "Eligue una opcione", "El juego del Vaso",
                                      JOptionPane.YES_NO_CANCEL_OPTION,
@@ -75,20 +81,20 @@ public class JUEGOVASO {
                         JOptionPane.showMessageDialog(null, "Mal!", "Juego del Vaso", JOptionPane.INFORMATION_MESSAGE, Mal);              
                     }
                     
-                    //MOSTRAMOS LOS PUNTOS
             }
+                    //MOSTRAMOS LOS PUNTOS
                     JOptionPane.showMessageDialog(null, "REUSLTADO FINAL \n"
                         + jugadores[0] + ": " + contadorPuntosJ1 + "\n" 
                         , "Juego del Vaso", JOptionPane.INFORMATION_MESSAGE, Icono);    
                     
                     switch(contadorPuntosJ1){
-                        case 0: JOptionPane.showMessageDialog(null, "Un desastre! Dedicate a otra cosa.", "Has sido Humillado", pelotita, Icono);
+                        case 0: JOptionPane.showMessageDialog(null, "Un desastre! Dedicate a otra cosa.", "Has sido Humillado", pelotita, Llorando);
                         break;
-                        case 1: JOptionPane.showMessageDialog(null, "Todavía te falta mucha sopa.", "Has Perdido", pelotita, Icono);
+                        case 1: JOptionPane.showMessageDialog(null, "Todavía te falta mucha sopa.", "Has Perdido", pelotita, Triste);
                         break;
-                        case 2: JOptionPane.showMessageDialog(null, "Casi Casi.", "Te mereces la revancha", pelotita, Icono);
+                        case 2: JOptionPane.showMessageDialog(null, "Casi Casi.", "Te mereces la revancha", pelotita, Apreton);
                         break;
-                        case 3: JOptionPane.showMessageDialog(null, "He sido derrotado ante el mejor.", "Eres el messio del Juego del Vaso", pelotita, Icono);
+                        case 3: JOptionPane.showMessageDialog(null, "He sido derrotado ante el mejor.", "Eres el messio del Juego del Vaso", pelotita, Campeon);
                         break;
                     }
            
@@ -159,15 +165,15 @@ public class JUEGOVASO {
             if(contadorPuntosJ1 > contadorPuntosJ2){
                 JOptionPane.showMessageDialog(null, "FELICITCIONES, "+ jugadores[0] + "\n Has Ganado!",
                         "Juego del Vaso",
-                        JOptionPane.INFORMATION_MESSAGE, Icono);
+                        JOptionPane.INFORMATION_MESSAGE, Campeon);
             }else if(contadorPuntosJ1 < contadorPuntosJ2){
                 JOptionPane.showMessageDialog(null, "FELICITCIONES, " + jugadores[1] + "\n Has Ganado!",
                         "Juego del Vaso",
-                        JOptionPane.INFORMATION_MESSAGE, Icono);                
+                        JOptionPane.INFORMATION_MESSAGE, Campeon);                
             }else{
                 JOptionPane.showMessageDialog(null, "Qué triste EMPATE",
                         "Juego del Vaso",
-                        JOptionPane.INFORMATION_MESSAGE, Icono);
+                        JOptionPane.INFORMATION_MESSAGE, Triste);
             }
         }
         
