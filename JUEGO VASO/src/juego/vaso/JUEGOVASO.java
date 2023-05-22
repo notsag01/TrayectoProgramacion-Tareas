@@ -56,7 +56,30 @@ public class JUEGOVASO {
         
         if(modo == 0){
             System.out.print("contra la computadora");
+            jugadores[0]= JOptionPane.showInputDialog(null,"JUGADOR Nª1","Juego del Vaso",JOptionPane.QUESTION_MESSAGE).toUpperCase();
+            
+            for(int i=0; i<contadorVueltas; i++ ){
+                   //JUGAS DEL JUGADOR 1 ----------------------------------
+                int seleccionJ1 = JOptionPane.showOptionDialog(null,
+                        jugadores[0] + ", \n encuentra la pelotita en los vasos!",
+                        "JUGADOR 1",
+                        JOptionPane.YES_NO_CANCEL_OPTION,
+                        JOptionPane.INFORMATION_MESSAGE, Icono,
+                        new Object[]{"VASO 1", "VASO 2", "VASO 3"}, "VASO1");                
+                    jugadasJugador1[i]=seleccionJ1;            
+
+                    //ACIERTOS JUGADOR 1
+                    if(pelotita == seleccionJ1){
+                        contadorPuntosJ1++;
+                    }
+
+                 
+            }
+           
         }else{        
+            
+            //*******************   MODO MULTIJUGADOR  ****************************************************************************************************************
+            
             jugadores[0]= JOptionPane.showInputDialog(null,"JUGADOR Nª1","Juego del Vaso",JOptionPane.QUESTION_MESSAGE).toUpperCase();
             jugadores[1]= JOptionPane.showInputDialog(null,"JUGADOR Nª2","Juego del Vaso",JOptionPane.QUESTION_MESSAGE).toUpperCase();
 
