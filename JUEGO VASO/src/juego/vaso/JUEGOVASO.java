@@ -55,7 +55,6 @@ public class JUEGOVASO {
                                      new Object[]{"COMPUTADORA", "MULTIJUGADOR"}, "COMPUTADORA");
         
         if(modo == 0){
-            System.out.print("contra la computadora");
             jugadores[0]= JOptionPane.showInputDialog(null,"JUGADOR Nª1","Juego del Vaso",JOptionPane.QUESTION_MESSAGE).toUpperCase();
             
             for(int i=0; i<contadorVueltas; i++ ){
@@ -70,11 +69,28 @@ public class JUEGOVASO {
 
                     //ACIERTOS JUGADOR 1
                     if(pelotita == seleccionJ1){
+                        JOptionPane.showMessageDialog(null, "Excelente!\n Punto para vos!", "Juego del Vaso", JOptionPane.INFORMATION_MESSAGE, Bien);
                         contadorPuntosJ1++;
+                    }else{
+                        JOptionPane.showMessageDialog(null, "Mal!", "Juego del Vaso", JOptionPane.INFORMATION_MESSAGE, Mal);              
                     }
-
-                 
+                    
+                    //MOSTRAMOS LOS PUNTOS
             }
+                    JOptionPane.showMessageDialog(null, "REUSLTADO FINAL \n"
+                        + jugadores[0] + ": " + contadorPuntosJ1 + "\n" 
+                        , "Juego del Vaso", JOptionPane.INFORMATION_MESSAGE, Icono);    
+                    
+                    switch(contadorPuntosJ1){
+                        case 0: JOptionPane.showMessageDialog(null, "Un desastre! Dedicate a otra cosa.", "Has sido Humillado", pelotita, Icono);
+                        break;
+                        case 1: JOptionPane.showMessageDialog(null, "Todavía te falta mucha sopa.", "Has Perdido", pelotita, Icono);
+                        break;
+                        case 2: JOptionPane.showMessageDialog(null, "Casi Casi.", "Te mereces la revancha", pelotita, Icono);
+                        break;
+                        case 3: JOptionPane.showMessageDialog(null, "He sido derrotado ante el mejor.", "Eres el messio del Juego del Vaso", pelotita, Icono);
+                        break;
+                    }
            
         }else{        
             
