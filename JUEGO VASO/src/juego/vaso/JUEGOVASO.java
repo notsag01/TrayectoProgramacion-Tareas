@@ -31,6 +31,7 @@ public class JUEGOVASO {
         ImageIcon Apreton = new ImageIcon("src/imagenes/apreton.png");
         ImageIcon Campeon = new ImageIcon("src/imagenes/campeon.png");
         ImageIcon Pelotita = new ImageIcon("src/imagenes/pelotita.jpg");
+        ImageIcon Mezclador = new ImageIcon("src/imagenes/mezclador.jpg");
         
          //OPCIONES DE JUEGO MULTIJUGADOR / COMPUTADORA
         JOptionPane.showMessageDialog(null, "Bienvenidos al JUEGO DEL VASO", "BIENVENIDA", JOptionPane.INFORMATION_MESSAGE , Icono);
@@ -52,12 +53,13 @@ public class JUEGOVASO {
                 }else{
                     JOptionPane.showMessageDialog(null, "Tercera y última Ronda", "Juego del Vaso", JOptionPane.INFORMATION_MESSAGE , Icono);                                
                 }
-                   
+                
+                //SELECCION DEL JUGADOR
                 int seleccionJ1 = JOptionPane.showOptionDialog(null,
                         jugadores[0] + ", \n encuentra la pelotita en los vasos!",
                         "JUGADOR 1",
                         JOptionPane.YES_NO_CANCEL_OPTION,
-                        JOptionPane.INFORMATION_MESSAGE, Icono,
+                        JOptionPane.INFORMATION_MESSAGE, Mezclador,
                         new Object[]{"VASO 1", "VASO 2", "VASO 3"}, "VASO1");                
                     jugadasJugador1[i]=seleccionJ1;            
                     
@@ -114,7 +116,7 @@ public class JUEGOVASO {
                     jugadores[0] + ", \n encuentra la pelotita en los vasos!",
                     "JUGADOR 1",
                     JOptionPane.YES_NO_CANCEL_OPTION,
-                    JOptionPane.INFORMATION_MESSAGE, Icono,
+                    JOptionPane.INFORMATION_MESSAGE, Mezclador,
                     new Object[]{"VASO 1", "VASO 2", "VASO 3"}, "VASO1");                
                 jugadasJugador1[i]=seleccionJ1;            
 
@@ -128,7 +130,7 @@ public class JUEGOVASO {
                     jugadores[1] + ", \n encuentra la pelotita en los vasos!",
                     "JUGADOR 2",
                     JOptionPane.YES_NO_CANCEL_OPTION,
-                    JOptionPane.INFORMATION_MESSAGE, Icono,
+                    JOptionPane.INFORMATION_MESSAGE, Mezclador,
                     new Object[]{"VASO 1", "VASO 2", "VASO 3"}, "VASO1");                
                 jugadasJugador2[i]=seleccionJ2;   
 
