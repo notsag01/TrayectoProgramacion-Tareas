@@ -65,11 +65,32 @@ public class SeguroAutomotor {
     Object listaMarcas []= {"FIAT", "NISSAN", "RENAULT", "CHEVROLET", "TOYOTA", "FORD", "PEUGEOT"};
     Object marca=JOptionPane.showInputDialog(null, "Seleccione una MARCA", "MARCAS", JOptionPane.QUESTION_MESSAGE, null, listaMarcas, listaMarcas[0]);
     System.out.print(marca);
-    Object modelosNissan []= {"PULSE", "CRONOS", "TORO", "UNO", "500", "STRADA", "FIORINO"};
     Object modelosFiat []= {"PULSE", "CRONOS", "TORO", "UNO", "500", "STRADA", "FIORINO"};
+    Object modelosNissan []= {"KICKS", "VERSA", "MARCH", "NOTE", "MURANO", "X-TRAIL", "LEAF"};
+    Object modelosRenault []= {"SANDERO", "LOGAN", "KANGOO", "KWID", "STEPWEY", "ALASKAN", "DUSTER"};
+    Object modelosChevrolet []= {"CRUEZE", "ONIX", "TRACKER", "S10", "SPIN", "PRISMA", "COBALT"};
+    Object modelosToyota []= {"HILUX", "COROLLA", "COROLLA CROSS", "ETIOS", "SW4", "PRIUS", "INNOVA"};
+    Object modelosFord []= {"RANGER", "ECOSPORT", "KA", "FIESTA", "FOCUS", "MONDEO", "MUSTANG"};
+    Object modelosPeugeot []= {"208", "207", "308", "408", "PARTNER", "PATAGONIC", "EXPERT"};
     
     if (marca.equals("FIAT")){
             Object modelo =JOptionPane.showInputDialog(null, "Seleccione un MODELO", "MODELO", JOptionPane.QUESTION_MESSAGE, null, modelosFiat, modelosFiat[0]);
+    }else if(marca.equals("NISSAN")){
+            Object modelo =JOptionPane.showInputDialog(null, "Seleccione un MODELO", "MODELO", JOptionPane.QUESTION_MESSAGE, null, modelosNissan, modelosNissan[0]);
+    }else if(marca.equals("RENAULT")){
+            Object modelo =JOptionPane.showInputDialog(null, "Seleccione un MODELO", "MODELO", JOptionPane.QUESTION_MESSAGE, null, modelosRenault, modelosRenault[0]);
+    }else if(marca.equals("CHEVROLET")){
+            Object modelo =JOptionPane.showInputDialog(null, "Seleccione un MODELO", "MODELO", JOptionPane.QUESTION_MESSAGE, null, modelosChevrolet, modelosChevrolet[0]);
+    
+    }else if(marca.equals("TOYOTA")){
+            Object modelo =JOptionPane.showInputDialog(null, "Seleccione un MODELO", "MODELO", JOptionPane.QUESTION_MESSAGE, null, modelosToyota, modelosToyota[0]);
+        
+    }else if(marca.equals("FORD")){
+            Object modelo =JOptionPane.showInputDialog(null, "Seleccione un MODELO", "MODELO", JOptionPane.QUESTION_MESSAGE, null, modelosFord, modelosFord[0]);
+    
+    }else if(marca.equals("PEUGEOT")){
+            Object modelo =JOptionPane.showInputDialog(null, "Seleccione un MODELO", "MODELO", JOptionPane.QUESTION_MESSAGE, null, modelosPeugeot, modelosPeugeot[0]);
+        
     }
 
 
