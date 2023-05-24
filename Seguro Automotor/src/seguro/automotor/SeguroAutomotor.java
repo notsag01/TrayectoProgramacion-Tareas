@@ -1,6 +1,7 @@
 
 package seguro.automotor;
 
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
 
@@ -60,7 +61,7 @@ public class SeguroAutomotor {
 
     
 
-
+    ImageIcon Fiat= new ImageIcon("src/imagen/fiat.png");
 
     Object listaMarcas []= {"FIAT", "NISSAN", "RENAULT", "CHEVROLET", "TOYOTA", "FORD", "PEUGEOT"};
     Object marca=JOptionPane.showInputDialog(null, "Seleccione una MARCA", "MARCAS", JOptionPane.QUESTION_MESSAGE, null, listaMarcas, listaMarcas[0]);
@@ -74,7 +75,7 @@ public class SeguroAutomotor {
     Object modelosPeugeot []= {"208", "207", "308", "408", "PARTNER", "PATAGONIC", "EXPERT"};
     
     if (marca.equals("FIAT")){
-            Object modelo =JOptionPane.showInputDialog(null, "Seleccione un MODELO", "MODELO", JOptionPane.QUESTION_MESSAGE, null, modelosFiat, modelosFiat[0]);
+            Object modelo =JOptionPane.showInputDialog(null, "Seleccione un MODELO", "MODELO", JOptionPane.QUESTION_MESSAGE, Fiat, modelosFiat, modelosFiat[0]);
     }else if(marca.equals("NISSAN")){
             Object modelo =JOptionPane.showInputDialog(null, "Seleccione un MODELO", "MODELO", JOptionPane.QUESTION_MESSAGE, null, modelosNissan, modelosNissan[0]);
     }else if(marca.equals("RENAULT")){
