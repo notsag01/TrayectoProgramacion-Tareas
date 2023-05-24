@@ -62,6 +62,12 @@ public class SeguroAutomotor {
     
 
     ImageIcon Fiat= new ImageIcon("src/imagen/fiat.png");
+    ImageIcon Nissan= new ImageIcon("src/imagen/nissan.png");
+    ImageIcon Renault= new ImageIcon("src/imagen/renault.png");
+    ImageIcon Chevrolet= new ImageIcon("src/imagen/chevrolet.png");
+    ImageIcon Toyota= new ImageIcon("src/imagen/toyota.png");
+    ImageIcon Ford= new ImageIcon("src/imagen/ford.png");
+    ImageIcon Peugeot= new ImageIcon("src/imagen/peugeot.png");
 
     Object listaMarcas []= {"FIAT", "NISSAN", "RENAULT", "CHEVROLET", "TOYOTA", "FORD", "PEUGEOT"};
     Object marca=JOptionPane.showInputDialog(null, "Seleccione una MARCA", "MARCAS", JOptionPane.QUESTION_MESSAGE, null, listaMarcas, listaMarcas[0]);
@@ -77,20 +83,20 @@ public class SeguroAutomotor {
     if (marca.equals("FIAT")){
             Object modelo =JOptionPane.showInputDialog(null, "Seleccione un MODELO", "MODELO", JOptionPane.QUESTION_MESSAGE, Fiat, modelosFiat, modelosFiat[0]);
     }else if(marca.equals("NISSAN")){
-            Object modelo =JOptionPane.showInputDialog(null, "Seleccione un MODELO", "MODELO", JOptionPane.QUESTION_MESSAGE, null, modelosNissan, modelosNissan[0]);
+            Object modelo =JOptionPane.showInputDialog(null, "Seleccione un MODELO", "MODELO", JOptionPane.QUESTION_MESSAGE, Nissan, modelosNissan, modelosNissan[0]);
     }else if(marca.equals("RENAULT")){
-            Object modelo =JOptionPane.showInputDialog(null, "Seleccione un MODELO", "MODELO", JOptionPane.QUESTION_MESSAGE, null, modelosRenault, modelosRenault[0]);
+            Object modelo =JOptionPane.showInputDialog(null, "Seleccione un MODELO", "MODELO", JOptionPane.QUESTION_MESSAGE, Renault, modelosRenault, modelosRenault[0]);
     }else if(marca.equals("CHEVROLET")){
-            Object modelo =JOptionPane.showInputDialog(null, "Seleccione un MODELO", "MODELO", JOptionPane.QUESTION_MESSAGE, null, modelosChevrolet, modelosChevrolet[0]);
+            Object modelo =JOptionPane.showInputDialog(null, "Seleccione un MODELO", "MODELO", JOptionPane.QUESTION_MESSAGE, Chevrolet, modelosChevrolet, modelosChevrolet[0]);
     
     }else if(marca.equals("TOYOTA")){
-            Object modelo =JOptionPane.showInputDialog(null, "Seleccione un MODELO", "MODELO", JOptionPane.QUESTION_MESSAGE, null, modelosToyota, modelosToyota[0]);
+            Object modelo =JOptionPane.showInputDialog(null, "Seleccione un MODELO", "MODELO", JOptionPane.QUESTION_MESSAGE, Toyota, modelosToyota, modelosToyota[0]);
         
     }else if(marca.equals("FORD")){
-            Object modelo =JOptionPane.showInputDialog(null, "Seleccione un MODELO", "MODELO", JOptionPane.QUESTION_MESSAGE, null, modelosFord, modelosFord[0]);
+            Object modelo =JOptionPane.showInputDialog(null, "Seleccione un MODELO", "MODELO", JOptionPane.QUESTION_MESSAGE, Ford, modelosFord, modelosFord[0]);
     
     }else if(marca.equals("PEUGEOT")){
-            Object modelo =JOptionPane.showInputDialog(null, "Seleccione un MODELO", "MODELO", JOptionPane.QUESTION_MESSAGE, null, modelosPeugeot, modelosPeugeot[0]);
+            Object modelo =JOptionPane.showInputDialog(null, "Seleccione un MODELO", "MODELO", JOptionPane.QUESTION_MESSAGE, Peugeot, modelosPeugeot, modelosPeugeot[0]);
         
     }
 
