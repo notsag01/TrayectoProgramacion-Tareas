@@ -1,6 +1,8 @@
 
 package seguro.automotor;
 
+import javax.swing.JOptionPane;
+
 
 public class SeguroAutomotor {
 
@@ -54,6 +56,35 @@ public class SeguroAutomotor {
 //c. Tipo de cobertura (detalle seleccionado)
 //d. Adicionales de la cobertura (detalles seleccionado)
 //e. Valor de la prima total
+
+
+    
+
+
+
+    Object listaMarcas []= {"FIAT", "NISSAN", "RENAULT", "CHEVROLET", "TOYOTA", "FORD", "PEUGEOT"};
+    Object marca=JOptionPane.showInputDialog(null, "Seleccione una MARCA", "MARCAS", JOptionPane.QUESTION_MESSAGE, null, listaMarcas, listaMarcas[0]);
+    System.out.print(marca);
+    Object modelosNissan []= {"PULSE", "CRONOS", "TORO", "UNO", "500", "STRADA", "FIORINO"};
+    Object modelosFiat []= {"PULSE", "CRONOS", "TORO", "UNO", "500", "STRADA", "FIORINO"};
+    
+    if (marca.equals("FIAT")){
+            Object modelo =JOptionPane.showInputDialog(null, "Seleccione un MODELO", "MODELO", JOptionPane.QUESTION_MESSAGE, null, modelosFiat, modelosFiat[0]);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
     
 }
