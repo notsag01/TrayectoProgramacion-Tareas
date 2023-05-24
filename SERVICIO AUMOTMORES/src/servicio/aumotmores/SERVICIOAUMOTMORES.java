@@ -47,38 +47,32 @@ public class SERVICIOAUMOTMORES {
         Random nRandom= new Random();
        
         //VARIABLES
-        String tickets [][]= new String [3] [6];
-        
-        tickets[0][0]="NOMBRE";
-        tickets[0][1]="TELEFNO";
-        tickets[0][5]="DNI";
-        tickets[0][2]="DOMINIO";
-        tickets[0][3]="MARCA";
-        tickets[0][4]="SERVICIO1";
-        
-        
+        int cantidadServicios=1;
+        String tickets[]= new String [5];
+        String servicios[]= new String[cantidadServicios];
+                               
         String nombre= " ";
         String dni=" ";
         String telefono=" ";
         String dominio=" ";
         String marca="";
         int servicio;
-        String servicios ="";
+        String cantidadCubiertas="";
         int numeroEspera=nRandom.nextInt(100)+1;
         int servicioAdic=1;
        
         System.out.print("nombre: ");
         nombre=datos.nextLine();
-        tickets[1][0]= nombre.toUpperCase();
+        tickets[0]= nombre.toUpperCase();
         System.out.print("Numero DNI: ");
         dni=datos.nextLine();
-        tickets[1][5]=dni;
+        tickets[1]=dni;
         System.out.print("telefono: ");
         telefono=datos.nextLine();
-        tickets[1][1]= telefono;
+        tickets[2]= telefono;
         System.out.print("dominio: ");
         dominio=datos.nextLine();
-        tickets [1][2]= dominio;
+        tickets[3]= dominio;
         
         
                   
@@ -92,13 +86,13 @@ public class SERVICIOAUMOTMORES {
         marca=datos.nextLine();
        
         switch (marca){
-            case "1" : tickets[1][3]= "FORD";
+            case "1" : tickets[4]= "FORD";
             break;
-            case "2": tickets[1][3]="PEUGEOT";
+            case "2": tickets[4]="PEUGEOT";
             break;
-            case "3": tickets[1][3]=" RENAULT";
+            case "3": tickets[4]=" RENAULT";
             break;
-            case "4": tickets[1][3]=" NISSAN";
+            case "4": tickets[4]=" NISSAN";
             break;
             default: System.out.print("no ha elegido un servicio.");
             break;
@@ -114,17 +108,15 @@ public class SERVICIOAUMOTMORES {
             servicio=datos.nextInt();
                           
             switch (servicio){
-                case 1 : tickets[1][4]= "ALINEACION";
+                case 1 : servicios[0]= "ALINEACION";
                 break;
-                case 2: tickets[1][4]="BALANCEO";
-                        String cantidadCubiertas="";
+                case 2: servicios[0]="BALANCEO";
                         System.out.print("Cantidad: ");
-                        cantidadCubiertas=datos.nextLine();
-                        tickets[2][4]=cantidadCubiertas;
+                        cantidadCubiertas=datos.nextLine();                        
                 break;
-                case 3: tickets[1][4]=" ACEITE";
+                case 3: servicios[0]=" ACEITE";
                 break;
-                case 4: tickets[1][4]=" CUBIERTAS";
+                case 4: servicios[0]=" CUBIERTAS";
                 break;
                 default: System.out.print("no ha elegido un servicio.");
                 break;
@@ -135,6 +127,12 @@ public class SERVICIOAUMOTMORES {
             System.out.println("**** 2- NO *****************");
             System.out.println("****************************");
             servicioAdic=datos.nextInt();
+            
+            switch(servicioAdic){
+                case 1: cantidadServicios++;
+                break;
+            }
+             
        }
         
         
@@ -149,13 +147,15 @@ public class SERVICIOAUMOTMORES {
           System.out.println("======== Bienvenido ==============");
           System.out.println("Centro de Servicios Automotor CFP N°36\nZavaleta 204, C1437EYF, CABA");
           System.out.println("=====Nº ORDEN: " + numeroEspera + "===========================");
-          System.out.println("Nombre del Cliente: " + tickets[1][0]);
-          System.out.println("DNI del cliente: " + tickets[1][5]);
-          System.out.println("Marca del Vehiculo: " + tickets[1][3]);
-          System.out.println("Dominio del Vehiculo: " + tickets[1][2]);
+          System.out.println("Nombre del Cliente: " + tickets[0]);
+          System.out.println("DNI del cliente: " + tickets[1]);
+          System.out.println("Marca del Vehiculo: " + tickets[2]);
+          System.out.println("Dominio del Vehiculo: " + tickets[3]);
           System.out.println("==================================");
-//          System.out.println("Cantidad de servicios: " + cont);
-//       
+          System.out.println("Cantidad de servicios: " + cantidadServicios);
+          for(int i=0;i<servicios.length;i++){
+              System.out.print(servicios[i]);
+          }
 //System.out.println("Los servicios son : " + cont2);
 //        System.out.println("==================================");
         
