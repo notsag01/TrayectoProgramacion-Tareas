@@ -97,51 +97,47 @@ public class SERVICIOAUMOTMORES {
             default: System.out.print("no ha elegido un servicio.");
             break;
         }
-        
-       while(servicioAdic == 1){
-            System.out.println("***   SERVICIOS   ***");
-            System.out.println("1- ALINEACION    ");
-            System.out.println("2- BALANCEO      ");
-            System.out.println("3- ACEITE        ");
-            System.out.println("4- CUBIERTAS     ");
-            System.out.print("Elija un servicio((numero): ");
-            servicio=datos.nextInt();
-                          
-            switch (servicio){
-                case 1 : servicios[0]= "ALINEACION";
-                break;
-                case 2: servicios[0]="BALANCEO";
-                        System.out.print("Cantidad: ");
-                        cantidadCubiertas=datos.nextLine();                        
-                break;
-                case 3: servicios[0]=" ACEITE";
-                break;
-                case 4: servicios[0]=" CUBIERTAS";
-                break;
-                default: System.out.print("no ha elegido un servicio.");
-                break;
+       
+       for(int i=0; i<servicios.length;i++){ 
+           
+            while(servicioAdic == 1){
+                 System.out.println("***   SERVICIOS   ***");
+                 System.out.println("1- ALINEACION    ");
+                 System.out.println("2- BALANCEO      ");
+                 System.out.println("3- ACEITE        ");
+                 System.out.println("4- CUBIERTAS     ");
+                 System.out.print("Elija un servicio((numero): ");
+                 servicio=datos.nextInt();
+
+                 switch (servicio){
+                     case 1 : servicios[i]= "ALINEACION";
+                     break;
+                     case 2: servicios[i]="BALANCEO";
+                             System.out.print("Cantidad: ");
+                             cantidadCubiertas=datos.nextLine();                        
+                     break;
+                     case 3: servicios[i]=" ACEITE";
+                     break;
+                     case 4: servicios[i]=" CUBIERTAS";
+                     break;
+                     default: System.out.print("no ha elegido un servicio.");
+                     break;
+                 }
+
+                 System.out.println("DESEA AGREGAR OTRO SERVICIOS");
+                 System.out.println("**** 1- SI *****************");
+                 System.out.println("**** 2- NO *****************");
+                 System.out.println("****************************");
+                 servicioAdic=datos.nextInt();
+
+                 switch(servicioAdic){
+                     case 1: cantidadServicios++;
+                     break;
+                 }
+
             }
-            
-            System.out.println("DESEA AGREGAR OTRO SERVICIOS");
-            System.out.println("**** 1- SI *****************");
-            System.out.println("**** 2- NO *****************");
-            System.out.println("****************************");
-            servicioAdic=datos.nextInt();
-            
-            switch(servicioAdic){
-                case 1: cantidadServicios++;
-                break;
-            }
-             
        }
-        
-        
-        
-//        for(int f=0; f<tickets.length;f++){
-//            for(int c=0; c<tickets[f].length;c++){
-//                System.out.println(tickets[f][c]);
-//            }            
-//        }
+
         
           System.out.println("\n==================================");
           System.out.println("======== Bienvenido ==============");
@@ -149,7 +145,8 @@ public class SERVICIOAUMOTMORES {
           System.out.println("=====Nº ORDEN: " + numeroEspera + "===========================");
           System.out.println("Nombre del Cliente: " + tickets[0]);
           System.out.println("DNI del cliente: " + tickets[1]);
-          System.out.println("Marca del Vehiculo: " + tickets[2]);
+          System.out.println("Telefono: " + tickets[2]);
+          System.out.println("Marca del vehiculo: " + tickets[4]);
           System.out.println("Dominio del Vehiculo: " + tickets[3]);
           System.out.println("==================================");
           System.out.println("Cantidad de servicios: " + cantidadServicios);
