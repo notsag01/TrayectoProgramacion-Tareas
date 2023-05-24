@@ -57,6 +57,7 @@ public class SERVICIOAUMOTMORES {
         String dominio=" ";
         String marca="";
         int servicio;
+        String cantidadBalanceo="";
         String cantidadCubiertas="";
         int numeroEspera=nRandom.nextInt(100)+1;
         int servicioAdic=1;
@@ -114,14 +115,23 @@ public class SERVICIOAUMOTMORES {
                      break;
                      case 2: servicios[i]="BALANCEO";
                              System.out.print("Cantidad: ");
-                             cantidadCubiertas=datos.nextLine();                        
+                             cantidadBalanceo=datos.nextLine();                        
                      break;
                      case 3: servicios[i]=" ACEITE";
                      break;
                      case 4: servicios[i]=" CUBIERTAS";
+                             System.out.print("Cantidad: ");
+                             cantidadCubiertas=datos.nextLine();                        
                      break;
                      default: System.out.print("no ha elegido un servicio.");
                      break;
+                 }
+                 if(servicio==2){                     
+                             cantidadBalanceo=datos.nextLine();   
+                             System.out.println(cantidadBalanceo);
+                 }else if(servicio==4){
+                             cantidadBalanceo=datos.nextLine();   
+                             System.out.println(cantidadCubiertas);                 
                  }
 
                  System.out.println("DESEA AGREGAR OTRO SERVICIOS");
