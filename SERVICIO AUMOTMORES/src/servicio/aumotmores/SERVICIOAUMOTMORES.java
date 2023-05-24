@@ -65,10 +65,11 @@ public class SERVICIOAUMOTMORES {
         int servicio;
         String servicios ="";
         int numeroEspera=nRandom.nextInt(100)+1;
+        int servicioAdic=1;
        
         System.out.print("nombre: ");
         nombre=datos.nextLine();
-        tickets[1][0]= nombre;
+        tickets[1][0]= nombre.toUpperCase();
         System.out.print("Numero DNI: ");
         dni=datos.nextLine();
         tickets[1][5]=dni;
@@ -103,35 +104,38 @@ public class SERVICIOAUMOTMORES {
             break;
         }
         
-       
-        System.out.println("***   SERVICIOS   ***");
-        System.out.println("1- ALINEACION    ");
-        System.out.println("2- BALANCEO      ");
-        System.out.println("3- ACEITE        ");
-        System.out.println("4- CUBIERTAS     ");
-        System.out.print("Elija un servicio((numero): ");
-        servicio=datos.nextInt();
-        
-       
-       
-        switch (servicio){
-            case 1 : tickets[1][4]= "ALINEACION";
-            break;
-            case 2: 
-                    tickets[1][4]="BALANCEO";
-                    String cantidadCubiertas="";
-                    System.out.print("Cantidad: ");
-                    cantidadCubiertas=datos.nextLine();
-                    tickets[2][4]=cantidadCubiertas;
-            break;
-            case 3: tickets[1][4]=" ACEITE";
-            break;
-            case 4: tickets[1][4]=" CUBIERTAS";
-            break;
-            default: System.out.print("no ha elegido un servicio.");
-            break;
-        }
-        
+       while(servicioAdic == 1){
+            System.out.println("***   SERVICIOS   ***");
+            System.out.println("1- ALINEACION    ");
+            System.out.println("2- BALANCEO      ");
+            System.out.println("3- ACEITE        ");
+            System.out.println("4- CUBIERTAS     ");
+            System.out.print("Elija un servicio((numero): ");
+            servicio=datos.nextInt();
+                          
+            switch (servicio){
+                case 1 : tickets[1][4]= "ALINEACION";
+                break;
+                case 2: tickets[1][4]="BALANCEO";
+                        String cantidadCubiertas="";
+                        System.out.print("Cantidad: ");
+                        cantidadCubiertas=datos.nextLine();
+                        tickets[2][4]=cantidadCubiertas;
+                break;
+                case 3: tickets[1][4]=" ACEITE";
+                break;
+                case 4: tickets[1][4]=" CUBIERTAS";
+                break;
+                default: System.out.print("no ha elegido un servicio.");
+                break;
+            }
+            
+            System.out.println("DESEA AGREGAR OTRO SERVICIOS");
+            System.out.println("**** 1- SI *****************");
+            System.out.println("**** 2- NO *****************");
+            System.out.println("****************************");
+            servicioAdic=datos.nextInt();
+       }
         
         
         
