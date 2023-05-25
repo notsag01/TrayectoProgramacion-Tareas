@@ -58,7 +58,49 @@ public class SeguroAutomotor {
 //d. Adicionales de la cobertura (detalles seleccionado)
 //e. Valor de la prima total
 
+        ImageIcon portada = new ImageIcon ("src/imagen/portada.png");
+        ImageIcon data = new ImageIcon ("src/imagen/agenda.png");
+        ImageIcon eleccion = new ImageIcon ("src/imagen/eleccion.png");
+        
+        JOptionPane.showMessageDialog(null,
+                "BIENVENIDO!",
+                "ASEGURADORA PARQUE PATRICIOS",
+                JOptionPane.INFORMATION_MESSAGE,
+                portada);
 
+
+
+        //Variables a usar en JOption
+        String nombre = "";
+        String tel = "";
+        String mail = "";
+        String dominio = "";
+        String antiguedad = "";
+  
+        
+        //Pido los datos 
+        nombre = (String) JOptionPane.showInputDialog(null,
+                "Ingresa tu Nombre y apellido: ",
+                "CARGA DE DATOS",
+                JOptionPane.QUESTION_MESSAGE,
+                data,
+                null,
+                "");
+        tel = (String) JOptionPane.showInputDialog(null,
+                "Ingresa tu telefono: ",
+                "CARGA DE DATOS",
+                JOptionPane.QUESTION_MESSAGE,
+                        data,
+                null,
+                "");
+        mail = (String) JOptionPane.showInputDialog(null,
+                "Ingresa tu E-Mail: ",
+                "CARGA DE DATOS",
+                JOptionPane.QUESTION_MESSAGE,
+                data,
+                null,
+                "");
+        
     
 
     ImageIcon Fiat= new ImageIcon("src/imagen/fiat.png");
@@ -70,7 +112,7 @@ public class SeguroAutomotor {
     ImageIcon Peugeot= new ImageIcon("src/imagen/peugeot.png");
 
     Object listaMarcas []= {"FIAT", "NISSAN", "RENAULT", "CHEVROLET", "TOYOTA", "FORD", "PEUGEOT"};
-    Object marca=JOptionPane.showInputDialog(null, "Seleccione una MARCA", "MARCAS", JOptionPane.QUESTION_MESSAGE, null, listaMarcas, listaMarcas[0]);
+    Object marca=JOptionPane.showInputDialog(null, "Seleccione una MARCA", "MARCAS", JOptionPane.QUESTION_MESSAGE, eleccion, listaMarcas, listaMarcas[0]);
     System.out.print(marca);
     Object modelosFiat []= {"PULSE", "CRONOS", "TORO", "UNO", "500", "STRADA", "FIORINO"};
     Object modelosNissan []= {"KICKS", "VERSA", "MARCH", "NOTE", "MURANO", "X-TRAIL", "LEAF"};
@@ -100,7 +142,21 @@ public class SeguroAutomotor {
         
     }
 
+     dominio = (String) JOptionPane.showInputDialog(null,
+            "Ingresa tu DOMINIO",
+            "DOMINIO",
+            JOptionPane.QUESTION_MESSAGE,
+            data,
+            null,
+            "");
 
+         antiguedad = (String) JOptionPane.showInputDialog(null, //uso int para que podamos correr bien la logica 
+            "Ingrese ANTIGÜEDAD del Vehiculo \n Por favor ingrese solo números",
+            "ANTIGÜEDAD",
+            JOptionPane.QUESTION_MESSAGE,
+            data,
+            null,
+            "");
 
 
 
