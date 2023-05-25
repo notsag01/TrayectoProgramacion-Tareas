@@ -57,27 +57,34 @@ public class SeguroAutomotor {
 //c. Tipo de cobertura (detalle seleccionado)
 //d. Adicionales de la cobertura (detalles seleccionado)
 //e. Valor de la prima total
+        
 
+
+        // IMAGENES  *******************************************************
+        ImageIcon Fiat= new ImageIcon("src/imagen/fiat.png");
+        ImageIcon Nissan= new ImageIcon("src/imagen/nissan.png");
+        ImageIcon Renault= new ImageIcon("src/imagen/renault.png");
+        ImageIcon Chevrolet= new ImageIcon("src/imagen/chevrolet.png");
+        ImageIcon Toyota= new ImageIcon("src/imagen/toyota.png");
+        ImageIcon Ford= new ImageIcon("src/imagen/ford.png");
+        ImageIcon Peugeot= new ImageIcon("src/imagen/peugeot.png");
         ImageIcon portada = new ImageIcon ("src/imagen/portada.png");
         ImageIcon data = new ImageIcon ("src/imagen/agenda.png");
         ImageIcon eleccion = new ImageIcon ("src/imagen/eleccion.png");
-        
-        JOptionPane.showMessageDialog(null,
-                "BIENVENIDO!",
-                "ASEGURADORA PARQUE PATRICIOS",
-                JOptionPane.INFORMATION_MESSAGE,
-                portada);
-
-
 
         //Variables a usar en JOption
         String nombre = "";
         String tel = "";
         String mail = "";
         String dominio = "";
-        String antiguedad = "";
-  
+        String antiguedad = "";        
         
+        JOptionPane.showMessageDialog(null,
+                "BIENVENIDO!",
+                "ASEGURADORA PARQUE PATRICIOS",
+                JOptionPane.INFORMATION_MESSAGE,
+                portada);
+              
         //Pido los datos 
         nombre = (String) JOptionPane.showInputDialog(null,
                 "Ingresa tu Nombre y apellido: ",
@@ -101,62 +108,49 @@ public class SeguroAutomotor {
                 null,
                 "");
         
-    
+        Object listaMarcas []= {"FIAT", "NISSAN", "RENAULT", "CHEVROLET", "TOYOTA", "FORD", "PEUGEOT"};
+        Object marca=JOptionPane.showInputDialog(null, "Seleccione una MARCA", "MARCAS", JOptionPane.QUESTION_MESSAGE, eleccion, listaMarcas, listaMarcas[0]);
+        Object modelosFiat []= {"PULSE", "CRONOS", "TORO", "UNO", "500", "STRADA", "FIORINO"};
+        Object modelosNissan []= {"KICKS", "VERSA", "MARCH", "NOTE", "MURANO", "X-TRAIL", "LEAF"};
+        Object modelosRenault []= {"SANDERO", "LOGAN", "KANGOO", "KWID", "STEPWEY", "ALASKAN", "DUSTER"};
+        Object modelosChevrolet []= {"CRUEZE", "ONIX", "TRACKER", "S10", "SPIN", "PRISMA", "COBALT"};
+        Object modelosToyota []= {"HILUX", "COROLLA", "COROLLA CROSS", "ETIOS", "SW4", "PRIUS", "INNOVA"};
+        Object modelosFord []= {"RANGER", "ECOSPORT", "KA", "FIESTA", "FOCUS", "MONDEO", "MUSTANG"};
+        Object modelosPeugeot []= {"208", "207", "308", "408", "PARTNER", "PATAGONIC", "EXPERT"};
 
-    ImageIcon Fiat= new ImageIcon("src/imagen/fiat.png");
-    ImageIcon Nissan= new ImageIcon("src/imagen/nissan.png");
-    ImageIcon Renault= new ImageIcon("src/imagen/renault.png");
-    ImageIcon Chevrolet= new ImageIcon("src/imagen/chevrolet.png");
-    ImageIcon Toyota= new ImageIcon("src/imagen/toyota.png");
-    ImageIcon Ford= new ImageIcon("src/imagen/ford.png");
-    ImageIcon Peugeot= new ImageIcon("src/imagen/peugeot.png");
+        if (marca.equals("FIAT")){
+                Object modelo =JOptionPane.showInputDialog(null, "Seleccione un MODELO", "MODELO", JOptionPane.QUESTION_MESSAGE, Fiat, modelosFiat, modelosFiat[0]);
+        }else if(marca.equals("NISSAN")){
+                Object modelo =JOptionPane.showInputDialog(null, "Seleccione un MODELO", "MODELO", JOptionPane.QUESTION_MESSAGE, Nissan, modelosNissan, modelosNissan[0]);
+        }else if(marca.equals("RENAULT")){
+                Object modelo =JOptionPane.showInputDialog(null, "Seleccione un MODELO", "MODELO", JOptionPane.QUESTION_MESSAGE, Renault, modelosRenault, modelosRenault[0]);
+        }else if(marca.equals("CHEVROLET")){
+                Object modelo =JOptionPane.showInputDialog(null, "Seleccione un MODELO", "MODELO", JOptionPane.QUESTION_MESSAGE, Chevrolet, modelosChevrolet, modelosChevrolet[0]);    
+        }else if(marca.equals("TOYOTA")){
+                Object modelo =JOptionPane.showInputDialog(null, "Seleccione un MODELO", "MODELO", JOptionPane.QUESTION_MESSAGE, Toyota, modelosToyota, modelosToyota[0]);        
+        }else if(marca.equals("FORD")){
+                Object modelo =JOptionPane.showInputDialog(null, "Seleccione un MODELO", "MODELO", JOptionPane.QUESTION_MESSAGE, Ford, modelosFord, modelosFord[0]);    
+        }else if(marca.equals("PEUGEOT")){
+                Object modelo =JOptionPane.showInputDialog(null, "Seleccione un MODELO", "MODELO", JOptionPane.QUESTION_MESSAGE, Peugeot, modelosPeugeot, modelosPeugeot[0]);        
+        }
 
-    Object listaMarcas []= {"FIAT", "NISSAN", "RENAULT", "CHEVROLET", "TOYOTA", "FORD", "PEUGEOT"};
-    Object marca=JOptionPane.showInputDialog(null, "Seleccione una MARCA", "MARCAS", JOptionPane.QUESTION_MESSAGE, eleccion, listaMarcas, listaMarcas[0]);
-    System.out.print(marca);
-    Object modelosFiat []= {"PULSE", "CRONOS", "TORO", "UNO", "500", "STRADA", "FIORINO"};
-    Object modelosNissan []= {"KICKS", "VERSA", "MARCH", "NOTE", "MURANO", "X-TRAIL", "LEAF"};
-    Object modelosRenault []= {"SANDERO", "LOGAN", "KANGOO", "KWID", "STEPWEY", "ALASKAN", "DUSTER"};
-    Object modelosChevrolet []= {"CRUEZE", "ONIX", "TRACKER", "S10", "SPIN", "PRISMA", "COBALT"};
-    Object modelosToyota []= {"HILUX", "COROLLA", "COROLLA CROSS", "ETIOS", "SW4", "PRIUS", "INNOVA"};
-    Object modelosFord []= {"RANGER", "ECOSPORT", "KA", "FIESTA", "FOCUS", "MONDEO", "MUSTANG"};
-    Object modelosPeugeot []= {"208", "207", "308", "408", "PARTNER", "PATAGONIC", "EXPERT"};
-    
-    if (marca.equals("FIAT")){
-            Object modelo =JOptionPane.showInputDialog(null, "Seleccione un MODELO", "MODELO", JOptionPane.QUESTION_MESSAGE, Fiat, modelosFiat, modelosFiat[0]);
-    }else if(marca.equals("NISSAN")){
-            Object modelo =JOptionPane.showInputDialog(null, "Seleccione un MODELO", "MODELO", JOptionPane.QUESTION_MESSAGE, Nissan, modelosNissan, modelosNissan[0]);
-    }else if(marca.equals("RENAULT")){
-            Object modelo =JOptionPane.showInputDialog(null, "Seleccione un MODELO", "MODELO", JOptionPane.QUESTION_MESSAGE, Renault, modelosRenault, modelosRenault[0]);
-    }else if(marca.equals("CHEVROLET")){
-            Object modelo =JOptionPane.showInputDialog(null, "Seleccione un MODELO", "MODELO", JOptionPane.QUESTION_MESSAGE, Chevrolet, modelosChevrolet, modelosChevrolet[0]);
-    
-    }else if(marca.equals("TOYOTA")){
-            Object modelo =JOptionPane.showInputDialog(null, "Seleccione un MODELO", "MODELO", JOptionPane.QUESTION_MESSAGE, Toyota, modelosToyota, modelosToyota[0]);
+         dominio = (String) JOptionPane.showInputDialog(null,
+                "Ingresa tu DOMINIO",
+                "DOMINIO",
+                JOptionPane.QUESTION_MESSAGE,
+                data,
+                null,
+                "");
+
+        antiguedad = (String) JOptionPane.showInputDialog(null, //uso int para que podamos correr bien la logica 
+           "Ingrese ANTIGÜEDAD del Vehiculo \n Por favor ingrese solo números",
+           "ANTIGÜEDAD",
+           JOptionPane.QUESTION_MESSAGE,
+           data,
+           null,
+           "");
         
-    }else if(marca.equals("FORD")){
-            Object modelo =JOptionPane.showInputDialog(null, "Seleccione un MODELO", "MODELO", JOptionPane.QUESTION_MESSAGE, Ford, modelosFord, modelosFord[0]);
-    
-    }else if(marca.equals("PEUGEOT")){
-            Object modelo =JOptionPane.showInputDialog(null, "Seleccione un MODELO", "MODELO", JOptionPane.QUESTION_MESSAGE, Peugeot, modelosPeugeot, modelosPeugeot[0]);
-        
-    }
-
-     dominio = (String) JOptionPane.showInputDialog(null,
-            "Ingresa tu DOMINIO",
-            "DOMINIO",
-            JOptionPane.QUESTION_MESSAGE,
-            data,
-            null,
-            "");
-
-         antiguedad = (String) JOptionPane.showInputDialog(null, //uso int para que podamos correr bien la logica 
-            "Ingrese ANTIGÜEDAD del Vehiculo \n Por favor ingrese solo números",
-            "ANTIGÜEDAD",
-            JOptionPane.QUESTION_MESSAGE,
-            data,
-            null,
-            "");
+        System.out.println(marca  + nombre + dominio + antiguedad);
 
 
 
