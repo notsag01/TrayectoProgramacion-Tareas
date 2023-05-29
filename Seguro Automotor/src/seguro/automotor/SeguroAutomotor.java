@@ -77,7 +77,10 @@ public class SeguroAutomotor {
         String tel = "";
         String mail = "";
         String dominio = "";
-        String antiguedad = "";        
+        int antiguedad = 0;    
+              
+        int cargoantiguedad =0;
+        String numeroingresado ="";
         
         JOptionPane.showMessageDialog(null,
                 "BIENVENIDO!",
@@ -142,17 +145,73 @@ public class SeguroAutomotor {
                 null,
                 "");
 
-        antiguedad = (String) JOptionPane.showInputDialog(null, //uso int para que podamos correr bien la logica 
+           numeroingresado = (String) JOptionPane.showInputDialog(null, //uso int para que podamos correr bien la logica 
            "Ingrese ANTIGÜEDAD del Vehiculo \n Por favor ingrese solo números",
            "ANTIGÜEDAD",
            JOptionPane.QUESTION_MESSAGE,
-           data,
+           null,
            null,
            "");
         
-        System.out.println(marca  + nombre + dominio + antiguedad);
+        System.out.println(marca  + nombre + dominio + antiguedad); // esto se  deberia eliminar 
 
+ 
+    
+     antiguedad = Integer.parseInt(numeroingresado);
 
+    if (antiguedad <= 5 ){
+            cargoantiguedad = 500;
+    }else if (antiguedad < 10){
+            cargoantiguedad =1000;    
+     }else if (antiguedad <= 15){
+            cargoantiguedad = 1500;
+    }else if (antiguedad <= 20){
+            cargoantiguedad = 2000;}
+    else {
+            JOptionPane.showMessageDialog(null, "Lamentamos informar que no podremos asegurar su vehículo", "Error", JOptionPane.ERROR_MESSAGE);
+    }
+    
+    JOptionPane.showMessageDialog(null,
+                cargoantiguedad + "$$ ",
+                "CARGA DE DATOS",
+                JOptionPane.QUESTION_MESSAGE);
+        
+    
+    Object coberturas [] = {"Tercero completo","Todo riesgo","Responsabilidad civil"};
+    
+    String coberturaElegida;
+        coberturaElegida = (String) JOptionPane.showInputDialog(null,
+                "Selecciona una opcion",
+                "Tipos de cobertura disponibles",
+                JOptionPane.QUESTION_MESSAGE,
+                null,
+                coberturas,
+                coberturas [0]);
+        
+        
+        
+    Object adicionales[] = {"Granizo", "Llantas deportivas", "Asistencia mecanica", "Localizador GPS", "Ninguna"};
+    Object adicionalElegido[] = new String[adicionales.length];
+    int contador = 0;
+    int cargoAdicionales = 0;
+
+                for (int i = 0; i < adicionales.length; i++) {
+                        if (contador % 2 == 0) {
+                            cargoAdicionales += 300;}
+
+                    adicionalElegido[i] = (String) JOptionPane.showInputDialog(null,
+                                "Seleccionar adicionales",
+                                "ADICIONALES",
+                                JOptionPane.QUESTION_MESSAGE,
+                                null,
+                                adicionales,
+                                adicionales[0]);
+
+                                        if (adicionalElegido[i].equals("Ninguna")) {
+                                          break;}
+
+    contador++;
+}
 
 
 
