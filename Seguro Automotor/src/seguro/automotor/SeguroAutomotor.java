@@ -82,6 +82,8 @@ public class SeguroAutomotor {
         int cargoantiguedad =0;
         String antiguedadIngresada ="";
         String coberturaElegida="";
+        int totalPoliza=0;
+        
         
         JOptionPane.showMessageDialog(null,
                 "BIENVENIDO!",
@@ -145,7 +147,7 @@ public class SeguroAutomotor {
                 data,
                 null,
                 "");
-
+         
         antiguedadIngresada = (String) JOptionPane.showInputDialog(null, //uso int para que podamos correr bien la logica 
         "Ingrese ANTIGÜEDAD del Vehiculo \n Por favor ingrese solo números",
         "ANTIGÜEDAD",
@@ -157,61 +159,77 @@ public class SeguroAutomotor {
         System.out.println(marca  + nombre + dominio + antiguedad); // esto se  deberia eliminar 
     
         antiguedad = Integer.parseInt(antiguedadIngresada);
+        
+       if(antiguedad > 20){
+            JOptionPane.showMessageDialog(null, "Lamentamos informar que no podremos asegurar su vehículo", "Error", JOptionPane.ERROR_MESSAGE);
+       }else{
+       
+            if  (antiguedad <= 5 ){
+                    totalPoliza = 500;
+                    System.out.println(totalPoliza);
+            }else if (antiguedad < 10){
+                    totalPoliza =1000;    
+             }else if (antiguedad <= 15){
+                    totalPoliza = 1500;
+            }else if (antiguedad <= 20){
+                    totalPoliza = 2000;}
 
-       if (antiguedad <= 5 ){
-               cargoantiguedad = 500;
-       }else if (antiguedad < 10){
-               cargoantiguedad =1000;    
-        }else if (antiguedad <= 15){
-               cargoantiguedad = 1500;
-       }else if (antiguedad <= 20){
-               cargoantiguedad = 2000;}
-       else {
-               JOptionPane.showMessageDialog(null, "Lamentamos informar que no podremos asegurar su vehículo", "Error", JOptionPane.ERROR_MESSAGE);
+
+            //YO ESTO LO SACARIA NO ES ALGO QUE CREO QUE DEBA SABER EL USUARIO *************************************************************
+    //       JOptionPane.showMessageDialog(null,
+    //                   cargoantiguedad + "$$ ",
+    //                   "CARGA DE DATOS",
+    //                   JOptionPane.QUESTION_MESSAGE);
+    //**************************************************************************************************************************************
+            //TIPO DE COBERTURA ***
+           Object coberturas [] = {"Tercero completo","Todo riesgo","Responsabilidad civil"};
+           JOptionPane.showMessageDialog(null, "Tercero completo: $2000 \n Todo riesto : $3000\n Responsabilida civil : $1000",
+                   "PRECIOS COBERTURAS", JOptionPane.INFORMATION_MESSAGE, data);
+           coberturaElegida = (String) JOptionPane.showInputDialog(null,
+                        "Selecciona una opcion",
+                        "Tipos de cobertura disponibles",
+                        JOptionPane.QUESTION_MESSAGE,
+                        null,
+                        coberturas,
+                        coberturas [0]);
+           
+           if(coberturaElegida.equals("Tercero completo")){
+               totalPoliza = totalPoliza + 2000;
+           }else if(coberturaElegida.equals("Todo riesgo")){
+               totalPoliza = totalPoliza + 3000;
+           }else if(coberturaElegida.equals("Responsabilidad civil")){
+               totalPoliza = totalPoliza + 1000;               
+           }
+           System.out.println(totalPoliza
+           );
+           // ADICIONALES ***
+            Object adicionales[] = {"Granizo", "Llantas deportivas", "Asistencia mecanica", "Localizador GPS", "Ninguna"};
+            Object adicionalElegido[] = new String[adicionales.length];
+            int contador = 0;
+            int cargoAdicionales = 0;
+
+            for (int i = 0; i < adicionales.length; i++) {
+                    if (contador % 2 == 0) {
+                        cargoAdicionales += 300;}
+
+                adicionalElegido[i] = (String) JOptionPane.showInputDialog(null,
+                                "Seleccionar adicionales",
+                                "ADICIONALES",
+                                JOptionPane.QUESTION_MESSAGE,
+                                null,
+                                adicionales,
+                                adicionales[0]);
+                                System.out.println(cargoAdicionales); //TESTIGO
+
+                                        if (adicionalElegido[i].equals("Ninguna")) {
+                                          break;}
+
+                contador++;
+            }
        }
-
-       JOptionPane.showMessageDialog(null,
-                   cargoantiguedad + "$$ ",
-                   "CARGA DE DATOS",
-                   JOptionPane.QUESTION_MESSAGE);
-
-
-       Object coberturas [] = {"Tercero completo","Todo riesgo","Responsabilidad civil"};
-
-       coberturaElegida = (String) JOptionPane.showInputDialog(null,
-                    "Selecciona una opcion",
-                    "Tipos de cobertura disponibles",
-                    JOptionPane.QUESTION_MESSAGE,
-                    null,
-                    coberturas,
-                    coberturas [0]);
-
-
-
-        Object adicionales[] = {"Granizo", "Llantas deportivas", "Asistencia mecanica", "Localizador GPS", "Ninguna"};
-        Object adicionalElegido[] = new String[adicionales.length];
-        int contador = 0;
-        int cargoAdicionales = 0;
-
-        for (int i = 0; i < adicionales.length; i++) {
-                if (contador % 2 == 0) {
-                    cargoAdicionales += 300;}
-
-            adicionalElegido[i] = (String) JOptionPane.showInputDialog(null,
-                            "Seleccionar adicionales",
-                            "ADICIONALES",
-                            JOptionPane.QUESTION_MESSAGE,
-                            null,
-                            adicionales,
-                            adicionales[0]);
-                            System.out.println(cargoAdicionales); //TESTIGO
-
-                                    if (adicionalElegido[i].equals("Ninguna")) {
-                                      break;}
-
-            contador++;
-        }
-                            System.out.println(adicionalElegido); //TESTIGO
+        
+       
+       
 
 
 
