@@ -200,8 +200,7 @@ public class SeguroAutomotor {
            }else if(coberturaElegida.equals("Responsabilidad civil")){
                totalPoliza = totalPoliza + 1000;               
            }
-           System.out.println(totalPoliza
-           );
+           
            // ADICIONALES ***
             Object adicionales[] = {"Granizo", "Llantas deportivas", "Asistencia mecanica", "Localizador GPS", "Ninguna"};
             Object adicionalElegido[] = new String[adicionales.length];
