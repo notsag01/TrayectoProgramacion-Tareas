@@ -80,7 +80,7 @@ public class SeguroAutomotor {
         int antiguedad = 0;    
               
         int cargoantiguedad =0;
-        String numeroingresado ="";
+        String antiguedadIngresada ="";
         
         JOptionPane.showMessageDialog(null,
                 "BIENVENIDO!",
@@ -145,7 +145,7 @@ public class SeguroAutomotor {
                 null,
                 "");
 
-           numeroingresado = (String) JOptionPane.showInputDialog(null, //uso int para que podamos correr bien la logica 
+           antiguedadIngresada = (String) JOptionPane.showInputDialog(null, //uso int para que podamos correr bien la logica 
            "Ingrese ANTIGÜEDAD del Vehiculo \n Por favor ingrese solo números",
            "ANTIGÜEDAD",
            JOptionPane.QUESTION_MESSAGE,
@@ -157,7 +157,7 @@ public class SeguroAutomotor {
 
  
     
-     antiguedad = Integer.parseInt(numeroingresado);
+     antiguedad = Integer.parseInt(antiguedadIngresada);
 
     if (antiguedad <= 5 ){
             cargoantiguedad = 500;
