@@ -206,11 +206,13 @@ public class SeguroAutomotor {
             Object adicionalElegido[] = new String[adicionales.length];
             int contador = 0;
             int cargoAdicionales = 0;
-
-            for (int i = 0; i < adicionales.length; i++) {
+            boolean nuevoAdicional= true;
+            
+            while(nuevoAdicional==true){
                     if (contador % 2 == 0) {
                         cargoAdicionales += 300;}
-
+                
+                for(int i=0; i<=adicionalElegido.length; i++){    
                 adicionalElegido[i] = (String) JOptionPane.showInputDialog(null,
                                 "Seleccionar adicionales",
                                 "ADICIONALES",
@@ -218,10 +220,10 @@ public class SeguroAutomotor {
                                 null,
                                 adicionales,
                                 adicionales[0]);
-                                System.out.println(cargoAdicionales); //TESTIGO
-
-                                        if (adicionalElegido[i].equals("Ninguna")) {
-                                          break;}
+                System.out.println(adicionalElegido[i]);
+                if (adicionalElegido[0].equals("Ninguna")) {
+                  nuevoAdicional= false;}
+                }
 
                 contador++;
             }
