@@ -209,23 +209,39 @@ public class SeguroAutomotor {
             boolean nuevoAdicional= true;
             
             while(nuevoAdicional==true){
-                    if (contador % 2 == 0) {
-                        cargoAdicionales += 300;}
+                
+                if (contador % 2 == 0) {
+                    cargoAdicionales += 300;}
                 
                 for(int i=0; i<=adicionalElegido.length; i++){    
-                adicionalElegido[i] = (String) JOptionPane.showInputDialog(null,
-                                "Seleccionar adicionales",
-                                "ADICIONALES",
-                                JOptionPane.QUESTION_MESSAGE,
-                                null,
-                                adicionales,
-                                adicionales[0]);
-                System.out.println(adicionalElegido[i]);
-                if (adicionalElegido[0].equals("Ninguna")) {
-                  nuevoAdicional= false;}
-                }
+                    String adic = (String) JOptionPane.showInputDialog(null,
+                                    "Seleccionar adicionales",
+                                    "ADICIONALES",
+                                    JOptionPane.QUESTION_MESSAGE,
+                                    null,
+                                    adicionales,
+                                    adicionales[i]);
+                    //System.out.println(adicionalElegido[i]);
+                    if (adic.equals("Ninguna")) {
+                      nuevoAdicional= false;}
+                    adicionalElegido[i] = adic;
+                    int modo = JOptionPane.showOptionDialog(null, "Eligue una opcion", "BLA",
+                                         JOptionPane.YES_NO_CANCEL_OPTION,
+                                         JOptionPane.INFORMATION_MESSAGE, null,
+                                         new Object[]{"AGREGAR", "NO, GRACIAS"}, "AGREGAR");
 
-                contador++;
+                    if(modo == 1){
+                        nuevoAdicional = false;                                                   
+                    }
+                    
+                    break;
+                }
+                
+                    contador++;
+                    }
+            
+                for (int i=0; i<adicionalElegido.length;i++){
+                    System.out.println(adicionalElegido[i]);
             }
        }
         
