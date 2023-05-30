@@ -209,7 +209,7 @@ public class SeguroAutomotor {
             String adicionales[] = {"Granizo", "Llantas deportivas", "Asistencia mecanica", "Localizador GPS", "Ninguna"};
             String adicionalElegido[] = new String[adicionales.length];
             
-//            while(nuevoAdicional==true){
+            while(nuevoAdicional==true){
                 
                 if (contador % 2 == 0) {
                     cargoAdicionales += 300;}
@@ -230,6 +230,8 @@ public class SeguroAutomotor {
                                          JOptionPane.YES_NO_CANCEL_OPTION,
                                          JOptionPane.INFORMATION_MESSAGE, null,
                                          new Object[]{"AGREGAR", "NO, GRACIAS"}, "AGREGAR");
+                    System.out.println(modo);
+                    
 
                     if(modo == 1){
                         nuevoAdicional = false;                                                   
@@ -239,7 +241,7 @@ public class SeguroAutomotor {
                 }
                 
                     contador++;
-//                    }
+            }
             
                 for (int i=0; i<adicionalElegido.length;i++){
                     System.out.println(adicionalElegido[i]);
