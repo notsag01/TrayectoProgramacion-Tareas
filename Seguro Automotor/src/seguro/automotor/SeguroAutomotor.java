@@ -84,6 +84,10 @@ public class SeguroAutomotor {
         String coberturaElegida="";
         int totalPoliza=0;
         
+        //VARIALES DE LOS ADICIONALES
+        int contador = 0;
+        int cargoAdicionales = 0;
+        boolean nuevoAdicional= true;
         
         JOptionPane.showMessageDialog(null,
                 "BIENVENIDO!",
@@ -202,18 +206,15 @@ public class SeguroAutomotor {
            }
            
            // ADICIONALES ***
-            Object adicionales[] = {"Granizo", "Llantas deportivas", "Asistencia mecanica", "Localizador GPS", "Ninguna"};
-            Object adicionalElegido[] = new String[adicionales.length];
-            int contador = 0;
-            int cargoAdicionales = 0;
-            boolean nuevoAdicional= true;
+            String adicionales[] = {"Granizo", "Llantas deportivas", "Asistencia mecanica", "Localizador GPS", "Ninguna"};
+            String adicionalElegido[] = new String[adicionales.length];
             
-            while(nuevoAdicional==true){
+//            while(nuevoAdicional==true){
                 
                 if (contador % 2 == 0) {
                     cargoAdicionales += 300;}
                 
-                for(int i=0; i<=adicionalElegido.length; i++){    
+                for(int i=0; i<=adicionales.length; i++){    
                     String adic = (String) JOptionPane.showInputDialog(null,
                                     "Seleccionar adicionales",
                                     "ADICIONALES",
@@ -238,7 +239,7 @@ public class SeguroAutomotor {
                 }
                 
                     contador++;
-                    }
+//                    }
             
                 for (int i=0; i<adicionalElegido.length;i++){
                     System.out.println(adicionalElegido[i]);
