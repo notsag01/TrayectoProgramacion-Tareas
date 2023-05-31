@@ -261,7 +261,7 @@ public class SeguroAutomotor {
                 if( cantidadAdicionales % 2 == 0){
                     totalPoliza-=300;
                 }
-            System.out.println(totalPoliza);
+            System.out.println(totalPoliza); ///TESTIGO ********************************************
                     
             
             
