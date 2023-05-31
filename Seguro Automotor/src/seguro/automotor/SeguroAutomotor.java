@@ -4,7 +4,7 @@ package seguro.automotor;
 import java.util.Arrays;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
-
+import java.util.ArrayList;
 
 public class SeguroAutomotor {
 
@@ -208,30 +208,28 @@ public class SeguroAutomotor {
            
            // ADICIONALES ***
             String adicionales[] = {"Granizo", "Llantas deportivas", "Asistencia mecanica", "Localizador GPS", "Ninguna"};
-            String adicionalElegido[] = new String[adicionales.length];    
+              ArrayList<String> adicionalElegido = new ArrayList<String>();   
             
             while(nuevoAdicional== true){    
-                for(int i=0; i<=adicionales.length; i++){    
-                     adicionalElegido[i] = (String) JOptionPane.showInputDialog(null,
-                                    "Seleccionar adicionales",
-                                    "ADICIONALES",
-                                    JOptionPane.QUESTION_MESSAGE,
-                                    null,
-                                    adicionales,
-                                    adicionales[0]);
-                    System.out.println(Arrays.toString(adicionalElegido));
-                   
-                 
-                    int agregarServicio = JOptionPane.showOptionDialog(null, "Eligue una opcion", "BLA",
-                                         JOptionPane.YES_NO_CANCEL_OPTION,
-                                         JOptionPane.INFORMATION_MESSAGE, null,
-                                         new Object[]{"AGREGAR", "NO, GRACIAS"}, "AGREGAR");
-                     System.out.println(agregarServicio);
-                    if(agregarServicio == 1){
-                         break;
-                    }
-                    
-                }
+                String adicional= (String) JOptionPane.showInputDialog(null,
+                               "Seleccionar adicionales",
+                               "ADICIONALES",
+                               JOptionPane.QUESTION_MESSAGE,
+                               null,
+                               adicionales,
+                               adicionales[0]);
+                adicionalElegido.add(adicional);
+               System.out.println(adicionalElegido);
+
+
+               int agregarServicio = JOptionPane.showOptionDialog(null, "Eligue una opcion", "BLA",
+                                    JOptionPane.YES_NO_CANCEL_OPTION,
+                                    JOptionPane.INFORMATION_MESSAGE, null,
+                                    new Object[]{"AGREGAR", "NO, GRACIAS"}, "AGREGAR");
+                System.out.println(agregarServicio);
+               if(agregarServicio == 1){
+                    nuevoAdicional=false;
+               }                    
             }    
                     
             
