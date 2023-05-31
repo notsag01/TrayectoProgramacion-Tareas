@@ -1,6 +1,7 @@
 
 package seguro.automotor;
 
+import java.util.Arrays;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
@@ -207,45 +208,34 @@ public class SeguroAutomotor {
            
            // ADICIONALES ***
             String adicionales[] = {"Granizo", "Llantas deportivas", "Asistencia mecanica", "Localizador GPS", "Ninguna"};
-            String adicionalElegido[] = new String[adicionales.length];
+            String adicionalElegido[] = new String[adicionales.length];    
             
-            while(nuevoAdicional==true){
-                
-                if (contador % 2 == 0) {
-                    cargoAdicionales += 300;}
-                
+            while(nuevoAdicional== true){    
                 for(int i=0; i<=adicionales.length; i++){    
-                    String adic = (String) JOptionPane.showInputDialog(null,
+                     adicionalElegido[i] = (String) JOptionPane.showInputDialog(null,
                                     "Seleccionar adicionales",
                                     "ADICIONALES",
                                     JOptionPane.QUESTION_MESSAGE,
                                     null,
                                     adicionales,
                                     adicionales[0]);
-                    //System.out.println(adicionalElegido[i]);
-                    if (adic.equals("Ninguna")) {
-                      nuevoAdicional= false;}
-                    adicionalElegido[i] = adic;
-                    int modo = JOptionPane.showOptionDialog(null, "Eligue una opcion", "BLA",
+                    System.out.println(Arrays.toString(adicionalElegido));
+                   
+                 
+                    int agregarServicio = JOptionPane.showOptionDialog(null, "Eligue una opcion", "BLA",
                                          JOptionPane.YES_NO_CANCEL_OPTION,
                                          JOptionPane.INFORMATION_MESSAGE, null,
                                          new Object[]{"AGREGAR", "NO, GRACIAS"}, "AGREGAR");
-                    System.out.println(modo);
-                    
-
-                    if(modo == 1){
-                        nuevoAdicional = false;                                                   
+                     System.out.println(agregarServicio);
+                    if(agregarServicio == 1){
+                         break;
                     }
                     
-                    break;
                 }
-                
-                    contador++;
-            }
+            }    
+                    
             
-                for (int i=0; i<adicionalElegido.length;i++){
-                    System.out.println(adicionalElegido[i]);
-            }
+            
        }
         
        
