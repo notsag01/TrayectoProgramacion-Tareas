@@ -231,6 +231,9 @@ public class SeguroAutomotor {
                     nuevoAdicional=false;
                }                    
             }    
+            for(int i=0;i<adicionalElegido.size();i++){
+                System.out.println(adicionalElegido.get(i));
+            }
                     
             
             
