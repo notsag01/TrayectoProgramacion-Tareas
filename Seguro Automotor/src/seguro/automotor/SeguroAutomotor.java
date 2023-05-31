@@ -78,8 +78,11 @@ public class SeguroAutomotor {
         String tel = "";
         String mail = "";
         String dominio = "";
-        int antiguedad = 0;    
-              
+        int checkNombre= 0;
+        int checkTel = 0;
+        
+        //Variables para los calculos
+        int antiguedad = 0;                  
         int cargoantiguedad =0;
         String antiguedadIngresada ="";
         String coberturaElegida="";
@@ -97,20 +100,36 @@ public class SeguroAutomotor {
                 portada);
               
         //Pido los datos 
-        nombre = (String) JOptionPane.showInputDialog(null,
-                "Ingresa tu Nombre y apellido: ",
-                "CARGA DE DATOS",
-                JOptionPane.QUESTION_MESSAGE,
-                data,
-                null,
-                "");
-        tel = (String) JOptionPane.showInputDialog(null,
-                "Ingresa tu telefono: ",
-                "CARGA DE DATOS",
-                JOptionPane.QUESTION_MESSAGE,
-                        data,
-                null,
-                "");
+        do{
+            nombre = (String) JOptionPane.showInputDialog(null,
+                    "Ingresa tu Nombre y apellido: ",
+                    "CARGA DE DATOS",
+                    JOptionPane.QUESTION_MESSAGE,
+                    data,
+                    null,
+                    "");
+                if(nombre.equals("")){
+                    JOptionPane.showMessageDialog(null, "El nombre es obligatorio", "ERROR", JOptionPane.ERROR_MESSAGE);
+                }else{
+                    checkNombre = 1;
+                }
+        }while(checkNombre == 0);
+        
+        do{
+            tel = (String) JOptionPane.showInputDialog(null,
+                    "Ingresa tu telefono: ",
+                    "CARGA DE DATOS",
+                    JOptionPane.QUESTION_MESSAGE,
+                            data,
+                    null,
+                    "");
+            if(tel.equals("")){
+                    JOptionPane.showMessageDialog(null, "El telefno es obligatorio", "ERROR", JOptionPane.ERROR_MESSAGE);
+                }else{
+                    checkTel = 1;
+                }
+        }while(checkTel == 0);
+        
         mail = (String) JOptionPane.showInputDialog(null,
                 "Ingresa tu E-Mail: ",
                 "CARGA DE DATOS",
