@@ -221,7 +221,7 @@ public class SeguroAutomotor {
                                     JOptionPane.QUESTION_MESSAGE,
                                     null,
                                     adicionales,
-                                    adicionales[i]);
+                                    adicionales[0]);
                     //System.out.println(adicionalElegido[i]);
                     if (adic.equals("Ninguna")) {
                       nuevoAdicional= false;}
