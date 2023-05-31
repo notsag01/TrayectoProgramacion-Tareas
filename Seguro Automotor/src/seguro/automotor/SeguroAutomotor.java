@@ -179,13 +179,6 @@ public class SeguroAutomotor {
             }else if (antiguedad <= 20){
                     totalPoliza = 2000;}
 
-
-            //YO ESTO LO SACARIA NO ES ALGO QUE CREO QUE DEBA SABER EL USUARIO *************************************************************
-    //       JOptionPane.showMessageDialog(null,
-    //                   cargoantiguedad + "$$ ",
-    //                   "CARGA DE DATOS",
-    //                   JOptionPane.QUESTION_MESSAGE);
-    //**************************************************************************************************************************************
             //TIPO DE COBERTURA ***
            Object coberturas [] = {"Tercero completo","Todo riesgo","Responsabilidad civil"};
            JOptionPane.showMessageDialog(null, "Tercero completo: $2000 \n Todo riesto : $3000\n Responsabilida civil : $1000",
@@ -209,6 +202,11 @@ public class SeguroAutomotor {
            // ADICIONALES ***
             String adicionales[] = {"Granizo", "Llantas deportivas", "Asistencia mecanica", "Localizador GPS", "Ninguna"};
               ArrayList<String> adicionalElegido = new ArrayList<String>();   
+              
+            JOptionPane.showMessageDialog(null, "*Granizo \n *Llantas Deportivas \n *Asistencia Mecánica \n *Localizador GPS ",
+                   "SERVICIOS ADICIONALES", JOptionPane.INFORMATION_MESSAGE, data);  
+            JOptionPane.showMessageDialog(null, "*Cada adicional cuesta $300, \n pero si elige 2, \n el segundo ES GRATIS!",
+                   "SERVICIOS ADICIONALES", JOptionPane.INFORMATION_MESSAGE, data);  
             
             while(nuevoAdicional== true){    
                 String adicional= (String) JOptionPane.showInputDialog(null,
@@ -218,15 +216,13 @@ public class SeguroAutomotor {
                                null,
                                adicionales,
                                adicionales[0]);
+                //agregamos a la lista 
                 adicionalElegido.add(adicional);
                System.out.println(adicionalElegido);
-
-
                int agregarServicio = JOptionPane.showOptionDialog(null, "Eligue una opcion", "BLA",
                                     JOptionPane.YES_NO_CANCEL_OPTION,
                                     JOptionPane.INFORMATION_MESSAGE, null,
-                                    new Object[]{"AGREGAR", "NO, GRACIAS"}, "AGREGAR");
-                System.out.println(agregarServicio);
+                                    new Object[]{"AGREGAR", "NO, GRACIAS"}, "AGREGAR");                
                if(agregarServicio == 1){
                     nuevoAdicional=false;
                }                    
@@ -234,6 +230,7 @@ public class SeguroAutomotor {
             for(int i=0;i<adicionalElegido.size();i++){
                 System.out.println(adicionalElegido.get(i));
             }
+            
                     
             
             
