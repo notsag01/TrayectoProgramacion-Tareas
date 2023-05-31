@@ -86,7 +86,7 @@ public class SeguroAutomotor {
         int totalPoliza=0;
         
         //VARIALES DE LOS ADICIONALES
-        int contador = 0;
+        int cantidadAdicionales = 0;
         int cargoAdicionales = 0;
         boolean nuevoAdicional= true;
         
@@ -192,11 +192,11 @@ public class SeguroAutomotor {
                         coberturas [0]);
            
            if(coberturaElegida.equals("Tercero completo")){
-               totalPoliza = totalPoliza + 2000;
+               totalPoliza += 2000;
            }else if(coberturaElegida.equals("Todo riesgo")){
-               totalPoliza = totalPoliza + 3000;
+               totalPoliza += 3000;
            }else if(coberturaElegida.equals("Responsabilidad civil")){
-               totalPoliza = totalPoliza + 1000;               
+               totalPoliza += 1000;               
            }
            
            // ADICIONALES ***
@@ -229,8 +229,13 @@ public class SeguroAutomotor {
             }    
             for(int i=0;i<adicionalElegido.size();i++){
                 System.out.println(adicionalElegido.get(i));
+                totalPoliza +=300;
+                cantidadAdicionales +=1;
             }
-            
+                if( cantidadAdicionales % 2 == 0){
+                    totalPoliza-=300;
+                }
+            System.out.println(totalPoliza);
                     
             
             
