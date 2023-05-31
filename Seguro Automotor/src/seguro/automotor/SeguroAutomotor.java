@@ -81,6 +81,8 @@ public class SeguroAutomotor {
         int checkNombre= 0;
         int checkTel = 0;
         int checkMail= 0;
+        int checkDominio=0;
+        int checkAntiguedad=0;
         
         //Variables para los calculos
         int antiguedad = 0;                  
@@ -130,7 +132,8 @@ public class SeguroAutomotor {
                     checkTel = 1;
                 }
         }while(checkTel == 0);
-        do{
+        
+        while(checkMail == 0){
             mail = (String) JOptionPane.showInputDialog(null,
                     "Ingresa tu E-Mail: ",
                     "CARGA DE DATOS",
@@ -143,17 +146,17 @@ public class SeguroAutomotor {
             }else{
                 checkMail = 1;
             }
-        }while(checkMail == 0);
+        }
         
-        Object listaMarcas []= {"FIAT", "NISSAN", "RENAULT", "CHEVROLET", "TOYOTA", "FORD", "PEUGEOT"};
+        String listaMarcas []= {"FIAT", "NISSAN", "RENAULT", "CHEVROLET", "TOYOTA", "FORD", "PEUGEOT"};
         Object marca=JOptionPane.showInputDialog(null, "Seleccione una MARCA", "MARCAS", JOptionPane.QUESTION_MESSAGE, eleccion, listaMarcas, listaMarcas[0]);
-        Object modelosFiat []= {"PULSE", "CRONOS", "TORO", "UNO", "500", "STRADA", "FIORINO"};
-        Object modelosNissan []= {"KICKS", "VERSA", "MARCH", "NOTE", "MURANO", "X-TRAIL", "LEAF"};
-        Object modelosRenault []= {"SANDERO", "LOGAN", "KANGOO", "KWID", "STEPWEY", "ALASKAN", "DUSTER"};
-        Object modelosChevrolet []= {"CRUEZE", "ONIX", "TRACKER", "S10", "SPIN", "PRISMA", "COBALT"};
-        Object modelosToyota []= {"HILUX", "COROLLA", "COROLLA CROSS", "ETIOS", "SW4", "PRIUS", "INNOVA"};
-        Object modelosFord []= {"RANGER", "ECOSPORT", "KA", "FIESTA", "FOCUS", "MONDEO", "MUSTANG"};
-        Object modelosPeugeot []= {"208", "207", "308", "408", "PARTNER", "PATAGONIC", "EXPERT"};
+        String modelosFiat []= {"PULSE", "CRONOS", "TORO", "UNO", "500", "STRADA", "FIORINO"};
+        String modelosNissan []= {"KICKS", "VERSA", "MARCH", "NOTE", "MURANO", "X-TRAIL", "LEAF"};
+        String modelosRenault []= {"SANDERO", "LOGAN", "KANGOO", "KWID", "STEPWEY", "ALASKAN", "DUSTER"};
+        String modelosChevrolet []= {"CRUEZE", "ONIX", "TRACKER", "S10", "SPIN", "PRISMA", "COBALT"};
+        String modelosToyota []= {"HILUX", "COROLLA", "COROLLA CROSS", "ETIOS", "SW4", "PRIUS", "INNOVA"};
+        String modelosFord []= {"RANGER", "ECOSPORT", "KA", "FIESTA", "FOCUS", "MONDEO", "MUSTANG"};
+        String modelosPeugeot []= {"208", "207", "308", "408", "PARTNER", "PATAGONIC", "EXPERT"};
 
         if (marca.equals("FIAT")){
                 Object modelo =JOptionPane.showInputDialog(null, "Seleccione un MODELO", "MODELO", JOptionPane.QUESTION_MESSAGE, Fiat, modelosFiat, modelosFiat[0]);
@@ -170,7 +173,8 @@ public class SeguroAutomotor {
         }else if(marca.equals("PEUGEOT")){
                 Object modelo =JOptionPane.showInputDialog(null, "Seleccione un MODELO", "MODELO", JOptionPane.QUESTION_MESSAGE, Peugeot, modelosPeugeot, modelosPeugeot[0]);        
         }
-
+        
+        do{
          dominio = (String) JOptionPane.showInputDialog(null,
                 "Ingresa tu DOMINIO",
                 "DOMINIO",
@@ -178,7 +182,13 @@ public class SeguroAutomotor {
                 data,
                 null,
                 "");
-         
+            if(dominio.equals("")){
+                JOptionPane.showMessageDialog(null, "El Dominio es obligatorio", "ERROR", JOptionPane.ERROR_MESSAGE);
+            }else{
+                checkDominio=1;
+            }            
+        }while(checkDominio == 0);
+        
         antiguedadIngresada = (String) JOptionPane.showInputDialog(null, //uso int para que podamos correr bien la logica 
         "Ingrese ANTIGÜEDAD del Vehiculo \n Por favor ingrese solo números",
         "ANTIGÜEDAD",
