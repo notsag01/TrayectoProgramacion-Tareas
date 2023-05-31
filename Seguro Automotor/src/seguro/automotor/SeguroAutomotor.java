@@ -80,6 +80,7 @@ public class SeguroAutomotor {
         String dominio = "";
         int checkNombre= 0;
         int checkTel = 0;
+        int checkMail= 0;
         
         //Variables para los calculos
         int antiguedad = 0;                  
@@ -129,14 +130,20 @@ public class SeguroAutomotor {
                     checkTel = 1;
                 }
         }while(checkTel == 0);
-        
-        mail = (String) JOptionPane.showInputDialog(null,
-                "Ingresa tu E-Mail: ",
-                "CARGA DE DATOS",
-                JOptionPane.QUESTION_MESSAGE,
-                data,
-                null,
-                "");
+        do{
+            mail = (String) JOptionPane.showInputDialog(null,
+                    "Ingresa tu E-Mail: ",
+                    "CARGA DE DATOS",
+                    JOptionPane.QUESTION_MESSAGE,
+                    data,
+                    null,
+                    "");
+            if(mail.equals("")){
+                JOptionPane.showMessageDialog(null, "El Mail es obligatorio", "ERROR", JOptionPane.ERROR_MESSAGE);
+            }else{
+                checkMail = 1;
+            }
+        }while(checkMail == 0);
         
         Object listaMarcas []= {"FIAT", "NISSAN", "RENAULT", "CHEVROLET", "TOYOTA", "FORD", "PEUGEOT"};
         Object marca=JOptionPane.showInputDialog(null, "Seleccione una MARCA", "MARCAS", JOptionPane.QUESTION_MESSAGE, eleccion, listaMarcas, listaMarcas[0]);
