@@ -201,35 +201,49 @@ public class SeguroAutomotor {
            
            // ADICIONALES ***
             String adicionales[] = {"Granizo", "Llantas deportivas", "Asistencia mecanica", "Localizador GPS", "Ninguna"};
-              ArrayList<String> adicionalElegido = new ArrayList<String>();   
+            String adicionalesElegidos[] = new String [adicionales.length];
+            
+//              ArrayList<String> adicionalElegido = new ArrayList<String>();   
               
             JOptionPane.showMessageDialog(null, "*Granizo \n *Llantas Deportivas \n *Asistencia Mecánica \n *Localizador GPS ",
                    "SERVICIOS ADICIONALES", JOptionPane.INFORMATION_MESSAGE, data);  
             JOptionPane.showMessageDialog(null, "*Cada adicional cuesta $300, \n pero si elige 2, \n el segundo ES GRATIS!",
                    "SERVICIOS ADICIONALES", JOptionPane.INFORMATION_MESSAGE, data);  
             
-            while(nuevoAdicional== true){    
-                String adicional= (String) JOptionPane.showInputDialog(null,
+//            while(nuevoAdicional== true){    
+//                String adicional= (String) JOptionPane.showInputDialog(null,
+//                               "Seleccionar adicionales",
+//                               "ADICIONALES",
+//                               JOptionPane.QUESTION_MESSAGE,
+//                               null,
+//                               adicionales,
+//                               adicionales[0]);
+//                //agregamos a la lista 
+//                adicionalElegido.add(adicional);
+//               System.out.println(adicionalElegido);
+//               int agregarServicio = JOptionPane.showOptionDialog(null, "Eligue una opcion", "BLA",
+//                                    JOptionPane.YES_NO_CANCEL_OPTION,
+//                                    JOptionPane.INFORMATION_MESSAGE, null,
+//                                    new Object[]{"AGREGAR", "NO, GRACIAS"}, "AGREGAR");                
+//               if(agregarServicio == 1){
+//                    nuevoAdicional=false;
+//               }                    
+//            }    
+//            for(int i=0;i<adicionalElegido.size();i++){
+//                System.out.println(adicionalElegido.get(i));
+//            }
+            
+            for(int i=0;i<adicionales.length;i++){
+               adicionalesElegidos[i] = (String) JOptionPane.showInputDialog(null,
                                "Seleccionar adicionales",
                                "ADICIONALES",
                                JOptionPane.QUESTION_MESSAGE,
                                null,
                                adicionales,
                                adicionales[0]);
-                //agregamos a la lista 
-                adicionalElegido.add(adicional);
-               System.out.println(adicionalElegido);
-               int agregarServicio = JOptionPane.showOptionDialog(null, "Eligue una opcion", "BLA",
-                                    JOptionPane.YES_NO_CANCEL_OPTION,
-                                    JOptionPane.INFORMATION_MESSAGE, null,
-                                    new Object[]{"AGREGAR", "NO, GRACIAS"}, "AGREGAR");                
-               if(agregarServicio == 1){
-                    nuevoAdicional=false;
-               }                    
-            }    
-            for(int i=0;i<adicionalElegido.size();i++){
-                System.out.println(adicionalElegido.get(i));
+                System.out.println(adicionalesElegidos[i]);
             }
+                System.out.println(adicionalesElegidos);
             
                     
             
