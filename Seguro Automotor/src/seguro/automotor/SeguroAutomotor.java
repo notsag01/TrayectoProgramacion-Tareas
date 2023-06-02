@@ -217,7 +217,7 @@ public class SeguroAutomotor {
         
        if(antiguedad > 20){
             JOptionPane.showMessageDialog(null,
-            "Lamentamos informar que no podremos asegurar su vehículo\n" +
+            "Lamentamos informar que no podremos asegurar un vehículo con más de 20 años de antiguedad.\n" +
             "\nNombre y Apellido: " + nombre + "\n" +
             "Teléfono: " + tel + "\n" +
             "Mail: " + mail + "\n\n" +
@@ -341,11 +341,12 @@ public class SeguroAutomotor {
                costado);
 
 
-              }/*
+              }
+            /*
             No pude solucionar el tema de ingresar letras en la antigüedad,
-       en realidad si encontre la forma pero con cosas que ni vimos y no daba meter mas cosas 
-       que el resto de la clase no entienda
-       
+            en realidad si encontre la forma pero con cosas que ni vimos y no daba meter mas cosas 
+            que el resto de la clase no entienda
+
             meti icono a absolutamente todo, si tenes alguna sugerencia para cambiar avisame
             
             termine eliminando todos los objects de los modelos porque tiraba error en el final 
@@ -356,9 +357,8 @@ public class SeguroAutomotor {
        
             cualquier cosa al celu, para mi ya quedó piola, faltaria el ultimo retoque del tema antigüedad 
        
-           no se si tenias la misma idea para mostrar la poliza final, para mi asi quedo gracioso y equilibra bastante 
-            
-       */
+           no se si tenias la misma idea para mostrar la poliza final, para mi asi quedo gracioso y equilibra bastante             
+            */
        
         
 
