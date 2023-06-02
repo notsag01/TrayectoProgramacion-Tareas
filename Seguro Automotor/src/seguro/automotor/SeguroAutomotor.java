@@ -230,7 +230,6 @@ public class SeguroAutomotor {
            //Con la variante TOTALPOLIZA ahorramos tener tantas variantes 
             if  (antiguedad <= 5 ){
                     totalPoliza = 500;
-                    System.out.println(totalPoliza);//TESTIGO ******************************
             }else if (antiguedad < 10){
                     totalPoliza =1000;    
              }else if (antiguedad <= 15){
@@ -279,7 +278,6 @@ public class SeguroAutomotor {
                                adicionales[0]);
                 //para agregar elementos a ArrayList, se usa el método add 
                 adicionalElegido.add(adicional);
-               System.out.println(adicionalElegido);//TESTIGO**************************
                
                int agregarServicio = JOptionPane.showOptionDialog(null, "Quiere otro adicional?", 
                                     "ADICIONALES",
@@ -292,7 +290,6 @@ public class SeguroAutomotor {
             }  //para contar la cantidad ACTUAL de elementos, se usa el metodo size  
             for(int i=0;i<adicionalElegido.size();i++){
                 //para traer el contenido de cada elemento, se uda el metodo get
-                System.out.println(adicionalElegido.get(i));//TESTIGO************************
                 totalPoliza +=300;
                 cantidadAdicionales +=1;
             }
@@ -301,7 +298,6 @@ public class SeguroAutomotor {
                 }else if(cantidadAdicionales % 2 == 0 || cantidadAdicionales % 3 == 0 ){
                     totalPoliza-=300;
                 }
-            System.out.println(totalPoliza); ///TESTIGO ********************************************
                     
             
             
@@ -328,6 +324,7 @@ public class SeguroAutomotor {
         + "\nADICIONALES DE LA COBERTURA: \n";
               for (int i = 0; i < adicionalElegido.size(); i++) {
                   mensaje += adicionalElegido.get(i) + "\n";
+                  
               }
             //con mensaje+= podemos ir agregando mas informacion sin modificar  los datos ya cargados en la variante
                mensaje += "\nVALOR TOTAL DE LA PRIMA: $" + totalPoliza + "\nN° de Póliza: " +poliza;
