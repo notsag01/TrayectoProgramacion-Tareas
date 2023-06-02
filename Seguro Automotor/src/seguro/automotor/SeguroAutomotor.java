@@ -259,7 +259,7 @@ public class SeguroAutomotor {
            }
            
            // ADICIONALES ***
-            String adicionales[] = {"Granizo", "Llantas deportivas", "Asistencia mecanica", "Localizador GPS", "Ninguna"};
+            String adicionales[] = { "NINGUNO","Granizo", "Llantas deportivas", "Asistencia mecanica", "Localizador GPS",};
             //Usamos un arreglo dinámico, es una estructura de datos que permite cambiar su tamaño durante la ejecución del programa.
               ArrayList<String> adicionalElegido = new ArrayList<String>();   
               
@@ -278,15 +278,19 @@ public class SeguroAutomotor {
                                adicionales[0]);
                 //para agregar elementos a ArrayList, se usa el método add 
                 adicionalElegido.add(adicional);
-               
-               int agregarServicio = JOptionPane.showOptionDialog(null, "Quiere otro adicional?", 
-                                    "ADICIONALES",
-                                    JOptionPane.YES_NO_CANCEL_OPTION,
-                                    JOptionPane.INFORMATION_MESSAGE, eleccion,
-                                    new Object[]{"AGREGAR", "NO, GRACIAS"}, "AGREGAR");                
-               if(agregarServicio == 1){
-                    nuevoAdicional=false;
-               }                    
+                
+               if(adicional.equals("NINGUNO")){
+                   nuevoAdicional=false;
+               }else{
+                    int agregarServicio = JOptionPane.showOptionDialog(null, "Quiere otro adicional?", 
+                                         "ADICIONALES",
+                                         JOptionPane.YES_NO_CANCEL_OPTION,
+                                         JOptionPane.INFORMATION_MESSAGE, eleccion,
+                                         new Object[]{"AGREGAR", "NO, GRACIAS"}, "AGREGAR");                
+                    if(agregarServicio == 1){
+                         nuevoAdicional=false;
+                    }                    
+               }
             }  //para contar la cantidad ACTUAL de elementos, se usa el metodo size  
             for(int i=0;i<adicionalElegido.size();i++){
                 //para traer el contenido de cada elemento, se uda el metodo get
