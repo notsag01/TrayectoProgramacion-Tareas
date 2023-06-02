@@ -217,15 +217,15 @@ public class SeguroAutomotor {
         
        if(antiguedad > 20){
             JOptionPane.showMessageDialog(null,
-        "Lamentamos informar que no podremos asegurar su vehículo\n" +
-        "\nNombre y Apellido: " + nombre + "\n" +
-        "Teléfono: " + tel + "\n" +
-        "Mail: " + mail + "\n\n" +
-        "Verifique que los datos son correctos \ny lo llamaremos cuando tengamos una propuesta para usted.\n\n" +
-        "Gracias por confiar en nosotros!",
-        "Error",
-        JOptionPane.ERROR_MESSAGE,
-        error);
+            "Lamentamos informar que no podremos asegurar su vehículo\n" +
+            "\nNombre y Apellido: " + nombre + "\n" +
+            "Teléfono: " + tel + "\n" +
+            "Mail: " + mail + "\n\n" +
+            "Verifique que los datos son correctos \ny lo llamaremos cuando tengamos una propuesta para usted.\n\n" +
+            "Gracias por confiar en nosotros!",
+            "Error",
+            JOptionPane.ERROR_MESSAGE,
+            error);
        }else{
            //Con la variante TOTALPOLIZA ahorramos tener tantas variantes 
             if  (antiguedad <= 5 ){
@@ -308,40 +308,40 @@ public class SeguroAutomotor {
             
             ///////
             //portada
-              JOptionPane.showMessageDialog(null,
+                JOptionPane.showMessageDialog(null,
                 "", "FELICIDADES",
                 JOptionPane.INFORMATION_MESSAGE,
                 portadaGrande);
-         //creamos una variable que va a contener todo lo que mostraría la ventana     
-        String mensaje = "DATOS DEL CLIENTE"
-        + "\nNombre y Apellido: " + nombre
-        + "\nTelefono: " + tel
-        + "\nMail: " + mail
-        + "\n"
-        + "\nDATOS DEL VEHICULO"
-        + "\nMarca: " + marca
-        + "\nModelo: " +modelo
-        + "\nDominio: " + dominio
-        + "\nAntigüedad: " + antiguedad + " años"
-        + "\n"
-        + "\nCOBERTURA ELEGIDA: " + coberturaElegida
-        + "\n"
-        + "\nADICIONALES DE LA COBERTURA: \n";
-              for (int i = 0; i < adicionalElegido.size(); i++) {
-                  mensaje += adicionalElegido.get(i) + "\n";
-                  
-              }
-            //con mensaje+= podemos ir agregando mas informacion sin modificar  los datos ya cargados en la variante
-               mensaje += "\nVALOR TOTAL DE LA PRIMA: $" + totalPoliza + "\nN° de Póliza: " +poliza;
+                //creamos una variable que va a contener todo lo que mostraría la ventana     
+               String mensaje = "DATOS DEL CLIENTE"
+               + "\nNombre y Apellido: " + nombre
+               + "\nTelefono: " + tel
+               + "\nMail: " + mail
+               + "\n"
+               + "\nDATOS DEL VEHICULO"
+               + "\nMarca: " + marca
+               + "\nModelo: " +modelo
+               + "\nDominio: " + dominio
+               + "\nAntigüedad: " + antiguedad + " años"
+               + "\n"
+               + "\nCOBERTURA ELEGIDA: " + coberturaElegida
+               + "\n"
+               + "\nADICIONALES DE LA COBERTURA: \n";
+                     for (int i = 0; i < adicionalElegido.size(); i++) {
+                         mensaje += adicionalElegido.get(i) + "\n";
 
-   JOptionPane.showMessageDialog(null,
-        mensaje,
-        "Detalles de la póliza", 
-        JOptionPane.INFORMATION_MESSAGE,
-        costado);
-            
-            
-       }/*
+                     }
+                   //con mensaje+= podemos ir agregando mas informacion sin modificar  los datos ya cargados en la variante
+                      mensaje += "\nVALOR TOTAL DE LA PRIMA: $" + totalPoliza + "\nN° de Póliza: " +poliza;
+
+          JOptionPane.showMessageDialog(null,
+               mensaje,
+               "Detalles de la póliza", 
+               JOptionPane.INFORMATION_MESSAGE,
+               costado);
+
+
+              }/*
             No pude solucionar el tema de ingresar letras en la antigüedad,
        en realidad si encontre la forma pero con cosas que ni vimos y no daba meter mas cosas 
        que el resto de la clase no entienda
