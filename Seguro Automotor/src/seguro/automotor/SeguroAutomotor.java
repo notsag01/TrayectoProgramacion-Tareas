@@ -218,7 +218,7 @@ public class SeguroAutomotor {
        if(antiguedad > 20){
             JOptionPane.showMessageDialog(null,
             "Lamentamos informar que no podremos asegurar un vehículo con más de 20 años de antiguedad.\n" +
-            "\nNombre y Apellido: " + nombre + "\n" +
+            "\nNombre y Apellido: " + nombre.toUpperCase() + "\n" +
             "Teléfono: " + tel + "\n" +
             "Mail: " + mail + "\n\n" +
             "Verifique que los datos son correctos \ny lo llamaremos cuando tengamos una propuesta para usted.\n\n" +
@@ -314,7 +314,7 @@ public class SeguroAutomotor {
                 portadaGrande);
                 //creamos una variable que va a contener todo lo que mostraría la ventana     
                String mensaje = "DATOS DEL CLIENTE"
-               + "\nNombre y Apellido: " + nombre
+               + "\nNombre y Apellido: " + nombre.toUpperCase()
                + "\nTelefono: " + tel
                + "\nMail: " + mail
                + "\n"
