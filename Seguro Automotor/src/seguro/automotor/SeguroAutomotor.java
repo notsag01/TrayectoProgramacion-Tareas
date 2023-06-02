@@ -341,25 +341,8 @@ public class SeguroAutomotor {
                costado);
 
 
-              }
-            /*
-            No pude solucionar el tema de ingresar letras en la antigüedad,
-            en realidad si encontre la forma pero con cosas que ni vimos y no daba meter mas cosas 
-            que el resto de la clase no entienda
-
-            meti icono a absolutamente todo, si tenes alguna sugerencia para cambiar avisame
-            
-            termine eliminando todos los objects de los modelos porque tiraba error en el final 
-       
-            meti machetazos explicando casi todo el codigo
-       
-            no colguemms en eliminar los testigos 
-       
-            cualquier cosa al celu, para mi ya quedó piola, faltaria el ultimo retoque del tema antigüedad 
-       
-           no se si tenias la misma idea para mostrar la poliza final, para mi asi quedo gracioso y equilibra bastante             
-            */
-       
+              }           
+              System.out.println("FIN DEL CODIGO");
         
 
 
