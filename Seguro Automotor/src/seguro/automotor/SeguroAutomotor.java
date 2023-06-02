@@ -298,7 +298,7 @@ public class SeguroAutomotor {
             }
                 if( cantidadAdicionales % 2 == 0 && cantidadAdicionales % 4 == 0){
                     totalPoliza-=600;
-                }else if(cantidadAdicionales % 2 == 0){
+                }else if(cantidadAdicionales % 2 == 0 || cantidadAdicionales % 3 == 0 ){
                     totalPoliza-=300;
                 }
             System.out.println(totalPoliza); ///TESTIGO ********************************************
