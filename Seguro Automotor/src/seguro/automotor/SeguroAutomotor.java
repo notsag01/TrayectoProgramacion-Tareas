@@ -281,6 +281,7 @@ public class SeguroAutomotor {
                 
                if(adicional.equals("NINGUNO")){
                    nuevoAdicional=false;
+                   totalPoliza-=300;
                }else{
                     int agregarServicio = JOptionPane.showOptionDialog(null, "Quiere otro adicional?", 
                                          "ADICIONALES",
