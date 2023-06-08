@@ -17,13 +17,13 @@ public class Autos {
     int precioVenta=0;
     
     ImageIcon imagen1= new ImageIcon("src/imagenes/auto1.png");
+    ImageIcon imagen2= new ImageIcon("src/imagenes/auto2.png");
     
     public void nuevoAuto(){
         marca =(String) JOptionPane.showInputDialog(null, "Marca", "marca", JOptionPane.QUESTION_MESSAGE, imagen1, null, null);
-        modelo  = JOptionPane.showInputDialog(null,"Modelo: ","modelo", JOptionPane.QUESTION_MESSAGE);
-        color  = JOptionPane.showInputDialog(null,"Color: ","color", JOptionPane.QUESTION_MESSAGE);
-        costo  = JOptionPane.showInputDialog(null,"Costo: ","costo", JOptionPane.QUESTION_MESSAGE);
-        
+        modelo =(String) JOptionPane.showInputDialog(null, "Modelo", "modelo", JOptionPane.QUESTION_MESSAGE, imagen1, null, null);
+        color =(String) JOptionPane.showInputDialog(null, "color", "color", JOptionPane.QUESTION_MESSAGE, imagen1, null, null);
+        costo =(String) JOptionPane.showInputDialog(null, "costo", "costo", JOptionPane.QUESTION_MESSAGE, imagen1, null, null);                
     }
     public void calcularPV(){
         int costoN= Integer.parseInt(costo);
@@ -40,7 +40,7 @@ public class Autos {
                 "Color: " + color + "\n" +
                 "Costo: " + costo + "\n" +
                 "Precio al público: " + precioVenta,
-                "CONFIRMACION ", JOptionPane.QUESTION_MESSAGE, imagen1);
+                "CONFIRMACION ", JOptionPane.QUESTION_MESSAGE, imagen2);
         
     }
     
