@@ -4,6 +4,8 @@
  */
 package vehiculos;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Administrador
@@ -15,13 +17,23 @@ public class Vehiculos {
      */
     public static void main(String[] args) {
         
-        Autos nuevaCarga= new Autos();
+        int seleccion = JOptionPane.showOptionDialog(null, "Qué desea cargar?", "Nueva Cargar?",
+                JOptionPane.YES_NO_CANCEL_OPTION,
+                JOptionPane.QUESTION_MESSAGE, null,
+                new Object[]{"AUTOS", "MOTOS"}, "AUTOS");
         
-        nuevaCarga.nuevoAuto();
-        nuevaCarga.calcularPV();
-        nuevaCarga.imprimir();
-        
-        
+        switch(seleccion){
+            case 0: Autos nuevoAuto= new Autos();
+                          nuevoAuto.nuevoAuto();
+                          nuevoAuto.calcularPV();
+                          nuevoAuto.imprimir();
+            break;
+            case 1: Motos nuevaMoto= new Motos();
+                    nuevaMoto.nuevaMoto();
+                    nuevaMoto.calcularPV();
+                    nuevaMoto.imprimir();
+            break;        
+        }
         
         
         

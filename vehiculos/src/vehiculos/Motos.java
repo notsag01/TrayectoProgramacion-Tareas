@@ -18,7 +18,7 @@ public class Motos {
     
     ImageIcon imagen1= new ImageIcon("src/imagenes/moto2.png");
     
-    public void nuevoAuto(){
+    public void nuevaMoto(){
         marca =(String) JOptionPane.showInputDialog(null, "Marca", "marca", JOptionPane.QUESTION_MESSAGE, imagen1, null, null);
         modelo =(String) JOptionPane.showInputDialog(null, "Modelo", "modelo", JOptionPane.QUESTION_MESSAGE, imagen1, null, null);
         color =(String) JOptionPane.showInputDialog(null, "color", "color", JOptionPane.QUESTION_MESSAGE, imagen1, null, null);
@@ -39,7 +39,7 @@ public class Motos {
                 "Color: " + color + "\n" +
                 "Costo: " + costo + "\n" +
                 "Precio al público: " + precioVenta,
-                "CONFIRMACION ", JOptionPane.QUESTION_MESSAGE, imagen2);
+                "CONFIRMACION ", JOptionPane.QUESTION_MESSAGE, imagen1);
         
     }
 }
