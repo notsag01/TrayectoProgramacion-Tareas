@@ -14,9 +14,23 @@ public class Vehiculos {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        
         Autos nuevaCarga= new Autos();
         
         nuevaCarga.nuevoAuto();
+        nuevaCarga.calcularPV();
+        nuevaCarga.imprimir();
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     }
     
 }
