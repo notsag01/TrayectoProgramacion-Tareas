@@ -26,12 +26,15 @@ public class Auto {
         int kilometrajeM=Integer.parseInt(kilometraje);
         
         if(kilometrajeM == 0){
-            System.out.println("El auto está 0KM");
+            JOptionPane.showMessageDialog(null, "El auto esta 0KM", "INFORMACION DEL AUTO", JOptionPane.INFORMATION_MESSAGE, null);
         }else if( kilometrajeM <= 10000){
+            JOptionPane.showMessageDialog(null, "El auto esta poco usado.", "INFORMACION DEL AUTO", JOptionPane.INFORMATION_MESSAGE, null);
             System.out.println("El auto poco usado");                
         }else if(kilometrajeM <=100000){
+            JOptionPane.showMessageDialog(null, "El auto esta usado.", "INFORMACION DEL AUTO", JOptionPane.INFORMATION_MESSAGE, null);
             System.out.println("El auto usado");                
         }else{
+            JOptionPane.showMessageDialog(null, "El auto esta muy usado.", "INFORMACION DEL AUTO", JOptionPane.INFORMATION_MESSAGE, null);
             System.out.println("El auto muy usado");                
         }
     }
