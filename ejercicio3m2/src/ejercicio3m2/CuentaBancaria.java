@@ -12,23 +12,22 @@ import javax.swing.JOptionPane;
  */
 public class CuentaBancaria {
     String nombreTitular="";
-//    String tipoCuenta="";
-//    String saldo="";
+    int tipoCuenta;
+    String saldo="";
     
-    public CuentaBancaria(String nombreTitular){
-        this.nombreTitular = nombreTitular;
-        
-    }
-    
-    public String getNombre(){
-     this.nombreTitular=JOptionPane.showInputDialog(null, "Nombre Titular");
-     return this.nombreTitular;   
-     
-     
-    }   
-    public void setNombre(String nombreTitular){
-        this.nombreTitular = nombreTitular;
-    }
+    public void getDatos(){
+        do{
+            nombreTitular= (String) JOptionPane.showInputDialog(null, "Ingrese una nombre del titular de la cuenta: ", "DATOS", JOptionPane.QUESTION_MESSAGE, null, null, null);
+        }while(nombreTitular == null || nombreTitular.equals("") );
+            tipoCuenta = JOptionPane.showOptionDialog(null, "Eligue el tipo de cuenta: ", "El juego del Vaso",
+                                     JOptionPane.YES_NO_CANCEL_OPTION,
+                                     JOptionPane.INFORMATION_MESSAGE, null,
+                                     new Object[]{"Caja de Ahorro", "Cuenta Corriente"}, "Caja de Ahorro");
+        do{
+            saldo= (String) JOptionPane.showInputDialog(null, "Ingrese el saldo: ", "DATOS", JOptionPane.QUESTION_MESSAGE, null, null, null);
+        }while(saldo == null || saldo.equals("") );
+    } 
+   
     
 
 }
