@@ -4,12 +4,12 @@ package Libreria;
 
 public class Funciones {
     
-    private int kilos =0 , llenadoCompleto= 0,TipoDeRopa = 0,LavadoCompleto = 0,SecadoCompleto =0;
+    private int kilos =0 , llenadoCompleto= 0,ropaColor = 0,LavadoCompleto = 0,SecadoCompleto =0;
    
     //contrustor 
-    public Funciones (int kilos,int tipoderopa){
+    public Funciones (int kilos,int ropaColor){
         this.kilos = kilos;
-        this.TipoDeRopa = tipoderopa;
+        this.ropaColor = ropaColor;
     }
     
     //metodos
@@ -27,11 +27,11 @@ public class Funciones {
     private void lavado(){
         llenado();
             if (llenadoCompleto == 1){
-                if(TipoDeRopa == 0){
+                if(ropaColor == 0){
                     System.out.println("Ropa Blanca - Lavado SUAVE ");
                     System.out.println("Lavando.....");
                     LavadoCompleto = 1;
-                } else if (TipoDeRopa == 1 ) {
+                } else if (ropaColor == 1 ) {
                     System.out.println("Ropa Color - Lavado Intenso ");
                     System.out.println("Lavando....");
                     LavadoCompleto = 1;

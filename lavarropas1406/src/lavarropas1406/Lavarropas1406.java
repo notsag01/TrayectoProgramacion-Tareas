@@ -19,7 +19,7 @@ public class Lavarropas1406 {
                 JOptionPane.INFORMATION_MESSAGE,
                 inicio);
         
-        int tipoderopa = JOptionPane.showOptionDialog(null,
+        int ropaColor = JOptionPane.showOptionDialog(null,
                "Por favor seleccione el tipo de ropa que va a lavar",
                "Tipo de Ropa",
                JOptionPane.YES_NO_CANCEL_OPTION,
@@ -36,7 +36,7 @@ public class Lavarropas1406 {
                 
         int  kilos = Integer.parseInt(peso2);   
         
-        Funciones MSG = new Funciones(kilos,tipoderopa);
+        Funciones MSG = new Funciones(kilos,ropaColor);
        
         MSG.ciclofinalizado();
               
