@@ -1,9 +1,11 @@
 
 package Libreria;
 
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class Funciones {
-    
+    Timer timer = new Timer();
     private int kilos =0 , llenadoCompleto= 0,ropaColor = 0,LavadoCompleto = 0,SecadoCompleto =0;
    
     //contrustor 
@@ -52,7 +54,14 @@ public class Funciones {
     public void ciclofinalizado(){
         secado();
         if (SecadoCompleto ==1) {
-              System.out.println("Tu ropa esta lista para usar");
+            TimerTask task =  new TimerTask(){
+                @Override
+                public void run(){
+                    System.out.println("Tu ropa esta lista para usar");
+                    timer.cancel();
+                }
+            };
+            timer.schedule(task, 4000);
         }
               
     
