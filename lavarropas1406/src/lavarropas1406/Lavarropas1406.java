@@ -42,17 +42,10 @@ public class Lavarropas1406 {
                 JOptionPane.QUESTION_MESSAGE,
                 null,
                 tiposRopa,
-                tiposRopa[0]);
-        System.out.println(tipoLavado);
+                tiposRopa[0]);                                        
         
-        
-        
-        
-        
-        
-        
-        
-        Funciones MSG = new Funciones(kilos,ropaColor);       
+//      ////////////////////////////////////////////////  
+        Funciones MSG = new Funciones(kilos,ropaColor,tipoLavado);       
         MSG.ciclofinalizado();
               
         

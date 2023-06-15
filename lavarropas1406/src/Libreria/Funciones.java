@@ -6,29 +6,45 @@ import java.util.TimerTask;
 
 public class Funciones {
     Timer timer = new Timer();
-    private int kilos =0 , llenadoCompleto= 0,ropaColor = 0,LavadoCompleto = 0,SecadoCompleto =0;
+    private int kilos =0 , llenadoCompleto= 0,tipoDeRopaOk=0, ropaColor = 0,LavadoCompleto = 0,SecadoCompleto =0;
+    private String tipoLavado="";
    
     //contrustor 
-    public Funciones (int kilos,int ropaColor){
+    public Funciones (int kilos,int ropaColor, String tipoLavado){
         this.kilos = kilos;
         this.ropaColor = ropaColor;
+        this.tipoLavado = tipoLavado;
     }
     
     //metodos
-    private void llenado(){
+    private void llenado(){                
         if(kilos <= 12 ){
             llenadoCompleto = 1;
             System.out.println("Llenado......");
-            System.out.println("Llenado Completo");             
+            System.out.println("Llenado Completo");                             
         } else {
             System.out.println("La carga para este modelo es mucha, saque ropa por favor");
-        
+        }        
+    }
+    private void tipoDeRopa(){
+        llenado();
+        if(llenadoCompleto==1){
+            switch(tipoLavado){
+                case "LANA" : System.out.println("LANA");
+                break;
+                case "ROPA SUCIA" : System.out.println("ROPA SUCIA");
+                break;
+                case "ECONOMICO" : System.out.println("ECONOMICO");
+                break;
+                case "BEBE" : System.out.println("BEBE");
+                break;
+            }
         }
-    
+        tipoDeRopaOk=1;
     }
     private void lavado(){
-        llenado();
-            if (llenadoCompleto == 1){
+        tipoDeRopa();
+            if (tipoDeRopaOk == 1){
                 if(ropaColor == 0){
                     System.out.println("Ropa Blanca - Lavado SUAVE ");
                     System.out.println("Lavando.....");
@@ -38,8 +54,8 @@ public class Funciones {
                     System.out.println("Lavando....");
                     LavadoCompleto = 1;
                 }
+        }
     }
-          }
         
     private void secado(){
         lavado();
@@ -54,14 +70,14 @@ public class Funciones {
     public void ciclofinalizado(){
         secado();
         if (SecadoCompleto ==1) {
-            TimerTask task =  new TimerTask(){
+            TimerTask faseFinal =  new TimerTask(){
                 @Override
                 public void run(){
                     System.out.println("Tu ropa esta lista para usar");
                     timer.cancel();
                 }
             };
-            timer.schedule(task, 4000);
+            timer.schedule(faseFinal, 4000);
         }
               
     
