@@ -33,11 +33,26 @@ public class Lavarropas1406 {
                 peso,
                 null,
                 "");
-                
         int  kilos = Integer.parseInt(peso2);   
         
-        Funciones MSG = new Funciones(kilos,ropaColor);
-       
+        String tiposRopa [] = {"LANA", "ROPA SUCIA", "ECONOMICO" , "BEBE"};
+        String tipoLavado=(String) JOptionPane.showInputDialog(null,
+                "Selecciones qué tipo de ropa lavará: ",
+                "TIPO DE ROPA",
+                JOptionPane.QUESTION_MESSAGE,
+                null,
+                tiposRopa,
+                tiposRopa[0]);
+        System.out.println(tipoLavado);
+        
+        
+        
+        
+        
+        
+        
+        
+        Funciones MSG = new Funciones(kilos,ropaColor);       
         MSG.ciclofinalizado();
               
         
