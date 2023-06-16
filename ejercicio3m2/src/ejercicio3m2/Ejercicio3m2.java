@@ -28,7 +28,10 @@ public class Ejercicio3m2 {
             tipito1.informarSaldo();
             tipito1.solicitarAccion();
         }else{
-            
+            CajaAhorro tipito1 = new CajaAhorro(usuario);
+            tipito1.saludar();
+            tipito1.informarSaldo();
+            tipito1.solicitarAccion();
         }
         
         
