@@ -19,11 +19,17 @@ public class Autos {
     ImageIcon imagen1= new ImageIcon("src/imagenes/auto1.png");
     ImageIcon imagen2= new ImageIcon("src/imagenes/auto2.png");
     
+    //CONSTRUCTOR
+    public Autos(String marca, String modelo, String color, String costo){
+        this.marca=marca;
+        this.modelo=modelo;
+        this.color=color;
+        this.costo=costo;
+    }
+    
     public void nuevoAuto(){
-        marca =(String) JOptionPane.showInputDialog(null, "Marca", "marca", JOptionPane.QUESTION_MESSAGE, imagen1, null, null);
-        modelo =(String) JOptionPane.showInputDialog(null, "Modelo", "modelo", JOptionPane.QUESTION_MESSAGE, imagen1, null, null);
-        color =(String) JOptionPane.showInputDialog(null, "color", "color", JOptionPane.QUESTION_MESSAGE, imagen1, null, null);
-        costo =(String) JOptionPane.showInputDialog(null, "costo", "costo", JOptionPane.QUESTION_MESSAGE, imagen1, null, null);                
+              
+
     }
     public void calcularPV(){
         int costoN= Integer.parseInt(costo);

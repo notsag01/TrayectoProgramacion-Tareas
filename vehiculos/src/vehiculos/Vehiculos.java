@@ -4,6 +4,7 @@
  */
 package vehiculos;
 
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
 /**
@@ -17,6 +18,9 @@ public class Vehiculos {
      */
     public static void main(String[] args) {
         
+            ImageIcon imagen1= new ImageIcon("src/imagenes/auto1.png");
+    ImageIcon imagen2= new ImageIcon("src/imagenes/auto2.png");
+        
         int nuevo=0;
         while(nuevo == 0){
             int seleccion = JOptionPane.showOptionDialog(null, "Qué desea cargar?", "Nueva Cargar?",
@@ -25,10 +29,14 @@ public class Vehiculos {
                     new Object[]{"AUTOS", "MOTOS"}, "AUTOS");
 
             switch(seleccion){
-                case 0: Autos nuevoAuto= new Autos();
-                              nuevoAuto.nuevoAuto();
-                              nuevoAuto.calcularPV();
-                              nuevoAuto.imprimir();
+                case 0: String marca =(String) JOptionPane.showInputDialog(null, "Marca", "marca", JOptionPane.QUESTION_MESSAGE, imagen1, null, null);
+                        String modelo =(String) JOptionPane.showInputDialog(null, "Modelo", "modelo", JOptionPane.QUESTION_MESSAGE, imagen1, null, null);
+                        String color =(String) JOptionPane.showInputDialog(null, "color", "color", JOptionPane.QUESTION_MESSAGE, imagen1, null, null);
+                        String costo =(String) JOptionPane.showInputDialog(null, "costo", "costo", JOptionPane.QUESTION_MESSAGE, imagen1, null, null);  
+                        Autos nuevoAuto = new Autos(marca, modelo,color, costo);      
+                        nuevoAuto.nuevoAuto();
+                        nuevoAuto.calcularPV();
+                        nuevoAuto.imprimir();
                 break;
                 case 1: Motos nuevaMoto= new Motos();
                         nuevaMoto.nuevaMoto();
