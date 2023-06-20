@@ -13,11 +13,11 @@ import javax.swing.JOptionPane;
  * @author gas12
  */
 public class Autos {
-    String marca="";
-    String modelo="";
-    String color="";
-    String costo="";
-    int precioVenta=0;
+    private String marca="";
+    private String modelo="";
+    private String color="";
+    private String costo="";
+    private int precioVenta=0;
     private ArrayList<Autos> listaAutos= new ArrayList<>();
     
     ImageIcon imagen1= new ImageIcon("src/imagenes/auto1.png");
