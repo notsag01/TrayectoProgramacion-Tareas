@@ -5,6 +5,7 @@
 package ejercicio4m3;
 
 import java.util.ArrayList;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
 /**
@@ -18,6 +19,9 @@ public class Autos {
     String costo="";
     int precioVenta=0;
     private ArrayList<Autos> listaAutos= new ArrayList<>();
+    
+    ImageIcon imagen1= new ImageIcon("src/imagenes/auto1.png");
+    ImageIcon imagen2= new ImageIcon("src/imagenes/auto2.png");
     
     public Autos(String marca, String modelo, String color){
         this.marca=marca;
@@ -34,16 +38,17 @@ public class Autos {
         
         Autos auto=new Autos(marca, modelo, color);
         
-        listaAutos.add(auto);
-        System.out.println(auto.marca);
+        listaAutos.add(auto);        
     
     }
-    
+
     public void imprimir(){
         for(Autos auto : listaAutos){
-            System.out.println("nombre: "+ auto.marca);
-            System.out.println("modelo: "+ auto.modelo);
-            System.out.println("color: "+ auto.color);
+            System.out.println(
+                "Marca: " + auto.marca +"\n" +
+                "Modelo: " + auto.modelo + "\n" +
+                "Color: " + auto.color + "\n" +
+                "Costo: " + auto.costo + "\n");
         }
         
     }
