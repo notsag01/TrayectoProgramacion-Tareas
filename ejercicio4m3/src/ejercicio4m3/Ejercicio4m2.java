@@ -6,7 +6,7 @@ package ejercicio4m3;
 
 import javax.swing.JOptionPane;
 
-public class Ejercicio4m3 {
+public class Ejercicio4m2 {
 
     public static void main(String[] args) {
         Autos auto =new Autos("","","");

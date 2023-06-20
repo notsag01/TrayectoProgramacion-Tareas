@@ -32,6 +32,7 @@ public class Autos {
     
     public void getDatos(){
         String marca =(String) JOptionPane.showInputDialog(null, "Marca", "marca", JOptionPane.QUESTION_MESSAGE, null, null, null);
+        this.revisarCadena(marca);
         String modelo =(String) JOptionPane.showInputDialog(null, "Modelo", "modelo", JOptionPane.QUESTION_MESSAGE, null, null, null);
         String color =(String) JOptionPane.showInputDialog(null, "color", "color", JOptionPane.QUESTION_MESSAGE, null, null, null);
         String costo =(String) JOptionPane.showInputDialog(null, "costo", "costo", JOptionPane.QUESTION_MESSAGE, null, null, null);  
@@ -52,7 +53,11 @@ public class Autos {
         }
         
     }
-    
+    public void revisarCadena(String cadena){
+        if(cadena == null|| cadena.equals("")){
+            System.out.println("Cadena");
+        };
+    }
     
     
     
