@@ -35,10 +35,18 @@ public class Autos {
         Autos auto=new Autos(marca, modelo, color);
         
         listaAutos.add(auto);
-        System.out.println(listaAutos);
+        System.out.println(auto.marca);
     
     }
     
+    public void imprimir(){
+        for(Autos auto : listaAutos){
+            System.out.println("nombre: "+ auto.marca);
+            System.out.println("modelo: "+ auto.modelo);
+            System.out.println("color: "+ auto.color);
+        }
+        
+    }
     
     
     

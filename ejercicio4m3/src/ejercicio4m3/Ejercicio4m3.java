@@ -9,6 +9,7 @@ public class Ejercicio4m3 {
     public static void main(String[] args) {
         Autos auto =new Autos("","","");
         auto.getDatos();
+        auto.imprimir();
     }
     
 }
