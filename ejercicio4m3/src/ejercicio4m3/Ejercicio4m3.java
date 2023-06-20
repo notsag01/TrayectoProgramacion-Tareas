@@ -10,6 +10,7 @@ public class Ejercicio4m3 {
 
     public static void main(String[] args) {
         Autos auto =new Autos("","","");
+        Motos moto =new Motos("","","");
         
         int nuevo=0;
         while(nuevo == 0){
@@ -22,8 +23,8 @@ public class Ejercicio4m3 {
                 case 0: auto.getDatos();
                         auto.imprimir();
                 break;
-                case 1: 
-                    //MOTOS!!!!!!!!!!!!!!!!!!
+                case 1: moto.nuevaMoto();
+                        moto.imprimir();
                 break;        
             }
             

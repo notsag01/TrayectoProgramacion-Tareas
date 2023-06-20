@@ -16,7 +16,7 @@ public class Motos {
     String color="";
     String costo="";
     int precioVenta=0;
-    private ArrayList<Motos> motos=new ArrayList<>();
+    private ArrayList<Motos> listaMotos=new ArrayList<>();
     
     ImageIcon imagen1= new ImageIcon("src/imagenes/moto2.png");
     
@@ -35,9 +35,20 @@ public class Motos {
         
         Motos moto=new Motos(marca,modelo,color);
         
-        motos.add(moto);
-        System.out.println(moto.marca);
+        listaMotos.add(moto);
+ 
     }
+    public void imprimir(){
+                for(Motos moto : listaMotos){
+                    System.out.println(
+                        "Marca: " + moto.marca +"\n" +
+                        "Modelo: " + moto.modelo + "\n" +
+                        "Color: " + moto.color + "\n" +
+                        "Costo: " + moto.costo + "\n");
+                }
+        
+    }
+    
     public void calcularPV(){
         int costoN= Integer.parseInt(costo);
         //System.out.println(costoN);
@@ -46,14 +57,4 @@ public class Motos {
         System.out.println(precioVenta);
     }
     
-    public void imprimir(){
-        JOptionPane.showMessageDialog(null,
-                "Marca: " + marca +"\n" +
-                "Modelo: " + modelo + "\n" +
-                "Color: " + color + "\n" +
-                "Costo: " + costo + "\n" +
-                "Precio al público: " + precioVenta,
-                "CONFIRMACION ", JOptionPane.QUESTION_MESSAGE, imagen1);
-        
-    }
 }
