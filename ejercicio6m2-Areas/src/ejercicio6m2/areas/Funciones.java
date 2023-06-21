@@ -11,27 +11,32 @@ import javax.swing.JOptionPane;
  * @author Administrador
  */
 public class Funciones {
-    private float base, altura;
+    private float base, altura, superficie;
     
     //CONSTRUCTOR
-    public Funciones(float base, float altura){
+    public Funciones(float base, float altura, float superficie){
         this.base=base;
         this.altura=altura;
+        this.superficie=superficie;
     }
     
     public void getDatos(){
         String datoBase= (String)JOptionPane.showInputDialog(null,"Ingrese la base", "base",JOptionPane.QUESTION_MESSAGE);
-        //float base=Float.parseFloat(datoBase);
         String datoAltura= (String)JOptionPane.showInputDialog(null,"Ingrese la altura", "altura",JOptionPane.QUESTION_MESSAGE);
-        //float altura=Float.parseFloat(datoAltura);
         
-        
+        this.parsear(datoBase,datoAltura);
     }
-    public void imprimir(){
-        System.out.println(this.base);
-        System.out.println(this.altura);
+    public void parsear(String datoBase, String datoAltura){
+        float base=Float.parseFloat(datoBase);
+        float altura=Float.parseFloat(datoAltura);
+        
+        this.calcularSuperficie(base,altura);
     }
     
+    public void calcularSuperficie(float base, float altura){
+        float superficie= base * altura;
+        System.out.println(superficie);
+    }
     
     
 }

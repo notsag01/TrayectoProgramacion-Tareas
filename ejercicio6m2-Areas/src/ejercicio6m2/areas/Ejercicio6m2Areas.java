@@ -4,7 +4,6 @@
  */
 package ejercicio6m2.areas;
 
-import javax.swing.JOptionPane;
 
 /**
  *
@@ -16,7 +15,8 @@ public class Ejercicio6m2Areas {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        
+       Funciones nuevoCalculo= new Funciones(0,0,0);
+       nuevoCalculo.getDatos();
                
         
     }
