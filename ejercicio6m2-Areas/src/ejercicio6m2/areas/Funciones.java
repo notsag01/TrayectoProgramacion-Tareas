@@ -35,8 +35,15 @@ public class Funciones {
     
     public void calcularSuperficie(float base, float altura){
         float superficie= base * altura;
-        System.out.println(superficie);
+        //System.out.println(superficie);
+        setSuperficie(superficie);
+        imprimirResultado(superficie);
     }
-    
+    public void setSuperficie(float superficie){
+        this.superficie=superficie;
+    }
+    public void imprimirResultado(float resultado){
+        System.out.println("La superficie es igual a: " + resultado);
+    }
     
 }
