@@ -42,8 +42,11 @@ public class Funciones {
     public void setSuperficie(float superficie){
         this.superficie=superficie;
     }
+    public float getSuperficie(){
+        return superficie;
+    }
     public void imprimirResultado(float resultado){
-        System.out.println("La superficie es igual a: " + resultado);
+        System.out.println("La superficie es igual a: " + getSuperficie());
     }
     
 }
