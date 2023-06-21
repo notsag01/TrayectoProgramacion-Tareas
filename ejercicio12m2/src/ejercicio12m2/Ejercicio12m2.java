@@ -16,9 +16,12 @@ public class Ejercicio12m2 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Funciones nuevoCelular=new Funciones();
+        
+        
+        Funciones nuevoCelular=new Funciones();        
         nuevoCelular.getDatos();
         nuevoCelular.imprimir();
+       
     }
     
 }

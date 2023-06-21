@@ -5,11 +5,17 @@
 package ejercicio12m2;
 
 import Funciones.Funciones;
+import java.util.ArrayList;
 
 /**
  *
  * @author gas12
  */
 public class Celulares extends Funciones {
+    
+
+    public Celulares(String cliente, String elemento, String marca) {
+        super(cliente, elemento, marca);
+    }
     
 }
