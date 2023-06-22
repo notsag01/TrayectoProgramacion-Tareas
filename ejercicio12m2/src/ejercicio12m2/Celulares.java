@@ -26,6 +26,7 @@ public class Celulares extends Funciones {
         Celulares nuevoIngreso= new Celulares(cliente, elemento, marca);
         
         lista.add(nuevoIngreso);
+        nuevoIngreso.imprimir();
     }
     
     
