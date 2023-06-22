@@ -15,20 +15,22 @@ import java.util.ArrayList;
  */
 public class Celulares extends Funciones {
     
-    ArrayList<Celulares> lista=new ArrayList<>();
+    ArrayList<Celulares> listaCelulares=new ArrayList<>();
     
     public Celulares(String cliente, String elemento, String marca){
-        this. cliente=cliente;
-        this. elemento=elemento;
-        this. marca=marca;
+        this.cliente=cliente;
+        this.elemento=elemento;
+        this.marca=marca;
     }
     
-    public void addLista(){
-        Celulares nuevoIngreso= new Celulares(cliente, elemento, marca);
+    public void guardarDatos(){
+        System.out.println(cliente + elemento + marca);
         
-        lista.add(nuevoIngreso);
-        nuevoIngreso.addLista();
+        Celulares celular=new Celulares(cliente, elemento, marca);
+        
+        listaCelulares.add(celular);
     }
+    
     
     
     

@@ -23,24 +23,12 @@ public class Ejercicio12m2 {
       
         
         int nuevaEntrada=0;
-        do{
-            Funciones nuevoCelular=new Funciones();        
-            nuevoCelular.getDatos();
-            nuevoCelular.imprimir();
+        do{                   
+            Celulares nuevoCelular=new Celulares("", "", "");        
+            nuevoCelular.getDatos();      
+            nuevoCelular.guardarDatos();
             
-            int seleccion = JOptionPane.showOptionDialog(null,
-                    "Desea cargar un nuevo elemento?",
-                    "Nueva Carga",
-                    JOptionPane.YES_NO_CANCEL_OPTION,
-                    JOptionPane.QUESTION_MESSAGE, null,
-                    new Object[]{"Sí","No"},"Sí") ;
-            System.out.println(seleccion);
-            switch(seleccion){
-                case 0: nuevaEntrada=0;
-                break;
-                case 1: nuevaEntrada=1;
-                break;
-            }
+            nuevaEntrada=nuevoCelular.recargar();
         }while(nuevaEntrada==0);
         
         
