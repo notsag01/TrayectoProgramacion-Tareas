@@ -5,6 +5,7 @@
 package ejercicio12m2;
 
 import Funciones.Funciones;
+import java.util.ArrayList;
 
 
 /**
@@ -13,9 +14,20 @@ import Funciones.Funciones;
  */
 public class Celulares extends Funciones {
     
-
-    public Celulares(String cliente, String elemento, String marca) {
-        super(cliente, elemento, marca);
+    ArrayList<Celulares> lista=new ArrayList<>();
+    
+    public Celulares(String cliente, String elemento, String marca){
+        this. cliente=cliente;
+        this. elemento=elemento;
+        this. marca=marca;
     }
+    
+    public void addLista(){
+        Celulares nuevoIngreso= new Celulares(cliente, elemento, marca);
+        
+        lista.add(nuevoIngreso);
+    }
+    
+    
     
 }
