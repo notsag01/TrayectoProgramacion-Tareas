@@ -5,7 +5,9 @@
 package ejercicio12m2;
 
 import Funciones.Funciones;
-import 
+import Funciones.Celulares;
+
+
 import javax.swing.JOptionPane;
 
 /**
@@ -21,10 +23,9 @@ public class Ejercicio12m2 {
       
         
         int nuevaEntrada=0;
-        while(nuevaEntrada==0){
+        do{
             Funciones nuevoCelular=new Funciones();        
             nuevoCelular.getDatos();
-            
             nuevoCelular.imprimir();
             
             int seleccion = JOptionPane.showOptionDialog(null,
@@ -33,13 +34,14 @@ public class Ejercicio12m2 {
                     JOptionPane.YES_NO_CANCEL_OPTION,
                     JOptionPane.QUESTION_MESSAGE, null,
                     new Object[]{"Sí","No"},"Sí") ;
+            System.out.println(seleccion);
             switch(seleccion){
                 case 0: nuevaEntrada=0;
                 break;
                 case 1: nuevaEntrada=1;
                 break;
             }
-        }
+        }while(nuevaEntrada==0);
         
         
        

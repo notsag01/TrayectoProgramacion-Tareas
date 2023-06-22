@@ -4,7 +4,6 @@
  */
 package Funciones;
 
-import ejercicio12m2.Celulares;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
