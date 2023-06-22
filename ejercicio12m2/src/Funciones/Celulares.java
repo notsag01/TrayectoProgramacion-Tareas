@@ -7,6 +7,7 @@ package Funciones;
 import Funciones.Funciones;
 import Funciones.Celulares;
 import java.util.ArrayList;
+import javax.swing.JOptionPane;
 
 
 /**
@@ -23,14 +24,27 @@ public class Celulares extends Funciones {
         this.marca=marca;
     }
     
-    public void guardarDatos(){
-        System.out.println(cliente + elemento + marca);
+    public void guardarDatos(ArrayList<Celulares> listaCelulares){
+        //System.out.println(cliente + elemento + marca);
         
         Celulares celular=new Celulares(cliente, elemento, marca);
         
         listaCelulares.add(celular);
     }
     
+    public void imprimirListado(ArrayList<Celulares> listaCelulares){
+        for(Celulares celular : listaCelulares){
+            JOptionPane.showMessageDialog(null,
+                    "Cliente: " + celular.cliente + "\n" + 
+                    "Dispositivo: " + celular.elemento + "\n" + 
+                    "Marca: " + celular.marca + "\n");
+            
+            System.out.println("Cliente: " + celular.cliente + "\n" + 
+                    "Dispositivo: " + celular.elemento + "\n" + 
+                    "Marca: " + celular.marca + "\n");
+        };
+            
+    }
     
     
     

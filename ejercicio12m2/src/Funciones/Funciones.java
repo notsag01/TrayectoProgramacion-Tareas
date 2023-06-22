@@ -36,8 +36,16 @@ public class Funciones {
                 case 1: nuevaEntrada=1;
                 break;
             } 
-            System.out.println(nuevaEntrada);
+            //System.out.println(nuevaEntrada);
             return nuevaEntrada;
+    }
+    public int imprimir(){
+        int seleccion = JOptionPane.showOptionDialog(null,
+                "Desea imprimir listado?",
+                "Impresion", JOptionPane.YES_NO_CANCEL_OPTION,
+                JOptionPane.QUESTION_MESSAGE, null,
+                new Object[]{"Sí", "No"}, "Sí");
+        return seleccion;
     }
     
 }

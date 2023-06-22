@@ -6,6 +6,7 @@ package ejercicio12m2;
 
 import Funciones.Funciones;
 import Funciones.Celulares;
+import java.util.ArrayList;
 
 
 import javax.swing.JOptionPane;
@@ -20,13 +21,19 @@ public class Ejercicio12m2 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-      
+          ArrayList<Celulares> listaCelulares=new ArrayList<>();
+
         
         int nuevaEntrada=0;
         do{                   
             Celulares nuevoCelular=new Celulares("", "", "");        
             nuevoCelular.getDatos();      
-            nuevoCelular.guardarDatos();
+            nuevoCelular.guardarDatos(listaCelulares);
+            int imprimirListados=nuevoCelular.imprimir();
+            switch(imprimirListados){
+                case 0: nuevoCelular.imprimirListado(listaCelulares);
+                break;
+            }
             
             nuevaEntrada=nuevoCelular.recargar();
         }while(nuevaEntrada==0);
