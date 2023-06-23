@@ -15,29 +15,21 @@ public class Funciones {
     public String cliente, elemento, marca;        
     
     public void getDatos(){
-        cliente = (String)JOptionPane.showInputDialog(null,"Ingrese nombre Cliente",null);
-        elemento = (String)JOptionPane.showInputDialog(null,"Ingrese el elemento",null);
-        marca = (String)JOptionPane.showInputDialog(null,"Ingrese la marca",null);
+        cliente = (String)JOptionPane.showInputDialog(null,"Ingrese nombre Cliente",null).toUpperCase();
+        elemento = (String)JOptionPane.showInputDialog(null,"Ingrese el elemento",null).toUpperCase();
+        marca = (String)JOptionPane.showInputDialog(null,"Ingrese la marca",null).toUpperCase();
         
     }
     
     public int recargar(){
-    int nuevaEntrada=0;
+//    int nuevaEntrada=0;
         int seleccion = JOptionPane.showOptionDialog(null,
                     "Desea cargar un nuevo elemento?",
                     "Nueva Carga",
                     JOptionPane.YES_NO_CANCEL_OPTION,
                     JOptionPane.QUESTION_MESSAGE, null,
-                    new Object[]{"Sí","No"},"Sí") ;
-            //System.out.println(seleccion);
-            switch(seleccion){
-                case 0: nuevaEntrada=0;
-                break;
-                case 1: nuevaEntrada=1;
-                break;
-            } 
-            //System.out.println(nuevaEntrada);
-            return nuevaEntrada;
+                    new Object[]{"Sí","No"},"Sí");
+            return seleccion;
     }
     public int imprimir(){
         int seleccion = JOptionPane.showOptionDialog(null,
