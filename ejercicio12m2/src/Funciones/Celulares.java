@@ -18,16 +18,15 @@ public class Celulares extends Funciones {
     
 
     
-    public Celulares(String cliente, String elemento, String marca){
+    public Celulares(String numCliente, String cliente, String marca, String modelo,String bateria, String defecto){
         this.cliente=cliente;
-        this.elemento=elemento;
         this.marca=marca;
     }
     
     public void guardarDatos(ArrayList<Celulares> listaCelulares){
         //System.out.println(cliente + elemento + marca);
         
-        Celulares celular=new Celulares(cliente, elemento, marca);
+        Celulares celular=new Celulares(numCliente,cliente, marca, modelo, bateria, defecto);
         
         listaCelulares.add(celular);
     }
@@ -39,7 +38,6 @@ public class Celulares extends Funciones {
                     "Marca: " + celular.marca + "\n");
             
             System.out.println("Cliente: " + celular.cliente + "\n" + 
-                    "Dispositivo: " + celular.elemento + "\n" + 
                     "Marca: " + celular.marca + "\n");
         };
             

@@ -12,11 +12,15 @@ import javax.swing.JOptionPane;
  * @author gas12
  */
 public class Funciones {
-    public String cliente, elemento, marca;        
+    public String numCliente, cliente,marca,modelo, bateria , defecto;        
     
     public void getDatos(){
+        numCliente = (String)JOptionPane.showInputDialog(null,"Ingrese numero de Cliente",null).toUpperCase();
         cliente = (String)JOptionPane.showInputDialog(null,"Ingrese nombre Cliente",null).toUpperCase();
         marca = (String)JOptionPane.showInputDialog(null,"Ingrese la marca",null).toUpperCase();
+        modelo = (String)JOptionPane.showInputDialog(null,"Ingrese el modelo",null).toUpperCase();
+        bateria = (String)JOptionPane.showInputDialog(null,"Ingrese tipo de Batería",null).toUpperCase();
+        defecto = (String)JOptionPane.showInputDialog(null,"Explique brevemente el defecto",null).toUpperCase();
         
     }
     
