@@ -27,7 +27,12 @@ public class Ejercicio12m2 {
         int nuevaEntrada=0;
         do{    
             Funciones funcion=new Funciones();
-            funcion.seleccionarElemento();
+              String elemento = funcion.seleccionarElemento();
+              
+            switch(elemento){
+                case "CELULARES":
+            }  
+            
             
             Celulares nuevoCelular=new Celulares("", "", "");        
             nuevoCelular.getDatos();      
