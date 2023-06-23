@@ -31,13 +31,6 @@ public class Notebooks extends Funciones {
     
     public void imprimirNotebooks(ArrayList<Notebooks> listaNotebooks){
         for(Notebooks notebook : listaNotebooks){
-//            JOptionPane.showMessageDialog(null,
-//                    "Numero de Cliente: " + notebook.numCliente + "\n" + 
-//                    "Cliente: " + notebook.cliente + "\n" + 
-//                    "Marca: " + notebook.marca + "\n" +
-//                    "Modelo: " + notebook.modelo + "\n" +
-//                    "Batería: " + notebook.bateria + "\n" +
-//                    "Defecto: " + notebook.defecto + "\n" );
             
             System.out.println(
                     "--------------LISTA DE NOTEBOOKS---------" + "\n" +
