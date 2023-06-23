@@ -37,16 +37,15 @@ public class Celulares extends Funciones {
     
     public void imprimirListado(ArrayList<Celulares> listaCelulares){
         for(Celulares celular : listaCelulares){
-            JOptionPane.showMessageDialog(null,
+            
+            System.out.println(
+                    "-------- LISTADO DE CELULARES  -------- " + "\n" +
                     "Numero de Cliente: " + celular.numCliente + "\n" + 
                     "Cliente: " + celular.cliente + "\n" + 
                     "Marca: " + celular.marca + "\n" +
                     "Modelo: " + celular.modelo + "\n" +
                     "Batería: " + celular.bateria + "\n" +
                     "Defecto: " + celular.defecto + "\n");
-            
-//            System.out.println("Cliente: " + celular.cliente + "\n" + 
-//                    "Marca: " + celular.marca + "\n");
         }
             
     }

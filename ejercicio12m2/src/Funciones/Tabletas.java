@@ -33,16 +33,22 @@ public class Tabletas extends Funciones {
     
     public void imprimirTabletas(ArrayList<Tabletas> listaTablets){
         for(Tabletas tablet : listaTablets){
-            JOptionPane.showMessageDialog(null,
+//            JOptionPane.showMessageDialog(null,
+//                    "Numero de Cliente: " + tablet.numCliente + "\n" + 
+//                    "Cliente: " + tablet.cliente + "\n" + 
+//                    "Marca: " + tablet.marca + "\n" +
+//                    "Modelo: " + tablet.modelo + "\n" +
+//                    "Batería: " + tablet.bateria + "\n" +
+//                    "Defecto: " + tablet.defecto + "\n" );
+            
+            System.out.println(
+                    "-----------LISTADO DE TABLETS ---------" + "\n" +
                     "Numero de Cliente: " + tablet.numCliente + "\n" + 
                     "Cliente: " + tablet.cliente + "\n" + 
                     "Marca: " + tablet.marca + "\n" +
                     "Modelo: " + tablet.modelo + "\n" +
                     "Batería: " + tablet.bateria + "\n" +
                     "Defecto: " + tablet.defecto + "\n" );
-            
-//            System.out.println("Cliente: " + tablet.cliente + "\n" + 
-//                    "Marca: " + tablet.marca + "\n");
         }
             
     }

@@ -23,14 +23,17 @@ public class Ejercicio12m2 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        //LISTA DE ELEMENTOS DONDE LOS VAMOS A ALMACENAR
           ArrayList<Celulares> listaCelulares=new ArrayList<>();
           ArrayList<Tabletas> listaTabletas=new ArrayList<>();
           ArrayList<Notebooks> listaNotebooks=new ArrayList<>();
-
+          Funciones funcion=new Funciones();
+          
+          funcion.Presentacion();
         
         int nuevaEntrada=0;
         do{    
-            Funciones funcion=new Funciones();
+            
               String elemento = funcion.seleccionarElemento();
               
             switch(elemento){

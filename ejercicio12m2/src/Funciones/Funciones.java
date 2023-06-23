@@ -13,7 +13,11 @@ import javax.swing.JOptionPane;
  */
 public class Funciones {
     //VARIABLES
-    public String numCliente, cliente,marca,modelo, bateria , defecto;        
+    public String numCliente, cliente,marca,modelo, bateria , defecto;    
+
+    public void Presentacion(){
+        JOptionPane.showMessageDialog(null, "***SERVICIO TECNICO***");
+    }
     
     // METODOS INPUTS
     public void getDatos(){
