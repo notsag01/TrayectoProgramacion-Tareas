@@ -17,12 +17,25 @@ public class Funciones {
     
     // METODOS INPUTS
     public void getDatos(){
-        numCliente = (String)JOptionPane.showInputDialog(null,"Ingrese numero de Cliente",null).toUpperCase();
-        cliente = (String)JOptionPane.showInputDialog(null,"Ingrese nombre Cliente",null).toUpperCase();
-        marca = (String)JOptionPane.showInputDialog(null,"Ingrese la marca",null).toUpperCase();
-        modelo = (String)JOptionPane.showInputDialog(null,"Ingrese el modelo",null).toUpperCase();
-        bateria = (String)JOptionPane.showInputDialog(null,"Ingrese tipo de Batería",null).toUpperCase();
-        defecto = (String)JOptionPane.showInputDialog(null,"Explique brevemente el defecto",null).toUpperCase();
+        do{
+            numCliente = (String)JOptionPane.showInputDialog(null,"Ingrese numero de Cliente",null);
+            System.out.println(numCliente);
+        }while(numCliente == null || numCliente.equals(""));
+        do{
+            cliente = (String)JOptionPane.showInputDialog(null,"Ingrese nombre Cliente",null).toUpperCase();
+        }while(cliente==null||cliente.equals(""));
+        do{
+            marca = (String)JOptionPane.showInputDialog(null,"Ingrese la marca",null).toUpperCase();
+        }while(marca==null||marca.equals(""));
+        do{
+            modelo = (String)JOptionPane.showInputDialog(null,"Ingrese el modelo",null).toUpperCase();
+        }while(modelo==null||modelo.equals(""));
+        do{
+            bateria = (String)JOptionPane.showInputDialog(null,"Ingrese tipo de Batería",null).toUpperCase();
+        }while(modelo==null||modelo.equals(""));
+        do{
+            defecto = (String)JOptionPane.showInputDialog(null,"Explique brevemente el defecto",null).toUpperCase();
+        }while(defecto==null||defecto.equals(""));
         
     }
     // METODO PARA SELECCIONAR EL DISPOSITIVO(RETORNA UN STRING)
