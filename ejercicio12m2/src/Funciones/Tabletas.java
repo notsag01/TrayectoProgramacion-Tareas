@@ -43,7 +43,7 @@ public class Tabletas extends Funciones {
             
 //            System.out.println("Cliente: " + tablet.cliente + "\n" + 
 //                    "Marca: " + tablet.marca + "\n");
-        };
+        }
             
     }
 }

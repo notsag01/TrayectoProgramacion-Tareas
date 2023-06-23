@@ -43,11 +43,11 @@ public class Celulares extends Funciones {
                     "Marca: " + celular.marca + "\n" +
                     "Modelo: " + celular.modelo + "\n" +
                     "Batería: " + celular.bateria + "\n" +
-                    "Defecto: " + celular.defecto + "\n" );
+                    "Defecto: " + celular.defecto + "\n");
             
 //            System.out.println("Cliente: " + celular.cliente + "\n" + 
 //                    "Marca: " + celular.marca + "\n");
-        };
+        }
             
     }
     
