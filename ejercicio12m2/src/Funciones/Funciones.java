@@ -17,25 +17,24 @@ public class Funciones {
     
     // METODOS INPUTS
     public void getDatos(){
-        do{
-            numCliente = (String)JOptionPane.showInputDialog(null,"Ingrese numero de Cliente",null);
-            System.out.println(numCliente);
-        }while(numCliente == null || numCliente.equals(""));
-        do{
+        
+            numCliente = (String)JOptionPane.showInputDialog(null,"Ingrese numero de Cliente",null).toUpperCase();
+            this.verificarStrings(numCliente);        
+        
             cliente = (String)JOptionPane.showInputDialog(null,"Ingrese nombre Cliente",null).toUpperCase();
-        }while(cliente==null||cliente.equals(""));
-        do{
+            this.verificarStrings(cliente);        
+        
             marca = (String)JOptionPane.showInputDialog(null,"Ingrese la marca",null).toUpperCase();
-        }while(marca==null||marca.equals(""));
-        do{
+            this.verificarStrings(marca);        
+
             modelo = (String)JOptionPane.showInputDialog(null,"Ingrese el modelo",null).toUpperCase();
-        }while(modelo==null||modelo.equals(""));
-        do{
-            bateria = (String)JOptionPane.showInputDialog(null,"Ingrese tipo de Batería",null).toUpperCase();
-        }while(modelo==null||modelo.equals(""));
-        do{
+            this.verificarStrings(modelo);        
+
+            this.seleccTipoBateria();
+            this.verificarStrings(marca);
+            
             defecto = (String)JOptionPane.showInputDialog(null,"Explique brevemente el defecto",null).toUpperCase();
-        }while(defecto==null||defecto.equals(""));
+            this.verificarStrings(defecto);        
         
     }
     // METODO PARA SELECCIONAR EL DISPOSITIVO(RETORNA UN STRING)
@@ -50,6 +49,18 @@ public class Funciones {
         
         //System.out.println(dispositivoSeleccionado);
         return dispositivoSeleccionado;
+    }
+    
+    // METODO PARA SELECCIONAR EL DISPOSITIVO(RETORNA UN STRING)
+    public String seleccTipoBateria(){
+         String listaBaterias[]={" ","3000ma5h)","4000ma9h","7000ma12h"};
+        
+        String tipoBateria = (String )JOptionPane.showInputDialog(null,
+                "Selecciones el tipo de bateria",
+                "BATERIA",
+                JOptionPane.QUESTION_MESSAGE, null,
+                listaBaterias, listaBaterias[0]);
+        return tipoBateria;
     }
     
     // METODO PARA SELECCIONAR EL ELEMENTO(RETORNA UN ENTERO 1 Y CORTA EL CICLO CON VARIABLE "NUEVA ENTRADA")
@@ -71,6 +82,12 @@ public class Funciones {
                 JOptionPane.QUESTION_MESSAGE, null,
                 new Object[]{"Sí", "No"}, "Sí");
         return seleccion;
+    }
+    //VERIFICA QUE LOS IMPUTS ESTEN LLENOS O NO SEAN NULL
+    public void verificarStrings(String dato){
+        if(dato==null){
+            System.exit(0);
+        }
     }
     
 }
