@@ -36,7 +36,6 @@ public class Celulares extends Funciones {
         for(Celulares celular : listaCelulares){
             JOptionPane.showMessageDialog(null,
                     "Cliente: " + celular.cliente + "\n" + 
-                    "Dispositivo: " + celular.elemento + "\n" + 
                     "Marca: " + celular.marca + "\n");
             
             System.out.println("Cliente: " + celular.cliente + "\n" + 

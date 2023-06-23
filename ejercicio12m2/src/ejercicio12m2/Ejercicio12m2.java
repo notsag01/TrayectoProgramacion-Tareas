@@ -30,20 +30,22 @@ public class Ejercicio12m2 {
               String elemento = funcion.seleccionarElemento();
               
             switch(elemento){
-                case "CELULARES":
+                case "CELULARES":   Celulares nuevoCelular=new Celulares("", "", "");        
+                                    nuevoCelular.getDatos();      
+                                    nuevoCelular.guardarDatos(listaCelulares);
+                                    int imprimirListados=nuevoCelular.imprimir();
+                                    switch(imprimirListados){
+                                        case 0: nuevoCelular.imprimirListado(listaCelulares);
+                                        break;
+                                    }
+                break;
+                    
+                    
             }  
             
             
-            Celulares nuevoCelular=new Celulares("", "", "");        
-            nuevoCelular.getDatos();      
-            nuevoCelular.guardarDatos(listaCelulares);
-            int imprimirListados=nuevoCelular.imprimir();
-            switch(imprimirListados){
-                case 0: nuevoCelular.imprimirListado(listaCelulares);
-                break;
-            }
             
-            nuevaEntrada=nuevoCelular.recargar();
+            nuevaEntrada=funcion.recargar();
         }while(nuevaEntrada==0);
         
         

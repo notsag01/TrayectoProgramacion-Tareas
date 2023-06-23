@@ -16,7 +16,6 @@ public class Funciones {
     
     public void getDatos(){
         cliente = (String)JOptionPane.showInputDialog(null,"Ingrese nombre Cliente",null).toUpperCase();
-        elemento = (String)JOptionPane.showInputDialog(null,"Ingrese el elemento",null).toUpperCase();
         marca = (String)JOptionPane.showInputDialog(null,"Ingrese la marca",null).toUpperCase();
         
     }
