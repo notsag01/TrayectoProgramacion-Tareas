@@ -16,7 +16,7 @@ import javax.swing.JOptionPane;
  */
 public class Celulares extends Funciones {
     
-    ArrayList<Celulares> listaCelulares=new ArrayList<>();
+//    ArrayList<Celulares> listaCelulares=new ArrayList<>();
     
     public Celulares(String cliente, String elemento, String marca){
         this.cliente=cliente;
