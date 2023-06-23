@@ -6,6 +6,7 @@ package ejercicio12m2;
 
 import Funciones.Funciones;
 import Funciones.Celulares;
+import Funciones.Tabletas;
 import java.util.ArrayList;
 
 
@@ -22,6 +23,7 @@ public class Ejercicio12m2 {
      */
     public static void main(String[] args) {
           ArrayList<Celulares> listaCelulares=new ArrayList<>();
+          ArrayList<Tabletas> listaTabletas=new ArrayList<>();
 
         
         int nuevaEntrada=0;
@@ -39,7 +41,14 @@ public class Ejercicio12m2 {
                                         break;
                                     }
                 break;
-                    
+                case "TABLETS":     Tabletas nuevaTablet=new Tabletas("","","","","", "");        
+                                    nuevaTablet.getDatos();      
+                                    nuevaTablet.guardarDatos(listaTabletas);
+                                    int imprimirTabletas=nuevaTablet.imprimir();
+                                    switch(imprimirTabletas){
+                                        case 0: nuevaTablet.imprimirTabletas(listaTabletas);
+                                        break;
+                                    }                                      
                     
             }  
             

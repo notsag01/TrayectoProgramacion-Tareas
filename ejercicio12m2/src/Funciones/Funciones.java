@@ -38,7 +38,7 @@ public class Funciones {
     }
     // METODO PARA SELECCIONAR EL DISPOSITIVO(RETORNA UN STRING)
     public String seleccionarElemento(){
-        String listaDispositivos[]={"CELULARES","TABLET","NOTEBOOKS"};
+        String listaDispositivos[]={"CELULARES","TABLETS","NOTEBOOKS"};
         
         String dispositivoSeleccionado= (String) JOptionPane.showInputDialog(null,
                 "Seleccione el dispositivo que va a ingresar.",
