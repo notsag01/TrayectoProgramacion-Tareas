@@ -21,6 +21,16 @@ public class Funciones {
         
     }
     
+    public void seleccionarElemento(){
+        String listaDispositivos[]={"CELULARES","TABLET","NOTEBOOKS"};
+        
+        JOptionPane.showInputDialog(null,
+                "Seleccione el dispositivo que va a ingresar.",
+                "Elección del Dispositivo",
+                JOptionPane.QUESTION_MESSAGE, null,
+                listaDispositivos, listaDispositivos[0]);
+    }
+    
     public int recargar(){
 //    int nuevaEntrada=0;
         int seleccion = JOptionPane.showOptionDialog(null,
