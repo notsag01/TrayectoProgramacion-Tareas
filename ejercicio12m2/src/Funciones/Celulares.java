@@ -20,7 +20,11 @@ public class Celulares extends Funciones {
     
     public Celulares(String numCliente, String cliente, String marca, String modelo,String bateria, String defecto){
         this.cliente=cliente;
+        this.numCliente=numCliente;
         this.marca=marca;
+        this.modelo=modelo;
+        this.bateria=bateria;
+        this.defecto=defecto;
     }
     
     public void guardarDatos(ArrayList<Celulares> listaCelulares){
@@ -34,11 +38,15 @@ public class Celulares extends Funciones {
     public void imprimirListado(ArrayList<Celulares> listaCelulares){
         for(Celulares celular : listaCelulares){
             JOptionPane.showMessageDialog(null,
+                    "Numero de Cliente: " + celular.numCliente + "\n" + 
                     "Cliente: " + celular.cliente + "\n" + 
-                    "Marca: " + celular.marca + "\n");
+                    "Marca: " + celular.marca + "\n" +
+                    "Modelo: " + celular.modelo + "\n" +
+                    "Batería: " + celular.bateria + "\n" +
+                    "Defecto: " + celular.defecto + "\n" );
             
-            System.out.println("Cliente: " + celular.cliente + "\n" + 
-                    "Marca: " + celular.marca + "\n");
+//            System.out.println("Cliente: " + celular.cliente + "\n" + 
+//                    "Marca: " + celular.marca + "\n");
         };
             
     }

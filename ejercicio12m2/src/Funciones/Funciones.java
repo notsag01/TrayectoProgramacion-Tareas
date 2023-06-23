@@ -12,8 +12,10 @@ import javax.swing.JOptionPane;
  * @author gas12
  */
 public class Funciones {
+    //VARIABLES
     public String numCliente, cliente,marca,modelo, bateria , defecto;        
     
+    // METODOS INPUTS
     public void getDatos(){
         numCliente = (String)JOptionPane.showInputDialog(null,"Ingrese numero de Cliente",null).toUpperCase();
         cliente = (String)JOptionPane.showInputDialog(null,"Ingrese nombre Cliente",null).toUpperCase();
@@ -23,7 +25,7 @@ public class Funciones {
         defecto = (String)JOptionPane.showInputDialog(null,"Explique brevemente el defecto",null).toUpperCase();
         
     }
-    
+    // METODO PARA SELECCIONAR EL DISPOSITIVO(RETORNA UN STRING)
     public String seleccionarElemento(){
         String listaDispositivos[]={"CELULARES","TABLET","NOTEBOOKS"};
         
@@ -37,8 +39,8 @@ public class Funciones {
         return dispositivoSeleccionado;
     }
     
+    // METODO PARA SELECCIONAR EL ELEMENTO(RETORNA UN ENTERO 1 Y CORTA EL CICLO CON VARIABLE "NUEVA ENTRADA")
     public int recargar(){
-//    int nuevaEntrada=0;
         int seleccion = JOptionPane.showOptionDialog(null,
                     "Desea cargar un nuevo elemento?",
                     "Nueva Carga",
@@ -47,6 +49,8 @@ public class Funciones {
                     new Object[]{"Sí","No"},"Sí");
             return seleccion;
     }
+    
+    // METODO PREGUNTA SI SE DESEA IMPRIMIR (RETORNA UN ENTERO 1 )
     public int imprimir(){
         int seleccion = JOptionPane.showOptionDialog(null,
                 "Desea imprimir listado?",
