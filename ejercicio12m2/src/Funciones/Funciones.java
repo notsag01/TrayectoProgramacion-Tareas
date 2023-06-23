@@ -24,11 +24,13 @@ public class Funciones {
     public void seleccionarElemento(){
         String listaDispositivos[]={"CELULARES","TABLET","NOTEBOOKS"};
         
-        JOptionPane.showInputDialog(null,
+        String dispositivoSeleccionado= (String) JOptionPane.showInputDialog(null,
                 "Seleccione el dispositivo que va a ingresar.",
                 "Elección del Dispositivo",
                 JOptionPane.QUESTION_MESSAGE, null,
                 listaDispositivos, listaDispositivos[0]);
+        
+        System.out.println(dispositivoSeleccionado);
     }
     
     public int recargar(){
