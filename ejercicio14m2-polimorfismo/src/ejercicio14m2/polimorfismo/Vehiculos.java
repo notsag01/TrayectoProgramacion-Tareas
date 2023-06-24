@@ -13,8 +13,8 @@ public abstract class Vehiculos {
                 JOptionPane.QUESTION_MESSAGE, null,
                 new Object []{"COCHE", "MOTO", "BUS"}, "COCHE");
         
-        System.out.println(seleccion);
+        //System.out.println(seleccion);
         
     }
-    public abstract void Saludar();
+    public abstract void estacionar();
 }
