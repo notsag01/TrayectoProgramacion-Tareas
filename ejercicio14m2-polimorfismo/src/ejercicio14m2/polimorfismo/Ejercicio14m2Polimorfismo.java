@@ -9,14 +9,16 @@ public class Ejercicio14m2Polimorfismo {
      */
     public static void main(String[] args) {
         Vehiculos vehiculo=new Coche();
+        Vehiculos vehiculo1=new Moto();
+        Vehiculos vehiculo2=new Bus();
         int vehiculoSeleccionado = vehiculo.elegirVehiculo();
         
         switch (vehiculoSeleccionado){
             case 0 : vehiculo.estacionar();
             break;
-            case 1: vehiculo.estacionar();
+            case 1: vehiculo1.estacionar();
             break;
-            case 2: vehiculo.estacionar();
+            case 2: vehiculo2.estacionar();
             break;
         }
         
