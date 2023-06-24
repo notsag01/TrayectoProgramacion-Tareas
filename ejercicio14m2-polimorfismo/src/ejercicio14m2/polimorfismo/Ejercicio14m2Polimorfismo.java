@@ -15,6 +15,9 @@ public class Ejercicio14m2Polimorfismo {
             case 0 : vehiculo.estacionar();
             break;
             case 1: vehiculo.estacionar();
+            break;
+            case 2: vehiculo.estacionar();
+            break;
         }
         
         
