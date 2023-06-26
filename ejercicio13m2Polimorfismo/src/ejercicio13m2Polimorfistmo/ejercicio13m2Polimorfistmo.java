@@ -1,26 +1,25 @@
-
-package ejercicio11m2.herencia;
+                 
+package ejercicio13m2Polimorfistmo;
 
 import Funciones.Resta;
 import Funciones.Suma;
 import Funciones.Funciones;
 
-public class Ejercicio11m2Herencia {
+public class ejercicio13m2Polimorfistmo {
 
 
     public static void main(String[] args) {
-        Suma suma= new Suma();
-        Resta resta= new Resta();
-        Funciones funcion = new Funciones();
+        Funciones suma= new Suma();
+        Funciones resta= new Resta();
         
-        int operacion=funcion.presOpciones();
+        int operacion=suma.presOpciones();
         switch(operacion){
             case 0: suma.obtenerDatos();
-                    suma.sumar();
+                    suma.operar();
                     suma.imprimir();
             break;
             case 1: resta.obtenerDatos();;
-                    resta.restar();
+                    resta.operar();
                     resta.imprimir();
             break;
             case 2: System.exit(0);

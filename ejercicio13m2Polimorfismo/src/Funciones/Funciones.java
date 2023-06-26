@@ -24,8 +24,7 @@ public abstract class Funciones {
         num2= Float.parseFloat(valor2);
     }
     
-    public void imprimir(){
-        System.out.println("El resultado es: " + resultado);
-    }
+    public abstract void operar();
+    public abstract void imprimir();
 
 }
