@@ -10,36 +10,49 @@ import javax.swing.JOptionPane;
 
 public class Motos {
      
-    String marca="";
-    String modelo="";
-    String color="";
-    String costo="";
-    int precioVenta=0;
+    private String marca="";
+    private String modelo="";
+    private String color="";
+    private String costo="";
     
     ImageIcon imagen1= new ImageIcon("src/imagenes/moto2.png");
     
-    public void nuevaMoto(){
-        marca =(String) JOptionPane.showInputDialog(null, "Marca", "marca", JOptionPane.QUESTION_MESSAGE, imagen1, null, null);
-        modelo =(String) JOptionPane.showInputDialog(null, "Modelo", "modelo", JOptionPane.QUESTION_MESSAGE, imagen1, null, null);
-        color =(String) JOptionPane.showInputDialog(null, "color", "color", JOptionPane.QUESTION_MESSAGE, imagen1, null, null);
-        costo =(String) JOptionPane.showInputDialog(null, "costo", "costo", JOptionPane.QUESTION_MESSAGE, imagen1, null, null);                
+    public Motos(String marca, String modelo, String color, String costo){
+        this.marca=marca;
+        this.modelo=modelo;
+        this.color=color;
+        this.costo=costo;
     }
-    public void calcularPV(){
-        int costoN= Integer.parseInt(costo);
-        //System.out.println(costoN);
-        
-        precioVenta = (int) (costoN * 1.5);
-        System.out.println(precioVenta);
+
+    public String getMarca() {
+        return marca;
+    }
+
+    public String getModelo() {
+        return modelo;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public String getCosto() {
+        return costo;
+    }
+
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+    public void setCosto(String costo) {
+        this.costo = costo;
     }
     
-    public void imprimir(){
-        JOptionPane.showMessageDialog(null,
-                "Marca: " + marca +"\n" +
-                "Modelo: " + modelo + "\n" +
-                "Color: " + color + "\n" +
-                "Costo: " + costo + "\n" +
-                "Precio al público: " + precioVenta,
-                "CONFIRMACION ", JOptionPane.QUESTION_MESSAGE, imagen1);
-        
-    }
 }

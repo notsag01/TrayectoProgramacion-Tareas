@@ -20,6 +20,9 @@ public class ejercicio9m2Encapsulamiento {
         
         ImageIcon imagen1= new ImageIcon("src/imagenes/auto1.png");
         ImageIcon imagen2= new ImageIcon("src/imagenes/auto2.png");
+        ImageIcon imagen3= new ImageIcon("src/imagenes/moto2.png");
+        
+    
         
         int nuevo=0;
         while(nuevo == 0){
@@ -43,10 +46,19 @@ public class ejercicio9m2Encapsulamiento {
                                             "Color: " + nuevoAuto.getColor() + "\n" + 
                                             "Costo: " + nuevoAuto.getCosto() + "\n");
                 break;
-                case 1: Motos nuevaMoto= new Motos();
-                        nuevaMoto.nuevaMoto();
-                        nuevaMoto.calcularPV();
-                        nuevaMoto.imprimir();
+                case 1: Motos nuevaMoto= new Motos("", "", "", "");
+                        marca =(String) JOptionPane.showInputDialog(null, "Marca", "marca", JOptionPane.QUESTION_MESSAGE, imagen3, null, null);
+                        nuevaMoto.setMarca(marca);
+                        modelo =(String) JOptionPane.showInputDialog(null, "Modelo", "modelo", JOptionPane.QUESTION_MESSAGE, imagen3, null, null);
+                        nuevaMoto.setModelo(modelo);
+                        color =(String) JOptionPane.showInputDialog(null, "color", "color", JOptionPane.QUESTION_MESSAGE, imagen3, null, null);
+                        nuevaMoto.setColor(color);
+                        costo =(String) JOptionPane.showInputDialog(null, "costo", "costo", JOptionPane.QUESTION_MESSAGE, imagen3, null, null);                
+                        nuevaMoto.setCosto(costo);
+                        System.out.println("Marca: " + nuevaMoto.getMarca() + "\n" + 
+                                            "Modelo: " + nuevaMoto.getModelo() + "\n" + 
+                                            "Color: " + nuevaMoto.getColor() + "\n" + 
+                                            "Costo: " + nuevaMoto.getCosto() + "\n");
                 break;        
             }
             

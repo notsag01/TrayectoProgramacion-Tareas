@@ -15,9 +15,7 @@ public class Autos {
     private String color="";
     String costo="";
     
-    ImageIcon imagen1= new ImageIcon("src/imagenes/auto1.png");
-    ImageIcon imagen2= new ImageIcon("src/imagenes/auto2.png");
-    
+
     //CONSTRUCTOR
     public Autos(String marca, String modelo, String color, String costo){
         this.marca=marca;
