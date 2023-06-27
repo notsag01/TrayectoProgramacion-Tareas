@@ -36,12 +36,12 @@ public class ejercicio9m2Encapsulamiento {
                         nuevoAuto.setModelo(modelo);
                         String color =(String) JOptionPane.showInputDialog(null, "color", "color", JOptionPane.QUESTION_MESSAGE, imagen1, null, null);
                         nuevoAuto.setColor(color);
-                        String costo =(String) JOptionPane.showInputDialog(null, "costo", "costo", JOptionPane.QUESTION_MESSAGE, imagen1, null, null);  
-                        nuevoAuto.nuevoAuto();
-//                        nuevoAuto.calcularPV();
+                        String costo =(String) JOptionPane.showInputDialog(null, "costo", "costo", JOptionPane.QUESTION_MESSAGE, imagen1, null, null); 
+                        nuevoAuto.setCosto(costo);
                         System.out.println("Marca: " + nuevoAuto.getMarca() + "\n" + 
                                             "Modelo: " + nuevoAuto.getModelo() + "\n" + 
-                                            "Color: " + nuevoAuto.getColor() + "\n");
+                                            "Color: " + nuevoAuto.getColor() + "\n" + 
+                                            "Costo: " + nuevoAuto.getCosto() + "\n");
                 break;
                 case 1: Motos nuevaMoto= new Motos();
                         nuevaMoto.nuevaMoto();

@@ -14,7 +14,6 @@ public class Autos {
     private String modelo="";
     private String color="";
     String costo="";
-    int precioVenta=0;
     
     ImageIcon imagen1= new ImageIcon("src/imagenes/auto1.png");
     ImageIcon imagen2= new ImageIcon("src/imagenes/auto2.png");
@@ -25,11 +24,6 @@ public class Autos {
         this.modelo=modelo;
         this.color=color;
         this.costo=costo;
-    }
-    
-    public void nuevoAuto(){
-              
-
     }
 
     public String getMarca() {
@@ -44,6 +38,10 @@ public class Autos {
         return color;
     }
 
+    public String getCosto() {
+        return costo;
+    }
+    
     public void setMarca(String marca) {
         this.marca = marca;
     }
@@ -55,30 +53,18 @@ public class Autos {
     public void setColor(String color) {
         this.color = color;
     }
+
+    public void setCosto(String costo) {
+        this.costo = costo;
+    }
     
-//    public void calcularPV(){
-//        int costoN= Integer.parseInt(costo);
-//        //System.out.println(costoN);
-//        
-//        precioVenta = (int) (costoN * 1.5);
-//        System.out.println(precioVenta);
-//    }
     
-//    public void imprimir(){
-//        JOptionPane.showMessageDialog(null,
-//                "Marca: " + marca +"\n" +
-//                "Modelo: " + modelo + "\n" +
-//                "Color: " + color + "\n" +
-//                "Costo: " + costo + "\n" +
-//                "Precio al público: " + precioVenta,
-//                "CONFIRMACION ", JOptionPane.QUESTION_MESSAGE, imagen2);
-//        
-//    }
+ }
     
     
     
     
     
     
-    
-}
+
+
