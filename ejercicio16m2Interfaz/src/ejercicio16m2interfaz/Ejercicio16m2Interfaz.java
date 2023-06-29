@@ -12,8 +12,9 @@ public class Ejercicio16m2Interfaz extends JFrame {
     public Ejercicio16m2Interfaz(){
         setLayout(null);
         
-        etiqueta=new JLabel("Nombre y Apellidio: Cordoba Gastón H.");
+        etiqueta=new JLabel("Cordoba Gastón H.");
         etiqueta.setBounds(0, 0, 600, 100);
+        etiqueta.setHorizontalAlignment(JLabel.CENTER);
         add(etiqueta);
         
         etiqueta=new JLabel("Teléfono: 15-1234-5678");
@@ -27,6 +28,8 @@ public class Ejercicio16m2Interfaz extends JFrame {
         etiqueta=new JLabel("Dni: 29.111.111");
         etiqueta.setBounds(0, 60, 600, 100);
         add(etiqueta);
+        
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
 
