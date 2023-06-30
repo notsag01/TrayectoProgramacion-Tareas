@@ -8,13 +8,13 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 
 public class Ejercicio17m2InterfazBotones extends JFrame implements ActionListener {
-    private JButton btn1,btn2,btn3;
-    private JLabel etiqueta;
+    final private JButton btn1,btn2,btn3;
+    final private JLabel etiqueta;
     
     //CONSTRUCTOR
     public Ejercicio17m2InterfazBotones(){
         btn1=new JButton("btn1");
-        btn1.setBounds(0, 100, 100, 50);
+        btn1.setBounds(100, 100, 100, 50);
         btn1.addActionListener(this);
         add(btn1);
         btn2=new JButton("btn2");
@@ -28,6 +28,7 @@ public class Ejercicio17m2InterfazBotones extends JFrame implements ActionListen
         
         etiqueta=new JLabel("Presiona un boton");
         etiqueta.setBounds(0, 400, 200, 50);
+        add(etiqueta);
     }
     @Override
     public void actionPerformed(ActionEvent e) {
