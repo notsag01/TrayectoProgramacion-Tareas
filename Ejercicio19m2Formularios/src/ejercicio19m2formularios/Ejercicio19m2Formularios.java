@@ -40,7 +40,7 @@ public class Ejercicio19m2Formularios extends JFrame implements ActionListener {
         add(text2);
        
         respuesta=new JTextField("");
-        respuesta.setBounds(0, 150, 600, 40);
+        respuesta.setBounds(150, 150, 300, 40);
         add(respuesta);
        
         btn1=new JButton("Comparar");
@@ -62,8 +62,10 @@ public class Ejercicio19m2Formularios extends JFrame implements ActionListener {
            
             if(num1>num2){
                 respuesta.setText("El número más grande es " + num1);
-            }else{
+            }else if(num2>num1){
                 respuesta.setText("El número más grande es " + num2);          
+            }else{
+                respuesta.setText("Ambos número son inguales");
             }
            
         }else if(e.getSource()==salida){
@@ -74,8 +76,9 @@ public class Ejercicio19m2Formularios extends JFrame implements ActionListener {
     public static void main(String[] args) {
         Ejercicio19m2Formularios formulario = new Ejercicio19m2Formularios();
         formulario.setBounds(0, 0, 600, 300);
+        formulario.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         formulario.setVisible(true);
-        formulario.setResizable(true);
+        formulario.setResizable(false);
         formulario.setTitle("Cual es más grande?");
     }
     
