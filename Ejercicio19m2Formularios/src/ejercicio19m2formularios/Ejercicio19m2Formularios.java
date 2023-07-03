@@ -1,6 +1,7 @@
 
 package ejercicio19m2formularios;
 
+import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
@@ -39,16 +40,16 @@ public class Ejercicio19m2Formularios extends JFrame implements ActionListener {
         add(text2);
        
         respuesta=new JTextField("");
-        respuesta.setBounds(0, 200, 300, 250);
+        respuesta.setBounds(0, 150, 600, 40);
         add(respuesta);
        
         btn1=new JButton("Ok");
-        btn1.setBounds(100, 200, 90, 30);
+        btn1.setBounds(0, 560, 90, 30);
         btn1.addActionListener(this);
         add(btn1);
        
         salida=new JButton("Salir");
-        salida.setBounds(50, 200, 90, 30);
+        salida.setBounds(300, 560, 90, 30);
         salida.addActionListener(this);
         add(salida);
     }
@@ -74,7 +75,7 @@ public class Ejercicio19m2Formularios extends JFrame implements ActionListener {
         Ejercicio19m2Formularios formulario = new Ejercicio19m2Formularios();
         formulario.setBounds(0, 0, 600, 300);
         formulario.setVisible(true);
-        formulario.setResizable(false);
+        formulario.setResizable(true);
         formulario.setTitle("Cual es más grande?");
     }
     
