@@ -43,13 +43,13 @@ public class Ejercicio19m2Formularios extends JFrame implements ActionListener {
         respuesta.setBounds(0, 150, 600, 40);
         add(respuesta);
        
-        btn1=new JButton("Ok");
-        btn1.setBounds(0, 560, 90, 30);
+        btn1=new JButton("Comparar");
+        btn1.setBounds(200, 200, 100, 30);
         btn1.addActionListener(this);
         add(btn1);
        
         salida=new JButton("Salir");
-        salida.setBounds(300, 560, 90, 30);
+        salida.setBounds(310, 200, 100, 30);
         salida.addActionListener(this);
         add(salida);
     }
