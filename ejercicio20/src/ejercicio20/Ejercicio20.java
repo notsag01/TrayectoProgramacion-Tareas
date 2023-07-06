@@ -50,6 +50,7 @@ public class Ejercicio20 extends JFrame implements ActionListener {
         respuesta=new JTextField();
         respuesta.setBounds(50, 320,400, 40);
         respuesta.setHorizontalAlignment(JTextField.CENTER);
+        respuesta.setEditable(false);
         add(respuesta);
     }
     
@@ -73,7 +74,7 @@ public class Ejercicio20 extends JFrame implements ActionListener {
         Ejercicio20 formulario = new Ejercicio20();
         formulario.setVisible(true);
         formulario.setBounds(0, 0, 500, 500);
-        formulario.setResizable(true);
+        formulario.setResizable(false);
         formulario.setTitle("PROMEDIOS");
         
         
