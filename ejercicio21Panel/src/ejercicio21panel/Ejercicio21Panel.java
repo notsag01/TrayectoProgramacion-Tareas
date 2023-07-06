@@ -9,6 +9,7 @@ import java.text.DecimalFormat;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
 
@@ -97,15 +98,28 @@ public class Ejercicio21Panel extends JFrame implements ActionListener {
         if(e.getSource()==btn1){
             //System.out.println("Its work");
             DecimalFormat formato = new DecimalFormat("#.##");
+            String nombre=inputNombre.getText();
+            String apellido=inputApellido.getText();
+            String grado=inputGrado.getText();
+            String division=inputDivision.getText();
             double nota1=Integer.parseInt(input1.getText());
             double nota2=Integer.parseInt(input2.getText());
             double nota3=Integer.parseInt(input3.getText());
             double promedio=(nota1 + nota2 + nota3) /3;
             
-            respuesta.setText(String.valueOf(formato.format(promedio)));
-            
-            
+            if(promedio>=6){
+                respuesta.setText("Aprobado " + String.valueOf(formato.format(promedio)));
+            }else{
+                respuesta.setText("Desaprobado " + String.valueOf(formato.format(promedio)));
+            }                                    
         }
+        JOptionPane.showMessageDialog(null, 
+                "Nombre: " + inputNombre.getText() + "\n" +
+                "Apellido: " + inputApellido.getText() + "\n" +
+                "Grado: " + inputGrado.getText() + "\n" +
+                "Division: " + inputDivision.getText() + "\n" ,
+                "Calificacion",
+                JOptionPane.INFORMATION_MESSAGE);
     }
 
     public static void main(String[] args) {
