@@ -112,7 +112,7 @@ public class Ejercicio21Panel extends JFrame implements ActionListener {
             }else{
                 respuesta.setText("Desaprobado " + String.valueOf(formato.format(promedio)));
             }                                    
-            mostrarInfo(promedio);
+            mostrarInfo();
         }
     }
 
@@ -124,7 +124,7 @@ public class Ejercicio21Panel extends JFrame implements ActionListener {
         formulario.setTitle("PROMEDIOS");
     }
 
-    private void mostrarInfo(double promedio) {
+    private void mostrarInfo() {
         JOptionPane.showMessageDialog(null, 
                 "Nombre: " + inputNombre.getText() + "\n" +
                 "Apellido: " + inputApellido.getText() + "\n" +
