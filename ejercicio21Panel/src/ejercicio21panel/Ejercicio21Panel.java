@@ -112,14 +112,8 @@ public class Ejercicio21Panel extends JFrame implements ActionListener {
             }else{
                 respuesta.setText("Desaprobado " + String.valueOf(formato.format(promedio)));
             }                                    
+            mostrarInfo(promedio);
         }
-        JOptionPane.showMessageDialog(null, 
-                "Nombre: " + inputNombre.getText() + "\n" +
-                "Apellido: " + inputApellido.getText() + "\n" +
-                "Grado: " + inputGrado.getText() + "\n" +
-                "Division: " + inputDivision.getText() + "\n" ,
-                "Calificacion",
-                JOptionPane.INFORMATION_MESSAGE);
     }
 
     public static void main(String[] args) {
@@ -128,6 +122,17 @@ public class Ejercicio21Panel extends JFrame implements ActionListener {
         formulario.setBounds(0, 0, 700, 500);
         formulario.setResizable(true);
         formulario.setTitle("PROMEDIOS");
+    }
+
+    private void mostrarInfo(double promedio) {
+        JOptionPane.showMessageDialog(null, 
+                "Nombre: " + inputNombre.getText() + "\n" +
+                "Apellido: " + inputApellido.getText() + "\n" +
+                "Grado: " + inputGrado.getText() + "\n" +
+                "Division: " + inputDivision.getText() + "\n" +
+                "Promedio: " + promedio,
+                "Calificacion",
+                JOptionPane.INFORMATION_MESSAGE);
     }
     
 }
