@@ -42,9 +42,7 @@ public class Ejercicio22Colores extends JFrame implements ActionListener {
        if(e.getSource()==btnColor1){
            //System.out.println("Hello");
            String colorSelec=inputColor1.getText().toUpperCase();
-           cambiarColor(colorSelec);
-           limpiarPanenl();
-           
+           cambiarColor(colorSelec);                      
            
        }
     }
@@ -71,10 +69,6 @@ public class Ejercicio22Colores extends JFrame implements ActionListener {
             break;
         }
         panel.setBackground(bgColor);
-    }
-
-    private void limpiarPanenl() {
-        inputColor1.setText(" ");
     }
 
     
