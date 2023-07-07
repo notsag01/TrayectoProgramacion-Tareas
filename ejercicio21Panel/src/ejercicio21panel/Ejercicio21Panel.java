@@ -130,7 +130,7 @@ public class Ejercicio21Panel extends JFrame implements ActionListener {
                 "Apellido: " + inputApellido.getText() + "\n" +
                 "Grado: " + inputGrado.getText() + "\n" +
                 "Division: " + inputDivision.getText() + "\n" +
-                "Promedio: " + promedio,
+                "Respuesta: " + respuesta.getText(),
                 "Calificacion",
                 JOptionPane.INFORMATION_MESSAGE);
     }
