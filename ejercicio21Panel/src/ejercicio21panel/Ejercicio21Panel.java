@@ -113,6 +113,7 @@ public class Ejercicio21Panel extends JFrame implements ActionListener {
                 respuesta.setText("Desaprobado " + String.valueOf(formato.format(promedio)));
             }                                    
             mostrarInfo();
+            reiniciarFormulario();
         }
     }
 
@@ -133,6 +134,17 @@ public class Ejercicio21Panel extends JFrame implements ActionListener {
                 "Respuesta: " + respuesta.getText(),
                 "Calificacion",
                 JOptionPane.INFORMATION_MESSAGE);
+    }
+
+    public void reiniciarFormulario() {
+        inputNombre.setText(" ");
+        inputApellido.setText(" ");
+        inputGrado.setText(" ");
+        inputDivision.setText(" ");
+        input1.setText(" ");
+        input2.setText(" ");
+        input3.setText(" ");
+        respuesta.setText(" ");
     }
     
 }
