@@ -65,6 +65,10 @@ public class Ejercicio22Colores extends JFrame implements ActionListener {
             break;
             case "AZUL" : bgColor=Color.BLUE;
             break;
+            case "AMARILLO" : bgColor=Color.YELLOW;
+            break;
+            case "CELESTE" : bgColor=Color.CYAN;
+            break;
             default : bgColor = Color.PINK ;
             break;
         }
