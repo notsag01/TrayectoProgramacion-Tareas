@@ -272,7 +272,9 @@ public class ejercicio23calculadora extends javax.swing.JFrame {
     }//GEN-LAST:event_PORCActionPerformed
 
     private void DIVActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DIVActionPerformed
-        // TODO add your handling code here:
+        this.primernumero=Float.parseFloat(display.getText());
+        this.operador= "/";
+        this.display.setText("");
     }//GEN-LAST:event_DIVActionPerformed
 
     private void MULTIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MULTIActionPerformed
@@ -330,6 +332,8 @@ public class ejercicio23calculadora extends javax.swing.JFrame {
             this.display.setText(Float.toString(this.primernumero - this.segundonuemro));
         }else if(operador == "*"){
             this.display.setText(Float.toString(this.primernumero * this.segundonuemro));
+        }else if(this.operador == "/"){
+            this.display.setText(Float.toString(this.primernumero / this.segundonuemro));
         }
       
         
