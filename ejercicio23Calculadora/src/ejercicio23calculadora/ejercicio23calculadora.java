@@ -268,7 +268,8 @@ public class ejercicio23calculadora extends javax.swing.JFrame {
     }//GEN-LAST:event_ACActionPerformed
 
     private void PORCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PORCActionPerformed
-        // TODO add your handling code here:
+        this.segundonuemro = Float.parseFloat(this.display.getText());
+        this.display.setText(Float.toString((this.primernumero * this.segundonuemro)/100));
     }//GEN-LAST:event_PORCActionPerformed
 
     private void DIVActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DIVActionPerformed
