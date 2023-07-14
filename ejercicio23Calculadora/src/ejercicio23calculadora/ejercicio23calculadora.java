@@ -46,6 +46,7 @@ public class ejercicio23calculadora extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Calculadora CFP36");
+        setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         display.setFont(new java.awt.Font("Stencil", 0, 48)); // NOI18N
         display.setForeground(new java.awt.Color(1, 1, 1));
