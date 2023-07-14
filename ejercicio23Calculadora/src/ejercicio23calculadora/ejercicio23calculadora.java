@@ -46,6 +46,7 @@ public class ejercicio23calculadora extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Calculadora CFP36");
+        setBackground(new java.awt.Color(204, 204, 204));
         setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         display.setFont(new java.awt.Font("Stencil", 0, 48)); // NOI18N
@@ -137,7 +138,7 @@ public class ejercicio23calculadora extends javax.swing.JFrame {
             }
         });
 
-        IGUAL.setBackground(new java.awt.Color(150, 60, 5));
+        IGUAL.setBackground(new java.awt.Color(255, 153, 51));
         IGUAL.setForeground(new java.awt.Color(255, 255, 255));
         IGUAL.setText("=");
         IGUAL.addActionListener(new java.awt.event.ActionListener() {
