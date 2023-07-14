@@ -25,6 +25,7 @@ public class ejercicio23calculadora extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
         display = new javax.swing.JTextField();
         AC = new javax.swing.JButton();
         PORC = new javax.swing.JButton();
@@ -44,10 +45,22 @@ public class ejercicio23calculadora extends javax.swing.JFrame {
         DOS = new javax.swing.JButton();
         TRES = new javax.swing.JButton();
 
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Calculadora CFP36");
         setBackground(new java.awt.Color(204, 204, 204));
         setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        setResizable(false);
 
         display.setFont(new java.awt.Font("Stencil", 0, 48)); // NOI18N
         display.setForeground(new java.awt.Color(1, 1, 1));
@@ -415,5 +428,6 @@ public class ejercicio23calculadora extends javax.swing.JFrame {
     private javax.swing.JButton TRES;
     private javax.swing.JButton UNO;
     private javax.swing.JTextField display;
+    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
