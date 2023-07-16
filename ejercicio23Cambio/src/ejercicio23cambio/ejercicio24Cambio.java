@@ -1,18 +1,14 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+
 package ejercicio23cambio;
 
-/**
- *
- * @author gas12
- */
-public class ejercicio24Cambio extends javax.swing.JFrame {
+import javax.swing.JOptionPane;
 
-    /**
-     * Creates new form Interfaz
-     */
+
+public class ejercicio24Cambio extends javax.swing.JFrame {
+    double dolar=522, euro=297.28, real=55.22;
+    double cantidadPesos, cambio;
+    int eleccionMoneda;
+    
     public ejercicio24Cambio() {
         initComponents();
     }
@@ -87,6 +83,12 @@ public class ejercicio24Cambio extends javax.swing.JFrame {
             }
         });
 
+        jTextFieldCambioFinal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldCambioFinalActionPerformed(evt);
+            }
+        });
+
         buttonSalir.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         buttonSalir.setLabel("Salir");
         buttonSalir.addActionListener(new java.awt.event.ActionListener() {
@@ -121,9 +123,8 @@ public class ejercicio24Cambio extends javax.swing.JFrame {
                 .addComponent(jComboBoxCambio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jTextFieldCambioFinal, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
-                .addComponent(buttonSalir, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
+                .addComponent(buttonSalir, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         labelSelecMoneda.setAlignment(java.awt.Label.RIGHT);
@@ -159,9 +160,9 @@ public class ejercicio24Cambio extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(labelSelecMoneda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(25, 25, 25)
+                .addGap(23, 23, 23)
                 .addComponent(labelCambio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(78, 78, 78))
+                .addGap(99, 99, 99))
             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel2Layout.createSequentialGroup()
                     .addGap(33, 33, 33)
@@ -213,12 +214,34 @@ public class ejercicio24Cambio extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jComboBoxCambioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxCambioActionPerformed
-        // TODO add your handling code here:
+        cantidadPesos = Double.parseDouble(jTextFieldPesos.getText());
+        //System.out.println(cantidadPesos);
+        
+        eleccionMoneda= jComboBoxCambio.getSelectedIndex();
+        //System.out.println(eleccionMoneda);
+        switch(eleccionMoneda){
+            case(0): JOptionPane.showMessageDialog(null, "Debe ingresar una Opciòn");
+            break;
+            case(1): cambio= cantidadPesos * dolar ;
+                     jTextFieldCambioFinal.setText(Double.toString(cambio));
+            break;
+            case(2): cambio= cantidadPesos * euro ;
+                     jTextFieldCambioFinal.setText(Double.toString(cambio));;
+            break;
+            case(3): cambio= cantidadPesos * real ;
+                     jTextFieldCambioFinal.setText(Double.toString(cambio));;
+            break;
+        }
+        
     }//GEN-LAST:event_jComboBoxCambioActionPerformed
 
     private void buttonSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonSalirActionPerformed
         System.exit(0);
     }//GEN-LAST:event_buttonSalirActionPerformed
+
+    private void jTextFieldCambioFinalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldCambioFinalActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldCambioFinalActionPerformed
 
     /**
      * @param args the command line arguments
