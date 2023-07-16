@@ -1,6 +1,7 @@
 
 package ejercicio23cambio;
 
+import java.text.DecimalFormat;
 import javax.swing.JOptionPane;
 
 
@@ -223,13 +224,13 @@ public class ejercicio24Cambio extends javax.swing.JFrame {
             case(0): JOptionPane.showMessageDialog(null, "Debe ingresar una Opciòn");
             break;
             case(1): cambio= cantidadPesos * dolar ;
-                     jTextFieldCambioFinal.setText(Double.toString(cambio));
+                     jTextFieldCambioFinal.setText(String.format("%.2f", cambio));
             break;
             case(2): cambio= cantidadPesos * euro ;
-                     jTextFieldCambioFinal.setText(Double.toString(cambio));;
+                     jTextFieldCambioFinal.setText(String.format("%.2f", cambio));;
             break;
             case(3): cambio= cantidadPesos * real ;
-                     jTextFieldCambioFinal.setText(Double.toString(cambio));;
+                     jTextFieldCambioFinal.setText(String.format("%.2f", cambio));;
             break;
         }
         
