@@ -6,8 +6,9 @@ import javax.swing.JOptionPane;
 
 
 public class Ejercicio25CambioImpuestos extends javax.swing.JFrame {
-    double dolar=522, euro=297.28, real=55.22;
-    double cantidadPesos, cambio;
+    double dolarBlue=522, dolarOficial=281.5, euro=297.28, real=55.22;
+    double cantidadPesos, cambio, impPais, impGcias;
+    double alicuotaImpPais=0.3, alicuotaGcias=0.35; 
     int eleccionMoneda;
     
     public Ejercicio25CambioImpuestos() {
@@ -83,15 +84,17 @@ public class Ejercicio25CambioImpuestos extends javax.swing.JFrame {
         jTextFieldPesos.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
 
         jComboBoxCambio.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jComboBoxCambio.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "DOLAR", "EUROS", "REALES" }));
+        jComboBoxCambio.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "DOLAR OFICIAL", "EUROS", "REALES", "DOLAR BLUE" }));
         jComboBoxCambio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBoxCambioActionPerformed(evt);
             }
         });
 
+        jTextFieldCambioFinal.setEditable(false);
+        jTextFieldCambioFinal.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jTextFieldCambioFinal.setToolTipText("");
-        jTextFieldCambioFinal.setMinimumSize(new java.awt.Dimension(64, 31));
+        jTextFieldCambioFinal.setMinimumSize(new java.awt.Dimension(64, 35));
         jTextFieldCambioFinal.setPreferredSize(new java.awt.Dimension(64, 28));
         jTextFieldCambioFinal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -290,8 +293,12 @@ public class Ejercicio25CambioImpuestos extends javax.swing.JFrame {
         switch(eleccionMoneda){
             case(0): JOptionPane.showMessageDialog(null, "Debe ingresar una Opciòn");
             break;
-            case(1): cambio= cantidadPesos * dolar ;
-                     jTextFieldCambioFinal.setText(String.format("%.2f", cambio));
+            case(1): impPais= (cantidadPesos * dolarOficial)*alicuotaImpPais ;
+                     impGcias=(cantidadPesos *dolarOficial)*alicuotaGcias;
+                     cambio=(cantidadPesos * dolarOficial) + impPais + impGcias;
+                     jTextFieldImpuestoPais.setText("$" + String.format("%.2f", impPais));
+                     jTextFieldImpuestoGanancias.setText("$" + String.format("%.2f",impGcias ));
+                     jTextFieldCambioFinal.setText("$" + String.format("%.2f", cambio));
             break;
             case(2): cambio= cantidadPesos * euro ;
                      jTextFieldCambioFinal.setText(String.format("%.2f", cambio));;
