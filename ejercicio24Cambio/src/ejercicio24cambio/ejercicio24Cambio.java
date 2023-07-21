@@ -40,7 +40,6 @@ public class ejercicio24Cambio extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Cambio");
-        setPreferredSize(new java.awt.Dimension(787, 500));
 
         javax.swing.GroupLayout jPanelPrincipalLayout = new javax.swing.GroupLayout(jPanelPrincipal);
         jPanelPrincipal.setLayout(jPanelPrincipalLayout);
@@ -87,6 +86,7 @@ public class ejercicio24Cambio extends javax.swing.JFrame {
             }
         });
 
+        jTextFieldCambioFinal.setEditable(false);
         jTextFieldCambioFinal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldCambioFinalActionPerformed(evt);
@@ -127,9 +127,9 @@ public class ejercicio24Cambio extends javax.swing.JFrame {
                 .addComponent(jComboBoxCambio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jTextFieldCambioFinal, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(20, 20, 20)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 101, Short.MAX_VALUE)
                 .addComponent(buttonSalir, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(127, Short.MAX_VALUE))
+                .addGap(46, 46, 46))
         );
 
         labelSelecMoneda.setAlignment(java.awt.Label.RIGHT);
@@ -246,13 +246,13 @@ public class ejercicio24Cambio extends javax.swing.JFrame {
             case(0): JOptionPane.showMessageDialog(null, "Debe ingresar una Opciòn");
             break;
             case(1): cambio= cantidadPesos * dolar ;
-                     jTextFieldCambioFinal.setText(String.format("%.2f", cambio));
+                     jTextFieldCambioFinal.setText("$" + String.format("%.2f", cambio));
             break;
             case(2): cambio= cantidadPesos * euro ;
-                     jTextFieldCambioFinal.setText(String.format("%.2f", cambio));;
+                     jTextFieldCambioFinal.setText("$" + String.format("%.2f", cambio));;
             break;
             case(3): cambio= cantidadPesos * real ;
-                     jTextFieldCambioFinal.setText(String.format("%.2f", cambio));;
+                     jTextFieldCambioFinal.setText("$" + String.format("%.2f", cambio));;
             break;
         }
         
