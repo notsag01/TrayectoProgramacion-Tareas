@@ -296,23 +296,23 @@ public class Ejercicio25CambioImpuestos extends javax.swing.JFrame {
             case(1): impPais= (cantidadPesos * dolarOficial)*alicuotaImpPais ;
                      impGcias=(cantidadPesos *dolarOficial)*alicuotaGcias;
                      cambio=(cantidadPesos * dolarOficial) + impPais + impGcias;
-                     jTextFieldImpuestoPais.setText("$" + String.format("%.2f", impPais));
-                     jTextFieldImpuestoGanancias.setText("$" + String.format("%.2f",impGcias ));
-                     jTextFieldCambioFinal.setText("$" + String.format("%.2f", cambio));;
+                     jTextFieldImpuestoPais.setText(String.format("$%,.2f", impPais));
+                     jTextFieldImpuestoGanancias.setText(String.format("$%,.2f",impGcias ));
+                     jTextFieldCambioFinal.setText(String.format("$%,.2f", cambio));;
             break;
             case(2): impPais= (cantidadPesos * euro) * alicuotaImpPais ;
                      impGcias=(cantidadPesos *euro)*alicuotaGcias;
                      cambio=(cantidadPesos * euro) + impPais + impGcias;
-                     jTextFieldImpuestoPais.setText("$" + String.format("%.2f", impPais));
-                     jTextFieldImpuestoGanancias.setText("$" + String.format("%.2f",impGcias ));
-                     jTextFieldCambioFinal.setText("$" + String.format("%.2f", cambio));;
+                     jTextFieldImpuestoPais.setText(String.format("$%,.2f", impPais));
+                     jTextFieldImpuestoGanancias.setText(String.format("$%,.2f",impGcias ));
+                     jTextFieldCambioFinal.setText(String.format("$%,.2f", cambio));;
             break;
             case(3): impPais= (cantidadPesos * real) * alicuotaImpPais ;
                      impGcias=(cantidadPesos *real)*alicuotaGcias;
                      cambio=(cantidadPesos * real) + impPais + impGcias;
-                     jTextFieldImpuestoPais.setText("$" + String.format("%.2f", impPais));
-                     jTextFieldImpuestoGanancias.setText("$" + String.format("%.2f",impGcias ));
-                     jTextFieldCambioFinal.setText("$" + String.format("%.2f", cambio));;
+                     jTextFieldImpuestoPais.setText( String.format("$%,.2f", impPais));
+                     jTextFieldImpuestoGanancias.setText( String.format("$%,.2f",impGcias ));
+                     jTextFieldCambioFinal.setText(String.format("$%,.2f", cambio));;
             break;
 
         }
