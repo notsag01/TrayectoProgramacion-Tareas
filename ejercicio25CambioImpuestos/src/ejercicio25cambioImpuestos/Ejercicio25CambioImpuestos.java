@@ -179,7 +179,7 @@ public class Ejercicio25CambioImpuestos extends javax.swing.JFrame {
                 .addComponent(labelSelecMoneda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(20, 20, 20)
                 .addComponent(labelSelecImpuestoPais, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 21, Short.MAX_VALUE)
                 .addComponent(labelSelecImpuestoGanancias, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(52, 52, 52)
                 .addComponent(labelCambio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -229,13 +229,13 @@ public class Ejercicio25CambioImpuestos extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(37, 37, 37)
                 .addComponent(jTextFieldPesos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(33, 33, 33)
+                .addGap(18, 18, 18)
                 .addComponent(jComboBoxCambio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jTextFieldImpuestoPais, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addComponent(jTextFieldImpuestoGanancias, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 15, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel2)
                 .addGap(18, 18, 18)
                 .addComponent(jTextFieldCambioFinal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -298,14 +298,23 @@ public class Ejercicio25CambioImpuestos extends javax.swing.JFrame {
                      cambio=(cantidadPesos * dolarOficial) + impPais + impGcias;
                      jTextFieldImpuestoPais.setText("$" + String.format("%.2f", impPais));
                      jTextFieldImpuestoGanancias.setText("$" + String.format("%.2f",impGcias ));
-                     jTextFieldCambioFinal.setText("$" + String.format("%.2f", cambio));
+                     jTextFieldCambioFinal.setText("$" + String.format("%.2f", cambio));;
             break;
-            case(2): cambio= cantidadPesos * euro ;
-                     jTextFieldCambioFinal.setText(String.format("%.2f", cambio));;
+            case(2): impPais= (cantidadPesos * euro) * alicuotaImpPais ;
+                     impGcias=(cantidadPesos *euro)*alicuotaGcias;
+                     cambio=(cantidadPesos * euro) + impPais + impGcias;
+                     jTextFieldImpuestoPais.setText("$" + String.format("%.2f", impPais));
+                     jTextFieldImpuestoGanancias.setText("$" + String.format("%.2f",impGcias ));
+                     jTextFieldCambioFinal.setText("$" + String.format("%.2f", cambio));;
             break;
-            case(3): cambio= cantidadPesos * real ;
-                     jTextFieldCambioFinal.setText(String.format("%.2f", cambio));;
+            case(3): impPais= (cantidadPesos * real) * alicuotaImpPais ;
+                     impGcias=(cantidadPesos *real)*alicuotaGcias;
+                     cambio=(cantidadPesos * real) + impPais + impGcias;
+                     jTextFieldImpuestoPais.setText("$" + String.format("%.2f", impPais));
+                     jTextFieldImpuestoGanancias.setText("$" + String.format("%.2f",impGcias ));
+                     jTextFieldCambioFinal.setText("$" + String.format("%.2f", cambio));;
             break;
+
         }
         
     }//GEN-LAST:event_jComboBoxCambioActionPerformed
