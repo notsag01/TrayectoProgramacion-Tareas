@@ -314,6 +314,13 @@ public class Ejercicio25CambioImpuestos extends javax.swing.JFrame {
                      jTextFieldImpuestoGanancias.setText( String.format("$%,.2f",impGcias ));
                      jTextFieldCambioFinal.setText(String.format("$%,.2f", cambio));;
             break;
+            case(4): impPais= 0 ;
+                     impGcias=0;
+                     cambio=(cantidadPesos * dolarBlue);
+                     jTextFieldImpuestoPais.setText( String.format("$%,.2f", impPais));
+                     jTextFieldImpuestoGanancias.setText( String.format("$%,.2f",impGcias ));
+                     jTextFieldCambioFinal.setText(String.format("$%,.2f", cambio));;
+            break;
 
         }
         
