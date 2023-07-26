@@ -8,7 +8,6 @@ import javax.swing.JOptionPane;
 public class Ejercicio25CambioImpuestos extends javax.swing.JFrame {
     double dolarBlue=522, dolarOficial=281.5, euro=297.28, real=55.22;
     double cantidadPesos, cambio, impPais, impGcias;
-    double alicuotaImpPais=0.3, alicuotaGcias=0.35; 
     int eleccionMoneda;
     
     public Ejercicio25CambioImpuestos() {
@@ -284,46 +283,55 @@ public class Ejercicio25CambioImpuestos extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+        private double calcularCambio(double cantidadPesos, double tasaCambio){
+            return cantidadPesos * tasaCambio;
+        }
+        private double calcularImpuestoPais(double cantidadPesos, double tasaCambio, double alicuotaImpPais){
+            double cantMonedaExtranjera= cantidadPesos * tasaCambio;
+            return cantMonedaExtranjera * alicuotaImpPais;
+        }
+        private double calcularImpuestoGanancias(double cantidadPEsos, double tasaCambio, double alicuotaGcias){
+            double cantMonedaExtranjera =  cantidadPesos * tasaCambio;
+            return cantMonedaExtranjera * alicuotaGcias;
+        }
     private void jComboBoxCambioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxCambioActionPerformed
+        try{
         cantidadPesos = Double.parseDouble(jTextFieldPesos.getText());
         //System.out.println(cantidadPesos);
+        }catch(NumberFormatException ex){
+            JOptionPane.showMessageDialog(null, "El dato ingresado no es correcto",
+                    "Mensaje de Error",
+                    JOptionPane.ERROR_MESSAGE);
+        }
+    
+        double alicuotaImpPais=0.30;
+        double alicuotaGcias=0.35; 
+        double tasaCambio= 0.00;
         
         eleccionMoneda= jComboBoxCambio.getSelectedIndex();
         //System.out.println(eleccionMoneda);
         switch(eleccionMoneda){
             case(0): JOptionPane.showMessageDialog(null, "Debe ingresar una Opciòn");
             break;
-            case(1): impPais= (cantidadPesos * dolarOficial)*alicuotaImpPais ;
-                     impGcias=(cantidadPesos *dolarOficial)*alicuotaGcias;
-                     cambio=(cantidadPesos * dolarOficial) + impPais + impGcias;
-                     jTextFieldImpuestoPais.setText(String.format("$%,.2f", impPais));
-                     jTextFieldImpuestoGanancias.setText(String.format("$%,.2f",impGcias ));
-                     jTextFieldCambioFinal.setText(String.format("$%,.2f", cambio));;
+            case(1): tasaCambio =  dolarOficial;
             break;
-            case(2): impPais= (cantidadPesos * euro) * alicuotaImpPais ;
-                     impGcias=(cantidadPesos *euro)*alicuotaGcias;
-                     cambio=(cantidadPesos * euro) + impPais + impGcias;
-                     jTextFieldImpuestoPais.setText(String.format("$%,.2f", impPais));
-                     jTextFieldImpuestoGanancias.setText(String.format("$%,.2f",impGcias ));
-                     jTextFieldCambioFinal.setText(String.format("$%,.2f", cambio));;
+            case(2): tasaCambio = euro; 
             break;
-            case(3): impPais= (cantidadPesos * real) * alicuotaImpPais ;
-                     impGcias=(cantidadPesos *real)*alicuotaGcias;
-                     cambio=(cantidadPesos * real) + impPais + impGcias;
-                     jTextFieldImpuestoPais.setText( String.format("$%,.2f", impPais));
-                     jTextFieldImpuestoGanancias.setText( String.format("$%,.2f",impGcias ));
-                     jTextFieldCambioFinal.setText(String.format("$%,.2f", cambio));;
+            case(3): tasaCambio = real;
             break;
-            case(4): impPais= 0 ;
-                     impGcias=0;
-                     cambio=(cantidadPesos * dolarBlue);
-                     jTextFieldImpuestoPais.setText( String.format("$%,.2f", impPais));
-                     jTextFieldImpuestoGanancias.setText( String.format("$%,.2f",impGcias ));
-                     jTextFieldCambioFinal.setText(String.format("$%,.2f", cambio));;
+            case(4): tasaCambio =  dolarBlue;
+                     alicuotaImpPais=0.00;
+                     alicuotaGcias=0.00;
             break;
 
         }
+        double impPais = calcularImpuestoPais(cantidadPesos, tasaCambio,alicuotaImpPais);
+        double impGcias= calcularImpuestoGanancias(cantidadPesos, tasaCambio, alicuotaGcias);
+        double cambio =  calcularCambio(cantidadPesos , tasaCambio) + impPais + impGcias;
         
+        jTextFieldImpuestoPais.setText(String.format("$%,.2f", impPais));
+        jTextFieldImpuestoGanancias.setText(String.format("$%,.2f", impGcias));
+        jTextFieldCambioFinal.setText(String.format("$%,.2f", cambio));
     }//GEN-LAST:event_jComboBoxCambioActionPerformed
 
     private void buttonSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonSalirActionPerformed
