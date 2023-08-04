@@ -1,5 +1,6 @@
 
 import java.awt.Color;
+import javax.swing.ImageIcon;
 
 
 public class VentanaPrincipal extends javax.swing.JFrame {
@@ -11,6 +12,9 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         this.setSize(500,400);
         this.setLocationRelativeTo(null);
         this.setVisible(false);
+        
+        ImageIcon rojo = new ImageIcon("//imagene/rojo.jpg");
+        jMenuItem_Rojo.setIcon(rojo);
     }
 
     /**
@@ -31,7 +35,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jDesktopPane2 = new javax.swing.JDesktopPane();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu_Colores = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
+        jMenuItem_Rojo = new javax.swing.JMenuItem();
         jMenuItem_Verde = new javax.swing.JMenuItem();
         jMenuItem_Azul = new javax.swing.JMenuItem();
         jMenu_Tamaño = new javax.swing.JMenu();
@@ -59,6 +63,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         jDesktopPane1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jDesktopPane2.setBackground(new java.awt.Color(255, 255, 255));
+
         javax.swing.GroupLayout jDesktopPane2Layout = new javax.swing.GroupLayout(jDesktopPane2);
         jDesktopPane2.setLayout(jDesktopPane2Layout);
         jDesktopPane2Layout.setHorizontalGroup(
@@ -67,7 +73,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         );
         jDesktopPane2Layout.setVerticalGroup(
             jDesktopPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 216, Short.MAX_VALUE)
+            .addGap(0, 269, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout jPanel_PanelLayout = new javax.swing.GroupLayout(jPanel_Panel);
@@ -78,7 +84,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 .addGap(24, 24, 24)
                 .addComponent(jDesktopPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(372, Short.MAX_VALUE))
-            .addComponent(jDesktopPane2)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel_PanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jDesktopPane2)
+                .addContainerGap())
         );
         jPanel_PanelLayout.setVerticalGroup(
             jPanel_PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -87,18 +96,18 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 .addComponent(jDesktopPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jDesktopPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(71, 71, 71))
+                .addGap(18, 18, 18))
         );
 
         jMenu_Colores.setText("COLORES");
 
-        jMenuItem1.setText("Rojo");
-        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+        jMenuItem_Rojo.setText("Rojo");
+        jMenuItem_Rojo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem1ActionPerformed(evt);
+                jMenuItem_RojoActionPerformed(evt);
             }
         });
-        jMenu_Colores.add(jMenuItem1);
+        jMenu_Colores.add(jMenuItem_Rojo);
 
         jMenuItem_Verde.setText("Verde");
         jMenuItem_Verde.addActionListener(new java.awt.event.ActionListener() {
@@ -196,9 +205,9 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+    private void jMenuItem_RojoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem_RojoActionPerformed
         jPanel_Panel.setBackground(Color.red);
-    }//GEN-LAST:event_jMenuItem1ActionPerformed
+    }//GEN-LAST:event_jMenuItem_RojoActionPerformed
 
     private void jMenuItem_VerdeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem_VerdeActionPerformed
         jPanel_Panel.setBackground(Color.green);
@@ -281,7 +290,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JDesktopPane jDesktopPane2;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenu jMenuInternal;
-    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem1000X800;
     private javax.swing.JMenuItem jMenuItem120X840;
     private javax.swing.JMenuItem jMenuItem2;
@@ -292,6 +300,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItemSalir;
     private javax.swing.JMenuItem jMenuItem_Azul;
     private javax.swing.JMenuItem jMenuItem_Mostrar_Internal;
+    private javax.swing.JMenuItem jMenuItem_Rojo;
     private javax.swing.JMenuItem jMenuItem_Verde;
     private javax.swing.JMenu jMenu_Colores;
     private javax.swing.JMenu jMenu_Sistema;

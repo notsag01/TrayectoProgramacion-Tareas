@@ -5,7 +5,7 @@ public class Internal extends javax.swing.JInternalFrame {
     public Internal() {
         initComponents();
         this.setTitle("Ventana Principal");
-        this.setSize(450,350);
+        this.setSize(450,250);
         this.setVisible(false);
     }
 
