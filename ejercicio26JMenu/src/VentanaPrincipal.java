@@ -1,5 +1,6 @@
 
 import java.awt.Color;
+import java.awt.Image;
 import javax.swing.ImageIcon;
 
 
@@ -11,10 +12,11 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         this.setTitle("Ventana Principal");
         this.setSize(500,400);
         this.setLocationRelativeTo(null);
-        this.setVisible(false);
+        this.setVisible(false);        
         
-        ImageIcon rojo = new ImageIcon("//imagene/rojo.jpg");
-        jMenuItem_Rojo.setIcon(rojo);
+        ImageIcon imgRojo = new ImageIcon("/imagen/rojo.jpg");
+        imgRojo= new ImageIcon(imgRojo.getImage().getScaledInstance(25, 25,Image.SCALE_DEFAULT));
+        jMenuItem_Rojo.setIcon(imgRojo);
     }
 
     /**
@@ -63,8 +65,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         jDesktopPane1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jDesktopPane2.setBackground(new java.awt.Color(255, 255, 255));
-
         javax.swing.GroupLayout jDesktopPane2Layout = new javax.swing.GroupLayout(jDesktopPane2);
         jDesktopPane2.setLayout(jDesktopPane2Layout);
         jDesktopPane2Layout.setHorizontalGroup(
@@ -73,7 +73,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         );
         jDesktopPane2Layout.setVerticalGroup(
             jDesktopPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 269, Short.MAX_VALUE)
+            .addGap(0, 216, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout jPanel_PanelLayout = new javax.swing.GroupLayout(jPanel_Panel);
@@ -96,11 +96,13 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 .addComponent(jDesktopPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jDesktopPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18))
+                .addGap(71, 71, 71))
         );
 
         jMenu_Colores.setText("COLORES");
 
+        jMenuItem_Rojo.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_R, java.awt.event.InputEvent.ALT_DOWN_MASK | java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        jMenuItem_Rojo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/rojo.jpg"))); // NOI18N
         jMenuItem_Rojo.setText("Rojo");
         jMenuItem_Rojo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -109,6 +111,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         });
         jMenu_Colores.add(jMenuItem_Rojo);
 
+        jMenuItem_Verde.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_V, java.awt.event.InputEvent.ALT_DOWN_MASK | java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        jMenuItem_Verde.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/verde.jpg"))); // NOI18N
         jMenuItem_Verde.setText("Verde");
         jMenuItem_Verde.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -117,6 +121,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         });
         jMenu_Colores.add(jMenuItem_Verde);
 
+        jMenuItem_Azul.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_A, java.awt.event.InputEvent.ALT_DOWN_MASK | java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        jMenuItem_Azul.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/azul.png"))); // NOI18N
         jMenuItem_Azul.setText("Azul");
         jMenuItem_Azul.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -129,6 +135,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         jMenu_Tamaño.setText("TAMAÑO");
 
+        jMenuItem800X600.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_1, java.awt.event.InputEvent.ALT_DOWN_MASK | java.awt.event.InputEvent.CTRL_DOWN_MASK));
         jMenuItem800X600.setText("800x600");
         jMenuItem800X600.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -137,6 +144,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         });
         jMenu_Tamaño.add(jMenuItem800X600);
 
+        jMenuItem1000X800.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_2, java.awt.event.InputEvent.ALT_DOWN_MASK | java.awt.event.InputEvent.CTRL_DOWN_MASK));
         jMenuItem1000X800.setText("1000X800");
         jMenuItem1000X800.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -145,6 +153,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         });
         jMenu_Tamaño.add(jMenuItem1000X800);
 
+        jMenuItem120X840.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_3, java.awt.event.InputEvent.ALT_DOWN_MASK | java.awt.event.InputEvent.CTRL_DOWN_MASK));
         jMenuItem120X840.setText("120X840");
         jMenuItem120X840.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
