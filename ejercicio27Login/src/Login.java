@@ -56,6 +56,11 @@ public class Login extends javax.swing.JFrame {
 
         buttonIngresar.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         buttonIngresar.setLabel("Ingresar");
+        buttonIngresar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonIngresarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanelLoginLayout = new javax.swing.GroupLayout(jPanelLogin);
         jPanelLogin.setLayout(jPanelLoginLayout);
@@ -128,6 +133,18 @@ public class Login extends javax.swing.JFrame {
             case 3: jLabelFoto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/donRamon.jpg")));
         }
     }//GEN-LAST:event_jComboBoxUsuariosActionPerformed
+
+    private void buttonIngresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonIngresarActionPerformed
+        // TODO add your handling code here:
+        String contrasenia= jTextFieldContrasenia.getText();
+        int usuario = jComboBoxUsuarios.getSelectedIndex();
+        
+        switch (usuario){
+            case 1: if(contrasenia.equals("chavo")){
+                        System.out.println("Login");
+                    }
+        }
+    }//GEN-LAST:event_buttonIngresarActionPerformed
 
     /**
      * @param args the command line arguments
