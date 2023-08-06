@@ -5,6 +5,13 @@ import javax.swing.JFrame;
 
 public class Login extends javax.swing.JFrame {
     ImageIcon chavo = new ImageIcon("/imagenes/chavo.png");
+    
+    private void ingresar(){
+        this.setVisible(false);
+        Principal principal = new Principal();
+        principal.setVisible(true);
+        principal.setExtendedState(JFrame.MAXIMIZED_BOTH);
+    }
 
     public Login() {
         initComponents();
@@ -140,26 +147,18 @@ public class Login extends javax.swing.JFrame {
         String contrasenia= jTextFieldContrasenia.getText();
         int usuario = jComboBoxUsuarios.getSelectedIndex();
         
+        
         switch (usuario){
             case 1: if(contrasenia.equals("123")){
-                        this.setVisible(false);
-                        Principal principal = new Principal();
-                        principal.setVisible(true);
-                        principal.setExtendedState(JFrame.MAXIMIZED_BOTH);
+                        ingresar();
                     }
             break;
             case 2: if(contrasenia.equals("456")){
-                        this.setVisible(false);
-                        Principal principal = new Principal();
-                        principal.setVisible(true);
-                        principal.setExtendedState(JFrame.MAXIMIZED_BOTH);
+                        ingresar();
                     }
             break;
             case 3: if(contrasenia.equals("789")){
-                        this.setVisible(false);
-                        Principal principal = new Principal();
-                        principal.setVisible(true);
-                        principal.setExtendedState(JFrame.MAXIMIZED_BOTH);
+                        ingresar();
                     }
             break;
         }
