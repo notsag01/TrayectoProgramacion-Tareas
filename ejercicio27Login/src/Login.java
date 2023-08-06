@@ -35,7 +35,6 @@ public class Login extends javax.swing.JFrame {
         jPanelLogin.setPreferredSize(new java.awt.Dimension(600, 600));
 
         jLabelFoto.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelFoto.setText("jLabelFoto");
         jLabelFoto.setAlignmentX(0.5F);
         jLabelFoto.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jLabelFoto.setPreferredSize(new java.awt.Dimension(200, 200));
@@ -123,6 +122,10 @@ public class Login extends javax.swing.JFrame {
         // TODO add your handling code here:
         switch(jComboBoxUsuarios.getSelectedIndex()){
             case 1 : jLabelFoto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/chavo.png")));
+            break;
+            case 2 : jLabelFoto.setIcon(new javax.swing.ImageIcon( getClass().getResource("/imagenes/chapulin.png")));
+            break;
+            case 3: jLabelFoto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/donRamon.jpg")));
         }
     }//GEN-LAST:event_jComboBoxUsuariosActionPerformed
 
