@@ -1,5 +1,6 @@
 
 import javax.swing.ImageIcon;
+import javax.swing.JFrame;
 
 
 public class Login extends javax.swing.JFrame {
@@ -141,7 +142,11 @@ public class Login extends javax.swing.JFrame {
         
         switch (usuario){
             case 1: if(contrasenia.equals("chavo")){
-                        System.out.println("Login");
+                        
+                        Principal principal = new Principal();
+                        principal.setVisible(true);
+                        principal.setExtendedState(JFrame.MAXIMIZED_BOTH);
+                        break;
                     }
         }
     }//GEN-LAST:event_buttonIngresarActionPerformed
