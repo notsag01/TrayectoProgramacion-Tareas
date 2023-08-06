@@ -1,6 +1,9 @@
 
-public class Login extends javax.swing.JFrame {
+import javax.swing.ImageIcon;
 
+
+public class Login extends javax.swing.JFrame {
+    ImageIcon chavo = new ImageIcon("/imagenes/chavo.png");
 
     public Login() {
         initComponents();
@@ -119,7 +122,7 @@ public class Login extends javax.swing.JFrame {
     private void jComboBoxUsuariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxUsuariosActionPerformed
         // TODO add your handling code here:
         switch(jComboBoxUsuarios.getSelectedIndex()){
-            case 1 : jLabelFoto.setIcon(new javax.swing.ImageIcon(getClass().getResource(name)));
+            case 1 : jLabelFoto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/chavo.png")));
         }
     }//GEN-LAST:event_jComboBoxUsuariosActionPerformed
 
