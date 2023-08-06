@@ -141,7 +141,21 @@ public class Login extends javax.swing.JFrame {
         int usuario = jComboBoxUsuarios.getSelectedIndex();
         
         switch (usuario){
-            case 1: if(contrasenia.equals("chavo")){
+            case 1: if(contrasenia.equals("123")){
+                        this.setVisible(false);
+                        Principal principal = new Principal();
+                        principal.setVisible(true);
+                        principal.setExtendedState(JFrame.MAXIMIZED_BOTH);
+                    }
+            break;
+            case 2: if(contrasenia.equals("456")){
+                        this.setVisible(false);
+                        Principal principal = new Principal();
+                        principal.setVisible(true);
+                        principal.setExtendedState(JFrame.MAXIMIZED_BOTH);
+                    }
+            break;
+            case 3: if(contrasenia.equals("789")){
                         this.setVisible(false);
                         Principal principal = new Principal();
                         principal.setVisible(true);
