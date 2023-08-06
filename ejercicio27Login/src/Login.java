@@ -142,12 +142,12 @@ public class Login extends javax.swing.JFrame {
         
         switch (usuario){
             case 1: if(contrasenia.equals("chavo")){
-                        
+                        this.setVisible(false);
                         Principal principal = new Principal();
                         principal.setVisible(true);
                         principal.setExtendedState(JFrame.MAXIMIZED_BOTH);
-                        break;
                     }
+            break;
         }
     }//GEN-LAST:event_buttonIngresarActionPerformed
 
