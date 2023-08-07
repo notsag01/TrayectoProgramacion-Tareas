@@ -68,6 +68,11 @@ public class Login extends javax.swing.JFrame {
                 buttonCerrarActionPerformed(evt);
             }
         });
+        buttonCerrar.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                buttonCerrarKeyPressed(evt);
+            }
+        });
 
         buttonIngresar.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         buttonIngresar.setLabel("Ingresar");
@@ -222,6 +227,11 @@ public class Login extends javax.swing.JFrame {
         }
         
     }//GEN-LAST:event_buttonIngresarKeyPressed
+
+    private void buttonCerrarKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_buttonCerrarKeyPressed
+        // TODO add your handling code here:
+        System.exit(0);
+    }//GEN-LAST:event_buttonCerrarKeyPressed
 
     /**
      * @param args the command line arguments
