@@ -55,6 +55,12 @@ public class Login extends javax.swing.JFrame {
             }
         });
 
+        jTextFieldContrasenia.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jTextFieldContraseniaKeyPressed(evt);
+            }
+        });
+
         buttonCerrar.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         buttonCerrar.setLabel("Cerrar");
         buttonCerrar.addActionListener(new java.awt.event.ActionListener() {
@@ -68,6 +74,11 @@ public class Login extends javax.swing.JFrame {
         buttonIngresar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buttonIngresarActionPerformed(evt);
+            }
+        });
+        buttonIngresar.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                buttonIngresarKeyPressed(evt);
             }
         });
 
@@ -166,6 +177,51 @@ public class Login extends javax.swing.JFrame {
             break;
         }
     }//GEN-LAST:event_buttonIngresarActionPerformed
+
+    private void jTextFieldContraseniaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldContraseniaKeyPressed
+        // TODO add your handling code here:
+        String contrasenia= jTextFieldContrasenia.getText();
+        int usuario = jComboBoxUsuarios.getSelectedIndex();
+        
+        
+        switch (usuario){
+            case 1: if(contrasenia.equals("123")){
+                        ingresar();
+                    }
+            break;
+            case 2: if(contrasenia.equals("456")){
+                        ingresar();
+                    }
+            break;
+            case 3: if(contrasenia.equals("789")){
+                        ingresar();
+                    }
+            break;
+        }
+    }//GEN-LAST:event_jTextFieldContraseniaKeyPressed
+
+    private void buttonIngresarKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_buttonIngresarKeyPressed
+        // TODO add your handling code here:
+        String contrasenia= jTextFieldContrasenia.getText();
+        int usuario = jComboBoxUsuarios.getSelectedIndex();
+        
+        
+        switch (usuario){
+            case 1: if(contrasenia.equals("123")){
+                        ingresar();
+                    }
+            break;
+            case 2: if(contrasenia.equals("456")){
+                        ingresar();
+                    }
+            break;
+            case 3: if(contrasenia.equals("789")){
+                        ingresar();
+                    }
+            break;
+        }
+        
+    }//GEN-LAST:event_buttonIngresarKeyPressed
 
     /**
      * @param args the command line arguments
