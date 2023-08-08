@@ -75,8 +75,9 @@ public class Cambio extends javax.swing.JFrame {
             }
         });
 
-        button_limpiar.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
-        button_limpiar.setLabel("Salir");
+        button_limpiar.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
+        button_limpiar.setLabel("Limpiar");
+        button_limpiar.setName(""); // NOI18N
         button_limpiar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 button_limpiarActionPerformed(evt);
@@ -289,8 +290,7 @@ public class Cambio extends javax.swing.JFrame {
         eleccionMoneda= jComboBoxCambio.getSelectedIndex();
         //System.out.println(eleccionMoneda);
         switch(eleccionMoneda){
-            case(0): JOptionPane.showMessageDialog(null, "Debe ingresar una Opciòn");
-            break;
+            case(0): tasaCambio = 0;
             case(1): tasaCambio =  dolarOficial;
             break;
             case(2): tasaCambio = euro;
@@ -318,6 +318,7 @@ public class Cambio extends javax.swing.JFrame {
 
     private void button_limpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button_limpiarActionPerformed
         jTextFieldPesos.setText("");
+        //jComboBoxCambio.setSelectedIndex(0);
         jTextFieldImpuestoPais.setText("");
         jTextFieldImpuestoGanancias.setText("");
         jTextFieldCambioFinal.setText("");
