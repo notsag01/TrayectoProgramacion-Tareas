@@ -99,7 +99,7 @@
             <Property name="text" type="java.lang.String" value="TAMA&#xd1;O"/>
           </Properties>
         </Menu>
-        <Menu class="javax.swing.JMenu" name="jMenu3">
+        <Menu class="javax.swing.JMenu" name="jMenuDolar">
           <Properties>
             <Property name="text" type="java.lang.String" value="CAMBIO"/>
           </Properties>

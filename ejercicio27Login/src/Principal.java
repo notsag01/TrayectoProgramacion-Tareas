@@ -1,6 +1,7 @@
 
 import java.awt.Color;
 import javax.swing.JDesktopPane;
+import javax.swing.JInternalFrame;
 
 
 public class Principal extends javax.swing.JFrame {
@@ -41,7 +42,7 @@ public class Principal extends javax.swing.JFrame {
         jMenuItem2 = new javax.swing.JMenuItem();
         jMenuItem3 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
-        jMenu3 = new javax.swing.JMenu();
+        jMenuDolar = new javax.swing.JMenu();
         jMenuItem4 = new javax.swing.JMenuItem();
 
         menu1.setLabel("File");
@@ -121,7 +122,7 @@ public class Principal extends javax.swing.JFrame {
         jMenu2.setText("TAMAÑO");
         jMenuBar1.add(jMenu2);
 
-        jMenu3.setText("CAMBIO");
+        jMenuDolar.setText("CAMBIO");
 
         jMenuItem4.setText("A DOLAR");
         jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
@@ -129,9 +130,9 @@ public class Principal extends javax.swing.JFrame {
                 jMenuItem4ActionPerformed(evt);
             }
         });
-        jMenu3.add(jMenuItem4);
+        jMenuDolar.add(jMenuItem4);
 
-        jMenuBar1.add(jMenu3);
+        jMenuBar1.add(jMenuDolar);
 
         setJMenuBar(jMenuBar1);
 
@@ -145,6 +146,21 @@ public class Principal extends javax.swing.JFrame {
 
     private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
         // TODO add your handling code here:
+        JDesktopPane desktopPane = new JDesktopPane();
+        desktopPane.setVisible(true);
+        
+        JInternalFrame internalFrame = new JInternalFrame("Nuevo Internal Frame", true, true, true, true);
+        internalFrame.setSize(300,500);
+        internalFrame.setLocation(0 , 0);
+        internalFrame.setVisible(true);
+        
+        desktopPane.add(internalFrame);
+        
+        jPanel_Panel.setLayout(null);
+        internalFrame.setBounds(0, 0, jPanel_Panel.getWidth(), jPanel_Panel.getHeight());
+        
+        jPanel_Panel.add(internalFrame);
+        jPanel_Panel.revalidate();
         
     }//GEN-LAST:event_jMenuItem4ActionPerformed
 
@@ -188,8 +204,8 @@ public class Principal extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenu jMenu3;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenu jMenuDolar;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
