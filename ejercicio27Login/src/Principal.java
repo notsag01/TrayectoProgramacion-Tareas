@@ -1,5 +1,6 @@
 
 import java.awt.Color;
+import java.awt.FlowLayout;
 import javax.swing.JDesktopPane;
 import javax.swing.JFrame;
 import javax.swing.JInternalFrame;
@@ -158,6 +159,7 @@ public class Principal extends javax.swing.JFrame {
         desktopPane.add(internalFrame);
         
         Cambio cambio = new Cambio();
+        cambio.setLayout(new FlowLayout(FlowLayout.CENTER,0,0));
         internalFrame.getContentPane().add(cambio.getContentPane());
         
         jPanel_Panel.setLayout(null);
