@@ -44,6 +44,8 @@ public class Principal extends javax.swing.JFrame {
         jMenuItem_verde = new javax.swing.JMenuItem();
         jMenuItem_azul = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
+        jMenuItem_medida1 = new javax.swing.JMenuItem();
+        jMenuItem_medida2 = new javax.swing.JMenuItem();
         jMenuDolar = new javax.swing.JMenu();
         jMenuItem4 = new javax.swing.JMenuItem();
 
@@ -132,6 +134,23 @@ public class Principal extends javax.swing.JFrame {
         jMenuBar1.add(jMenu1);
 
         jMenu2.setText("TAMAÑO");
+
+        jMenuItem_medida1.setText("200 x 300");
+        jMenuItem_medida1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem_medida1ActionPerformed(evt);
+            }
+        });
+        jMenu2.add(jMenuItem_medida1);
+
+        jMenuItem_medida2.setText("500 x 400");
+        jMenuItem_medida2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem_medida2ActionPerformed(evt);
+            }
+        });
+        jMenu2.add(jMenuItem_medida2);
+
         jMenuBar1.add(jMenu2);
 
         jMenuDolar.setText("CAMBIO");
@@ -190,6 +209,16 @@ public class Principal extends javax.swing.JFrame {
         jPanel_Panel.setBackground(Color.blue);
     }//GEN-LAST:event_jMenuItem_azulActionPerformed
 
+    private void jMenuItem_medida1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem_medida1ActionPerformed
+        // TODO add your handling code here:
+        this.setSize(200,300);
+    }//GEN-LAST:event_jMenuItem_medida1ActionPerformed
+
+    private void jMenuItem_medida2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem_medida2ActionPerformed
+        // TODO add your handling code here:
+        this.setSize(500,400);
+    }//GEN-LAST:event_jMenuItem_medida2ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -234,6 +263,8 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JMenu jMenuDolar;
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem_azul;
+    private javax.swing.JMenuItem jMenuItem_medida1;
+    private javax.swing.JMenuItem jMenuItem_medida2;
     private javax.swing.JMenuItem jMenuItem_rojo;
     private javax.swing.JMenuItem jMenuItem_verde;
     private javax.swing.JPanel jPanel2;
