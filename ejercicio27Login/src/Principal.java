@@ -40,9 +40,9 @@ public class Principal extends javax.swing.JFrame {
         jPanel_Panel = new javax.swing.JPanel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
-        jMenuItem2 = new javax.swing.JMenuItem();
-        jMenuItem3 = new javax.swing.JMenuItem();
+        jMenuItem_rojo = new javax.swing.JMenuItem();
+        jMenuItem_verde = new javax.swing.JMenuItem();
+        jMenuItem_azul = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         jMenuDolar = new javax.swing.JMenu();
         jMenuItem4 = new javax.swing.JMenuItem();
@@ -102,22 +102,32 @@ public class Principal extends javax.swing.JFrame {
 
         jMenu1.setText("COLORES");
 
-        jMenuItem1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/rojo.jpg"))); // NOI18N
-        jMenuItem1.setText("ROJO");
-        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+        jMenuItem_rojo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/rojo.jpg"))); // NOI18N
+        jMenuItem_rojo.setText("ROJO");
+        jMenuItem_rojo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem1ActionPerformed(evt);
+                jMenuItem_rojoActionPerformed(evt);
             }
         });
-        jMenu1.add(jMenuItem1);
+        jMenu1.add(jMenuItem_rojo);
 
-        jMenuItem2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/verde.jpg"))); // NOI18N
-        jMenuItem2.setText("VERDE");
-        jMenu1.add(jMenuItem2);
+        jMenuItem_verde.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/verde.jpg"))); // NOI18N
+        jMenuItem_verde.setText("VERDE");
+        jMenuItem_verde.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem_verdeActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuItem_verde);
 
-        jMenuItem3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/azul.png"))); // NOI18N
-        jMenuItem3.setText("AZUL");
-        jMenu1.add(jMenuItem3);
+        jMenuItem_azul.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/azul.png"))); // NOI18N
+        jMenuItem_azul.setText("AZUL");
+        jMenuItem_azul.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem_azulActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuItem_azul);
 
         jMenuBar1.add(jMenu1);
 
@@ -141,10 +151,10 @@ public class Principal extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+    private void jMenuItem_rojoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem_rojoActionPerformed
         // TODO add your handling code here:
         jPanel_Panel.setBackground(Color.red);
-    }//GEN-LAST:event_jMenuItem1ActionPerformed
+    }//GEN-LAST:event_jMenuItem_rojoActionPerformed
 
     private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
         // TODO add your handling code here:
@@ -169,6 +179,16 @@ public class Principal extends javax.swing.JFrame {
         jPanel_Panel.revalidate();
         
     }//GEN-LAST:event_jMenuItem4ActionPerformed
+
+    private void jMenuItem_verdeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem_verdeActionPerformed
+        // TODO add your handling code here:
+        jPanel_Panel.setBackground(Color.green);
+    }//GEN-LAST:event_jMenuItem_verdeActionPerformed
+
+    private void jMenuItem_azulActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem_azulActionPerformed
+        // TODO add your handling code here:
+        jPanel_Panel.setBackground(Color.blue);
+    }//GEN-LAST:event_jMenuItem_azulActionPerformed
 
     /**
      * @param args the command line arguments
@@ -212,10 +232,10 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenu jMenuDolar;
-    private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
+    private javax.swing.JMenuItem jMenuItem_azul;
+    private javax.swing.JMenuItem jMenuItem_rojo;
+    private javax.swing.JMenuItem jMenuItem_verde;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel_Panel;
     private java.awt.Menu menu1;
