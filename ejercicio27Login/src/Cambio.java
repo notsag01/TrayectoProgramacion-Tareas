@@ -369,14 +369,16 @@ public class Cambio extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 
     private double calcularImpuestoPais(double cantidadPesos, double tasaCambio, double alicuotaImpPais) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        double cantMonedaExtranjera= cantidadPesos * tasaCambio;
+            return cantMonedaExtranjera * alicuotaImpPais;
     }
 
     private double calcularImpuestoGanancias(double cantidadPesos, double tasaCambio, double alicuotaGcias) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        double cantMonedaExtranjera =  cantidadPesos * tasaCambio;
+            return cantMonedaExtranjera * alicuotaGcias;
     }
 
     private double calcularCambio(double cantidadPesos, double tasaCambio) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+            return cantidadPesos * tasaCambio;
     }
 }
