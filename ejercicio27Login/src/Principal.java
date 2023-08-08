@@ -156,6 +156,9 @@ public class Principal extends javax.swing.JFrame {
         
         desktopPane.add(internalFrame);
         
+        Cambio cambio = new Cambio();
+        internalFrame.getContentPane().add(cambio.getContentPane());
+        
         jPanel_Panel.setLayout(null);
         internalFrame.setBounds(0, 0, jPanel_Panel.getWidth(), jPanel_Panel.getHeight());
         
