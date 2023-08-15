@@ -41,36 +41,36 @@ public class Main extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
-        jCheckBox1 = new javax.swing.JCheckBox();
-        jCheckBox2 = new javax.swing.JCheckBox();
-        jCheckBox3 = new javax.swing.JCheckBox();
-        jLabel13 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
+        cebolla = new javax.swing.JCheckBox();
+        lechuga = new javax.swing.JCheckBox();
+        panceta = new javax.swing.JCheckBox();
+        pepino = new javax.swing.JLabel();
+        picle = new javax.swing.JLabel();
+        tomate = new javax.swing.JLabel();
         jCheckBox4 = new javax.swing.JCheckBox();
         jCheckBox5 = new javax.swing.JCheckBox();
         jCheckBox6 = new javax.swing.JCheckBox();
         jLabel12 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
-        jRadioButton3 = new javax.swing.JRadioButton();
+        gaseosa_chicas = new javax.swing.JRadioButton();
+        gaseosa_medianas = new javax.swing.JRadioButton();
+        gaseosa_grandes = new javax.swing.JRadioButton();
         jLabel8 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
-        jRadioButton4 = new javax.swing.JRadioButton();
-        jRadioButton5 = new javax.swing.JRadioButton();
+        papas_chicas = new javax.swing.JRadioButton();
+        papas_grandes = new javax.swing.JRadioButton();
         jPanel7 = new javax.swing.JPanel();
         jLabel16 = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
-        jRadioButton6 = new javax.swing.JRadioButton();
-        jRadioButton7 = new javax.swing.JRadioButton();
+        cocaCola = new javax.swing.JRadioButton();
+        sprite = new javax.swing.JRadioButton();
         jRadioButton8 = new javax.swing.JRadioButton();
         jLabel19 = new javax.swing.JLabel();
         jPanel8 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
+        fanta = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jPanel9 = new javax.swing.JPanel();
         jLabel20 = new javax.swing.JLabel();
@@ -188,49 +188,54 @@ public class Main extends javax.swing.JFrame {
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/panceta.jpg"))); // NOI18N
         jPanel4.add(jLabel10);
 
-        jCheckBox1.setBackground(new java.awt.Color(255, 255, 255));
-        jCheckBox1.setText("CEBOLLA");
-        jCheckBox1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jCheckBox1.setOpaque(true);
-        jCheckBox1.setPreferredSize(new java.awt.Dimension(84, 10));
-        jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
+        cebolla.setBackground(new java.awt.Color(255, 255, 255));
+        cebolla.setText("CEBOLLA");
+        cebolla.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cebolla.setOpaque(true);
+        cebolla.setPreferredSize(new java.awt.Dimension(84, 10));
+        cebolla.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox1ActionPerformed(evt);
+                cebollaActionPerformed(evt);
             }
         });
-        jPanel4.add(jCheckBox1);
+        jPanel4.add(cebolla);
 
-        jCheckBox2.setBackground(new java.awt.Color(255, 255, 255));
-        jCheckBox2.setText("LECHUGA");
-        jCheckBox2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jCheckBox2.setOpaque(true);
-        jCheckBox2.setPreferredSize(new java.awt.Dimension(84, 10));
-        jPanel4.add(jCheckBox2);
+        lechuga.setBackground(new java.awt.Color(255, 255, 255));
+        lechuga.setText("LECHUGA");
+        lechuga.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lechuga.setOpaque(true);
+        lechuga.setPreferredSize(new java.awt.Dimension(84, 10));
+        jPanel4.add(lechuga);
 
-        jCheckBox3.setBackground(new java.awt.Color(255, 255, 255));
-        jCheckBox3.setText("PANCETA");
-        jCheckBox3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jCheckBox3.setOpaque(true);
-        jCheckBox3.setPreferredSize(new java.awt.Dimension(84, 10));
-        jPanel4.add(jCheckBox3);
+        panceta.setBackground(new java.awt.Color(255, 255, 255));
+        panceta.setText("PANCETA");
+        panceta.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        panceta.setOpaque(true);
+        panceta.setPreferredSize(new java.awt.Dimension(84, 10));
+        jPanel4.add(panceta);
 
-        jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/pepino.jpg"))); // NOI18N
-        jPanel4.add(jLabel13);
+        pepino.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        pepino.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/pepino.jpg"))); // NOI18N
+        jPanel4.add(pepino);
 
-        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/pikles.jpg"))); // NOI18N
-        jPanel4.add(jLabel7);
+        picle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        picle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/pikles.jpg"))); // NOI18N
+        jPanel4.add(picle);
 
-        jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/tomates.jpg"))); // NOI18N
-        jPanel4.add(jLabel11);
+        tomate.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        tomate.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/tomates.jpg"))); // NOI18N
+        jPanel4.add(tomate);
 
         jCheckBox4.setBackground(new java.awt.Color(255, 255, 255));
         jCheckBox4.setText("PEPINOS");
         jCheckBox4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jCheckBox4.setOpaque(true);
         jCheckBox4.setPreferredSize(new java.awt.Dimension(84, 10));
+        jCheckBox4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox4ActionPerformed(evt);
+            }
+        });
         jPanel4.add(jCheckBox4);
 
         jCheckBox5.setBackground(new java.awt.Color(255, 255, 255));
@@ -267,20 +272,20 @@ public class Main extends javax.swing.JFrame {
         jPanel5.setBackground(new java.awt.Color(255, 255, 255));
         jPanel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 153, 0)));
 
-        jRadioButton1.setBackground(new java.awt.Color(255, 255, 255));
-        jRadioButton1.setText("CHICAS");
-        jRadioButton1.setOpaque(true);
-        jPanel5.add(jRadioButton1);
+        gaseosa_chicas.setBackground(new java.awt.Color(255, 255, 255));
+        gaseosa_chicas.setText("CHICAS");
+        gaseosa_chicas.setOpaque(true);
+        jPanel5.add(gaseosa_chicas);
 
-        jRadioButton2.setBackground(new java.awt.Color(255, 255, 255));
-        jRadioButton2.setText("MEDIANAS");
-        jRadioButton2.setOpaque(true);
-        jPanel5.add(jRadioButton2);
+        gaseosa_medianas.setBackground(new java.awt.Color(255, 255, 255));
+        gaseosa_medianas.setText("MEDIANAS");
+        gaseosa_medianas.setOpaque(true);
+        jPanel5.add(gaseosa_medianas);
 
-        jRadioButton3.setBackground(new java.awt.Color(255, 255, 255));
-        jRadioButton3.setText("GRANDES");
-        jRadioButton3.setOpaque(true);
-        jPanel5.add(jRadioButton3);
+        gaseosa_grandes.setBackground(new java.awt.Color(255, 255, 255));
+        gaseosa_grandes.setText("GRANDES");
+        gaseosa_grandes.setOpaque(true);
+        jPanel5.add(gaseosa_grandes);
 
         jLabel8.setFont(new java.awt.Font("Tempus Sans ITC", 1, 18)); // NOI18N
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -296,15 +301,15 @@ public class Main extends javax.swing.JFrame {
         flowLayout1.setAlignOnBaseline(true);
         jPanel6.setLayout(flowLayout1);
 
-        jRadioButton4.setBackground(new java.awt.Color(255, 255, 255));
-        jRadioButton4.setText("GRANDES");
-        jRadioButton4.setOpaque(true);
-        jPanel6.add(jRadioButton4);
+        papas_chicas.setBackground(new java.awt.Color(255, 255, 255));
+        papas_chicas.setText("CHICAS");
+        papas_chicas.setOpaque(true);
+        jPanel6.add(papas_chicas);
 
-        jRadioButton5.setBackground(new java.awt.Color(255, 255, 255));
-        jRadioButton5.setText("CHICAS");
-        jRadioButton5.setOpaque(true);
-        jPanel6.add(jRadioButton5);
+        papas_grandes.setBackground(new java.awt.Color(255, 255, 255));
+        papas_grandes.setText("GRANDES");
+        papas_grandes.setOpaque(true);
+        jPanel6.add(papas_grandes);
 
         jPanel7.setLayout(new java.awt.GridLayout(2, 3));
 
@@ -329,19 +334,19 @@ public class Main extends javax.swing.JFrame {
         jLabel17.setOpaque(true);
         jPanel7.add(jLabel17);
 
-        jRadioButton6.setBackground(new java.awt.Color(255, 255, 255));
-        jRadioButton6.setText("COCA COLA");
-        jRadioButton6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jRadioButton6.setOpaque(true);
-        jRadioButton6.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-        jPanel7.add(jRadioButton6);
+        cocaCola.setBackground(new java.awt.Color(255, 255, 255));
+        cocaCola.setText("COCA COLA");
+        cocaCola.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cocaCola.setOpaque(true);
+        cocaCola.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        jPanel7.add(cocaCola);
 
-        jRadioButton7.setBackground(new java.awt.Color(255, 255, 255));
-        jRadioButton7.setText("SPRITE");
-        jRadioButton7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jRadioButton7.setOpaque(true);
-        jRadioButton7.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-        jPanel7.add(jRadioButton7);
+        sprite.setBackground(new java.awt.Color(255, 255, 255));
+        sprite.setText("SPRITE");
+        sprite.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        sprite.setOpaque(true);
+        sprite.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        jPanel7.add(sprite);
 
         jRadioButton8.setBackground(new java.awt.Color(255, 255, 255));
         jRadioButton8.setText("FANTA");
@@ -356,10 +361,10 @@ public class Main extends javax.swing.JFrame {
 
         jPanel8.setBackground(new java.awt.Color(255, 255, 255));
 
-        jButton1.setBackground(new java.awt.Color(255, 255, 204));
-        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 0, 51));
-        jButton1.setText("jButton1");
+        fanta.setBackground(new java.awt.Color(255, 255, 204));
+        fanta.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        fanta.setForeground(new java.awt.Color(255, 0, 51));
+        fanta.setText("jButton1");
 
         jButton2.setBackground(new java.awt.Color(255, 255, 204));
         jButton2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -372,7 +377,7 @@ public class Main extends javax.swing.JFrame {
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(fanta, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(74, 74, 74)
                 .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(104, 104, 104))
@@ -382,7 +387,7 @@ public class Main extends javax.swing.JFrame {
             .addGroup(jPanel8Layout.createSequentialGroup()
                 .addGap(30, 30, 30)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(fanta, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(47, Short.MAX_VALUE))
         );
@@ -501,9 +506,13 @@ public class Main extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
+    private void cebollaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cebollaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox1ActionPerformed
+    }//GEN-LAST:event_cebollaActionPerformed
+
+    private void jCheckBox4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jCheckBox4ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -541,19 +550,19 @@ public class Main extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JCheckBox cebolla;
+    private javax.swing.JRadioButton cocaCola;
+    private javax.swing.JButton fanta;
+    private javax.swing.JRadioButton gaseosa_chicas;
+    private javax.swing.JRadioButton gaseosa_grandes;
+    private javax.swing.JRadioButton gaseosa_medianas;
     private javax.swing.JButton jButton2;
-    private javax.swing.JCheckBox jCheckBox1;
-    private javax.swing.JCheckBox jCheckBox2;
-    private javax.swing.JCheckBox jCheckBox3;
     private javax.swing.JCheckBox jCheckBox4;
     private javax.swing.JCheckBox jCheckBox5;
     private javax.swing.JCheckBox jCheckBox6;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
@@ -566,7 +575,6 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
@@ -579,15 +587,16 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JPanel jPanel_datos;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JRadioButton jRadioButton3;
-    private javax.swing.JRadioButton jRadioButton4;
-    private javax.swing.JRadioButton jRadioButton5;
-    private javax.swing.JRadioButton jRadioButton6;
-    private javax.swing.JRadioButton jRadioButton7;
     private javax.swing.JRadioButton jRadioButton8;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
+    private javax.swing.JCheckBox lechuga;
+    private javax.swing.JCheckBox panceta;
+    private javax.swing.JRadioButton papas_chicas;
+    private javax.swing.JRadioButton papas_grandes;
+    private javax.swing.JLabel pepino;
+    private javax.swing.JLabel picle;
+    private javax.swing.JRadioButton sprite;
+    private javax.swing.JLabel tomate;
     // End of variables declaration//GEN-END:variables
 }
