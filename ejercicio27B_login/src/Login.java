@@ -24,6 +24,12 @@ public class Login extends javax.swing.JFrame {
         Ingreso_ok ingresoOk = new Ingreso_ok();
         ingresoOk.setVisible(true);
     }
+    
+    private void ingresarNoOk(){
+        this.setVisible(false);
+        Ingresar_no_ok ingresarNoOk= new Ingresar_no_ok();
+        ingresarNoOk.setVisible(true);
+    }
 
     public Login() {
         initComponents();
@@ -191,14 +197,20 @@ public class Login extends javax.swing.JFrame {
         switch(usuarios){
             case 1: if(contrasenia.equals("123")){
                         ingresar();
+                    }else{
+                        ingresarNoOk();
                     }
             break;
             case 2: if(contrasenia.equals("456")){
                         ingresar();
+                    }else{
+                        ingresarNoOk();                        
                     }
             break;
             case 3: if(contrasenia.equals("789")){
                         ingresar();
+                    }else{
+                        ingresarNoOk();
                     }
             break;
         }
