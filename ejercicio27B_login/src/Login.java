@@ -1,3 +1,6 @@
+
+import java.awt.BorderLayout;
+
 //Crear un formlario de login en donde contenga:
 //-Comobox
 //-1 label donde se muestre la imagen del usuario que va acceder
@@ -23,9 +26,6 @@ public class Login extends javax.swing.JFrame {
         this.setSize(500,700);
         this.setLocationRelativeTo(null);
         
-        panel_login.setSize(500,700);
-        
-        //panel_foto.setSize(500,300);
     }
 
     /**
@@ -37,38 +37,119 @@ public class Login extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        panel_login = new javax.swing.JPanel();
+        pane_principal = new javax.swing.JPanel();
+        panel_foto = new javax.swing.JPanel();
+        imagen_usuario = new javax.swing.JLabel();
+        panel_datos = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        usuario = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
+        contrasenia = new javax.swing.JTextField();
+        nuevaContraseña = new javax.swing.JCheckBox();
+        panel_botones = new javax.swing.JPanel();
+        salir = new javax.swing.JButton();
+        intresar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        panel_login.setBackground(new java.awt.Color(255, 255, 255));
+        pane_principal.setBackground(new java.awt.Color(255, 255, 255));
 
-        javax.swing.GroupLayout panel_loginLayout = new javax.swing.GroupLayout(panel_login);
-        panel_login.setLayout(panel_loginLayout);
-        panel_loginLayout.setHorizontalGroup(
-            panel_loginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 353, Short.MAX_VALUE)
+        panel_foto.setBackground(new java.awt.Color(255, 255, 255));
+        panel_foto.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        imagen_usuario.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        imagen_usuario.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        imagen_usuario.addHierarchyListener(new java.awt.event.HierarchyListener() {
+            public void hierarchyChanged(java.awt.event.HierarchyEvent evt) {
+                imagen_usuarioHierarchyChanged(evt);
+            }
+        });
+        panel_foto.add(imagen_usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 10, 196, 172));
+
+        panel_datos.setBackground(new java.awt.Color(255, 255, 255));
+        panel_datos.setLayout(new java.awt.GridLayout(2, 2));
+
+        jLabel2.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel2.setText("nombre: ");
+        panel_datos.add(jLabel2);
+
+        usuario.setColumns(20);
+        usuario.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        usuario.setActionCommand("<Not Set>");
+        usuario.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        panel_datos.add(usuario);
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel1.setText("Contraseña: ");
+        panel_datos.add(jLabel1);
+
+        contrasenia.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        panel_datos.add(contrasenia);
+
+        nuevaContraseña.setBackground(new java.awt.Color(255, 255, 255));
+        nuevaContraseña.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
+        nuevaContraseña.setText("Olvidé mi contraseña");
+        nuevaContraseña.setOpaque(true);
+
+        javax.swing.GroupLayout pane_principalLayout = new javax.swing.GroupLayout(pane_principal);
+        pane_principal.setLayout(pane_principalLayout);
+        pane_principalLayout.setHorizontalGroup(
+            pane_principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(panel_datos, javax.swing.GroupLayout.DEFAULT_SIZE, 486, Short.MAX_VALUE)
+            .addComponent(panel_foto, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(pane_principalLayout.createSequentialGroup()
+                .addGap(150, 150, 150)
+                .addComponent(nuevaContraseña)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        panel_loginLayout.setVerticalGroup(
-            panel_loginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 679, Short.MAX_VALUE)
+        pane_principalLayout.setVerticalGroup(
+            pane_principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pane_principalLayout.createSequentialGroup()
+                .addGap(78, 78, 78)
+                .addComponent(panel_foto, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(panel_datos, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(nuevaContraseña)
+                .addContainerGap(104, Short.MAX_VALUE))
         );
+
+        panel_botones.setBackground(new java.awt.Color(255, 255, 255));
+
+        salir.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
+        salir.setText("jButton1");
+        panel_botones.add(salir);
+
+        intresar.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
+        intresar.setText("jButton2");
+        panel_botones.add(intresar);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panel_login, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(0, 0, 0)
+                .addComponent(panel_botones, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+            .addComponent(pane_principal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(panel_login, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addComponent(pane_principal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(0, 0, 0)
+                .addComponent(panel_botones, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void imagen_usuarioHierarchyChanged(java.awt.event.HierarchyEvent evt) {//GEN-FIRST:event_imagen_usuarioHierarchyChanged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_imagen_usuarioHierarchyChanged
 
     /**
      * @param args the command line arguments
@@ -106,6 +187,17 @@ public class Login extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel panel_login;
+    private javax.swing.JTextField contrasenia;
+    private javax.swing.JLabel imagen_usuario;
+    private javax.swing.JButton intresar;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JCheckBox nuevaContraseña;
+    private javax.swing.JPanel pane_principal;
+    private javax.swing.JPanel panel_botones;
+    private javax.swing.JPanel panel_datos;
+    private javax.swing.JPanel panel_foto;
+    private javax.swing.JButton salir;
+    private javax.swing.JTextField usuario;
     // End of variables declaration//GEN-END:variables
 }
