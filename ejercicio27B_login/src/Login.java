@@ -18,7 +18,12 @@ import java.awt.BorderLayout;
 //Se debe verificar la contraseña según el usuario para acceder. Debe llamar a otro formulario y hacerlo visible
 
 public class Login extends javax.swing.JFrame {
-
+    
+    private void ingresar(){
+        this.setVisible(false);
+        Ingreso_ok ingresoOk = new Ingreso_ok();
+        ingresoOk.setVisible(true);
+    }
 
     public Login() {
         initComponents();
@@ -185,15 +190,15 @@ public class Login extends javax.swing.JFrame {
         
         switch(usuarios){
             case 1: if(contrasenia.equals("123")){
-                        
+                        ingresar();
                     }
             break;
             case 2: if(contrasenia.equals("456")){
-                        
+                        ingresar();
                     }
             break;
             case 3: if(contrasenia.equals("789")){
-                        
+                        ingresar();
                     }
             break;
         }
