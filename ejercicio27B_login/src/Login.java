@@ -149,9 +149,13 @@ public class Login extends javax.swing.JFrame {
         );
 
         panel_botones.setBackground(new java.awt.Color(255, 255, 255));
+        panel_botones.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 100, 35));
 
+        salir.setBackground(new java.awt.Color(255, 204, 204));
         salir.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
         salir.setText("SALIR");
+        salir.setOpaque(true);
+        salir.setPreferredSize(new java.awt.Dimension(100, 30));
         salir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 salirActionPerformed(evt);
@@ -159,8 +163,11 @@ public class Login extends javax.swing.JFrame {
         });
         panel_botones.add(salir);
 
+        intresar.setBackground(new java.awt.Color(255, 204, 204));
         intresar.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
         intresar.setText("INGRESAR");
+        intresar.setOpaque(true);
+        intresar.setPreferredSize(new java.awt.Dimension(100, 30));
         intresar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 intresarActionPerformed(evt);
@@ -174,7 +181,7 @@ public class Login extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(0, 0, 0)
-                .addComponent(panel_botones, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(panel_botones, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                 .addContainerGap())
             .addComponent(pane_principal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
