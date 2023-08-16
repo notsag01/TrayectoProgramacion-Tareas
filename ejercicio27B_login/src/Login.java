@@ -30,6 +30,12 @@ public class Login extends javax.swing.JFrame {
         Ingresar_no_ok ingresarNoOk= new Ingresar_no_ok();
         ingresarNoOk.setVisible(true);
     }
+    
+    private void cambiarContrasenia(){
+        this.setVisible(false);
+        Nueva_contrasenia nuevaContrasenia = new Nueva_contrasenia();
+        nuevaContrasenia.setVisible(true);
+    }
 
     public Login() {
         initComponents();
@@ -56,7 +62,7 @@ public class Login extends javax.swing.JFrame {
         comboBox_usuarios = new javax.swing.JComboBox<>();
         jLabel1 = new javax.swing.JLabel();
         jtextField_contrasenia = new javax.swing.JTextField();
-        nuevaContraseña = new javax.swing.JCheckBox();
+        nuevaContrasenia = new javax.swing.JCheckBox();
         panel_botones = new javax.swing.JPanel();
         salir = new javax.swing.JButton();
         intresar = new javax.swing.JButton();
@@ -107,10 +113,15 @@ public class Login extends javax.swing.JFrame {
         });
         panel_datos.add(jtextField_contrasenia);
 
-        nuevaContraseña.setBackground(new java.awt.Color(255, 255, 255));
-        nuevaContraseña.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
-        nuevaContraseña.setText("Olvidé mi contraseña");
-        nuevaContraseña.setOpaque(true);
+        nuevaContrasenia.setBackground(new java.awt.Color(255, 255, 255));
+        nuevaContrasenia.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
+        nuevaContrasenia.setText("Olvidé mi contraseña");
+        nuevaContrasenia.setOpaque(true);
+        nuevaContrasenia.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nuevaContraseniaActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout pane_principalLayout = new javax.swing.GroupLayout(pane_principal);
         pane_principal.setLayout(pane_principalLayout);
@@ -119,7 +130,7 @@ public class Login extends javax.swing.JFrame {
             .addComponent(panel_foto, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(pane_principalLayout.createSequentialGroup()
                 .addGap(150, 150, 150)
-                .addComponent(nuevaContraseña)
+                .addComponent(nuevaContrasenia)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(pane_principalLayout.createSequentialGroup()
                 .addComponent(panel_datos, javax.swing.GroupLayout.PREFERRED_SIZE, 363, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -133,7 +144,7 @@ public class Login extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(panel_datos, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(69, 69, 69)
-                .addComponent(nuevaContraseña)
+                .addComponent(nuevaContrasenia)
                 .addContainerGap(98, Short.MAX_VALUE))
         );
 
@@ -220,6 +231,12 @@ public class Login extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jtextField_contraseniaActionPerformed
 
+    private void nuevaContraseniaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nuevaContraseniaActionPerformed
+        if(nuevaContrasenia.isSelected()==true){
+            cambiarContrasenia();
+        }
+    }//GEN-LAST:event_nuevaContraseniaActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -262,7 +279,7 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JTextField jtextField_contrasenia;
-    private javax.swing.JCheckBox nuevaContraseña;
+    private javax.swing.JCheckBox nuevaContrasenia;
     private javax.swing.JPanel pane_principal;
     private javax.swing.JPanel panel_botones;
     private javax.swing.JPanel panel_datos;
