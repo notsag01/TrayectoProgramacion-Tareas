@@ -152,6 +152,11 @@ public class Login extends javax.swing.JFrame {
 
         salir.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
         salir.setText("SALIR");
+        salir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                salirActionPerformed(evt);
+            }
+        });
         panel_botones.add(salir);
 
         intresar.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
@@ -236,6 +241,10 @@ public class Login extends javax.swing.JFrame {
             cambiarContrasenia();
         }
     }//GEN-LAST:event_nuevaContraseniaActionPerformed
+
+    private void salirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salirActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_salirActionPerformed
 
     /**
      * @param args the command line arguments
