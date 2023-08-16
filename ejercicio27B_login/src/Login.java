@@ -42,7 +42,7 @@ public class Login extends javax.swing.JFrame {
         imagen_usuario = new javax.swing.JLabel();
         panel_datos = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        usuario = new javax.swing.JTextField();
+        jComboBox1 = new javax.swing.JComboBox<>();
         jLabel1 = new javax.swing.JLabel();
         contrasenia = new javax.swing.JTextField();
         nuevaContraseña = new javax.swing.JCheckBox();
@@ -71,14 +71,11 @@ public class Login extends javax.swing.JFrame {
 
         jLabel2.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel2.setText("nombre: ");
+        jLabel2.setText("Usuario: ");
         panel_datos.add(jLabel2);
 
-        usuario.setColumns(20);
-        usuario.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        usuario.setActionCommand("<Not Set>");
-        usuario.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        panel_datos.add(usuario);
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "Chavo", "Chapulin", "Don Ramon" }));
+        panel_datos.add(jComboBox1);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
@@ -97,8 +94,8 @@ public class Login extends javax.swing.JFrame {
         pane_principal.setLayout(pane_principalLayout);
         pane_principalLayout.setHorizontalGroup(
             pane_principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panel_datos, javax.swing.GroupLayout.DEFAULT_SIZE, 486, Short.MAX_VALUE)
-            .addComponent(panel_foto, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(panel_datos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(panel_foto, javax.swing.GroupLayout.DEFAULT_SIZE, 486, Short.MAX_VALUE)
             .addGroup(pane_principalLayout.createSequentialGroup()
                 .addGap(150, 150, 150)
                 .addComponent(nuevaContraseña)
@@ -119,11 +116,11 @@ public class Login extends javax.swing.JFrame {
         panel_botones.setBackground(new java.awt.Color(255, 255, 255));
 
         salir.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
-        salir.setText("jButton1");
+        salir.setText("SALIR");
         panel_botones.add(salir);
 
         intresar.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
-        intresar.setText("jButton2");
+        intresar.setText("INGRESAR");
         panel_botones.add(intresar);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -148,7 +145,7 @@ public class Login extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void imagen_usuarioHierarchyChanged(java.awt.event.HierarchyEvent evt) {//GEN-FIRST:event_imagen_usuarioHierarchyChanged
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_imagen_usuarioHierarchyChanged
 
     /**
@@ -190,6 +187,7 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JTextField contrasenia;
     private javax.swing.JLabel imagen_usuario;
     private javax.swing.JButton intresar;
+    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JCheckBox nuevaContraseña;
@@ -198,6 +196,5 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JPanel panel_datos;
     private javax.swing.JPanel panel_foto;
     private javax.swing.JButton salir;
-    private javax.swing.JTextField usuario;
     // End of variables declaration//GEN-END:variables
 }
