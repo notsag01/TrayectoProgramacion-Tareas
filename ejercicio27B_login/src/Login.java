@@ -42,9 +42,9 @@ public class Login extends javax.swing.JFrame {
         imagen_usuario = new javax.swing.JLabel();
         panel_datos = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        comboBox_usuarios = new javax.swing.JComboBox<>();
         jLabel1 = new javax.swing.JLabel();
-        contrasenia = new javax.swing.JTextField();
+        jtextField_contrasenia = new javax.swing.JTextField();
         nuevaContraseña = new javax.swing.JCheckBox();
         panel_botones = new javax.swing.JPanel();
         salir = new javax.swing.JButton();
@@ -58,13 +58,14 @@ public class Login extends javax.swing.JFrame {
         panel_foto.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         imagen_usuario.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        imagen_usuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/usuario.png"))); // NOI18N
         imagen_usuario.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         imagen_usuario.addHierarchyListener(new java.awt.event.HierarchyListener() {
             public void hierarchyChanged(java.awt.event.HierarchyEvent evt) {
                 imagen_usuarioHierarchyChanged(evt);
             }
         });
-        panel_foto.add(imagen_usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 10, 196, 172));
+        panel_foto.add(imagen_usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 2, 196, 180));
 
         panel_datos.setBackground(new java.awt.Color(255, 255, 255));
         panel_datos.setLayout(new java.awt.GridLayout(2, 2));
@@ -74,16 +75,26 @@ public class Login extends javax.swing.JFrame {
         jLabel2.setText("Usuario: ");
         panel_datos.add(jLabel2);
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "Chavo", "Chapulin", "Don Ramon" }));
-        panel_datos.add(jComboBox1);
+        comboBox_usuarios.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "Chavo", "Chapulin", "Don Ramon" }));
+        comboBox_usuarios.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                comboBox_usuariosActionPerformed(evt);
+            }
+        });
+        panel_datos.add(comboBox_usuarios);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel1.setText("Contraseña: ");
         panel_datos.add(jLabel1);
 
-        contrasenia.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        panel_datos.add(contrasenia);
+        jtextField_contrasenia.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        jtextField_contrasenia.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jtextField_contraseniaActionPerformed(evt);
+            }
+        });
+        panel_datos.add(jtextField_contrasenia);
 
         nuevaContraseña.setBackground(new java.awt.Color(255, 255, 255));
         nuevaContraseña.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
@@ -123,6 +134,11 @@ public class Login extends javax.swing.JFrame {
 
         intresar.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
         intresar.setText("INGRESAR");
+        intresar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                intresarActionPerformed(evt);
+            }
+        });
         panel_botones.add(intresar);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -149,6 +165,43 @@ public class Login extends javax.swing.JFrame {
     private void imagen_usuarioHierarchyChanged(java.awt.event.HierarchyEvent evt) {//GEN-FIRST:event_imagen_usuarioHierarchyChanged
         
     }//GEN-LAST:event_imagen_usuarioHierarchyChanged
+
+    private void comboBox_usuariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboBox_usuariosActionPerformed
+        switch(comboBox_usuarios.getSelectedIndex()){
+            case 0: imagen_usuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/usuario.png")));
+            break;
+            case 1: imagen_usuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/chavo.png")));
+            break;
+            case 2: imagen_usuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/chapulin.png")));
+            break;
+            case 3: imagen_usuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/donRamon.jpg")));
+            break;
+        }
+    }//GEN-LAST:event_comboBox_usuariosActionPerformed
+
+    private void intresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_intresarActionPerformed
+        String contrasenia=jtextField_contrasenia.getText();
+        int usuarios=comboBox_usuarios.getSelectedIndex();
+        
+        switch(usuarios){
+            case 1: if(contrasenia.equals("123")){
+                        
+                    }
+            break;
+            case 2: if(contrasenia.equals("456")){
+                        
+                    }
+            break;
+            case 3: if(contrasenia.equals("789")){
+                        
+                    }
+            break;
+        }
+    }//GEN-LAST:event_intresarActionPerformed
+
+    private void jtextField_contraseniaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtextField_contraseniaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jtextField_contraseniaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -186,12 +239,12 @@ public class Login extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField contrasenia;
+    private javax.swing.JComboBox<String> comboBox_usuarios;
     private javax.swing.JLabel imagen_usuario;
     private javax.swing.JButton intresar;
-    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JTextField jtextField_contrasenia;
     private javax.swing.JCheckBox nuevaContraseña;
     private javax.swing.JPanel pane_principal;
     private javax.swing.JPanel panel_botones;

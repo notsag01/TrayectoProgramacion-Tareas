@@ -93,6 +93,9 @@
             <Component class="javax.swing.JLabel" name="imagen_usuario">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/imagenes/usuario.png"/>
+                </Property>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                     <LineBorder/>
@@ -104,7 +107,7 @@
               </Events>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="140" y="10" width="196" height="172"/>
+                  <AbsoluteConstraints x="140" y="2" width="196" height="180"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -131,7 +134,7 @@
                 <Property name="text" type="java.lang.String" value="Usuario: "/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JComboBox" name="jComboBox1">
+            <Component class="javax.swing.JComboBox" name="comboBox_usuarios">
               <Properties>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                   <StringArray count="4">
@@ -142,6 +145,9 @@
                   </StringArray>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="comboBox_usuariosActionPerformed"/>
+              </Events>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
               </AuxValues>
@@ -155,7 +161,7 @@
                 <Property name="text" type="java.lang.String" value="Contrase&#xf1;a: "/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="contrasenia">
+            <Component class="javax.swing.JTextField" name="jtextField_contrasenia">
               <Properties>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.EmptyBorderInfo">
@@ -163,6 +169,9 @@
                   </Border>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jtextField_contraseniaActionPerformed"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>
@@ -204,6 +213,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="INGRESAR"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="intresarActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>
