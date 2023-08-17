@@ -369,7 +369,7 @@ public class Main extends javax.swing.JFrame {
         jButton2.setBackground(new java.awt.Color(255, 255, 204));
         jButton2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jButton2.setForeground(new java.awt.Color(255, 0, 51));
-        jButton2.setText("jButton2");
+        jButton2.setText("PEDIR");
 
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
