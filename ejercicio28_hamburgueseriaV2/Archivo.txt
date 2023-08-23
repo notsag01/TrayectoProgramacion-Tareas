@@ -1,0 +1,11 @@
+gaston,45454545
+Valeria,56565656
+julieta,78787878
+Celeste,89898989
+laura,23232323
+marcela,777777777
+Roberto,1111111,Pequeña.
+Ramon,2222222,Mediana.
+Norberto,3333333,Pequeña.,Pequeñas.
+Pepito,7777777,Pequeña,Pequeñas,COCA COLA
+Pequeña,9999999,Pequeña,Pequeñas,COCA COLA,[CEBOLLA, LECHUGA]
