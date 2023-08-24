@@ -19,9 +19,6 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
     private void initComponents() {
 
         setBackground(new java.awt.Color(255, 204, 204));
-        setClosable(true);
-        setIconifiable(true);
-        setMaximizable(true);
         setOpaque(true);
         setVisible(true);
 
