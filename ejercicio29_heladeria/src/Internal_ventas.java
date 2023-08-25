@@ -29,9 +29,10 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
         for(Component componente : componentes){
             if (componente instanceof JCheckBox) {
                 JCheckBox checkBox = (JCheckBox) componente;
-                boolean seleccionado = checkBox.isSelected();
-                String texto = checkBox.getText(); // Puedes obtener el texto del JCheckBox si es necesario
-                System.out.println("JCheckBox '" + texto + "' seleccionado: " + seleccionado);
+                if(checkBox.isSelected()){
+                    String sabor = checkBox.getText(); // Puedes obtener el texto del JCheckBox si es necesario
+                    System.out.println( sabor);
+                }
              }   
         }    
     }
