@@ -51,7 +51,7 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
         jLabel3.setText("Nombre: ");
 
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel4.setText("jLabel4");
+        jLabel4.setText("Email:");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
