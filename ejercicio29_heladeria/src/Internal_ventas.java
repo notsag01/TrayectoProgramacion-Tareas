@@ -27,12 +27,11 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
     public void limpiar(){
         Component[] componentes =jPanel_checkbox.getComponents();
         for(Component componente : componentes){
-
-                JCheckBox checkBox = (JCheckBox) componente;
-                if(checkBox.isSelected()){
-                    String sabor = checkBox.getText(); // Puedes obtener el texto del JCheckBox si es necesario
-                    System.out.println( sabor);
-                }
+            JCheckBox checkBox = (JCheckBox) componente;
+            if(checkBox.isSelected()){
+                String sabor = checkBox.getText(); // Puedes obtener el texto del JCheckBox si es necesario
+                System.out.println( sabor);
+            }
         }    
     }
     
