@@ -3,7 +3,7 @@ import java.awt.Color;
 
 
 public class Internal_ventas extends javax.swing.JInternalFrame {
-
+    
 
     public Internal_ventas() {
         initComponents();
@@ -12,6 +12,7 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
         this.setVisible(false);
         this.setBackground(Color.white);
     }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -31,10 +32,10 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
         jTextField2 = new javax.swing.JTextField();
         jTextField3 = new javax.swing.JTextField();
         jPanel3 = new javax.swing.JPanel();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
-        jRadioButton3 = new javax.swing.JRadioButton();
-        jRadioButton4 = new javax.swing.JRadioButton();
+        jRB_cono = new javax.swing.JRadioButton();
+        jRB_cuarto = new javax.swing.JRadioButton();
+        jRB_medio = new javax.swing.JRadioButton();
+        jRB_kilo = new javax.swing.JRadioButton();
         jLabel1 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         jCheckBox1 = new javax.swing.JCheckBox();
@@ -118,13 +119,33 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Embase", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 12), new java.awt.Color(153, 153, 255))); // NOI18N
 
-        jRadioButton1.setText("Cono");
+        jRB_cono.setText("Cono");
+        jRB_cono.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRB_conoActionPerformed(evt);
+            }
+        });
 
-        jRadioButton2.setText("1/4 Kilo");
+        jRB_cuarto.setText("1/4 Kilo");
+        jRB_cuarto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRB_cuartoActionPerformed(evt);
+            }
+        });
 
-        jRadioButton3.setText("1/2 Kilo");
+        jRB_medio.setText("1/2 Kilo");
+        jRB_medio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRB_medioActionPerformed(evt);
+            }
+        });
 
-        jRadioButton4.setText("1 Kilo");
+        jRB_kilo.setText("1 Kilo");
+        jRB_kilo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRB_kiloActionPerformed(evt);
+            }
+        });
 
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/helado.png"))); // NOI18N
@@ -136,10 +157,10 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(10, 10, 10)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jRadioButton4)
-                    .addComponent(jRadioButton3)
-                    .addComponent(jRadioButton2)
-                    .addComponent(jRadioButton1))
+                    .addComponent(jRB_kilo)
+                    .addComponent(jRB_medio)
+                    .addComponent(jRB_cuarto)
+                    .addComponent(jRB_cono))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
@@ -150,13 +171,13 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(20, 20, 20)
-                .addComponent(jRadioButton1)
+                .addComponent(jRB_cono)
                 .addGap(20, 20, 20)
-                .addComponent(jRadioButton2)
+                .addComponent(jRB_cuarto)
                 .addGap(20, 20, 20)
-                .addComponent(jRadioButton3)
+                .addComponent(jRB_medio)
                 .addGap(20, 20, 20)
-                .addComponent(jRadioButton4)
+                .addComponent(jRB_kilo)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
@@ -353,6 +374,38 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jRB_conoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRB_conoActionPerformed
+        if(jRB_cono.isSelected()){
+            jRB_cuarto.setSelected(false);
+            jRB_medio.setSelected(false);
+            jRB_kilo.setSelected(false);
+        }
+    }//GEN-LAST:event_jRB_conoActionPerformed
+
+    private void jRB_cuartoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRB_cuartoActionPerformed
+        if(jRB_cuarto.isSelected()){
+            jRB_cono.setSelected(false);
+            jRB_medio.setSelected(false);
+            jRB_kilo.setSelected(false);
+        }
+    }//GEN-LAST:event_jRB_cuartoActionPerformed
+
+    private void jRB_medioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRB_medioActionPerformed
+        if(jRB_medio.isSelected()){
+            jRB_cono.setSelected(false);
+            jRB_cuarto.setSelected(false);
+            jRB_kilo.setSelected(false);
+        }
+    }//GEN-LAST:event_jRB_medioActionPerformed
+
+    private void jRB_kiloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRB_kiloActionPerformed
+        if(jRB_kilo.isSelected()){
+            jRB_cono.setSelected(false);
+            jRB_cuarto.setSelected(false);
+            jRB_medio.setSelected(false);
+        }
+    }//GEN-LAST:event_jRB_kiloActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
@@ -381,10 +434,10 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JRadioButton jRadioButton3;
-    private javax.swing.JRadioButton jRadioButton4;
+    private javax.swing.JRadioButton jRB_cono;
+    private javax.swing.JRadioButton jRB_cuarto;
+    private javax.swing.JRadioButton jRB_kilo;
+    private javax.swing.JRadioButton jRB_medio;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
