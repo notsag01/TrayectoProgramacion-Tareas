@@ -1,7 +1,9 @@
 
 import java.awt.Color;
+import java.awt.Component;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import javax.swing.JCheckBox;
 
 
 public class Internal_ventas extends javax.swing.JInternalFrame {
@@ -20,6 +22,18 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM//yy");
         String fecha=sdf.format(date);
         jTextField_fecha.setText(fecha);
+        
+    }
+    public void limpiar(){
+        Component[] componentes =jPanel_checkbox.getComponents();
+        for(Component componente : componentes){
+            if (componente instanceof JCheckBox) {
+                JCheckBox checkBox = (JCheckBox) componente;
+                boolean seleccionado = checkBox.isSelected();
+                String texto = checkBox.getText(); // Puedes obtener el texto del JCheckBox si es necesario
+                System.out.println("JCheckBox '" + texto + "' seleccionado: " + seleccionado);
+             }   
+        }    
     }
     
 
@@ -304,6 +318,11 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
         jButton1.setAlignmentY(0.0F);
         jButton1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jButton1.setIconTextGap(10);
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
@@ -477,6 +496,10 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
     private void jCheckBox12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox12ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jCheckBox12ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        limpiar();
+    }//GEN-LAST:event_jButton1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
