@@ -39,21 +39,22 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
                 cantidad--;
             }
         }
-        if (cantidad > gustosPermitidos) {
-            // Deshabilitar los JCheckBox excedentes
-            for (int i = gustosPermitidos; i < componente.size(); i++) {
-                JCheckBox checkbox = checkboxes.get(i);
-                checkbox.setEnabled(false);
+        if(cantidad>=gustosPermitidos){
+            for(Component componente: componentes){
+                JCheckBox checkBox =(JCheckBox) componente;
+                if(!checkBox.isSelected()){
+                    checkBox.setEnabled(false);
+                }
             }
-        } else {
-            // Habilitar todos los JCheckBox
-            for (JCheckBox checkbox : checkboxes) {
-                checkbox.setEnabled(true);
+        }else{
+            for(Component componente: componentes){
+                JCheckBox checkBox =(JCheckBox) componente;
+                if(checkBox.isSelected()){
+                    checkBox.setEnabled(false);
+                }
             }
-        }
-
+         }
     }
-
     
 
     /**
@@ -78,7 +79,7 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
         jRadioButton1 = new javax.swing.JRadioButton();
         jRadioButton2 = new javax.swing.JRadioButton();
         jRadioButton3 = new javax.swing.JRadioButton();
-        jRadioButton4 = new javax.swing.JRadioButton();
+        jRadioButton_kilo = new javax.swing.JRadioButton();
         jPanel_gustos = new javax.swing.JPanel();
         jCheckBox1 = new javax.swing.JCheckBox();
         jCheckBox2 = new javax.swing.JCheckBox();
@@ -160,7 +161,12 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
 
         jRadioButton3.setText("1/2 Kilo");
 
-        jRadioButton4.setText("1 kilo");
+        jRadioButton_kilo.setText("1 kilo");
+        jRadioButton_kilo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton_kiloActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -169,7 +175,7 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(29, 29, 29)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jRadioButton4)
+                    .addComponent(jRadioButton_kilo)
                     .addComponent(jRadioButton3)
                     .addComponent(jRadioButton2)
                     .addComponent(jRadioButton1))
@@ -185,7 +191,7 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jRadioButton3)
                 .addGap(18, 18, 18)
-                .addComponent(jRadioButton4)
+                .addComponent(jRadioButton_kilo)
                 .addContainerGap(194, Short.MAX_VALUE))
         );
 
@@ -323,6 +329,10 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jCheckBox3ActionPerformed
 
+    private void jRadioButton_kiloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton_kiloActionPerformed
+        contarChecks();
+    }//GEN-LAST:event_jRadioButton_kiloActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JCheckBox jCheckBox1;
@@ -346,7 +356,7 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JRadioButton jRadioButton3;
-    private javax.swing.JRadioButton jRadioButton4;
+    private javax.swing.JRadioButton jRadioButton_kilo;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField_fecha;
