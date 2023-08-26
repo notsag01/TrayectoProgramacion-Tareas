@@ -35,14 +35,18 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
             
             if(checkbox.isSelected()){
                 cantidad++;
+                System.out.println(cantidad);
             }else{
-                cantidad--;
+                if(cantidad>0){
+                    cantidad--;
+                    System.out.println(cantidad);                
+                }
             }
         }
         if(cantidad>=gustosPermitidos){
             for(Component componente: componentes){
                 JCheckBox checkBox =(JCheckBox) componente;
-                if(!checkBox.isSelected()){
+                if(checkBox.isSelected()==false){
                     checkBox.setEnabled(false);
                 }
             }
@@ -50,7 +54,7 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
             for(Component componente: componentes){
                 JCheckBox checkBox =(JCheckBox) componente;
                 if(checkBox.isSelected()){
-                    checkBox.setEnabled(false);
+                    checkBox.setEnabled(true);
                 }
             }
          }
