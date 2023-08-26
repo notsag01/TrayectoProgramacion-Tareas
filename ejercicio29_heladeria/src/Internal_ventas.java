@@ -12,7 +12,7 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
     public Internal_ventas() {
         initComponents();
         this.setTitle("Ventana Principal");
-        this.setSize(800,535);
+        this.setSize(850,700);
         this.setVisible(false);
         this.setBackground(Color.white);
         
