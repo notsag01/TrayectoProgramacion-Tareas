@@ -7,7 +7,8 @@ import javax.swing.JCheckBox;
 
 
 public class Internal_ventas extends javax.swing.JInternalFrame {
-    
+        int cantidad=0;
+        int gustosPermitidos=3;
 
     public Internal_ventas() {
         initComponents();
@@ -21,19 +22,38 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
         Date date = new Date();
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM//yy");
         String fecha=sdf.format(date);
-        jTextField_fecha.setText(fecha);
+        jTextField_fecha.setText(fecha);        
+    }
+    
+    private void contarChecks(){
+
         
+        Component [] componentes = jPanel_gustos.getComponents();
+        
+        for(Component componente: componentes){
+            JCheckBox checkbox = (JCheckBox) componente;
+            
+            if(checkbox.isSelected()){
+                cantidad++;
+            }else{
+                cantidad--;
+            }
+        }
+        if (cantidad > gustosPermitidos) {
+            // Deshabilitar los JCheckBox excedentes
+            for (int i = gustosPermitidos; i < componente.size(); i++) {
+                JCheckBox checkbox = checkboxes.get(i);
+                checkbox.setEnabled(false);
+            }
+        } else {
+            // Habilitar todos los JCheckBox
+            for (JCheckBox checkbox : checkboxes) {
+                checkbox.setEnabled(true);
+            }
+        }
+
     }
-    public void limpiar(){
-//        Component[] componentes =jPanel_checkbox.getComponents();
-//        for(Component componente : componentes){
-//            JCheckBox checkBox = (JCheckBox) componente;
-//            if(checkBox.isSelected()){
-//                String sabor = checkBox.getText(); // Puedes obtener el texto del JCheckBox si es necesario
-//                System.out.println( sabor);
-//            }
-//        }    
-    }
+
     
 
     /**
@@ -59,7 +79,7 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
         jRadioButton2 = new javax.swing.JRadioButton();
         jRadioButton3 = new javax.swing.JRadioButton();
         jRadioButton4 = new javax.swing.JRadioButton();
-        jPanel4 = new javax.swing.JPanel();
+        jPanel_gustos = new javax.swing.JPanel();
         jCheckBox1 = new javax.swing.JCheckBox();
         jCheckBox2 = new javax.swing.JCheckBox();
         jCheckBox3 = new javax.swing.JCheckBox();
@@ -134,13 +154,13 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
-        jRadioButton1.setText("jRadioButton1");
+        jRadioButton1.setText("Cono");
 
-        jRadioButton2.setText("jRadioButton2");
+        jRadioButton2.setText("1/4 Kilo");
 
-        jRadioButton3.setText("jRadioButton3");
+        jRadioButton3.setText("1/2 Kilo");
 
-        jRadioButton4.setText("jRadioButton4");
+        jRadioButton4.setText("1 kilo");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -169,68 +189,69 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
                 .addContainerGap(194, Short.MAX_VALUE))
         );
 
-        jPanel4.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+        jPanel_gustos.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel_gustos.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
-        jCheckBox1.setText("jCheckBox1");
+        jCheckBox1.setText("CHOCOLATE");
 
-        jCheckBox2.setText("jCheckBox2");
+        jCheckBox2.setText("DULCE DE LECHE");
 
-        jCheckBox3.setText("jCheckBox3");
+        jCheckBox3.setText("CREMA AMERICANA");
+        jCheckBox3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox3ActionPerformed(evt);
+            }
+        });
 
-        jCheckBox4.setText("jCheckBox4");
+        jCheckBox4.setText("FRUTILLA");
 
-        jCheckBox5.setText("jCheckBox5");
+        jCheckBox5.setText("LIMON");
 
-        jCheckBox6.setText("jCheckBox6");
+        jCheckBox6.setText("ANANA");
 
-        jCheckBox7.setText("jCheckBox7");
+        jCheckBox7.setText("TRAMONTANA");
 
-        jCheckBox8.setText("jCheckBox8");
+        jCheckBox8.setText("MASCARPONE");
 
-        jCheckBox9.setText("jCheckBox9");
+        jCheckBox9.setText("KINOTO");
 
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(68, 68, 68)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jCheckBox7)
+        javax.swing.GroupLayout jPanel_gustosLayout = new javax.swing.GroupLayout(jPanel_gustos);
+        jPanel_gustos.setLayout(jPanel_gustosLayout);
+        jPanel_gustosLayout.setHorizontalGroup(
+            jPanel_gustosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel_gustosLayout.createSequentialGroup()
+                .addGap(82, 82, 82)
+                .addGroup(jPanel_gustosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jCheckBox4)
-                    .addComponent(jCheckBox1))
-                .addGap(62, 62, 62)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jCheckBox2)
-                            .addComponent(jCheckBox5))
-                        .addGap(84, 84, 84)
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jCheckBox3)
-                            .addComponent(jCheckBox6)))
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addComponent(jCheckBox8)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jCheckBox9)))
-                .addContainerGap(106, Short.MAX_VALUE))
+                    .addComponent(jCheckBox1)
+                    .addComponent(jCheckBox7))
+                .addGap(48, 48, 48)
+                .addGroup(jPanel_gustosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jCheckBox2)
+                    .addComponent(jCheckBox5)
+                    .addComponent(jCheckBox8))
+                .addGap(84, 84, 84)
+                .addGroup(jPanel_gustosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jCheckBox9)
+                    .addComponent(jCheckBox3)
+                    .addComponent(jCheckBox6))
+                .addContainerGap(35, Short.MAX_VALUE))
         );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
+        jPanel_gustosLayout.setVerticalGroup(
+            jPanel_gustosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel_gustosLayout.createSequentialGroup()
                 .addGap(49, 49, 49)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jPanel_gustosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jCheckBox1)
                     .addComponent(jCheckBox2)
                     .addComponent(jCheckBox3))
                 .addGap(30, 30, 30)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jPanel_gustosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jCheckBox4)
                     .addComponent(jCheckBox5)
                     .addComponent(jCheckBox6))
                 .addGap(45, 45, 45)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jPanel_gustosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jCheckBox7)
                     .addComponent(jCheckBox8)
                     .addComponent(jCheckBox9))
@@ -256,16 +277,16 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(34, 34, 34)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jPanel_gustos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(22, Short.MAX_VALUE))
+                .addGap(71, 71, 71))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -275,7 +296,7 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jPanel_gustos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(0, 19, Short.MAX_VALUE))
@@ -285,9 +306,7 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(0, 1, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 803, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -299,6 +318,10 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jCheckBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jCheckBox3ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -317,8 +340,8 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel_gustos;
     private javax.swing.JPopupMenu jPopupMenu1;
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton2;
