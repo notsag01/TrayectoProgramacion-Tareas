@@ -4,7 +4,6 @@ import java.awt.Component;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import javax.swing.JCheckBox;
-import javax.swing.JRadioButton;
 
 
 public class Internal_ventas extends javax.swing.JInternalFrame {
@@ -39,17 +38,7 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
             }
         }
     }
-    private void checkTamaños(){
-        Component [] componentes = jPanel_tamaños.getComponents();
-        
-        for(Component componente : componentes  ){
-            JRadioButton radioButton =(JRadioButton) componente;
-            
-            if(!radioButton.isSelected()){
-                radioButton.setEnabled(false);
-            }
-        }
-    }
+
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -71,8 +60,8 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
         jTextField3 = new javax.swing.JTextField();
         jPanel_tamaños = new javax.swing.JPanel();
         jRadioButton_cono = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
-        jRadioButton3 = new javax.swing.JRadioButton();
+        jRadioButton_cuartoKilo = new javax.swing.JRadioButton();
+        jRadioButton_medioKilo = new javax.swing.JRadioButton();
         jRadioButton_kilo = new javax.swing.JRadioButton();
         jPanel_gustos = new javax.swing.JPanel();
         jCheckBox_chocolate = new javax.swing.JCheckBox();
@@ -156,9 +145,19 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
             }
         });
 
-        jRadioButton2.setText("1/4 Kilo");
+        jRadioButton_cuartoKilo.setText("1/4 Kilo");
+        jRadioButton_cuartoKilo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton_cuartoKiloActionPerformed(evt);
+            }
+        });
 
-        jRadioButton3.setText("1/2 Kilo");
+        jRadioButton_medioKilo.setText("1/2 Kilo");
+        jRadioButton_medioKilo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton_medioKiloActionPerformed(evt);
+            }
+        });
 
         jRadioButton_kilo.setText("1 kilo");
         jRadioButton_kilo.addActionListener(new java.awt.event.ActionListener() {
@@ -175,8 +174,8 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
                 .addGap(29, 29, 29)
                 .addGroup(jPanel_tamañosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jRadioButton_kilo)
-                    .addComponent(jRadioButton3)
-                    .addComponent(jRadioButton2)
+                    .addComponent(jRadioButton_medioKilo)
+                    .addComponent(jRadioButton_cuartoKilo)
                     .addComponent(jRadioButton_cono))
                 .addContainerGap(41, Short.MAX_VALUE))
         );
@@ -186,9 +185,9 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
                 .addGap(35, 35, 35)
                 .addComponent(jRadioButton_cono)
                 .addGap(18, 18, 18)
-                .addComponent(jRadioButton2)
+                .addComponent(jRadioButton_cuartoKilo)
                 .addGap(18, 18, 18)
-                .addComponent(jRadioButton3)
+                .addComponent(jRadioButton_medioKilo)
                 .addGap(18, 18, 18)
                 .addComponent(jRadioButton_kilo)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -372,7 +371,12 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jCheckBox_cremaAmericanaActionPerformed
 
     private void jRadioButton_kiloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton_kiloActionPerformed
-        
+        if(jCheckBox_chocolate.isSelected()){
+            cantidad++;
+        }
+        jRadioButton_cono.setSelected(false);
+        jRadioButton_cuartoKilo.setSelected(false);
+        jRadioButton_medioKilo.setSelected(false);
     }//GEN-LAST:event_jRadioButton_kiloActionPerformed
 
     private void jCheckBox_chocolateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox_chocolateActionPerformed
@@ -432,12 +436,31 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jCheckBox_pistachoActionPerformed
 
     private void jRadioButton_conoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton_conoActionPerformed
-        
         if(jRadioButton_cono.isSelected()){
             gustosPermitidos=2;
         }
-        checkTamaños();
+        jRadioButton_cuartoKilo.setSelected(false);
+        jRadioButton_medioKilo.setSelected(false);
+        jRadioButton_kilo.setSelected(false);
     }//GEN-LAST:event_jRadioButton_conoActionPerformed
+
+    private void jRadioButton_cuartoKiloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton_cuartoKiloActionPerformed
+        if(jRadioButton_cono.isSelected()){
+            gustosPermitidos=2;
+        }
+        jRadioButton_cono.setSelected(false);
+        jRadioButton_medioKilo.setSelected(false);
+        jRadioButton_kilo.setSelected(false);
+    }//GEN-LAST:event_jRadioButton_cuartoKiloActionPerformed
+
+    private void jRadioButton_medioKiloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton_medioKiloActionPerformed
+        if(jRadioButton_cono.isSelected()){
+            gustosPermitidos=2;
+        }
+        jRadioButton_cono.setSelected(false);
+        jRadioButton_cuartoKilo.setSelected(false);
+        jRadioButton_kilo.setSelected(false);
+    }//GEN-LAST:event_jRadioButton_medioKiloActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -459,10 +482,10 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
     private javax.swing.JPanel jPanel_gustos;
     private javax.swing.JPanel jPanel_tamaños;
     private javax.swing.JPopupMenu jPopupMenu1;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JRadioButton jRadioButton3;
     private javax.swing.JRadioButton jRadioButton_cono;
+    private javax.swing.JRadioButton jRadioButton_cuartoKilo;
     private javax.swing.JRadioButton jRadioButton_kilo;
+    private javax.swing.JRadioButton jRadioButton_medioKilo;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField_fecha;
