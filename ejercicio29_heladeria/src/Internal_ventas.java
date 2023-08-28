@@ -27,13 +27,19 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
     
     private void checkCantidad(){
         if(cantidad==gustosPermitidos){
-            Component [] componentes = jPanel_gustos.getComponents();
+            Component [] componentes = jPanel_gustos.getComponents();      
+            int editar=0;
             
             for(Component componente : componentes){
                 JCheckBox checkbox =(JCheckBox) componente;
                 
                 if(!checkbox.isSelected()){
                     checkbox.setEnabled(false);
+                    editar++;
+                    System.out.println(editar);
+                }
+                if(editar!=(9-gustosPermitidos)){
+                   checkbox.setEnabled(true);
                 }
             }
         }
