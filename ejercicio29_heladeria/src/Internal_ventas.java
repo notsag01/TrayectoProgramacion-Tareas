@@ -37,10 +37,7 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
                     checkbox.setEnabled(false);
                     editar++;
                     System.out.println(editar);
-                }
-                if(editar!=(9-gustosPermitidos)){
-                   checkbox.setEnabled(true);
-                }
+                }                
             }
         }
     }
