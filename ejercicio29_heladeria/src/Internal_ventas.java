@@ -39,6 +39,16 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
                     System.out.println(editar);
                 }                
             }
+        }else{
+            Component [] componentess = jPanel_gustos.getComponents();
+            
+            for (Component componentee : componentess){
+                JCheckBox check =(JCheckBox) componentee;
+                
+                if(!check.isSelected()){
+                    check.setEnabled(true);
+                }
+            }
         }
     }
 
