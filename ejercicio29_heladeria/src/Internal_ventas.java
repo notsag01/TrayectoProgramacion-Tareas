@@ -102,12 +102,12 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
         jCheckBox_chocolate = new javax.swing.JCheckBox();
         jCheckBox_dulceDeLeche = new javax.swing.JCheckBox();
         jCheckBox_cremaAmericana = new javax.swing.JCheckBox();
-        jCheckBox4 = new javax.swing.JCheckBox();
-        jCheckBox5 = new javax.swing.JCheckBox();
-        jCheckBox6 = new javax.swing.JCheckBox();
-        jCheckBox7 = new javax.swing.JCheckBox();
-        jCheckBox8 = new javax.swing.JCheckBox();
-        jCheckBox9 = new javax.swing.JCheckBox();
+        jCheckBox_frutilla = new javax.swing.JCheckBox();
+        jCheckBox_limon = new javax.swing.JCheckBox();
+        jCheckBox_anana = new javax.swing.JCheckBox();
+        jCheckBox_tamontana = new javax.swing.JCheckBox();
+        jCheckBox_mascarpone = new javax.swing.JCheckBox();
+        jCheckBox_pistacho = new javax.swing.JCheckBox();
         jPanel5 = new javax.swing.JPanel();
 
         setBackground(new java.awt.Color(255, 204, 204));
@@ -237,17 +237,17 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
             }
         });
 
-        jCheckBox4.setText("FRUTILLA");
+        jCheckBox_frutilla.setText("FRUTILLA");
 
-        jCheckBox5.setText("LIMON");
+        jCheckBox_limon.setText("LIMON");
 
-        jCheckBox6.setText("ANANA");
+        jCheckBox_anana.setText("ANANA");
 
-        jCheckBox7.setText("TRAMONTANA");
+        jCheckBox_tamontana.setText("TRAMONTANA");
 
-        jCheckBox8.setText("MASCARPONE");
+        jCheckBox_mascarpone.setText("MASCARPONE");
 
-        jCheckBox9.setText("KINOTO");
+        jCheckBox_pistacho.setText("PISTACHO");
 
         javax.swing.GroupLayout jPanel_gustosLayout = new javax.swing.GroupLayout(jPanel_gustos);
         jPanel_gustos.setLayout(jPanel_gustosLayout);
@@ -256,19 +256,19 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
             .addGroup(jPanel_gustosLayout.createSequentialGroup()
                 .addGap(82, 82, 82)
                 .addGroup(jPanel_gustosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jCheckBox4)
+                    .addComponent(jCheckBox_frutilla)
                     .addComponent(jCheckBox_chocolate)
-                    .addComponent(jCheckBox7))
+                    .addComponent(jCheckBox_tamontana))
                 .addGap(48, 48, 48)
                 .addGroup(jPanel_gustosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jCheckBox_dulceDeLeche)
-                    .addComponent(jCheckBox5)
-                    .addComponent(jCheckBox8))
+                    .addComponent(jCheckBox_limon)
+                    .addComponent(jCheckBox_mascarpone))
                 .addGap(84, 84, 84)
                 .addGroup(jPanel_gustosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jCheckBox9)
+                    .addComponent(jCheckBox_pistacho)
                     .addComponent(jCheckBox_cremaAmericana)
-                    .addComponent(jCheckBox6))
+                    .addComponent(jCheckBox_anana))
                 .addContainerGap(35, Short.MAX_VALUE))
         );
         jPanel_gustosLayout.setVerticalGroup(
@@ -279,16 +279,16 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
                     .addComponent(jCheckBox_chocolate)
                     .addComponent(jCheckBox_dulceDeLeche)
                     .addComponent(jCheckBox_cremaAmericana))
-                .addGap(30, 30, 30)
+                .addGap(37, 37, 37)
                 .addGroup(jPanel_gustosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCheckBox4)
-                    .addComponent(jCheckBox5)
-                    .addComponent(jCheckBox6))
-                .addGap(45, 45, 45)
+                    .addComponent(jCheckBox_frutilla)
+                    .addComponent(jCheckBox_limon)
+                    .addComponent(jCheckBox_anana))
+                .addGap(37, 37, 37)
                 .addGroup(jPanel_gustosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCheckBox7)
-                    .addComponent(jCheckBox8)
-                    .addComponent(jCheckBox9))
+                    .addComponent(jCheckBox_tamontana)
+                    .addComponent(jCheckBox_mascarpone)
+                    .addComponent(jCheckBox_pistacho))
                 .addContainerGap(94, Short.MAX_VALUE))
         );
 
@@ -382,15 +382,15 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JCheckBox jCheckBox4;
-    private javax.swing.JCheckBox jCheckBox5;
-    private javax.swing.JCheckBox jCheckBox6;
-    private javax.swing.JCheckBox jCheckBox7;
-    private javax.swing.JCheckBox jCheckBox8;
-    private javax.swing.JCheckBox jCheckBox9;
+    private javax.swing.JCheckBox jCheckBox_anana;
     private javax.swing.JCheckBox jCheckBox_chocolate;
     private javax.swing.JCheckBox jCheckBox_cremaAmericana;
     private javax.swing.JCheckBox jCheckBox_dulceDeLeche;
+    private javax.swing.JCheckBox jCheckBox_frutilla;
+    private javax.swing.JCheckBox jCheckBox_limon;
+    private javax.swing.JCheckBox jCheckBox_mascarpone;
+    private javax.swing.JCheckBox jCheckBox_pistacho;
+    private javax.swing.JCheckBox jCheckBox_tamontana;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

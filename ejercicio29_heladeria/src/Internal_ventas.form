@@ -285,21 +285,21 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="82" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jCheckBox4" min="-2" max="-2" attributes="0"/>
+                          <Component id="jCheckBox_frutilla" min="-2" max="-2" attributes="0"/>
                           <Component id="jCheckBox_chocolate" min="-2" max="-2" attributes="0"/>
-                          <Component id="jCheckBox7" min="-2" max="-2" attributes="0"/>
+                          <Component id="jCheckBox_tamontana" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jCheckBox_dulceDeLeche" min="-2" max="-2" attributes="0"/>
-                          <Component id="jCheckBox5" min="-2" max="-2" attributes="0"/>
-                          <Component id="jCheckBox8" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jCheckBox_limon" min="-2" max="-2" attributes="0"/>
+                          <Component id="jCheckBox_mascarpone" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="84" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jCheckBox9" min="-2" max="-2" attributes="0"/>
+                          <Component id="jCheckBox_pistacho" min="-2" max="-2" attributes="0"/>
                           <Component id="jCheckBox_cremaAmericana" min="-2" max="-2" attributes="0"/>
-                          <Component id="jCheckBox6" min="-2" max="-2" attributes="0"/>
+                          <Component id="jCheckBox_anana" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace pref="35" max="32767" attributes="0"/>
                   </Group>
@@ -314,17 +314,17 @@
                           <Component id="jCheckBox_dulceDeLeche" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jCheckBox_cremaAmericana" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jCheckBox4" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jCheckBox5" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jCheckBox6" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jCheckBox_frutilla" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jCheckBox_limon" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jCheckBox_anana" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jCheckBox7" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jCheckBox8" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jCheckBox9" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jCheckBox_tamontana" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jCheckBox_mascarpone" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jCheckBox_pistacho" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace pref="94" max="32767" attributes="0"/>
                   </Group>
@@ -356,34 +356,34 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBox_cremaAmericanaActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JCheckBox" name="jCheckBox4">
+            <Component class="javax.swing.JCheckBox" name="jCheckBox_frutilla">
               <Properties>
                 <Property name="text" type="java.lang.String" value="FRUTILLA"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JCheckBox" name="jCheckBox5">
+            <Component class="javax.swing.JCheckBox" name="jCheckBox_limon">
               <Properties>
                 <Property name="text" type="java.lang.String" value="LIMON"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JCheckBox" name="jCheckBox6">
+            <Component class="javax.swing.JCheckBox" name="jCheckBox_anana">
               <Properties>
                 <Property name="text" type="java.lang.String" value="ANANA"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JCheckBox" name="jCheckBox7">
+            <Component class="javax.swing.JCheckBox" name="jCheckBox_tamontana">
               <Properties>
                 <Property name="text" type="java.lang.String" value="TRAMONTANA"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JCheckBox" name="jCheckBox8">
+            <Component class="javax.swing.JCheckBox" name="jCheckBox_mascarpone">
               <Properties>
                 <Property name="text" type="java.lang.String" value="MASCARPONE"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JCheckBox" name="jCheckBox9">
+            <Component class="javax.swing.JCheckBox" name="jCheckBox_pistacho">
               <Properties>
-                <Property name="text" type="java.lang.String" value="KINOTO"/>
+                <Property name="text" type="java.lang.String" value="PISTACHO"/>
               </Properties>
             </Component>
           </SubComponents>
