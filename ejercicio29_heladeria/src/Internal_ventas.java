@@ -25,40 +25,46 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
         jTextField_fecha.setText(fecha);        
     }
     
-    private void contarChecks(){
-
-        
-        Component [] componentes = jPanel_gustos.getComponents();
-        
-        for(Component componente: componentes){
-            JCheckBox checkbox = (JCheckBox) componente;
+    private void checkCantidad(){
+        if(cantidad==3){
             
-            if(checkbox.isSelected()){
-                cantidad++;
-                System.out.println(cantidad);
-            }else{
-                if(cantidad>0){
-                    cantidad--;
-                    System.out.println(cantidad);                
-                }
-            }
         }
-        if(cantidad>=gustosPermitidos){
-            for(Component componente: componentes){
-                JCheckBox checkBox =(JCheckBox) componente;
-                if(checkBox.isSelected()==false){
-                    checkBox.setEnabled(false);
-                }
-            }
-        }else{
-            for(Component componente: componentes){
-                JCheckBox checkBox =(JCheckBox) componente;
-                if(checkBox.isSelected()){
-                    checkBox.setEnabled(true);
-                }
-            }
-         }
     }
+//    
+//    private void contarChecks(){
+//
+//        
+//        Component [] componentes = jPanel_gustos.getComponents();
+//        
+//        for(Component componente: componentes){
+//            JCheckBox checkbox = (JCheckBox) componente;
+//            
+//            if(checkbox.isSelected()){
+//                cantidad++;
+//                System.out.println(cantidad);
+//            }else{
+//                if(cantidad>0){
+//                    cantidad--;
+//                    System.out.println(cantidad);                
+//                }
+//            }
+//        }
+//        if(cantidad>=gustosPermitidos){
+//            for(Component componente: componentes){
+//                JCheckBox checkBox =(JCheckBox) componente;
+//                if(checkBox.isSelected()==false){
+//                    checkBox.setEnabled(false);
+//                }
+//            }
+//        }else{
+//            for(Component componente: componentes){
+//                JCheckBox checkBox =(JCheckBox) componente;
+//                if(checkBox.isSelected()){
+//                    checkBox.setEnabled(true);
+//                }
+//            }
+//         }
+//    }
     
 
     /**
@@ -85,9 +91,9 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
         jRadioButton3 = new javax.swing.JRadioButton();
         jRadioButton_kilo = new javax.swing.JRadioButton();
         jPanel_gustos = new javax.swing.JPanel();
-        jCheckBox1 = new javax.swing.JCheckBox();
-        jCheckBox2 = new javax.swing.JCheckBox();
-        jCheckBox3 = new javax.swing.JCheckBox();
+        jCheckBox_chocolate = new javax.swing.JCheckBox();
+        jCheckBox_dulceDeLeche = new javax.swing.JCheckBox();
+        jCheckBox_cremaAmericana = new javax.swing.JCheckBox();
         jCheckBox4 = new javax.swing.JCheckBox();
         jCheckBox5 = new javax.swing.JCheckBox();
         jCheckBox6 = new javax.swing.JCheckBox();
@@ -202,14 +208,24 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
         jPanel_gustos.setBackground(new java.awt.Color(255, 255, 255));
         jPanel_gustos.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
-        jCheckBox1.setText("CHOCOLATE");
-
-        jCheckBox2.setText("DULCE DE LECHE");
-
-        jCheckBox3.setText("CREMA AMERICANA");
-        jCheckBox3.addActionListener(new java.awt.event.ActionListener() {
+        jCheckBox_chocolate.setText("CHOCOLATE");
+        jCheckBox_chocolate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox3ActionPerformed(evt);
+                jCheckBox_chocolateActionPerformed(evt);
+            }
+        });
+
+        jCheckBox_dulceDeLeche.setText("DULCE DE LECHE");
+        jCheckBox_dulceDeLeche.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox_dulceDeLecheActionPerformed(evt);
+            }
+        });
+
+        jCheckBox_cremaAmericana.setText("CREMA AMERICANA");
+        jCheckBox_cremaAmericana.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox_cremaAmericanaActionPerformed(evt);
             }
         });
 
@@ -233,17 +249,17 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
                 .addGap(82, 82, 82)
                 .addGroup(jPanel_gustosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jCheckBox4)
-                    .addComponent(jCheckBox1)
+                    .addComponent(jCheckBox_chocolate)
                     .addComponent(jCheckBox7))
                 .addGap(48, 48, 48)
                 .addGroup(jPanel_gustosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jCheckBox2)
+                    .addComponent(jCheckBox_dulceDeLeche)
                     .addComponent(jCheckBox5)
                     .addComponent(jCheckBox8))
                 .addGap(84, 84, 84)
                 .addGroup(jPanel_gustosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jCheckBox9)
-                    .addComponent(jCheckBox3)
+                    .addComponent(jCheckBox_cremaAmericana)
                     .addComponent(jCheckBox6))
                 .addContainerGap(35, Short.MAX_VALUE))
         );
@@ -252,9 +268,9 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
             .addGroup(jPanel_gustosLayout.createSequentialGroup()
                 .addGap(49, 49, 49)
                 .addGroup(jPanel_gustosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCheckBox1)
-                    .addComponent(jCheckBox2)
-                    .addComponent(jCheckBox3))
+                    .addComponent(jCheckBox_chocolate)
+                    .addComponent(jCheckBox_dulceDeLeche)
+                    .addComponent(jCheckBox_cremaAmericana))
                 .addGap(30, 30, 30)
                 .addGroup(jPanel_gustosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jCheckBox4)
@@ -329,25 +345,42 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jCheckBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox3ActionPerformed
+    private void jCheckBox_cremaAmericanaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox_cremaAmericanaActionPerformed
+        if(jCheckBox_cremaAmericana.isSelected()){
+            cantidad++;
+            
+        }
+    }//GEN-LAST:event_jCheckBox_cremaAmericanaActionPerformed
 
     private void jRadioButton_kiloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton_kiloActionPerformed
-        contarChecks();
+        
     }//GEN-LAST:event_jRadioButton_kiloActionPerformed
+
+    private void jCheckBox_chocolateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox_chocolateActionPerformed
+        if(jCheckBox_chocolate.isSelected()){
+            cantidad++;
+            System.out.println(cantidad);
+        }
+    }//GEN-LAST:event_jCheckBox_chocolateActionPerformed
+
+    private void jCheckBox_dulceDeLecheActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox_dulceDeLecheActionPerformed
+        if(jCheckBox_dulceDeLeche.isSelected()){
+            cantidad++;
+            System.out.println(cantidad);
+        }        
+    }//GEN-LAST:event_jCheckBox_dulceDeLecheActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JCheckBox jCheckBox1;
-    private javax.swing.JCheckBox jCheckBox2;
-    private javax.swing.JCheckBox jCheckBox3;
     private javax.swing.JCheckBox jCheckBox4;
     private javax.swing.JCheckBox jCheckBox5;
     private javax.swing.JCheckBox jCheckBox6;
     private javax.swing.JCheckBox jCheckBox7;
     private javax.swing.JCheckBox jCheckBox8;
     private javax.swing.JCheckBox jCheckBox9;
+    private javax.swing.JCheckBox jCheckBox_chocolate;
+    private javax.swing.JCheckBox jCheckBox_cremaAmericana;
+    private javax.swing.JCheckBox jCheckBox_dulceDeLeche;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
