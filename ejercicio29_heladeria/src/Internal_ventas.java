@@ -27,10 +27,18 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
     
     private void checkCantidad(){
         if(cantidad==3){
+            Component [] componentes = jPanel_gustos.getComponents();
             
+            for(Component componente : componentes){
+                JCheckBox checkbox =(JCheckBox) componente;
+                
+                if(!checkbox.isSelected()){
+                    checkbox.setEnabled(false);
+                }
+            }
         }
     }
-//    
+
 //    private void contarChecks(){
 //
 //        
@@ -347,9 +355,9 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
 
     private void jCheckBox_cremaAmericanaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox_cremaAmericanaActionPerformed
         if(jCheckBox_cremaAmericana.isSelected()){
-            cantidad++;
-            
+            cantidad++;            
         }
+        checkCantidad();
     }//GEN-LAST:event_jCheckBox_cremaAmericanaActionPerformed
 
     private void jRadioButton_kiloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton_kiloActionPerformed
@@ -361,6 +369,7 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
             cantidad++;
             System.out.println(cantidad);
         }
+        checkCantidad();
     }//GEN-LAST:event_jCheckBox_chocolateActionPerformed
 
     private void jCheckBox_dulceDeLecheActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox_dulceDeLecheActionPerformed
@@ -368,6 +377,7 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
             cantidad++;
             System.out.println(cantidad);
         }        
+        checkCantidad();
     }//GEN-LAST:event_jCheckBox_dulceDeLecheActionPerformed
 
 
