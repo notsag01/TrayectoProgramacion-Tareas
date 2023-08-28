@@ -238,16 +238,46 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
         });
 
         jCheckBox_frutilla.setText("FRUTILLA");
+        jCheckBox_frutilla.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox_frutillaActionPerformed(evt);
+            }
+        });
 
         jCheckBox_limon.setText("LIMON");
+        jCheckBox_limon.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox_limonActionPerformed(evt);
+            }
+        });
 
         jCheckBox_anana.setText("ANANA");
+        jCheckBox_anana.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox_ananaActionPerformed(evt);
+            }
+        });
 
         jCheckBox_tamontana.setText("TRAMONTANA");
+        jCheckBox_tamontana.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox_tamontanaActionPerformed(evt);
+            }
+        });
 
         jCheckBox_mascarpone.setText("MASCARPONE");
+        jCheckBox_mascarpone.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox_mascarponeActionPerformed(evt);
+            }
+        });
 
         jCheckBox_pistacho.setText("PISTACHO");
+        jCheckBox_pistacho.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox_pistachoActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel_gustosLayout = new javax.swing.GroupLayout(jPanel_gustos);
         jPanel_gustos.setLayout(jPanel_gustosLayout);
@@ -379,6 +409,48 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
         }        
         checkCantidad();
     }//GEN-LAST:event_jCheckBox_dulceDeLecheActionPerformed
+
+    private void jCheckBox_frutillaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox_frutillaActionPerformed
+        if(jCheckBox_frutilla.isSelected()){
+            cantidad++;
+        }        
+        checkCantidad();
+    }//GEN-LAST:event_jCheckBox_frutillaActionPerformed
+
+    private void jCheckBox_limonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox_limonActionPerformed
+        if(jCheckBox_limon.isSelected()){
+            cantidad++;
+        }        
+        checkCantidad();
+    }//GEN-LAST:event_jCheckBox_limonActionPerformed
+
+    private void jCheckBox_ananaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox_ananaActionPerformed
+        if(jCheckBox_anana.isSelected()){
+            cantidad++;
+        }        
+        checkCantidad();
+    }//GEN-LAST:event_jCheckBox_ananaActionPerformed
+
+    private void jCheckBox_tamontanaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox_tamontanaActionPerformed
+        if(jCheckBox_tamontana.isSelected()){
+            cantidad++;
+        }        
+        checkCantidad();
+    }//GEN-LAST:event_jCheckBox_tamontanaActionPerformed
+
+    private void jCheckBox_mascarponeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox_mascarponeActionPerformed
+        if(jCheckBox_mascarpone.isSelected()){
+            cantidad++;
+        }        
+        checkCantidad();
+    }//GEN-LAST:event_jCheckBox_mascarponeActionPerformed
+
+    private void jCheckBox_pistachoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox_pistachoActionPerformed
+        if(jCheckBox_pistacho.isSelected()){
+            cantidad++;
+        }        
+        checkCantidad();
+    }//GEN-LAST:event_jCheckBox_pistachoActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
