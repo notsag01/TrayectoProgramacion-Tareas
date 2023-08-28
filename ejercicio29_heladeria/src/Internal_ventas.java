@@ -371,8 +371,8 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jCheckBox_cremaAmericanaActionPerformed
 
     private void jRadioButton_kiloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton_kiloActionPerformed
-        if(jCheckBox_chocolate.isSelected()){
-            cantidad++;
+        if(jRadioButton_kilo.isSelected()){
+            gustosPermitidos=4;
         }
         jRadioButton_cono.setSelected(false);
         jRadioButton_cuartoKilo.setSelected(false);
@@ -455,7 +455,7 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
 
     private void jRadioButton_medioKiloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton_medioKiloActionPerformed
         if(jRadioButton_cono.isSelected()){
-            gustosPermitidos=2;
+            gustosPermitidos=3;
         }
         jRadioButton_cono.setSelected(false);
         jRadioButton_cuartoKilo.setSelected(false);
