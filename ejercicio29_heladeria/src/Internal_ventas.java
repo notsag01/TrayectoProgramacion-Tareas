@@ -80,7 +80,7 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
         jCheckBox_frutilla = new javax.swing.JCheckBox();
         jCheckBox_limon = new javax.swing.JCheckBox();
         jCheckBox_anana = new javax.swing.JCheckBox();
-        jCheckBox_tamontana = new javax.swing.JCheckBox();
+        jCheckBox_tramontana = new javax.swing.JCheckBox();
         jCheckBox_mascarpone = new javax.swing.JCheckBox();
         jCheckBox_pistacho = new javax.swing.JCheckBox();
         jPanel5 = new javax.swing.JPanel();
@@ -222,10 +222,10 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
             }
         });
 
-        jCheckBox_tamontana.setText("TRAMONTANA");
-        jCheckBox_tamontana.addActionListener(new java.awt.event.ActionListener() {
+        jCheckBox_tramontana.setText("TRAMONTANA");
+        jCheckBox_tramontana.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox_tamontanaActionPerformed(evt);
+                jCheckBox_tramontanaActionPerformed(evt);
             }
         });
 
@@ -252,7 +252,7 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
                 .addGroup(jPanel_gustosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jCheckBox_frutilla)
                     .addComponent(jCheckBox_chocolate)
-                    .addComponent(jCheckBox_tamontana))
+                    .addComponent(jCheckBox_tramontana))
                 .addGap(48, 48, 48)
                 .addGroup(jPanel_gustosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jCheckBox_dulceDeLeche)
@@ -280,7 +280,7 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
                     .addComponent(jCheckBox_anana))
                 .addGap(37, 37, 37)
                 .addGroup(jPanel_gustosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCheckBox_tamontana)
+                    .addComponent(jCheckBox_tramontana)
                     .addComponent(jCheckBox_mascarpone)
                     .addComponent(jCheckBox_pistacho))
                 .addContainerGap(37, Short.MAX_VALUE))
@@ -297,26 +297,27 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 79, Short.MAX_VALUE)
+            .addGap(0, 66, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout jPanel_tamañosLayout = new javax.swing.GroupLayout(jPanel_tamaños);
         jPanel_tamaños.setLayout(jPanel_tamañosLayout);
         jPanel_tamañosLayout.setHorizontalGroup(
             jPanel_tamañosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel_tamañosLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(15, 15, 15))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel_tamañosLayout.createSequentialGroup()
-                .addGap(29, 29, 29)
+            .addGroup(jPanel_tamañosLayout.createSequentialGroup()
                 .addGroup(jPanel_tamañosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jRadioButton_kilo)
-                    .addComponent(jRadioButton_medioKilo)
-                    .addComponent(jRadioButton_cuartoKilo)
-                    .addComponent(jRadioButton_cono))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
-                .addComponent(jPanel_gustos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel_tamañosLayout.createSequentialGroup()
+                        .addGap(29, 29, 29)
+                        .addGroup(jPanel_tamañosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jRadioButton_kilo)
+                            .addComponent(jRadioButton_medioKilo)
+                            .addComponent(jRadioButton_cuartoKilo)
+                            .addComponent(jRadioButton_cono))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
+                        .addComponent(jPanel_gustos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel_tamañosLayout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
         jPanel_tamañosLayout.setVerticalGroup(
@@ -333,9 +334,9 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel_tamañosLayout.createSequentialGroup()
                 .addComponent(jPanel_gustos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
                 .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 19, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -357,7 +358,7 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(12, 12, 12)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
                 .addComponent(jPanel_tamaños, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -368,14 +369,14 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 23, Short.MAX_VALUE))
+                .addGap(0, 8, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 497, Short.MAX_VALUE)
-                .addGap(0, 0, 0))
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 511, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -402,6 +403,8 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
     private void jCheckBox_chocolateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox_chocolateActionPerformed
         if(jCheckBox_chocolate.isSelected()){
             cantidad++;
+        }else if(!jCheckBox_chocolate.isSelected()&&cantidad==gustosPermitidos){
+            cantidad--;
         }
         checkCantidad();
     }//GEN-LAST:event_jCheckBox_chocolateActionPerformed
@@ -409,6 +412,8 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
     private void jCheckBox_dulceDeLecheActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox_dulceDeLecheActionPerformed
         if(jCheckBox_dulceDeLeche.isSelected()){
             cantidad++;
+        }else if(!jCheckBox_dulceDeLeche.isSelected()&&cantidad==gustosPermitidos){
+            cantidad--;
         }        
         checkCantidad();
     }//GEN-LAST:event_jCheckBox_dulceDeLecheActionPerformed
@@ -416,6 +421,8 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
     private void jCheckBox_frutillaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox_frutillaActionPerformed
         if(jCheckBox_frutilla.isSelected()){
             cantidad++;
+        }else if(!jCheckBox_frutilla.isSelected()&&cantidad==gustosPermitidos){
+            cantidad--;
         }        
         checkCantidad();
     }//GEN-LAST:event_jCheckBox_frutillaActionPerformed
@@ -423,6 +430,8 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
     private void jCheckBox_limonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox_limonActionPerformed
         if(jCheckBox_limon.isSelected()){
             cantidad++;
+        }else if(!jCheckBox_limon.isSelected()&&cantidad==gustosPermitidos){
+            cantidad--;
         }        
         checkCantidad();
     }//GEN-LAST:event_jCheckBox_limonActionPerformed
@@ -434,16 +443,20 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
         checkCantidad();
     }//GEN-LAST:event_jCheckBox_ananaActionPerformed
 
-    private void jCheckBox_tamontanaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox_tamontanaActionPerformed
-        if(jCheckBox_tamontana.isSelected()){
+    private void jCheckBox_tramontanaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox_tramontanaActionPerformed
+        if(jCheckBox_tramontana.isSelected()){
             cantidad++;
+        }else if(!jCheckBox_tramontana.isSelected()&&cantidad==gustosPermitidos){
+            cantidad--;
         }        
         checkCantidad();
-    }//GEN-LAST:event_jCheckBox_tamontanaActionPerformed
+    }//GEN-LAST:event_jCheckBox_tramontanaActionPerformed
 
     private void jCheckBox_mascarponeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox_mascarponeActionPerformed
         if(jCheckBox_mascarpone.isSelected()){
             cantidad++;
+        }else if(!jCheckBox_mascarpone.isSelected()&&cantidad==gustosPermitidos){
+            cantidad--;
         }        
         checkCantidad();
     }//GEN-LAST:event_jCheckBox_mascarponeActionPerformed
@@ -451,6 +464,8 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
     private void jCheckBox_pistachoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox_pistachoActionPerformed
         if(jCheckBox_pistacho.isSelected()){
             cantidad++;
+        }else if(!jCheckBox_pistacho.isSelected()&&cantidad==gustosPermitidos){
+            cantidad--;
         }        
         checkCantidad();
     }//GEN-LAST:event_jCheckBox_pistachoActionPerformed
@@ -492,7 +507,7 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
     private javax.swing.JCheckBox jCheckBox_limon;
     private javax.swing.JCheckBox jCheckBox_mascarpone;
     private javax.swing.JCheckBox jCheckBox_pistacho;
-    private javax.swing.JCheckBox jCheckBox_tamontana;
+    private javax.swing.JCheckBox jCheckBox_tramontana;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
