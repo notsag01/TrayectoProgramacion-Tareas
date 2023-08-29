@@ -434,10 +434,11 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
     private void jCheckBox_cremaAmericanaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox_cremaAmericanaActionPerformed
         if(jCheckBox_cremaAmericana.isSelected()){
             cantidad++;            
+            checkCantidad();
         }else if(!jCheckBox_cremaAmericana.isSelected()&&cantidad==gustosPermitidos){
             cantidad--;
+            checkCantidad();
         }
-        checkCantidad();
     }//GEN-LAST:event_jCheckBox_cremaAmericanaActionPerformed
 
     private void jRadioButton_kiloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton_kiloActionPerformed
@@ -452,71 +453,81 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
     private void jCheckBox_chocolateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox_chocolateActionPerformed
         if(jCheckBox_chocolate.isSelected()){
             cantidad++;
+            checkCantidad();
         }else if(!jCheckBox_chocolate.isSelected()&&cantidad==gustosPermitidos){
             cantidad--;
+            checkCantidad();
         }
-        checkCantidad();
     }//GEN-LAST:event_jCheckBox_chocolateActionPerformed
 
     private void jCheckBox_dulceDeLecheActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox_dulceDeLecheActionPerformed
         if(jCheckBox_dulceDeLeche.isSelected()){
             cantidad++;
+            checkCantidad();
         }else if(!jCheckBox_dulceDeLeche.isSelected()&&cantidad==gustosPermitidos){
             cantidad--;
+            checkCantidad();
         }        
-        checkCantidad();
     }//GEN-LAST:event_jCheckBox_dulceDeLecheActionPerformed
 
     private void jCheckBox_frutillaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox_frutillaActionPerformed
         if(jCheckBox_frutilla.isSelected()){
             cantidad++;
+            checkCantidad();
         }else if(!jCheckBox_frutilla.isSelected()&&cantidad==gustosPermitidos){
             cantidad--;
+            checkCantidad();
         }        
-        checkCantidad();
     }//GEN-LAST:event_jCheckBox_frutillaActionPerformed
 
     private void jCheckBox_limonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox_limonActionPerformed
         if(jCheckBox_limon.isSelected()){
             cantidad++;
+            checkCantidad();
         }else if(!jCheckBox_limon.isSelected()&&cantidad==gustosPermitidos){
             cantidad--;
+            checkCantidad();
         }        
-        checkCantidad();
     }//GEN-LAST:event_jCheckBox_limonActionPerformed
 
     private void jCheckBox_ananaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox_ananaActionPerformed
         if(jCheckBox_anana.isSelected()){
             cantidad++;
-        }        
-        checkCantidad();
+            checkCantidad();
+        }else if(!jCheckBox_anana.isSelected()&&cantidad==gustosPermitidos){
+            cantidad--;
+            checkCantidad();
+        }       
     }//GEN-LAST:event_jCheckBox_ananaActionPerformed
 
     private void jCheckBox_tramontanaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox_tramontanaActionPerformed
         if(jCheckBox_tramontana.isSelected()){
             cantidad++;
+            checkCantidad();
         }else if(!jCheckBox_tramontana.isSelected()&&cantidad==gustosPermitidos){
             cantidad--;
+            checkCantidad();
         }        
-        checkCantidad();
     }//GEN-LAST:event_jCheckBox_tramontanaActionPerformed
 
     private void jCheckBox_mascarponeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox_mascarponeActionPerformed
         if(jCheckBox_mascarpone.isSelected()){
             cantidad++;
+            checkCantidad();
         }else if(!jCheckBox_mascarpone.isSelected()&&cantidad==gustosPermitidos){
             cantidad--;
+            checkCantidad();
         }        
-        checkCantidad();
     }//GEN-LAST:event_jCheckBox_mascarponeActionPerformed
 
     private void jCheckBox_pistachoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox_pistachoActionPerformed
         if(jCheckBox_pistacho.isSelected()){
             cantidad++;
+            checkCantidad();
         }else if(!jCheckBox_pistacho.isSelected()&&cantidad==gustosPermitidos){
             cantidad--;
+            checkCantidad();
         }        
-        checkCantidad();
     }//GEN-LAST:event_jCheckBox_pistachoActionPerformed
 
     private void jRadioButton_conoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton_conoActionPerformed
