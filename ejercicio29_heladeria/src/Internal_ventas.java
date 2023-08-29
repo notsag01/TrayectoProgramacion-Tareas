@@ -28,26 +28,13 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
     private void checkCantidad(){
         if(cantidad==gustosPermitidos){
             Component [] componentes = jPanel_gustos.getComponents();      
-            int editar=0;
             
             for(Component componente : componentes){
                 JCheckBox checkbox =(JCheckBox) componente;
                 
                 if(!checkbox.isSelected()){
                     checkbox.setEnabled(false);
-                    editar++;
-                    System.out.println(editar);
                 }                
-            }
-        }else{
-            Component [] componentess = jPanel_gustos.getComponents();
-            
-            for (Component componentee : componentess){
-                JCheckBox check =(JCheckBox) componentee;
-                
-                if(!check.isSelected()){
-                    check.setEnabled(true);
-                }
             }
         }
     }
@@ -466,7 +453,7 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jRadioButton_conoActionPerformed
 
     private void jRadioButton_cuartoKiloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton_cuartoKiloActionPerformed
-        if(jRadioButton_cono.isSelected()){
+        if(jRadioButton_cuartoKilo.isSelected()){
             gustosPermitidos=2;
         }
         jRadioButton_cono.setSelected(false);
@@ -475,7 +462,7 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jRadioButton_cuartoKiloActionPerformed
 
     private void jRadioButton_medioKiloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton_medioKiloActionPerformed
-        if(jRadioButton_cono.isSelected()){
+        if(jRadioButton_medioKilo.isSelected()){
             gustosPermitidos=3;
         }
         jRadioButton_cono.setSelected(false);
