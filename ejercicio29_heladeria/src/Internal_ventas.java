@@ -36,6 +36,16 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
                     checkbox.setEnabled(false);
                 }                
             }
+        }else{
+            Component [] componentes = jPanel_gustos.getComponents();      
+            
+            for(Component componente : componentes){
+                JCheckBox checkbox =(JCheckBox) componente;
+                
+                if(!checkbox.isSelected()){
+                    checkbox.setEnabled(true);
+                }                
+            }
         }
     }
 
@@ -374,6 +384,8 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
     private void jCheckBox_cremaAmericanaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox_cremaAmericanaActionPerformed
         if(jCheckBox_cremaAmericana.isSelected()){
             cantidad++;            
+        }else if(!jCheckBox_cremaAmericana.isSelected()&&cantidad==gustosPermitidos){
+            cantidad--;
         }
         checkCantidad();
     }//GEN-LAST:event_jCheckBox_cremaAmericanaActionPerformed
