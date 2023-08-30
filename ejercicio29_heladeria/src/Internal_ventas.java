@@ -13,7 +13,7 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
     public Internal_ventas() {
         initComponents();
         this.setTitle("Ventana Principal");
-        this.setSize(650,650);
+        this.setSize(695,645);
         this.setVisible(false);
         this.setBackground(Color.white);
         
@@ -71,10 +71,6 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
         jTextField2 = new javax.swing.JTextField();
         jTextField3 = new javax.swing.JTextField();
         jPanel_tamaños = new javax.swing.JPanel();
-        jRadioButton_cono = new javax.swing.JRadioButton();
-        jRadioButton_cuartoKilo = new javax.swing.JRadioButton();
-        jRadioButton_medioKilo = new javax.swing.JRadioButton();
-        jRadioButton_kilo = new javax.swing.JRadioButton();
         jPanel_gustos = new javax.swing.JPanel();
         jCheckBox_chocolate = new javax.swing.JCheckBox();
         jCheckBox_dulceDeLeche = new javax.swing.JCheckBox();
@@ -89,6 +85,11 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
+        jPanel3 = new javax.swing.JPanel();
+        jRadioButton_cono = new javax.swing.JRadioButton();
+        jRadioButton_cuartoKilo = new javax.swing.JRadioButton();
+        jRadioButton_medioKilo = new javax.swing.JRadioButton();
+        jRadioButton_kilo = new javax.swing.JRadioButton();
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -166,34 +167,6 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
 
         jPanel_tamaños.setBackground(new java.awt.Color(255, 255, 255));
         jPanel_tamaños.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
-
-        jRadioButton_cono.setText("Cono");
-        jRadioButton_cono.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton_conoActionPerformed(evt);
-            }
-        });
-
-        jRadioButton_cuartoKilo.setText("1/4 Kilo");
-        jRadioButton_cuartoKilo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton_cuartoKiloActionPerformed(evt);
-            }
-        });
-
-        jRadioButton_medioKilo.setText("1/2 Kilo");
-        jRadioButton_medioKilo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton_medioKiloActionPerformed(evt);
-            }
-        });
-
-        jRadioButton_kilo.setText("1 kilo");
-        jRadioButton_kilo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton_kiloActionPerformed(evt);
-            }
-        });
 
         jPanel_gustos.setBackground(new java.awt.Color(255, 255, 255));
         jPanel_gustos.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Gustos", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(204, 153, 255))); // NOI18N
@@ -356,18 +329,75 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
                 .addContainerGap(24, Short.MAX_VALUE))
         );
 
+        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Tamaño", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(204, 153, 255))); // NOI18N
+
+        jRadioButton_cono.setText("Cono");
+        jRadioButton_cono.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton_conoActionPerformed(evt);
+            }
+        });
+
+        jRadioButton_cuartoKilo.setText("1/4 Kilo");
+        jRadioButton_cuartoKilo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton_cuartoKiloActionPerformed(evt);
+            }
+        });
+
+        jRadioButton_medioKilo.setText("1/2 Kilo");
+        jRadioButton_medioKilo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton_medioKiloActionPerformed(evt);
+            }
+        });
+
+        jRadioButton_kilo.setText("1 kilo");
+        jRadioButton_kilo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton_kiloActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jRadioButton_medioKilo)
+                    .addComponent(jRadioButton_kilo))
+                .addContainerGap(31, Short.MAX_VALUE))
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jRadioButton_cuartoKilo)
+                    .addComponent(jRadioButton_cono))
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap(28, Short.MAX_VALUE)
+                .addComponent(jRadioButton_cono)
+                .addGap(18, 18, 18)
+                .addComponent(jRadioButton_cuartoKilo)
+                .addGap(18, 18, 18)
+                .addComponent(jRadioButton_medioKilo)
+                .addGap(18, 18, 18)
+                .addComponent(jRadioButton_kilo)
+                .addGap(42, 42, 42))
+        );
+
         javax.swing.GroupLayout jPanel_tamañosLayout = new javax.swing.GroupLayout(jPanel_tamaños);
         jPanel_tamaños.setLayout(jPanel_tamañosLayout);
         jPanel_tamañosLayout.setHorizontalGroup(
             jPanel_tamañosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel_tamañosLayout.createSequentialGroup()
-                .addGap(29, 29, 29)
-                .addGroup(jPanel_tamañosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jRadioButton_kilo)
-                    .addComponent(jRadioButton_medioKilo)
-                    .addComponent(jRadioButton_cuartoKilo)
-                    .addComponent(jRadioButton_cono))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 56, Short.MAX_VALUE)
+                .addGap(14, 14, 14)
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
                 .addGroup(jPanel_tamañosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel_gustos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -376,19 +406,10 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
         jPanel_tamañosLayout.setVerticalGroup(
             jPanel_tamañosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel_tamañosLayout.createSequentialGroup()
-                .addGroup(jPanel_tamañosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel_tamañosLayout.createSequentialGroup()
-                        .addGap(35, 35, 35)
-                        .addComponent(jRadioButton_cono)
-                        .addGap(18, 18, 18)
-                        .addComponent(jRadioButton_cuartoKilo)
-                        .addGap(18, 18, 18)
-                        .addComponent(jRadioButton_medioKilo)
-                        .addGap(18, 18, 18)
-                        .addComponent(jRadioButton_kilo))
-                    .addGroup(jPanel_tamañosLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jPanel_gustos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap()
+                .addGroup(jPanel_tamañosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jPanel_gustos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -399,21 +420,18 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(21, 21, 21)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(121, 121, 121)
-                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(21, 21, 21)
-                        .addComponent(jPanel_tamaños, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(58, Short.MAX_VALUE))
+                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel_tamaños, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(48, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(12, 12, 12)
+                .addContainerGap(14, Short.MAX_VALUE)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 8, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel_tamaños, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -589,6 +607,7 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel_gustos;
     private javax.swing.JPanel jPanel_tamaños;
