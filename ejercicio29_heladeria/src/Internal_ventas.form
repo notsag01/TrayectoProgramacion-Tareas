@@ -614,7 +614,12 @@
             <Component class="javax.swing.JButton" name="jButton_delibery">
               <Properties>
                 <Property name="text" type="java.lang.String" value="DELIVERY"/>
+                <Property name="doubleBuffered" type="boolean" value="true"/>
+                <Property name="enabled" type="boolean" value="false"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton_deliberyActionPerformed"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>

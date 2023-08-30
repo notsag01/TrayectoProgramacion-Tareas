@@ -425,6 +425,13 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
         jPanel4.setEnabled(false);
 
         jButton_delibery.setText("DELIVERY");
+        jButton_delibery.setDoubleBuffered(true);
+        jButton_delibery.setEnabled(false);
+        jButton_delibery.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_deliberyActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -618,6 +625,11 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         System.exit(0);
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton_deliberyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_deliberyActionPerformed
+        Delibery delibery = new Delibery();
+        delibery.setVisible(true);
+    }//GEN-LAST:event_jButton_deliberyActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
