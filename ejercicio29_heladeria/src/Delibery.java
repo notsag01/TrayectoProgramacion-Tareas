@@ -65,19 +65,19 @@ public class Delibery extends javax.swing.JFrame {
         jPanel3.setPreferredSize(new java.awt.Dimension(500, 500));
 
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel2.setText("Telefono: ");
+        jLabel2.setText("Nombre: ");
         jLabel2.setPreferredSize(new java.awt.Dimension(300, 25));
 
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel3.setText("Direccion");
+        jLabel3.setText("Telefono: ");
         jLabel3.setPreferredSize(new java.awt.Dimension(300, 25));
 
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel4.setText("jLabel4");
+        jLabel4.setText("Dirección: ");
         jLabel4.setPreferredSize(new java.awt.Dimension(300, 25));
 
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel5.setText("jLabel5");
+        jLabel5.setText("Localidad: ");
         jLabel5.setPreferredSize(new java.awt.Dimension(300, 25));
 
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
@@ -85,7 +85,7 @@ public class Delibery extends javax.swing.JFrame {
         jLabel6.setPreferredSize(new java.awt.Dimension(300, 25));
 
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel7.setText("jLabel7");
+        jLabel7.setText("Entre Calles: ");
         jLabel7.setPreferredSize(new java.awt.Dimension(300, 25));
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
