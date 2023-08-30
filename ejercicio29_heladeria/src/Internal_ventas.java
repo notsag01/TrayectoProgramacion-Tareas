@@ -326,6 +326,11 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
         jButton3.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jButton3.setText("SALIR");
         jButton3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -425,7 +430,7 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 514, Short.MAX_VALUE))
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 499, Short.MAX_VALUE))
         );
 
         pack();
@@ -435,7 +440,7 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
         if(jCheckBox_cremaAmericana.isSelected()){
             cantidad++;            
             checkCantidad();
-        }else if(!jCheckBox_cremaAmericana.isSelected()&&cantidad==gustosPermitidos){
+        }else if(!jCheckBox_cremaAmericana.isSelected()&&cantidad!=0){
             cantidad--;
             checkCantidad();
         }
@@ -454,7 +459,7 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
         if(jCheckBox_chocolate.isSelected()){
             cantidad++;
             checkCantidad();
-        }else if(!jCheckBox_chocolate.isSelected()&&cantidad==gustosPermitidos){
+        }else if(!jCheckBox_chocolate.isSelected()&&cantidad!=0){
             cantidad--;
             checkCantidad();
         }
@@ -464,7 +469,7 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
         if(jCheckBox_dulceDeLeche.isSelected()){
             cantidad++;
             checkCantidad();
-        }else if(!jCheckBox_dulceDeLeche.isSelected()&&cantidad==gustosPermitidos){
+        }else if(!jCheckBox_dulceDeLeche.isSelected()&&cantidad!=0){
             cantidad--;
             checkCantidad();
         }        
@@ -474,7 +479,7 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
         if(jCheckBox_frutilla.isSelected()){
             cantidad++;
             checkCantidad();
-        }else if(!jCheckBox_frutilla.isSelected()&&cantidad==gustosPermitidos){
+        }else if(!jCheckBox_frutilla.isSelected()&&cantidad!=0){
             cantidad--;
             checkCantidad();
         }        
@@ -484,7 +489,7 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
         if(jCheckBox_limon.isSelected()){
             cantidad++;
             checkCantidad();
-        }else if(!jCheckBox_limon.isSelected()&&cantidad==gustosPermitidos){
+        }else if(!jCheckBox_limon.isSelected()&&cantidad!=0){
             cantidad--;
             checkCantidad();
         }        
@@ -494,7 +499,7 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
         if(jCheckBox_anana.isSelected()){
             cantidad++;
             checkCantidad();
-        }else if(!jCheckBox_anana.isSelected()&&cantidad==gustosPermitidos){
+        }else if(!jCheckBox_anana.isSelected()&&cantidad!=0){
             cantidad--;
             checkCantidad();
         }       
@@ -504,7 +509,7 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
         if(jCheckBox_tramontana.isSelected()){
             cantidad++;
             checkCantidad();
-        }else if(!jCheckBox_tramontana.isSelected()&&cantidad==gustosPermitidos){
+        }else if(!jCheckBox_tramontana.isSelected()&&cantidad!=0){
             cantidad--;
             checkCantidad();
         }        
@@ -514,7 +519,7 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
         if(jCheckBox_mascarpone.isSelected()){
             cantidad++;
             checkCantidad();
-        }else if(!jCheckBox_mascarpone.isSelected()&&cantidad==gustosPermitidos){
+        }else if(!jCheckBox_mascarpone.isSelected()&&cantidad!=0){
             cantidad--;
             checkCantidad();
         }        
@@ -524,7 +529,7 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
         if(jCheckBox_pistacho.isSelected()){
             cantidad++;
             checkCantidad();
-        }else if(!jCheckBox_pistacho.isSelected()&&cantidad==gustosPermitidos){
+        }else if(!jCheckBox_pistacho.isSelected()&&cantidad!=0){
             cantidad--;
             checkCantidad();
         }        
@@ -560,6 +565,10 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_jButton3ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
