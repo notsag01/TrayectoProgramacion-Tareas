@@ -1,0 +1,43 @@
+
+public class Datos {
+    public String nombre;
+    public String telefono;
+    public String direccion;
+    public String localidad;
+    public String entreCalles;
+    public String comentarios;
+    
+    public Datos(String nombre, String telefono,String direccion, String localidad, String entreCalles, String comentarios){
+        this.nombre=nombre;
+        this.telefono=telefono;
+        this.direccion=direccion;
+        this.localidad=localidad;
+        this.entreCalles=entreCalles;
+        this.comentarios=comentarios;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public String getTelefono() {
+        return telefono;
+    }
+
+    public String getDireccion() {
+        return direccion;
+    }
+
+    public String getLocalidad() {
+        return localidad;
+    }
+
+    public String getEntreCalles() {
+        return entreCalles;
+    }
+
+    public String getComentarios() {
+        return comentarios;
+    }
+    
+}
