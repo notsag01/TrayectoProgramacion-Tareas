@@ -209,6 +209,8 @@ public class Delibery extends javax.swing.JFrame {
         localidad=jTextField_localidad.getText();
         entreCalles=jTextField_entreCalles.getText();
         comentarios=jTextField_comentarios.getText();
+        
+        Datos datos= new Datos();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
