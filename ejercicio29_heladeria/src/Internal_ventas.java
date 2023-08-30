@@ -4,7 +4,6 @@ import java.awt.Component;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import javax.swing.JCheckBox;
-import javax.swing.JFrame;
 
 
 public class Internal_ventas extends javax.swing.JInternalFrame {
@@ -17,7 +16,8 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
         this.setSize(700,645);
         this.setVisible(false);
         this.setBackground(Color.white);
-        this.setLocation(300,100);
+        this.setLocation(400,25);
+        
         
     
         
