@@ -4,6 +4,7 @@ import java.awt.Component;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import javax.swing.JCheckBox;
+import javax.swing.JFrame;
 
 
 public class Internal_ventas extends javax.swing.JInternalFrame {
@@ -16,6 +17,7 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
         this.setSize(700,645);
         this.setVisible(false);
         this.setBackground(Color.white);
+        this.setLocation(300,100);
         
     
         
@@ -440,15 +442,14 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(0, 0, 0)
                 .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 509, Short.MAX_VALUE))
         );
 
