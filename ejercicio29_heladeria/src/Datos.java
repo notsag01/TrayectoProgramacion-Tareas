@@ -49,15 +49,15 @@ public class Datos {
     
 
 
-    void guardar(String nombre, String telefono, String direccion, String localidad, String entreCalles, String comentarios) {
-        try {
-            BufferedWriter escribir= new BufferedWriter(new FileWriter("pedidos.txt",true));
-            escribir.write(this.nombre + "," +this.telefono + "," +this.direccion + "," +this.localidad + "," +this.entreCalles + "," +this.comentarios);
-            escribir.newLine();
-            escribir.close();
-        } catch (IOException ex) {
-            System.out.println(ex);
-        }
-    }
+//    void guardar(String nombre, String telefono, String direccion, String localidad, String entreCalles, String comentarios) {
+//        try {
+//            BufferedWriter escribir= new BufferedWriter(new FileWriter("pedidos.txt",true));
+//            escribir.write(this.nombre + "," +this.telefono + "," +this.direccion + "," +this.localidad + "," +this.entreCalles + "," +this.comentarios);
+//            escribir.newLine();
+//            escribir.close();
+//        } catch (IOException ex) {
+//            System.out.println(ex);
+//        }
+//    }
     
 }
