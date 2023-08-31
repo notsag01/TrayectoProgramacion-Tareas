@@ -4,6 +4,7 @@ public class InfoDelibery extends javax.swing.JFrame {
 
     public InfoDelibery() {
         initComponents();
+        this.setLocation(800, 60);
     }
 
 
