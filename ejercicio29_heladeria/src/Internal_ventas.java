@@ -541,7 +541,7 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
     private void jCheckBox_chocolateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox_chocolateActionPerformed
         if(jCheckBox_chocolate.isSelected()){
             cantidad++;
-            checkCantidad();
+            checkCantidad();            
         }else if(!jCheckBox_chocolate.isSelected()&&cantidad!=0){
             cantidad--;
             checkCantidad();
@@ -656,7 +656,7 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        System.exit(0);
+        this.setVisible(false);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton_deliberyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_deliberyActionPerformed
