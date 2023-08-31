@@ -1,17 +1,7 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 
-/**
- *
- * @author gas12
- */
 public class Delibery extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Delibery
-     */
+
     public Delibery() {
         initComponents();
         
@@ -213,8 +203,8 @@ public class Delibery extends javax.swing.JFrame {
         Datos datos= new Datos(nombre,telefono,direccion,localidad,entreCalles,comentarios);
         //datos.guardar(nombre,telefono,direccion,localidad,entreCalles,comentarios);
         
-        ArchivarDatos archivarDatos= new ArchivarDatos();
-        //archivarDatos.guardar();
+        ArchivarDatos archivarDatos= new ArchivarDatos(datos);
+        archivarDatos.guardar();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
