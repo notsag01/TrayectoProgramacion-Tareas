@@ -16,7 +16,7 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
         this.setSize(700,645);
         this.setVisible(false);
         this.setBackground(Color.white);
-        this.setLocation(400,25);
+        this.setLocation(200,25);
         
         
     
@@ -112,6 +112,7 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
 
         setBackground(new java.awt.Color(255, 204, 204));
         setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        setClosable(true);
         setOpaque(true);
         setPreferredSize(new java.awt.Dimension(700, 500));
         setVisible(true);
