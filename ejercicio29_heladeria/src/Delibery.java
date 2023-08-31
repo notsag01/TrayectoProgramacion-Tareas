@@ -4,6 +4,7 @@ public class Delibery extends javax.swing.JFrame {
 
     public Delibery() {
         initComponents();
+        this.setLocation(800, 60);
         
     }
 
@@ -35,7 +36,8 @@ public class Delibery extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Datos del Cliente");
+        setResizable(false);
 
         jPanel1.setPreferredSize(new java.awt.Dimension(500, 700));
 
