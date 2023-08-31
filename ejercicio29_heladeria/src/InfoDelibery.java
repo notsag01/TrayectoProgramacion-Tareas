@@ -1,10 +1,52 @@
 
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.table.DefaultTableModel;
+
+
 public class InfoDelibery extends javax.swing.JFrame {
 
+        DefaultTableModel model = new DefaultTableModel();
 
-    public InfoDelibery() {
+    public InfoDelibery() throws IOException {
         initComponents();
         this.setLocation(800, 60);
+        
+        cargarTabla();
+                
+    }
+    private void cargarTabla() throws IOException{
+        model.addColumn("Nombre");
+        model.addColumn("Telefono");
+        model.addColumn("Direccion");
+        model.addColumn("Localidad");
+        model.addColumn("Entre Calles");
+        model.addColumn("Comentarios");
+        jTable_tabla.setModel(model);
+        
+        cargarArchivo();
+    }
+    private void cargarArchivo() throws IOException{
+        String fila[];
+        
+            try {
+                BufferedReader leer = new BufferedReader(new FileReader("pedidos.txt"));
+                
+                String linea=leer.readLine();
+                
+                while(linea != null){
+                    fila = linea.split(",");
+                    model.addRow(fila);
+                    linea = leer.readLine();
+                }
+            } catch (FileNotFoundException ex) {
+                System.out.println(ex);
+            }
+        
     }
 
 
@@ -15,7 +57,7 @@ public class InfoDelibery extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        jTable_tabla = new javax.swing.JTable();
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
@@ -29,7 +71,7 @@ public class InfoDelibery extends javax.swing.JFrame {
         jPanel3.setOpaque(false);
         jPanel3.setPreferredSize(new java.awt.Dimension(500, 400));
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        jTable_tabla.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -40,8 +82,8 @@ public class InfoDelibery extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jTable1.setPreferredSize(new java.awt.Dimension(500, 80));
-        jScrollPane1.setViewportView(jTable1);
+        jTable_tabla.setPreferredSize(new java.awt.Dimension(500, 80));
+        jScrollPane1.setViewportView(jTable_tabla);
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -137,7 +179,7 @@ public class InfoDelibery extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new InfoDelibery().setVisible(true);
+                //new InfoDelibery().setVisible(true);
             }
         });
     }
@@ -149,6 +191,6 @@ public class InfoDelibery extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
+    private javax.swing.JTable jTable_tabla;
     // End of variables declaration//GEN-END:variables
 }
