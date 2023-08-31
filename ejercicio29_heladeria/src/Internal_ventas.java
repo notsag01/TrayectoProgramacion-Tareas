@@ -4,6 +4,7 @@ import java.awt.Component;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import javax.swing.JCheckBox;
+import javax.swing.JOptionPane;
 
 
 public class Internal_ventas extends javax.swing.JInternalFrame {
@@ -87,7 +88,7 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
         jCheckBox_pistacho = new javax.swing.JCheckBox();
         jPanel5 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        jButton_facturar = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jRadioButton_cono = new javax.swing.JRadioButton();
@@ -96,6 +97,7 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
         jRadioButton_kilo = new javax.swing.JRadioButton();
         jPanel4 = new javax.swing.JPanel();
         jButton_delibery = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -298,10 +300,15 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
             }
         });
 
-        jButton2.setBackground(new java.awt.Color(255, 204, 204));
-        jButton2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jButton2.setText("FACTURAR");
-        jButton2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jButton_facturar.setBackground(new java.awt.Color(255, 204, 204));
+        jButton_facturar.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jButton_facturar.setText("FACTURAR");
+        jButton_facturar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jButton_facturar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_facturarActionPerformed(evt);
+            }
+        });
 
         jButton3.setBackground(new java.awt.Color(255, 204, 204));
         jButton3.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -321,7 +328,7 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
                 .addGap(25, 25, 25)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(77, 77, 77)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jButton_facturar, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(25, 25, 25))
@@ -332,7 +339,7 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
                 .addGap(19, 19, 19)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton_facturar, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(24, Short.MAX_VALUE))
         );
@@ -445,6 +452,8 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
             .addComponent(jButton_delibery, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
+        jLabel1.setText("Envio");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -454,8 +463,13 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(18, 18, 18)
+                                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(54, 54, 54)
+                                .addComponent(jLabel1))))
                     .addComponent(jPanel_tamaños, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(68, Short.MAX_VALUE))
         );
@@ -468,9 +482,11 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
                         .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(31, 31, 31)
+                        .addGap(9, 9, 9)
+                        .addComponent(jLabel1)
+                        .addGap(0, 0, 0)
                         .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addComponent(jPanel_tamaños, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(15, 15, 15))
         );
@@ -506,6 +522,7 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
     private void jRadioButton_kiloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton_kiloActionPerformed
         if(jRadioButton_kilo.isSelected()){
             gustosPermitidos=4;
+            JOptionPane.showMessageDialog(null, "Solo puede elegir 4 Gustos.");
         }
         jRadioButton_cono.setSelected(false);
         jRadioButton_cuartoKilo.setSelected(false);
@@ -595,6 +612,7 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
     private void jRadioButton_conoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton_conoActionPerformed
         if(jRadioButton_cono.isSelected()){
             gustosPermitidos=2;
+            JOptionPane.showMessageDialog(null, "Solo puede elegir 2 Gustos.");
         }
         jRadioButton_cuartoKilo.setSelected(false);
         jRadioButton_medioKilo.setSelected(false);
@@ -604,6 +622,7 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
     private void jRadioButton_cuartoKiloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton_cuartoKiloActionPerformed
         if(jRadioButton_cuartoKilo.isSelected()){
             gustosPermitidos=2;
+            JOptionPane.showMessageDialog(null, "Solo puede elegir 2 Gustos.");
         }
         jRadioButton_cono.setSelected(false);
         jRadioButton_medioKilo.setSelected(false);
@@ -613,6 +632,7 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
     private void jRadioButton_medioKiloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton_medioKiloActionPerformed
         if(jRadioButton_medioKilo.isSelected()){
             gustosPermitidos=3;
+            JOptionPane.showMessageDialog(null, "Solo puede elegir 3 Gustos.");
         }
         jRadioButton_cono.setSelected(false);
         jRadioButton_cuartoKilo.setSelected(false);
@@ -632,12 +652,16 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
         delibery.setVisible(true);
     }//GEN-LAST:event_jButton_deliberyActionPerformed
 
+    private void jButton_facturarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_facturarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton_facturarActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton_delibery;
+    private javax.swing.JButton jButton_facturar;
     private javax.swing.JCheckBox jCheckBox_anana;
     private javax.swing.JCheckBox jCheckBox_chocolate;
     private javax.swing.JCheckBox jCheckBox_cremaAmericana;
@@ -647,6 +671,7 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
     private javax.swing.JCheckBox jCheckBox_mascarpone;
     private javax.swing.JCheckBox jCheckBox_pistacho;
     private javax.swing.JCheckBox jCheckBox_tramontana;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
