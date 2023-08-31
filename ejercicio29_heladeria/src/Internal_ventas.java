@@ -425,7 +425,7 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
 
         jPanel4.setEnabled(false);
 
-        jButton_delibery.setText("DELIVERY");
+        jButton_delibery.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/delibery.jpg"))); // NOI18N
         jButton_delibery.setDoubleBuffered(true);
         jButton_delibery.setEnabled(false);
         jButton_delibery.addActionListener(new java.awt.event.ActionListener() {
@@ -438,11 +438,11 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jButton_delibery, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+            .addComponent(jButton_delibery, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jButton_delibery, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+            .addComponent(jButton_delibery, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
