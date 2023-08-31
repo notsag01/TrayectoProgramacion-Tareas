@@ -201,7 +201,6 @@ public class Delibery extends javax.swing.JFrame {
         comentarios=jTextField_comentarios.getText();
         
         Datos datos= new Datos(nombre,telefono,direccion,localidad,entreCalles,comentarios);
-        //datos.guardar(nombre,telefono,direccion,localidad,entreCalles,comentarios);
         
         ArchivarDatos archivarDatos= new ArchivarDatos(datos);
         archivarDatos.guardar();
