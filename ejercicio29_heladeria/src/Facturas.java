@@ -1,5 +1,6 @@
 
 import java.util.ArrayList;
+import javax.swing.JOptionPane;
 
 
 public class Facturas {
@@ -38,6 +39,10 @@ public class Facturas {
 
     public ArrayList<String> getGustos(){
         return gustos;
+    }
+    
+    public void mostrarFactura(){
+        JOptionPane.showMessageDialog(null, fecha, mail, 0, icon);
     }
     
 }
