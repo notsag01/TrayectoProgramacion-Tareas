@@ -27,7 +27,7 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
     
         
         Date date = new Date();
-        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM//yy");
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yy");
         String fecha=sdf.format(date);
         jTextField_fecha.setText(fecha);        
     }
@@ -47,6 +47,7 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
         
         Facturas factura = new Facturas(fecha, nombre, mail, tamaño, gustos);
         factura.mostrarFactura();
+        factura.guardarFacturas();
     }
     private void checkCantidad(){
         if(cantidad==gustosPermitidos){
