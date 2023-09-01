@@ -50,8 +50,9 @@ public class Facturas {
         mensaje.append("Nombre: ").append(this.nombre).append("\n");
         mensaje.append("Mail: ").append(this.mail).append("\n");
         mensaje.append("Tamaño: ").append(this.tamaño).append("\n");
+        mensaje.append("Gustos: ");
         for(String gusto : gustos){
-            mensaje.append("Gustos: ").append("*").append(gusto).append("\n");
+            mensaje.append("*").append(gusto).append("\n");
         }
         
         JOptionPane.showMessageDialog(null, mensaje.toString(),
