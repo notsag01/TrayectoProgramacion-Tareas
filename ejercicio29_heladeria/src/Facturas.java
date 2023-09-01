@@ -1,5 +1,6 @@
 
 import java.util.ArrayList;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
 
@@ -42,16 +43,19 @@ public class Facturas {
     }
     
     public void mostrarFactura(){
+        ImageIcon imagen = new ImageIcon("src/imagenes/img_facturas.jpg");
+        
         StringBuilder mensaje = new StringBuilder();
         mensaje.append("Fecha: ").append(this.fecha).append("\n");
         mensaje.append("Nombre: ").append(this.nombre).append("\n");
         mensaje.append("Mail: ").append(this.mail).append("\n");
         mensaje.append("Tamaño: ").append(this.tamaño).append("\n");
         for(String gusto : gustos){
-            mensaje.append("*").append(gusto).append("\n")
+            mensaje.append("*").append(gusto).append("\n");
         }
         
-        //JOptionPane.showMessageDialog(null, fecha, mail, 0, icon);
+        JOptionPane.showMessageDialog(null, mensaje.toString(),
+                                    "FACTURACION", JOptionPane.INFORMATION_MESSAGE, imagen);
     }
     
 }
