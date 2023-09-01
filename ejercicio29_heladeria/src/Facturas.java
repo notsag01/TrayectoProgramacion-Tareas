@@ -43,7 +43,7 @@ public class Facturas {
     }
     
     public void mostrarFactura(){
-        ImageIcon imagen = new ImageIcon("src/imagenes/img_facturas.jpg");
+        ImageIcon imagen = new ImageIcon("src/imagenes/img_factura.jpg");
         
         StringBuilder mensaje = new StringBuilder();
         mensaje.append("Fecha: ").append(this.fecha).append("\n");
@@ -51,7 +51,7 @@ public class Facturas {
         mensaje.append("Mail: ").append(this.mail).append("\n");
         mensaje.append("Tamaño: ").append(this.tamaño).append("\n");
         for(String gusto : gustos){
-            mensaje.append("*").append(gusto).append("\n");
+            mensaje.append("Gustos: ").append("*").append(gusto).append("\n");
         }
         
         JOptionPane.showMessageDialog(null, mensaje.toString(),

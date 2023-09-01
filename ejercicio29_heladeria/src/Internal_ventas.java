@@ -46,6 +46,7 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
         }
         
         Facturas factura = new Facturas(fecha, nombre, mail, tamaño, gustos);
+        factura.mostrarFactura();
     }
     private void checkCantidad(){
         if(cantidad==gustosPermitidos){
@@ -676,7 +677,7 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jButton_deliberyActionPerformed
 
     private void jButton_facturarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_facturarActionPerformed
-      
+        getDatos();
     }//GEN-LAST:event_jButton_facturarActionPerformed
 
 
