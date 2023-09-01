@@ -2,6 +2,7 @@
 import java.awt.Color;
 import java.awt.Component;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import javax.swing.JCheckBox;
 import javax.swing.JOptionPane;
@@ -12,7 +13,7 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
         int gustosPermitidos=0;
         
         String fecha, nombre, mail, tamaño;
-        String gustos[];
+        ArrayList <String> gustos= new ArrayList<>();
 
     public Internal_ventas() {
         initComponents();
@@ -34,7 +35,17 @@ public class Internal_ventas extends javax.swing.JInternalFrame {
         fecha = jTextField_fecha.getText();
         nombre = jTextField_nombre.getText();
         mail = jTextField_mail.getText();
+        tamaño=this.tamaño;
         
+        Component [] componentes = jPanel_gustos.getComponents();
+        for(Component componente : componentes){
+            JCheckBox checkbox = (JCheckBox) componente;
+            if(checkbox.isSelected()){
+                gustos.add(checkbox.getText());
+            }
+        }
+        
+        Facturas factura = new Facturas(fecha, nombre, mail, tamaño, gustos);
     }
     private void checkCantidad(){
         if(cantidad==gustosPermitidos){
