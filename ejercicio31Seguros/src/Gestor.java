@@ -842,7 +842,7 @@ public class Gestor extends javax.swing.JFrame {
 
         jPanel21.setOpaque(false);
 
-        jLabel19.setFont(new java.awt.Font("Comic Sans MS", 3, 24)); // NOI18N
+        jLabel19.setFont(new java.awt.Font("Constantia", 3, 24)); // NOI18N
         jLabel19.setForeground(new java.awt.Color(255, 255, 102));
         jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel19.setText("La Tercera ");
