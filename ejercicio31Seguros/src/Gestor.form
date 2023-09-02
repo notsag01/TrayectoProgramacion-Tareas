@@ -126,7 +126,7 @@
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="jPanel11" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace pref="37" max="32767" attributes="0"/>
+                              <EmptySpace pref="35" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -477,7 +477,7 @@
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jButton1" alignment="3" max="32767" attributes="0"/>
-                                      <Component id="jButton2" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                                      <Component id="jButton2" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                               </Group>
@@ -487,12 +487,30 @@
                       <SubComponents>
                         <Component class="javax.swing.JButton" name="jButton1">
                           <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Segoe UI" size="12" style="1"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="Contratar"/>
+                            <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                              <Dimension value="[72, 27]"/>
+                            </Property>
+                            <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                              <Dimension value="[72, 27]"/>
+                            </Property>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JButton" name="jButton2">
                           <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Segoe UI" size="12" style="1"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="Salir"/>
+                            <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                              <Dimension value="[72, 27]"/>
+                            </Property>
+                            <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                              <Dimension value="[72, 27]"/>
+                            </Property>
                           </Properties>
                           <Events>
                             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
@@ -562,7 +580,7 @@
                                       <Component id="jPanel14" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
-                              <EmptySpace pref="85" max="32767" attributes="0"/>
+                              <EmptySpace pref="50" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -574,9 +592,9 @@
                                   <Component id="jPanel13" max="32767" attributes="0"/>
                                   <Component id="jPanel14" max="32767" attributes="0"/>
                               </Group>
-                              <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Component id="jPanel15" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace pref="12" max="32767" attributes="0"/>
+                              <EmptySpace pref="17" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -629,7 +647,7 @@
                                   </Group>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Component id="jCheckBox13" min="-2" pref="25" max="-2" attributes="0"/>
-                                  <EmptySpace pref="35" max="32767" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -637,31 +655,49 @@
                       <SubComponents>
                         <Component class="javax.swing.JCheckBox" name="jCheckBox10">
                           <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Segoe UI" size="14" style="1"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="Muerte"/>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JCheckBox" name="jCheckBox11">
                           <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Segoe UI" size="14" style="1"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="Muerte Accidental"/>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JCheckBox" name="jCheckBox12">
                           <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Segoe UI" size="14" style="1"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="Dias de Internacion"/>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JCheckBox" name="jCheckBox13">
                           <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Segoe UI" size="14" style="1"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="Paralisis Total o Parcial"/>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel12">
                           <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Segoe UI" size="14" style="0"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="Dias:"/>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JTextField" name="jTextField7">
                           <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Segoe UI" size="14" style="0"/>
+                            </Property>
                             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                                 <LineBorder/>
@@ -729,22 +765,45 @@
                                       <Component id="jTextField11" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                                       <Component id="jComboBox7" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace max="32767" attributes="0"/>
+                                  <EmptySpace pref="34" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
                       </Layout>
                       <SubComponents>
                         <Component class="javax.swing.JTextField" name="jTextField8">
+                          <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Segoe UI" size="14" style="0"/>
+                            </Property>
+                          </Properties>
                         </Component>
                         <Component class="javax.swing.JTextField" name="jTextField9">
+                          <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Segoe UI" size="14" style="0"/>
+                            </Property>
+                          </Properties>
                         </Component>
                         <Component class="javax.swing.JTextField" name="jTextField10">
+                          <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Segoe UI" size="14" style="0"/>
+                            </Property>
+                          </Properties>
                         </Component>
                         <Component class="javax.swing.JTextField" name="jTextField11">
+                          <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Segoe UI" size="14" style="0"/>
+                            </Property>
+                          </Properties>
                         </Component>
                         <Component class="javax.swing.JComboBox" name="jComboBox4">
                           <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Segoe UI" size="14" style="0"/>
+                            </Property>
                             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                               <StringArray count="5">
                                 <StringItem index="0" value=""/>
@@ -761,6 +820,9 @@
                         </Component>
                         <Component class="javax.swing.JComboBox" name="jComboBox5">
                           <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Segoe UI" size="14" style="0"/>
+                            </Property>
                             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                               <StringArray count="5">
                                 <StringItem index="0" value=""/>
@@ -777,6 +839,9 @@
                         </Component>
                         <Component class="javax.swing.JComboBox" name="jComboBox6">
                           <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Segoe UI" size="14" style="0"/>
+                            </Property>
                             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                               <StringArray count="5">
                                 <StringItem index="0" value=""/>
@@ -793,6 +858,9 @@
                         </Component>
                         <Component class="javax.swing.JComboBox" name="jComboBox7">
                           <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Segoe UI" size="14" style="0"/>
+                            </Property>
                             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                               <StringArray count="5">
                                 <StringItem index="0" value=""/>
@@ -845,11 +913,17 @@
                       <SubComponents>
                         <Component class="javax.swing.JButton" name="jButton3">
                           <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Segoe UI" size="14" style="1"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="Contratar"/>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JButton" name="jButton4">
                           <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Segoe UI" size="14" style="1"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="Salir"/>
                           </Properties>
                           <Events>
@@ -1358,7 +1432,7 @@
                         <Component class="javax.swing.JButton" name="jButton5">
                           <Properties>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                              <Font name="Segoe UI" size="14" style="0"/>
+                              <Font name="Segoe UI" size="14" style="1"/>
                             </Property>
                             <Property name="text" type="java.lang.String" value="Contratar"/>
                           </Properties>
@@ -1366,7 +1440,7 @@
                         <Component class="javax.swing.JButton" name="jButton6">
                           <Properties>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                              <Font name="Segoe UI" size="14" style="0"/>
+                              <Font name="Segoe UI" size="14" style="1"/>
                             </Property>
                             <Property name="text" type="java.lang.String" value="Salir"/>
                           </Properties>
