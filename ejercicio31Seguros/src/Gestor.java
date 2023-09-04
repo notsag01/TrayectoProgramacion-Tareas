@@ -868,6 +868,8 @@ public class Gestor extends javax.swing.JFrame {
         jLabel4.setText("MAIL");
         jLabel4.setPreferredSize(new java.awt.Dimension(150, 20));
 
+        jTextField1.setEditable(false);
+
         jPanel6.setBackground(new java.awt.Color(255, 255, 255));
         jPanel6.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         jPanel6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
