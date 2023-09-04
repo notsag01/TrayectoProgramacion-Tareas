@@ -5,6 +5,7 @@ import javax.swing.Timer;
 
 
 public class Gestor extends javax.swing.JFrame {
+    
     private Timer timer;
      String[] frases = {
          "Seguros",
@@ -23,13 +24,13 @@ public class Gestor extends javax.swing.JFrame {
          timer.start();
      }
 
-     
-
     public Gestor() {
         initComponents();
         this.setLocationRelativeTo(null);
         frasesAleatorias();
     }
+    
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -514,6 +515,11 @@ public class Gestor extends javax.swing.JFrame {
 
         jButton3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jButton3.setText("Contratar");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         jButton4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jButton4.setText("Salir");
@@ -1010,6 +1016,10 @@ public class Gestor extends javax.swing.JFrame {
     private void jCheckBox4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox4ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jCheckBox4ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
