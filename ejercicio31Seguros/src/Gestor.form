@@ -1066,8 +1066,8 @@
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Component id="jTextField13" min="-2" pref="77" max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                                  <Component id="jComboBox8" alignment="1" pref="189" max="32767" attributes="0"/>
-                                                  <Component id="jComboBox9" alignment="1" max="32767" attributes="0"/>
+                                                  <Component id="jComboBox_marcas" alignment="1" pref="189" max="32767" attributes="0"/>
+                                                  <Component id="jComboBox_modelos" alignment="1" max="32767" attributes="0"/>
                                                   <Component id="jComboBox10" alignment="1" max="32767" attributes="0"/>
                                               </Group>
                                           </Group>
@@ -1114,12 +1114,12 @@
                                   <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel11" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
-                                      <Component id="jComboBox8" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                                      <Component id="jComboBox_marcas" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel13" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
-                                      <Component id="jComboBox9" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                                      <Component id="jComboBox_modelos" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
@@ -1202,36 +1202,36 @@
                             </Property>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JComboBox" name="jComboBox8">
+                        <Component class="javax.swing.JComboBox" name="jComboBox_marcas">
                           <Properties>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Segoe UI" size="14" style="0"/>
                             </Property>
                             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                              <StringArray count="4">
-                                <StringItem index="0" value="Item 1"/>
-                                <StringItem index="1" value="Item 2"/>
-                                <StringItem index="2" value="Item 3"/>
-                                <StringItem index="3" value="Item 4"/>
+                              <StringArray count="6">
+                                <StringItem index="0" value=""/>
+                                <StringItem index="1" value="FIAT"/>
+                                <StringItem index="2" value="RENAULT"/>
+                                <StringItem index="3" value="CHEVROLET"/>
+                                <StringItem index="4" value="FORD"/>
+                                <StringItem index="5" value="PEUGEOT"/>
                               </StringArray>
                             </Property>
                           </Properties>
+                          <Events>
+                            <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="jComboBox_marcasItemStateChanged"/>
+                          </Events>
                           <AuxValues>
                             <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                           </AuxValues>
                         </Component>
-                        <Component class="javax.swing.JComboBox" name="jComboBox9">
+                        <Component class="javax.swing.JComboBox" name="jComboBox_modelos">
                           <Properties>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Segoe UI" size="14" style="0"/>
                             </Property>
                             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                              <StringArray count="4">
-                                <StringItem index="0" value="Item 1"/>
-                                <StringItem index="1" value="Item 2"/>
-                                <StringItem index="2" value="Item 3"/>
-                                <StringItem index="3" value="Item 4"/>
-                              </StringArray>
+                              <StringArray count="0"/>
                             </Property>
                           </Properties>
                           <AuxValues>

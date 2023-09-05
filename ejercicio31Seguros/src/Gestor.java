@@ -28,7 +28,12 @@ public class Gestor extends javax.swing.JFrame {
         initComponents();
         this.setLocationRelativeTo(null);
         frasesAleatorias();
+    
+
+    
     }
+    
+    
     
     
 
@@ -98,8 +103,8 @@ public class Gestor extends javax.swing.JFrame {
         jLabel15 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
         jTextField13 = new javax.swing.JTextField();
-        jComboBox8 = new javax.swing.JComboBox<>();
-        jComboBox9 = new javax.swing.JComboBox<>();
+        jComboBox_marcas = new javax.swing.JComboBox<>();
+        jComboBox_modelos = new javax.swing.JComboBox<>();
         jComboBox10 = new javax.swing.JComboBox<>();
         jLabel17 = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
@@ -614,11 +619,15 @@ public class Gestor extends javax.swing.JFrame {
         jTextField13.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jTextField13.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jComboBox8.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jComboBox8.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox_marcas.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jComboBox_marcas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "FIAT", "RENAULT", "CHEVROLET", "FORD", "PEUGEOT" }));
+        jComboBox_marcas.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jComboBox_marcasItemStateChanged(evt);
+            }
+        });
 
-        jComboBox9.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jComboBox9.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox_modelos.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
 
         jComboBox10.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jComboBox10.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
@@ -646,8 +655,8 @@ public class Gestor extends javax.swing.JFrame {
                         .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jTextField13, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jComboBox8, javax.swing.GroupLayout.Alignment.TRAILING, 0, 189, Short.MAX_VALUE)
-                                .addComponent(jComboBox9, javax.swing.GroupLayout.Alignment.TRAILING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jComboBox_marcas, javax.swing.GroupLayout.Alignment.TRAILING, 0, 189, Short.MAX_VALUE)
+                                .addComponent(jComboBox_modelos, javax.swing.GroupLayout.Alignment.TRAILING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jComboBox10, javax.swing.GroupLayout.Alignment.TRAILING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                     .addGroup(jPanel17Layout.createSequentialGroup()
                         .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -679,11 +688,11 @@ public class Gestor extends javax.swing.JFrame {
                 .addGap(15, 15, 15)
                 .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBox8, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jComboBox_marcas, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(15, 15, 15)
                 .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBox9, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jComboBox_modelos, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(15, 15, 15)
                 .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1023,6 +1032,19 @@ public class Gestor extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
 
+    private void jComboBox_marcasItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jComboBox_marcasItemStateChanged
+        ////////////   SECCION VEHICULOS   ///////////////////////////////
+        String modelosFiat []= {"PULSE", "CRONOS", "TORO", "UNO", "500", "STRADA", "FIORINO"};
+        int marca = jComboBox_marcas.getSelectedIndex();
+        
+        if(marca==1){
+            for(String modelo:modelosFiat){
+                jComboBox_modelos.addItem(modelo);
+            }
+        }
+        
+    }//GEN-LAST:event_jComboBox_marcasItemStateChanged
+
     /**
      * @param args the command line arguments
      */
@@ -1094,8 +1116,8 @@ public class Gestor extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> jComboBox5;
     private javax.swing.JComboBox<String> jComboBox6;
     private javax.swing.JComboBox<String> jComboBox7;
-    private javax.swing.JComboBox<String> jComboBox8;
-    private javax.swing.JComboBox<String> jComboBox9;
+    private javax.swing.JComboBox<String> jComboBox_marcas;
+    private javax.swing.JComboBox<String> jComboBox_modelos;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
