@@ -1010,7 +1010,7 @@
                                   <Group type="102" attributes="0">
                                       <Component id="jPanel17" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="jPanel18" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jPanel_coberturaVehiculos" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Component id="jPanel19" min="-2" max="-2" attributes="0"/>
                                   </Group>
@@ -1024,7 +1024,7 @@
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                  <Component id="jPanel18" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="jPanel_coberturaVehiculos" alignment="0" max="32767" attributes="0"/>
                                   <Component id="jPanel19" max="32767" attributes="0"/>
                                   <Component id="jPanel17" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
@@ -1274,7 +1274,7 @@
                         </Component>
                       </SubComponents>
                     </Container>
-                    <Container class="javax.swing.JPanel" name="jPanel18">
+                    <Container class="javax.swing.JPanel" name="jPanel_coberturaVehiculos">
                       <Properties>
                         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                           <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
@@ -1390,7 +1390,7 @@
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" alignment="0" attributes="0">
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="jTextField12" min="-2" pref="69" max="-2" attributes="0"/>
+                                          <Component id="jTextField_anio" min="-2" pref="69" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
                                           <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
@@ -1407,14 +1407,14 @@
                                   <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                                   <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="jTextField12" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jTextField_anio" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
                       </Layout>
                       <SubComponents>
-                        <Component class="javax.swing.JTextField" name="jTextField12">
+                        <Component class="javax.swing.JTextField" name="jTextField_anio">
                           <Properties>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Segoe UI" size="14" style="0"/>
