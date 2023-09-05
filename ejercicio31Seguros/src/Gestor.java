@@ -55,6 +55,9 @@ public class Gestor extends javax.swing.JFrame {
                 coberturaVehiculo.add(checkbox.getText());
             }
         }
+        SeguroAutomotor sa= new SeguroAutomotor(id,nombre,telefono,mail,dominio,
+                                                marcaSelec,modeloSelec,anio);
+        sa.guardar();
     }
     
     

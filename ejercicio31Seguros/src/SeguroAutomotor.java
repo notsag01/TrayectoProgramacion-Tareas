@@ -59,5 +59,7 @@ public class SeguroAutomotor {
     public ArrayList<String> getCoberturaVehiculo() {
         return coberturaVehiculo;
     }
-    
+    public void guardar(){
+        System.out.println(nombre);
+    }
 }
