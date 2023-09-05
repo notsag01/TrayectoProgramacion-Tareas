@@ -114,7 +114,7 @@ public class Gestor extends javax.swing.JFrame {
         jCheckBox_responsabilidadCivil = new javax.swing.JCheckBox();
         jCheckBox_todoRiesgoSF = new javax.swing.JCheckBox();
         jCheckBox_todoRiesgoCF = new javax.swing.JCheckBox();
-        jCheckBox18 = new javax.swing.JCheckBox();
+        jCheckBox_granizo = new javax.swing.JCheckBox();
         jPanel19 = new javax.swing.JPanel();
         jTextField12 = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
@@ -737,8 +737,13 @@ public class Gestor extends javax.swing.JFrame {
             }
         });
 
-        jCheckBox18.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
-        jCheckBox18.setText("Granizo");
+        jCheckBox_granizo.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
+        jCheckBox_granizo.setText("Granizo");
+        jCheckBox_granizo.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jCheckBox_granizoItemStateChanged(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel18Layout = new javax.swing.GroupLayout(jPanel18);
         jPanel18.setLayout(jPanel18Layout);
@@ -752,7 +757,7 @@ public class Gestor extends javax.swing.JFrame {
                     .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addComponent(jCheckBox_terceroCompleto, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jCheckBox_todoRiesgoSF, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(jCheckBox18, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jCheckBox_granizo, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(33, Short.MAX_VALUE))
         );
         jPanel18Layout.setVerticalGroup(
@@ -767,7 +772,7 @@ public class Gestor extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jCheckBox_todoRiesgoCF, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jCheckBox18, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jCheckBox_granizo, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -1121,6 +1126,14 @@ public class Gestor extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jCheckBox_todoRiesgoCFItemStateChanged
 
+    private void jCheckBox_granizoItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jCheckBox_granizoItemStateChanged
+        if(jCheckBox_granizo.isSelected()){
+            jCheckBox_todoRiesgoSF.setSelected(true);
+        }else{
+            jCheckBox_todoRiesgoSF.setSelected(true);
+        }
+    }//GEN-LAST:event_jCheckBox_granizoItemStateChanged
+
     /**
      * @param args the command line arguments
      */
@@ -1171,7 +1184,6 @@ public class Gestor extends javax.swing.JFrame {
     private javax.swing.JCheckBox jCheckBox11;
     private javax.swing.JCheckBox jCheckBox12;
     private javax.swing.JCheckBox jCheckBox13;
-    private javax.swing.JCheckBox jCheckBox18;
     private javax.swing.JCheckBox jCheckBox2;
     private javax.swing.JCheckBox jCheckBox3;
     private javax.swing.JCheckBox jCheckBox4;
@@ -1180,6 +1192,7 @@ public class Gestor extends javax.swing.JFrame {
     private javax.swing.JCheckBox jCheckBox7;
     private javax.swing.JCheckBox jCheckBox8;
     private javax.swing.JCheckBox jCheckBox9;
+    private javax.swing.JCheckBox jCheckBox_granizo;
     private javax.swing.JCheckBox jCheckBox_responsabilidadCivil;
     private javax.swing.JCheckBox jCheckBox_terceroCompleto;
     private javax.swing.JCheckBox jCheckBox_todoRiesgoCF;
