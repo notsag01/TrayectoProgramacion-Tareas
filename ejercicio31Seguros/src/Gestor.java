@@ -43,6 +43,7 @@ public class Gestor extends javax.swing.JFrame {
         telefono=jTextField_telefono.getText();
         mail=jTextField_mail.getText();
         dominio=jTextField_dominio.getText();
+        modeloSelec=jComboBox_modelos.getItemAt(indice);
     }
     
     
@@ -130,7 +131,7 @@ public class Gestor extends javax.swing.JFrame {
         jTextField12 = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
         jPanel20 = new javax.swing.JPanel();
-        jButton5 = new javax.swing.JButton();
+        jButton_seguroVehiculos = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
@@ -820,11 +821,11 @@ public class Gestor extends javax.swing.JFrame {
 
         jPanel20.setOpaque(false);
 
-        jButton5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton5.setText("Contratar");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        jButton_seguroVehiculos.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jButton_seguroVehiculos.setText("Contratar");
+        jButton_seguroVehiculos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                jButton_seguroVehiculosActionPerformed(evt);
             }
         });
 
@@ -844,7 +845,7 @@ public class Gestor extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jButton_seguroVehiculos, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         jPanel20Layout.setVerticalGroup(
@@ -852,7 +853,7 @@ public class Gestor extends javax.swing.JFrame {
             .addGroup(jPanel20Layout.createSequentialGroup()
                 .addGap(15, 15, 15)
                 .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton5)
+                    .addComponent(jButton_seguroVehiculos)
                     .addComponent(jButton6))
                 .addContainerGap(11, Short.MAX_VALUE))
         );
@@ -1155,9 +1156,9 @@ public class Gestor extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jCheckBox_granizoItemStateChanged
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-                
-    }//GEN-LAST:event_jButton5ActionPerformed
+    private void jButton_seguroVehiculosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_seguroVehiculosActionPerformed
+        getDatosVehiculo();
+    }//GEN-LAST:event_jButton_seguroVehiculosActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1202,8 +1203,8 @@ public class Gestor extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton_seguroVehiculos;
     private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JCheckBox jCheckBox10;
     private javax.swing.JCheckBox jCheckBox11;
