@@ -1,6 +1,7 @@
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.ItemEvent;
 import javax.swing.Timer;
 
 
@@ -1035,12 +1036,18 @@ public class Gestor extends javax.swing.JFrame {
     private void jComboBox_marcasItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jComboBox_marcasItemStateChanged
         ////////////   SECCION VEHICULOS   ///////////////////////////////
         String modelosFiat []= {"PULSE", "CRONOS", "TORO", "UNO", "500", "STRADA", "FIORINO"};
-        int marca = jComboBox_marcas.getSelectedIndex();
-        System.out.println(marca);
-        if(marca==1){
-            for(String modelo:modelosFiat){
-                jComboBox_modelos.addItem(modelo);
-            }
+        
+        // El evento ItemEvent tiene dos estados posibles: ItemEvent.SELECTED y ItemEvent.DESELECTED, y ambos estados se generan cuando se 
+        //selecciona o deselecciona un ítem en el JComboBox.
+        // El código solo se ejecuta cuando el estado es ItemEvent.SELECTED
+        if(evt.getStateChange()==ItemEvent.SELECTED){
+            int marca = jComboBox_marcas.getSelectedIndex();
+            System.out.println(marca);
+            if(marca==1){
+                for(String modelo:modelosFiat){
+                    jComboBox_modelos.addItem(modelo);
+                }
+            }        
         }
         
     }//GEN-LAST:event_jComboBox_marcasItemStateChanged
