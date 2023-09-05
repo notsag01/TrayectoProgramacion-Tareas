@@ -44,7 +44,7 @@ public class Gestor extends javax.swing.JFrame {
         nombre=jTextField_nombre.getText().toUpperCase();
         telefono=jTextField_telefono.getText();
         mail=jTextField_mail.getText();
-        dominio=jTextField_dominio.getText();
+        dominio=jTextField_dominio.getText().toUpperCase();
         modeloSelec=jComboBox_modelos.getItemAt(indice);
         anio=jTextField_anio.getText();
         
@@ -55,8 +55,7 @@ public class Gestor extends javax.swing.JFrame {
                 coberturaVehiculo.add(checkbox.getText());
             }
         }
-        SeguroAutomotor sa= new SeguroAutomotor(id,nombre,telefono,mail,dominio,
-                                                marcaSelec,modeloSelec,anio);
+        SeguroAutomotor sa= new SeguroAutomotor(id,nombre,telefono,mail,dominio, marcaSelec,modeloSelec,anio,coberturaVehiculo);
         sa.guardar();
     }
     
