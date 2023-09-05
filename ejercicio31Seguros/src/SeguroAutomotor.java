@@ -13,7 +13,8 @@ public class SeguroAutomotor {
                             String dominio,
                             String marcaSelec,
                             String modeloSelec,
-                            String anio){
+                            String anio,
+                            ArrayList coberturaVehiculo){
         this.id=id;
         this.nombre=nombre;
         this.telefono=telefono;
