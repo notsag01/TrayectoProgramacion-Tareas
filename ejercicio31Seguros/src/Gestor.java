@@ -1036,7 +1036,7 @@ public class Gestor extends javax.swing.JFrame {
         ////////////   SECCION VEHICULOS   ///////////////////////////////
         String modelosFiat []= {"PULSE", "CRONOS", "TORO", "UNO", "500", "STRADA", "FIORINO"};
         int marca = jComboBox_marcas.getSelectedIndex();
-        
+        System.out.println(marca);
         if(marca==1){
             for(String modelo:modelosFiat){
                 jComboBox_modelos.addItem(modelo);
