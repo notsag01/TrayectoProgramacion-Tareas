@@ -106,14 +106,14 @@ public class Gestor extends javax.swing.JFrame {
         jTextField13 = new javax.swing.JTextField();
         jComboBox_marcas = new javax.swing.JComboBox<>();
         jComboBox_modelos = new javax.swing.JComboBox<>();
-        jComboBox10 = new javax.swing.JComboBox<>();
+        jComboBox_franquicia = new javax.swing.JComboBox<>();
         jLabel17 = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
         jPanel18 = new javax.swing.JPanel();
         jCheckBox_terceroCompleto = new javax.swing.JCheckBox();
         jCheckBox_responsabilidadCivil = new javax.swing.JCheckBox();
         jCheckBox_todoRiesgoSF = new javax.swing.JCheckBox();
-        jCheckBox17 = new javax.swing.JCheckBox();
+        jCheckBox_todoRiesgoCF = new javax.swing.JCheckBox();
         jCheckBox18 = new javax.swing.JCheckBox();
         jPanel19 = new javax.swing.JPanel();
         jTextField12 = new javax.swing.JTextField();
@@ -630,15 +630,13 @@ public class Gestor extends javax.swing.JFrame {
 
         jComboBox_modelos.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
 
-        jComboBox10.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jComboBox10.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jComboBox10.setEnabled(false);
+        jComboBox_franquicia.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jComboBox_franquicia.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "20.000", "40.000", "60.000", "80.000" }));
+        jComboBox_franquicia.setEnabled(false);
 
         jLabel17.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel17.setText("jLabel17");
 
         jLabel18.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel18.setText("jLabel18");
 
         javax.swing.GroupLayout jPanel17Layout = new javax.swing.GroupLayout(jPanel17);
         jPanel17.setLayout(jPanel17Layout);
@@ -658,7 +656,7 @@ public class Gestor extends javax.swing.JFrame {
                             .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addComponent(jComboBox_marcas, javax.swing.GroupLayout.Alignment.TRAILING, 0, 189, Short.MAX_VALUE)
                                 .addComponent(jComboBox_modelos, javax.swing.GroupLayout.Alignment.TRAILING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jComboBox10, javax.swing.GroupLayout.Alignment.TRAILING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                                .addComponent(jComboBox_franquicia, javax.swing.GroupLayout.Alignment.TRAILING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                     .addGroup(jPanel17Layout.createSequentialGroup()
                         .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel17Layout.createSequentialGroup()
@@ -697,7 +695,7 @@ public class Gestor extends javax.swing.JFrame {
                 .addGap(15, 15, 15)
                 .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBox10, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jComboBox_franquicia, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(15, 15, 15)
                 .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -731,8 +729,13 @@ public class Gestor extends javax.swing.JFrame {
             }
         });
 
-        jCheckBox17.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
-        jCheckBox17.setText("Todo Riesgo con Franquicia");
+        jCheckBox_todoRiesgoCF.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
+        jCheckBox_todoRiesgoCF.setText("Todo Riesgo con Franquicia");
+        jCheckBox_todoRiesgoCF.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jCheckBox_todoRiesgoCFItemStateChanged(evt);
+            }
+        });
 
         jCheckBox18.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
         jCheckBox18.setText("Granizo");
@@ -745,7 +748,7 @@ public class Gestor extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jCheckBox_responsabilidadCivil, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jCheckBox17)
+                    .addComponent(jCheckBox_todoRiesgoCF)
                     .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addComponent(jCheckBox_terceroCompleto, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jCheckBox_todoRiesgoSF, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -762,7 +765,7 @@ public class Gestor extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jCheckBox_todoRiesgoSF, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jCheckBox17, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jCheckBox_todoRiesgoCF, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jCheckBox18, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -1108,6 +1111,16 @@ public class Gestor extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jCheckBox_todoRiesgoSFItemStateChanged
 
+    private void jCheckBox_todoRiesgoCFItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jCheckBox_todoRiesgoCFItemStateChanged
+        if(jCheckBox_todoRiesgoCF.isSelected()){
+            jCheckBox_responsabilidadCivil.setSelected(true);
+            jComboBox_franquicia.setEnabled(true);
+        }else{
+            jCheckBox_responsabilidadCivil.setSelected(false);
+            jComboBox_franquicia.setEnabled(false);
+        }
+    }//GEN-LAST:event_jCheckBox_todoRiesgoCFItemStateChanged
+
     /**
      * @param args the command line arguments
      */
@@ -1158,7 +1171,6 @@ public class Gestor extends javax.swing.JFrame {
     private javax.swing.JCheckBox jCheckBox11;
     private javax.swing.JCheckBox jCheckBox12;
     private javax.swing.JCheckBox jCheckBox13;
-    private javax.swing.JCheckBox jCheckBox17;
     private javax.swing.JCheckBox jCheckBox18;
     private javax.swing.JCheckBox jCheckBox2;
     private javax.swing.JCheckBox jCheckBox3;
@@ -1170,15 +1182,16 @@ public class Gestor extends javax.swing.JFrame {
     private javax.swing.JCheckBox jCheckBox9;
     private javax.swing.JCheckBox jCheckBox_responsabilidadCivil;
     private javax.swing.JCheckBox jCheckBox_terceroCompleto;
+    private javax.swing.JCheckBox jCheckBox_todoRiesgoCF;
     private javax.swing.JCheckBox jCheckBox_todoRiesgoSF;
     private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox10;
     private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JComboBox<String> jComboBox3;
     private javax.swing.JComboBox<String> jComboBox4;
     private javax.swing.JComboBox<String> jComboBox5;
     private javax.swing.JComboBox<String> jComboBox6;
     private javax.swing.JComboBox<String> jComboBox7;
+    private javax.swing.JComboBox<String> jComboBox_franquicia;
     private javax.swing.JComboBox<String> jComboBox_marcas;
     private javax.swing.JComboBox<String> jComboBox_modelos;
     private javax.swing.JLabel jLabel1;

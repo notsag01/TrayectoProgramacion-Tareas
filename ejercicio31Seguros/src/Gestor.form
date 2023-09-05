@@ -1068,7 +1068,7 @@
                                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                                   <Component id="jComboBox_marcas" alignment="1" pref="189" max="32767" attributes="0"/>
                                                   <Component id="jComboBox_modelos" alignment="1" max="32767" attributes="0"/>
-                                                  <Component id="jComboBox10" alignment="1" max="32767" attributes="0"/>
+                                                  <Component id="jComboBox_franquicia" alignment="1" max="32767" attributes="0"/>
                                               </Group>
                                           </Group>
                                       </Group>
@@ -1124,7 +1124,7 @@
                                   <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel14" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
-                                      <Component id="jComboBox10" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                                      <Component id="jComboBox_franquicia" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
@@ -1238,17 +1238,18 @@
                             <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                           </AuxValues>
                         </Component>
-                        <Component class="javax.swing.JComboBox" name="jComboBox10">
+                        <Component class="javax.swing.JComboBox" name="jComboBox_franquicia">
                           <Properties>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Segoe UI" size="14" style="0"/>
                             </Property>
                             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                              <StringArray count="4">
-                                <StringItem index="0" value="Item 1"/>
-                                <StringItem index="1" value="Item 2"/>
-                                <StringItem index="2" value="Item 3"/>
-                                <StringItem index="3" value="Item 4"/>
+                              <StringArray count="5">
+                                <StringItem index="0" value=""/>
+                                <StringItem index="1" value="20.000"/>
+                                <StringItem index="2" value="40.000"/>
+                                <StringItem index="3" value="60.000"/>
+                                <StringItem index="4" value="80.000"/>
                               </StringArray>
                             </Property>
                             <Property name="enabled" type="boolean" value="false"/>
@@ -1262,7 +1263,6 @@
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Segoe UI" size="14" style="0"/>
                             </Property>
-                            <Property name="text" type="java.lang.String" value="jLabel17"/>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel18">
@@ -1270,7 +1270,6 @@
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Segoe UI" size="14" style="0"/>
                             </Property>
-                            <Property name="text" type="java.lang.String" value="jLabel18"/>
                           </Properties>
                         </Component>
                       </SubComponents>
@@ -1295,7 +1294,7 @@
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="jCheckBox_responsabilidadCivil" min="-2" pref="199" max="-2" attributes="0"/>
-                                      <Component id="jCheckBox17" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jCheckBox_todoRiesgoCF" min="-2" max="-2" attributes="0"/>
                                       <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
                                           <Component id="jCheckBox_terceroCompleto" alignment="0" max="32767" attributes="0"/>
                                           <Component id="jCheckBox_todoRiesgoSF" alignment="0" max="32767" attributes="0"/>
@@ -1316,7 +1315,7 @@
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   <Component id="jCheckBox_todoRiesgoSF" min="-2" pref="25" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="jCheckBox17" min="-2" pref="25" max="-2" attributes="0"/>
+                                  <Component id="jCheckBox_todoRiesgoCF" min="-2" pref="25" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Component id="jCheckBox18" min="-2" pref="25" max="-2" attributes="0"/>
                                   <EmptySpace max="32767" attributes="0"/>
@@ -1355,13 +1354,16 @@
                             <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="jCheckBox_todoRiesgoSFItemStateChanged"/>
                           </Events>
                         </Component>
-                        <Component class="javax.swing.JCheckBox" name="jCheckBox17">
+                        <Component class="javax.swing.JCheckBox" name="jCheckBox_todoRiesgoCF">
                           <Properties>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Segoe UI" size="14" style="3"/>
                             </Property>
                             <Property name="text" type="java.lang.String" value="Todo Riesgo con Franquicia"/>
                           </Properties>
+                          <Events>
+                            <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="jCheckBox_todoRiesgoCFItemStateChanged"/>
+                          </Events>
                         </Component>
                         <Component class="javax.swing.JCheckBox" name="jCheckBox18">
                           <Properties>
