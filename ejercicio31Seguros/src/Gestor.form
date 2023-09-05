@@ -1298,7 +1298,7 @@
                                       <Component id="jCheckBox17" min="-2" max="-2" attributes="0"/>
                                       <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
                                           <Component id="jCheckBox_terceroCompleto" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="jCheckBox16" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="jCheckBox_todoRiesgoSF" alignment="0" max="32767" attributes="0"/>
                                       </Group>
                                       <Component id="jCheckBox18" alignment="1" min="-2" pref="94" max="-2" attributes="0"/>
                                   </Group>
@@ -1314,7 +1314,7 @@
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   <Component id="jCheckBox_responsabilidadCivil" min="-2" pref="25" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="jCheckBox16" min="-2" pref="25" max="-2" attributes="0"/>
+                                  <Component id="jCheckBox_todoRiesgoSF" min="-2" pref="25" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Component id="jCheckBox17" min="-2" pref="25" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -1344,13 +1344,16 @@
                             <Property name="text" type="java.lang.String" value="Responsabilidad Civil"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JCheckBox" name="jCheckBox16">
+                        <Component class="javax.swing.JCheckBox" name="jCheckBox_todoRiesgoSF">
                           <Properties>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Segoe UI" size="14" style="3"/>
                             </Property>
                             <Property name="text" type="java.lang.String" value="Todo Riesgo sin Franquicia"/>
                           </Properties>
+                          <Events>
+                            <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="jCheckBox_todoRiesgoSFItemStateChanged"/>
+                          </Events>
                         </Component>
                         <Component class="javax.swing.JCheckBox" name="jCheckBox17">
                           <Properties>

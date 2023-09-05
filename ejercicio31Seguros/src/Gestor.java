@@ -112,7 +112,7 @@ public class Gestor extends javax.swing.JFrame {
         jPanel18 = new javax.swing.JPanel();
         jCheckBox_terceroCompleto = new javax.swing.JCheckBox();
         jCheckBox_responsabilidadCivil = new javax.swing.JCheckBox();
-        jCheckBox16 = new javax.swing.JCheckBox();
+        jCheckBox_todoRiesgoSF = new javax.swing.JCheckBox();
         jCheckBox17 = new javax.swing.JCheckBox();
         jCheckBox18 = new javax.swing.JCheckBox();
         jPanel19 = new javax.swing.JPanel();
@@ -723,8 +723,13 @@ public class Gestor extends javax.swing.JFrame {
         jCheckBox_responsabilidadCivil.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
         jCheckBox_responsabilidadCivil.setText("Responsabilidad Civil");
 
-        jCheckBox16.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
-        jCheckBox16.setText("Todo Riesgo sin Franquicia");
+        jCheckBox_todoRiesgoSF.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
+        jCheckBox_todoRiesgoSF.setText("Todo Riesgo sin Franquicia");
+        jCheckBox_todoRiesgoSF.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jCheckBox_todoRiesgoSFItemStateChanged(evt);
+            }
+        });
 
         jCheckBox17.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
         jCheckBox17.setText("Todo Riesgo con Franquicia");
@@ -743,7 +748,7 @@ public class Gestor extends javax.swing.JFrame {
                     .addComponent(jCheckBox17)
                     .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addComponent(jCheckBox_terceroCompleto, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jCheckBox16, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(jCheckBox_todoRiesgoSF, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addComponent(jCheckBox18, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(33, Short.MAX_VALUE))
         );
@@ -755,7 +760,7 @@ public class Gestor extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jCheckBox_responsabilidadCivil, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jCheckBox16, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jCheckBox_todoRiesgoSF, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jCheckBox17, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
@@ -1095,6 +1100,14 @@ public class Gestor extends javax.swing.JFrame {
          }
     }//GEN-LAST:event_jCheckBox_terceroCompletoItemStateChanged
 
+    private void jCheckBox_todoRiesgoSFItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jCheckBox_todoRiesgoSFItemStateChanged
+        if(jCheckBox_todoRiesgoSF.isSelected()){
+            jCheckBox_responsabilidadCivil.setSelected(true);
+        }else{
+            jCheckBox_responsabilidadCivil.setSelected(false);
+        }
+    }//GEN-LAST:event_jCheckBox_todoRiesgoSFItemStateChanged
+
     /**
      * @param args the command line arguments
      */
@@ -1145,7 +1158,6 @@ public class Gestor extends javax.swing.JFrame {
     private javax.swing.JCheckBox jCheckBox11;
     private javax.swing.JCheckBox jCheckBox12;
     private javax.swing.JCheckBox jCheckBox13;
-    private javax.swing.JCheckBox jCheckBox16;
     private javax.swing.JCheckBox jCheckBox17;
     private javax.swing.JCheckBox jCheckBox18;
     private javax.swing.JCheckBox jCheckBox2;
@@ -1158,6 +1170,7 @@ public class Gestor extends javax.swing.JFrame {
     private javax.swing.JCheckBox jCheckBox9;
     private javax.swing.JCheckBox jCheckBox_responsabilidadCivil;
     private javax.swing.JCheckBox jCheckBox_terceroCompleto;
+    private javax.swing.JCheckBox jCheckBox_todoRiesgoSF;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox10;
     private javax.swing.JComboBox<String> jComboBox2;
