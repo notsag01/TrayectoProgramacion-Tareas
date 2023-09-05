@@ -110,8 +110,8 @@ public class Gestor extends javax.swing.JFrame {
         jLabel17 = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
         jPanel18 = new javax.swing.JPanel();
-        jCheckBox14 = new javax.swing.JCheckBox();
-        jCheckBox15 = new javax.swing.JCheckBox();
+        jCheckBox_terceroCompleto = new javax.swing.JCheckBox();
+        jCheckBox_responsabilidadCivil = new javax.swing.JCheckBox();
         jCheckBox16 = new javax.swing.JCheckBox();
         jCheckBox17 = new javax.swing.JCheckBox();
         jCheckBox18 = new javax.swing.JCheckBox();
@@ -712,11 +712,16 @@ public class Gestor extends javax.swing.JFrame {
         jPanel18.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Cobertura", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14), new java.awt.Color(204, 204, 204))); // NOI18N
         jPanel18.setOpaque(false);
 
-        jCheckBox14.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
-        jCheckBox14.setText("Tercero Completo");
+        jCheckBox_terceroCompleto.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
+        jCheckBox_terceroCompleto.setText("Tercero Completo");
+        jCheckBox_terceroCompleto.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jCheckBox_terceroCompletoItemStateChanged(evt);
+            }
+        });
 
-        jCheckBox15.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
-        jCheckBox15.setText("Responsabilidad Civil");
+        jCheckBox_responsabilidadCivil.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
+        jCheckBox_responsabilidadCivil.setText("Responsabilidad Civil");
 
         jCheckBox16.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
         jCheckBox16.setText("Todo Riesgo sin Franquicia");
@@ -734,10 +739,10 @@ public class Gestor extends javax.swing.JFrame {
             .addGroup(jPanel18Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jCheckBox15, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jCheckBox_responsabilidadCivil, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jCheckBox17)
                     .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(jCheckBox14, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jCheckBox_terceroCompleto, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jCheckBox16, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addComponent(jCheckBox18, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(33, Short.MAX_VALUE))
@@ -746,9 +751,9 @@ public class Gestor extends javax.swing.JFrame {
             jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel18Layout.createSequentialGroup()
                 .addGap(19, 19, 19)
-                .addComponent(jCheckBox14, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jCheckBox_terceroCompleto, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jCheckBox15, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jCheckBox_responsabilidadCivil, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jCheckBox16, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
@@ -1082,6 +1087,14 @@ public class Gestor extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jComboBox_marcasItemStateChanged
 
+    private void jCheckBox_terceroCompletoItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jCheckBox_terceroCompletoItemStateChanged
+         if(jCheckBox_terceroCompleto.isSelected()){
+             jCheckBox_responsabilidadCivil.setSelected(true);
+         }else{
+             jCheckBox_responsabilidadCivil.setSelected(false);         
+         }
+    }//GEN-LAST:event_jCheckBox_terceroCompletoItemStateChanged
+
     /**
      * @param args the command line arguments
      */
@@ -1132,8 +1145,6 @@ public class Gestor extends javax.swing.JFrame {
     private javax.swing.JCheckBox jCheckBox11;
     private javax.swing.JCheckBox jCheckBox12;
     private javax.swing.JCheckBox jCheckBox13;
-    private javax.swing.JCheckBox jCheckBox14;
-    private javax.swing.JCheckBox jCheckBox15;
     private javax.swing.JCheckBox jCheckBox16;
     private javax.swing.JCheckBox jCheckBox17;
     private javax.swing.JCheckBox jCheckBox18;
@@ -1145,6 +1156,8 @@ public class Gestor extends javax.swing.JFrame {
     private javax.swing.JCheckBox jCheckBox7;
     private javax.swing.JCheckBox jCheckBox8;
     private javax.swing.JCheckBox jCheckBox9;
+    private javax.swing.JCheckBox jCheckBox_responsabilidadCivil;
+    private javax.swing.JCheckBox jCheckBox_terceroCompleto;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox10;
     private javax.swing.JComboBox<String> jComboBox2;

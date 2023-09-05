@@ -1294,10 +1294,10 @@
                               <Group type="102" attributes="0">
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jCheckBox15" min="-2" pref="199" max="-2" attributes="0"/>
+                                      <Component id="jCheckBox_responsabilidadCivil" min="-2" pref="199" max="-2" attributes="0"/>
                                       <Component id="jCheckBox17" min="-2" max="-2" attributes="0"/>
                                       <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                                          <Component id="jCheckBox14" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="jCheckBox_terceroCompleto" alignment="0" max="32767" attributes="0"/>
                                           <Component id="jCheckBox16" alignment="0" max="32767" attributes="0"/>
                                       </Group>
                                       <Component id="jCheckBox18" alignment="1" min="-2" pref="94" max="-2" attributes="0"/>
@@ -1310,9 +1310,9 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
-                                  <Component id="jCheckBox14" min="-2" pref="25" max="-2" attributes="0"/>
+                                  <Component id="jCheckBox_terceroCompleto" min="-2" pref="25" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="jCheckBox15" min="-2" pref="25" max="-2" attributes="0"/>
+                                  <Component id="jCheckBox_responsabilidadCivil" min="-2" pref="25" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   <Component id="jCheckBox16" min="-2" pref="25" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -1325,15 +1325,18 @@
                         </DimensionLayout>
                       </Layout>
                       <SubComponents>
-                        <Component class="javax.swing.JCheckBox" name="jCheckBox14">
+                        <Component class="javax.swing.JCheckBox" name="jCheckBox_terceroCompleto">
                           <Properties>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Segoe UI" size="14" style="3"/>
                             </Property>
                             <Property name="text" type="java.lang.String" value="Tercero Completo"/>
                           </Properties>
+                          <Events>
+                            <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="jCheckBox_terceroCompletoItemStateChanged"/>
+                          </Events>
                         </Component>
-                        <Component class="javax.swing.JCheckBox" name="jCheckBox15">
+                        <Component class="javax.swing.JCheckBox" name="jCheckBox_responsabilidadCivil">
                           <Properties>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Segoe UI" size="14" style="3"/>
