@@ -1037,6 +1037,9 @@ public class Gestor extends javax.swing.JFrame {
         ////////////   SECCION VEHICULOS   ///////////////////////////////
         String modelosFiat []= {"PULSE", "CRONOS", "TORO", "UNO", "500", "STRADA", "FIORINO"};
         String modelosRenault []= {"SANDERO", "LOGAN", "KANGOO", "KWID", "STEPWEY", "ALASKAN", "DUSTER"};
+        String modelosChevrolet []= {"CRUEZE", "ONIX", "TRACKER", "S10", "SPIN", "PRISMA", "COBALT"};
+        String modelosFord []= {"RANGER", "ECOSPORT", "KA", "FIESTA", "FOCUS", "MONDEO", "MUSTANG"};
+        String modelosPeugeot []= {"208", "207", "308", "408", "PARTNER", "PATAGONIC", "EXPERT"};
         
         // El evento ItemEvent tiene dos estados posibles: ItemEvent.SELECTED y ItemEvent.DESELECTED, y ambos estados se generan cuando se 
         //selecciona o deselecciona un ítem en el JComboBox.
@@ -1054,6 +1057,24 @@ public class Gestor extends javax.swing.JFrame {
             if(marca==2){
                 jComboBox_modelos.removeAllItems();
                 for(String modelo:modelosRenault){
+                    jComboBox_modelos.addItem(modelo);
+                }            
+            }
+            if(marca==3){
+                jComboBox_modelos.removeAllItems();
+                for(String modelo:modelosChevrolet){
+                    jComboBox_modelos.addItem(modelo);
+                }            
+            }
+            if(marca==4){
+                jComboBox_modelos.removeAllItems();
+                for(String modelo:modelosFord){
+                    jComboBox_modelos.addItem(modelo);
+                }            
+            }
+            if(marca==5){
+                jComboBox_modelos.removeAllItems();
+                for(String modelo:modelosPeugeot){
                     jComboBox_modelos.addItem(modelo);
                 }            
             }
