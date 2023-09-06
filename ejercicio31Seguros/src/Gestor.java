@@ -46,7 +46,8 @@ public class Gestor extends javax.swing.JFrame {
         telefono=jTextField_telefono.getText();
         mail=jTextField_mail.getText();
         dominio=jTextField_dominio.getText().toUpperCase();
-        modeloSelec=jComboBox_modelos.getItemAt(indice);
+        Object modeloObject=jComboBox_modelos.getSelectedItem();
+        modeloSelec=modeloObject.toString();
         System.out.println(modeloSelec);
         anio=jTextField_anio.getText();
         
