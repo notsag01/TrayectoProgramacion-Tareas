@@ -36,11 +36,21 @@ public class Gestor extends javax.swing.JFrame {
         initComponents();
         this.setLocationRelativeTo(null);
         frasesAleatorias();
-    
-
-    
     }
     
+    String tipoSeguro, cuit, nombre,telefono, mail;
+    
+    public void getDatosPerosona(){
+        tipoSeguro="Seguro Hogar";
+        cuit=jTextField_id.getText();
+        nombre=jTextField_nombre.getText();
+        telefono=jTextField_telefono.getText();
+        mail=jTextField_mail.getText();
+        
+        Personas persona = new Personas(tipoSeguro,cuit,nombre,telefono,mail);
+        Archivo archivo =new Archivo();
+        archivo.escribirArchivo(persona);
+    }
     
     
     
@@ -55,7 +65,7 @@ public class Gestor extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jTabbedPane1 = new javax.swing.JTabbedPane();
+        jTabbedPane_seguroHogar = new javax.swing.JTabbedPane();
         jPanel2 = new javax.swing.JPanel();
         jPanel7 = new javax.swing.JPanel();
         jPanel8 = new javax.swing.JPanel();
@@ -149,9 +159,9 @@ public class Gestor extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setPreferredSize(new java.awt.Dimension(750, 650));
 
-        jTabbedPane1.setBackground(new java.awt.Color(255, 255, 255));
-        jTabbedPane1.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(255, 0, 51)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(255, 51, 51), null, null)));
-        jTabbedPane1.setOpaque(true);
+        jTabbedPane_seguroHogar.setBackground(new java.awt.Color(255, 255, 255));
+        jTabbedPane_seguroHogar.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(255, 0, 51)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(255, 51, 51), null, null)));
+        jTabbedPane_seguroHogar.setOpaque(true);
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -324,6 +334,11 @@ public class Gestor extends javax.swing.JFrame {
         jButton1.setText("Contratar");
         jButton1.setMaximumSize(new java.awt.Dimension(72, 27));
         jButton1.setMinimumSize(new java.awt.Dimension(72, 27));
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jButton2.setText("Salir");
@@ -393,7 +408,7 @@ public class Gestor extends javax.swing.JFrame {
         jLabel6.setOpaque(true);
         jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 690, 350));
 
-        jTabbedPane1.addTab("HOGAR ", jPanel2);
+        jTabbedPane_seguroHogar.addTab("SEGURO HOGAR ", jPanel2);
 
         jPanel4.setBackground(new java.awt.Color(255, 255, 255));
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -596,7 +611,7 @@ public class Gestor extends javax.swing.JFrame {
         jLabel7.setToolTipText("");
         jPanel4.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 750, 360));
 
-        jTabbedPane1.addTab("VIDA", jPanel4);
+        jTabbedPane_seguroHogar.addTab("VIDA", jPanel4);
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -888,7 +903,7 @@ public class Gestor extends javax.swing.JFrame {
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/vehiculos.jpg"))); // NOI18N
         jPanel3.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 750, 386));
 
-        jTabbedPane1.addTab("VEHICULO", jPanel3);
+        jTabbedPane_seguroHogar.addTab("VEHICULO", jPanel3);
 
         jPanel5.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -1005,14 +1020,14 @@ public class Gestor extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+            .addComponent(jTabbedPane_seguroHogar, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTabbedPane1))
+                .addComponent(jTabbedPane_seguroHogar))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -1153,6 +1168,10 @@ public class Gestor extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jButton_seguroVehiculosActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        getDatosPerosona();
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1267,7 +1286,7 @@ public class Gestor extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JPanel jPanel_coberturaVehiculos;
-    private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JTabbedPane jTabbedPane_seguroHogar;
     private javax.swing.JTextField jTextField10;
     private javax.swing.JTextField jTextField11;
     private javax.swing.JTextField jTextField5;
