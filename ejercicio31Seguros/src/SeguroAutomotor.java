@@ -1,5 +1,10 @@
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 
 public class SeguroAutomotor {
@@ -65,6 +70,28 @@ public class SeguroAutomotor {
         return coberturaVehiculo;
     }
     public void guardar(){
-        System.out.println(nombre);
+        try {
+            //System.out.println(nombre);
+            BufferedWriter escribir = new BufferedWriter(new FileWriter("seguroAutomotor.txt",true));
+            StringBuilder sb = new StringBuilder();
+            sb.append(this.tipoSeguro).append(",")
+                    .append(this.id).append(",")
+                    .append(this.nombre).append(",")
+                    .append(this.telefono).append(",")
+                    .append(this.mail).append(",")
+                    .append(this.marcaSelec).append(",")
+                    .append(this.modeloSelec).append(",")
+                    .append(this.anio).append(",");
+            for(String item : coberturaVehiculo){
+                sb.append(item).append(",");
+            }
+            escribir.write(sb.toString());
+            escribir.newLine();
+            escribir.close();
+                    
+        } catch (IOException ex) {
+            System.out.println(ex);
+        }
+        
     }
 }
