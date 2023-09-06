@@ -1,11 +1,14 @@
 
+import java.awt.Color;
 import java.awt.Component;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.ItemEvent;
 import java.util.ArrayList;
+import javax.swing.BorderFactory;
 import javax.swing.JCheckBox;
 import javax.swing.Timer;
+import javax.swing.border.Border;
 
 
 public class Gestor extends javax.swing.JFrame {
@@ -27,6 +30,7 @@ public class Gestor extends javax.swing.JFrame {
          });
          timer.start();
      }
+     Border bordeError = BorderFactory.createLineBorder(Color.RED);
 
     public Gestor() {
         initComponents();
@@ -47,7 +51,9 @@ public class Gestor extends javax.swing.JFrame {
         mail=jTextField_mail.getText();
         dominio=jTextField_dominio.getText().toUpperCase();
         Object modeloObject=jComboBox_modelos.getSelectedItem();
-        modeloSelec=modeloObject.toString();
+        if(modeloObject!=null){       
+            modeloSelec=modeloObject.toString();
+        }else{ jComboBox_modelos.setBorder(bordeError);}
         System.out.println(modeloSelec);
         anio=jTextField_anio.getText();
         
