@@ -53,10 +53,13 @@ public class Gestor extends javax.swing.JFrame {
         
         Component [] componentes= jPanel_coberturaVehiculos.getComponents();
         for(Component componente : componentes){
-            JCheckBox checkbox = new JCheckBox();
+            JCheckBox checkbox = (JCheckBox) componente;
             if(checkbox.isSelected()){
                 coberturaVehiculo.add(checkbox.getText());
             }
+        }
+        for(String item : coberturaVehiculo){
+            System.out.println(item);
         }
         SeguroAutomotor sa= new SeguroAutomotor(tipoSeguro, id,nombre,telefono,mail,dominio, marcaSelec,modeloSelec,anio,coberturaVehiculo);
         sa.guardar();
