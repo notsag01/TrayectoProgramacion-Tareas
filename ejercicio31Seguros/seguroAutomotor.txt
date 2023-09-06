@@ -1,3 +1,1 @@
-Seguro Automotor,666,CORDOBA GASTON,4545-45454,gaston@gaston,Peugeot,308,2011,
-Seguro Automotor,666,CORDOBA GASTON,4545-45454,gaston@gaston,Peugeot,208,2011,
-Seguro Automotor,666,CORDOBA GASTON,4545-45454,gaston@gaston,Peugeot,308,2011,
+

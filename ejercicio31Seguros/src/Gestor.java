@@ -47,6 +47,7 @@ public class Gestor extends javax.swing.JFrame {
         mail=jTextField_mail.getText();
         dominio=jTextField_dominio.getText().toUpperCase();
         modeloSelec=jComboBox_modelos.getItemAt(indice);
+        System.out.println(modeloSelec);
         anio=jTextField_anio.getText();
         
         Component [] componentes= jPanel_coberturaVehiculos.getComponents();
@@ -632,7 +633,7 @@ public class Gestor extends javax.swing.JFrame {
         jLabel11.setText("Marca: ");
 
         jLabel13.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel13.setText("Model:");
+        jLabel13.setText("Modelo:");
 
         jLabel14.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel14.setText("Franquicia: ");
