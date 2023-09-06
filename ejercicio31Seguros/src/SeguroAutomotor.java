@@ -3,10 +3,11 @@ import java.util.ArrayList;
 
 
 public class SeguroAutomotor {
-    String id,nombre,telefono,mail,dominio,marcaSelec,modeloSelec,anio;
+    String tipoSeguro, id,nombre,telefono,mail,dominio,marcaSelec,modeloSelec,anio;
     ArrayList <String> coberturaVehiculo = new ArrayList<>();
     
-    public SeguroAutomotor(String id,
+    public SeguroAutomotor( String tipoSeguro,
+                            String id,
                             String nombre,
                             String telefono,
                             String mail,
@@ -15,6 +16,7 @@ public class SeguroAutomotor {
                             String modeloSelec,
                             String anio,
                             ArrayList coberturaVehiculo){
+        this.tipoSeguro=tipoSeguro;
         this.id=id;
         this.nombre=nombre;
         this.telefono=telefono;
@@ -24,7 +26,9 @@ public class SeguroAutomotor {
         this.modeloSelec=modeloSelec;
         this.anio=anio;
     }
-
+    public String getTipoSeguor(){
+        return tipoSeguro;
+    }
     public String getId() {
         return id;
     }
