@@ -1,5 +1,8 @@
 
 import java.awt.Color;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JFrame;
 
 public class Heladeria extends javax.swing.JFrame {
@@ -113,8 +116,13 @@ public class Heladeria extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
-        InfoDelibery infoD=new InfoDelibery();
-        infoD.setVisible(true);
+        InfoDelibery infoD;
+        try {
+            infoD = new InfoDelibery();
+            infoD.setVisible(true);
+        } catch (IOException ex) {
+            Logger.getLogger(Heladeria.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_jMenuItem3ActionPerformed
 
     /**

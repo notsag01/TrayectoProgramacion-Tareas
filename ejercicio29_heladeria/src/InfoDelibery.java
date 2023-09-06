@@ -30,7 +30,7 @@ public class InfoDelibery extends javax.swing.JFrame {
         
         cargarArchivo();
     }
-    private void cargarArchivo() throws IOException{
+    private void cargarArchivo(){
         String fila[];
         
             try {
@@ -43,7 +43,7 @@ public class InfoDelibery extends javax.swing.JFrame {
                     model.addRow(fila);
                     linea = leer.readLine();
                 }
-            } catch (FileNotFoundException ex) {
+            } catch (IOException ex) {
                 System.out.println(ex);
             }
         
