@@ -30,6 +30,7 @@ public class SeguroAutomotor {
         this.marcaSelec=marcaSelec;
         this.modeloSelec=modeloSelec;
         this.anio=anio;
+        this.coberturaVehiculo=coberturaVehiculo;
     }
     public String getTipoSeguor(){
         return tipoSeguro;
@@ -84,6 +85,7 @@ public class SeguroAutomotor {
                     .append(this.anio).append(",");
             for(String item : coberturaVehiculo){
                 sb.append(item).append(",");
+                //System.out.println(item);
             }
             escribir.write(sb.toString());
             escribir.newLine();

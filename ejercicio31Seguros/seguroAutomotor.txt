@@ -1,0 +1,2 @@
+Seguro Automotor,1,GAST,45454545,gast@gast,Peugeot,207,2011,Responsabilidad Civil,Todo Riesgo con Franquicia,Tercero Completo,
+Seguro Automotor,2,HOMERO,56565656,hom@hom,Chevrolet,S10,2023,Responsabilidad Civil,Todo Riesgo sin Franquicia,
