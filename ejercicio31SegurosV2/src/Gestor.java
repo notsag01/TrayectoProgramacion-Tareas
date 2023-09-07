@@ -42,6 +42,8 @@ public class Gestor extends javax.swing.JFrame {
         jComboBox_incendio.setEnabled(false);
         jComboBox_robo.setEnabled(false);
         jComboBox_inundacion.setEnabled(false);
+        jTextField_notebooksCantidad.setEnabled(false);
+        jTextField_televisorCantidad.setEnabled(false);
     }
     
     String tipoSeguro, cuit, nombre,telefono, mail,incendio,robo,inundacion;
@@ -52,7 +54,8 @@ public class Gestor extends javax.swing.JFrame {
         cuit=jTextField_id.getText();
         nombre=jTextField_nombre.getText();
         telefono=jTextField_telefono.getText();
-        mail=jTextField_mail.getText();        
+        mail=jTextField_mail.getText();
+        
         incendio=(String)jComboBox_incendio.getSelectedItem();
         if(incendio.equals("")){
             incendio="-";
@@ -306,12 +309,22 @@ public class Gestor extends javax.swing.JFrame {
 
         jCheckBox_notebooks.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jCheckBox_notebooks.setText("Noteboks");
+        jCheckBox_notebooks.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jCheckBox_notebooksItemStateChanged(evt);
+            }
+        });
 
         jCheckBox_consola.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jCheckBox_consola.setText("Consola Games");
 
         jCheckBox_televisor.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jCheckBox_televisor.setText("Televisor");
+        jCheckBox_televisor.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jCheckBox_televisorItemStateChanged(evt);
+            }
+        });
 
         jTextField_notebooksCantidad.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
@@ -1224,6 +1237,22 @@ public class Gestor extends javax.swing.JFrame {
             jComboBox_inundacion.setEnabled(true);
         }else{jComboBox_inundacion.setEnabled(false);}
     }//GEN-LAST:event_jCheckBox_inundacionItemStateChanged
+
+    private void jCheckBox_notebooksItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jCheckBox_notebooksItemStateChanged
+        if(jCheckBox_notebooks.isSelected()){
+            jTextField_notebooksCantidad.setEnabled(true);
+        }else{
+            jTextField_notebooksCantidad.setEnabled(false);
+        }
+    }//GEN-LAST:event_jCheckBox_notebooksItemStateChanged
+
+    private void jCheckBox_televisorItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jCheckBox_televisorItemStateChanged
+        if(jCheckBox_televisor.isSelected()){
+            jTextField_televisorCantidad.setEnabled(true);
+        }else{
+            jTextField_televisorCantidad.setEnabled(false);
+        }
+    }//GEN-LAST:event_jCheckBox_televisorItemStateChanged
 
     /**
      * @param args the command line arguments
