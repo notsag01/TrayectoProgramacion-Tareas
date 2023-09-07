@@ -87,14 +87,14 @@ public class Gestor extends javax.swing.JFrame {
         jComboBox_robo = new javax.swing.JComboBox<>();
         jComboBox_inundacion = new javax.swing.JComboBox<>();
         jPanel10 = new javax.swing.JPanel();
-        jCheckBox4 = new javax.swing.JCheckBox();
-        jCheckBox5 = new javax.swing.JCheckBox();
-        jCheckBox6 = new javax.swing.JCheckBox();
-        jCheckBox7 = new javax.swing.JCheckBox();
-        jCheckBox8 = new javax.swing.JCheckBox();
-        jCheckBox9 = new javax.swing.JCheckBox();
-        jTextField5 = new javax.swing.JTextField();
-        jTextField6 = new javax.swing.JTextField();
+        jCheckBox_helader = new javax.swing.JCheckBox();
+        jCheckBox_lavarropas = new javax.swing.JCheckBox();
+        jCheckBox_cocina = new javax.swing.JCheckBox();
+        jCheckBox_notebooks = new javax.swing.JCheckBox();
+        jCheckBox_consola = new javax.swing.JCheckBox();
+        jCheckBox_televisor = new javax.swing.JCheckBox();
+        jTextField_notebooksCantidad = new javax.swing.JTextField();
+        jTextField_televisorCantidad = new javax.swing.JTextField();
         jPanel11 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
@@ -280,32 +280,32 @@ public class Gestor extends javax.swing.JFrame {
         jPanel10.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Elementos Robados/Dañados", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 12), new java.awt.Color(255, 51, 51))); // NOI18N
         jPanel10.setOpaque(false);
 
-        jCheckBox4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jCheckBox4.setText("Heladera");
-        jCheckBox4.addActionListener(new java.awt.event.ActionListener() {
+        jCheckBox_helader.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jCheckBox_helader.setText("Heladera");
+        jCheckBox_helader.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox4ActionPerformed(evt);
+                jCheckBox_heladerActionPerformed(evt);
             }
         });
 
-        jCheckBox5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jCheckBox5.setText("Lavarropas");
+        jCheckBox_lavarropas.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jCheckBox_lavarropas.setText("Lavarropas");
 
-        jCheckBox6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jCheckBox6.setText("Cocina");
+        jCheckBox_cocina.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jCheckBox_cocina.setText("Cocina");
 
-        jCheckBox7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jCheckBox7.setText("Noteboks");
+        jCheckBox_notebooks.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jCheckBox_notebooks.setText("Noteboks");
 
-        jCheckBox8.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jCheckBox8.setText("Consola Games");
+        jCheckBox_consola.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jCheckBox_consola.setText("Consola Games");
 
-        jCheckBox9.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jCheckBox9.setText("Televisor");
+        jCheckBox_televisor.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jCheckBox_televisor.setText("Televisor");
 
-        jTextField5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jTextField_notebooksCantidad.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jTextField6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jTextField_televisorCantidad.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
         jPanel10.setLayout(jPanel10Layout);
@@ -315,22 +315,22 @@ public class Gestor extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel10Layout.createSequentialGroup()
-                        .addComponent(jCheckBox6, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jCheckBox_cocina, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(32, 32, 32)
-                        .addComponent(jCheckBox9)
+                        .addComponent(jCheckBox_televisor)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jTextField_televisorCantidad, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addGroup(jPanel10Layout.createSequentialGroup()
-                            .addComponent(jCheckBox5, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jCheckBox_lavarropas, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jCheckBox8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(jCheckBox_consola, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGroup(jPanel10Layout.createSequentialGroup()
-                            .addComponent(jCheckBox4)
+                            .addComponent(jCheckBox_helader)
                             .addGap(18, 18, 18)
-                            .addComponent(jCheckBox7, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jCheckBox_notebooks, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(jTextField_notebooksCantidad, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel10Layout.setVerticalGroup(
@@ -338,18 +338,18 @@ public class Gestor extends javax.swing.JFrame {
             .addGroup(jPanel10Layout.createSequentialGroup()
                 .addGap(25, 25, 25)
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCheckBox4, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jCheckBox7, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jCheckBox_helader, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jCheckBox_notebooks, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField_notebooksCantidad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(36, 36, 36)
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCheckBox5, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jCheckBox8, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jCheckBox_lavarropas, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jCheckBox_consola, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCheckBox6, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jCheckBox9, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jCheckBox_cocina, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jCheckBox_televisor, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField_televisorCantidad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(40, 40, 40))
         );
 
@@ -1093,9 +1093,9 @@ public class Gestor extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_jButton6ActionPerformed
 
-    private void jCheckBox4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox4ActionPerformed
+    private void jCheckBox_heladerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox_heladerActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox4ActionPerformed
+    }//GEN-LAST:event_jCheckBox_heladerActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
@@ -1264,17 +1264,17 @@ public class Gestor extends javax.swing.JFrame {
     private javax.swing.JCheckBox jCheckBox11;
     private javax.swing.JCheckBox jCheckBox12;
     private javax.swing.JCheckBox jCheckBox13;
-    private javax.swing.JCheckBox jCheckBox4;
-    private javax.swing.JCheckBox jCheckBox5;
-    private javax.swing.JCheckBox jCheckBox6;
-    private javax.swing.JCheckBox jCheckBox7;
-    private javax.swing.JCheckBox jCheckBox8;
-    private javax.swing.JCheckBox jCheckBox9;
+    private javax.swing.JCheckBox jCheckBox_cocina;
+    private javax.swing.JCheckBox jCheckBox_consola;
     private javax.swing.JCheckBox jCheckBox_granizo;
+    private javax.swing.JCheckBox jCheckBox_helader;
     private javax.swing.JCheckBox jCheckBox_incendio;
     private javax.swing.JCheckBox jCheckBox_inundacion;
+    private javax.swing.JCheckBox jCheckBox_lavarropas;
+    private javax.swing.JCheckBox jCheckBox_notebooks;
     private javax.swing.JCheckBox jCheckBox_responsabilidadCivil;
     private javax.swing.JCheckBox jCheckBox_robo;
+    private javax.swing.JCheckBox jCheckBox_televisor;
     private javax.swing.JCheckBox jCheckBox_terceroCompleto;
     private javax.swing.JCheckBox jCheckBox_todoRiesgoCF;
     private javax.swing.JCheckBox jCheckBox_todoRiesgoSF;
@@ -1332,8 +1332,6 @@ public class Gestor extends javax.swing.JFrame {
     private javax.swing.JTabbedPane jTabbedPane_seguroHogar;
     private javax.swing.JTextField jTextField10;
     private javax.swing.JTextField jTextField11;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
     private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField8;
     private javax.swing.JTextField jTextField9;
@@ -1342,6 +1340,8 @@ public class Gestor extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField_id;
     private javax.swing.JTextField jTextField_mail;
     private javax.swing.JTextField jTextField_nombre;
+    private javax.swing.JTextField jTextField_notebooksCantidad;
     private javax.swing.JTextField jTextField_telefono;
+    private javax.swing.JTextField jTextField_televisorCantidad;
     // End of variables declaration//GEN-END:variables
 }
