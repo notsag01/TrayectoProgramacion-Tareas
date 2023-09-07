@@ -75,6 +75,23 @@ public class Gestor extends javax.swing.JFrame {
         }else{
             heladera="-";
         }
+        if(jCheckBox_lavarropas.isSelected()){
+            heladera=jCheckBox_lavarropas.getText();
+        }else{
+            lavarropas="-";
+        }
+        if(jCheckBox_cocina.isSelected()){
+            heladera=jCheckBox_cocina.getText();
+        }else{
+            cocina="-";
+        }
+        if(jCheckBox_notebooks.isSelected()){
+            notebook=jCheckBox_notebooks.getText();
+            notebookCantidad= jTextField_notebooksCantidad.setText();
+        }else{
+            notebook="-";
+        }
+        
         
         Personas persona = new Personas(tipoSeguro,cuit,nombre,telefono,mail,incendio,robo,inundacion);
         Archivo archivo =new Archivo();
