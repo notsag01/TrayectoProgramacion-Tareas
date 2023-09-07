@@ -1,1 +1,2 @@
 Seguro Hogar,555,Gaston,45454545,gast@gast,Parcial,-,Total,Cocina,-,null,Noteboks,2,null,Televisor,3
+Seguro Vida,7,7,7,7,Muerte,-,Dias de Internacion,7,-

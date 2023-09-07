@@ -1208,7 +1208,7 @@ public class Gestor extends javax.swing.JFrame {
     }//GEN-LAST:event_jCheckBox_heladeraActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
+        getDatosPerosonaVida();
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jComboBox_marcasItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jComboBox_marcasItemStateChanged
