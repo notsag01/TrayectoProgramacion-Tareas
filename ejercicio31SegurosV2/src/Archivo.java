@@ -34,13 +34,37 @@ public class Archivo {
                                 persona.getNotebookCantidad()+ "," +
                                 persona.getConsola()+ "," +
                                 persona.getTelevisor()+ "," +
-                                persona.getTelevisorCantidad());
+                                persona.getTelevisorCantidad()
+                );
 
                 escribir.newLine();
                 escribir.close();
 
             } catch (IOException ex) {
                 System.out.println(ex);
+            }
+            break;
+            case "Seguro Vida":
+            {
+                try {
+                    BufferedWriter escribir = new BufferedWriter(new FileWriter("seguros.txt",true));
+                    escribir.write(persona.getTipoSeguro()+ "," +
+                            persona.getCuit() + "," +
+                            persona.getNombre() + "," +
+                            persona.getTelefono() + "," +
+                            persona.getMail() + "," +
+                            persona.getMuerte() + "," +
+                            persona.getMuerteAccidental() + "," +
+                            persona.getInternacion()+ "," +
+                            persona.getInternacionDias()+ "," +
+                            persona.getParalisis()                                
+                    );
+
+                escribir.newLine();
+                escribir.close();
+                } catch (IOException ex) {
+                    System.out.println(ex);
+                }
             }
         }    
     }   

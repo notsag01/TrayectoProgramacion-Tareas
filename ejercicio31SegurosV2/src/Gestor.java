@@ -50,7 +50,7 @@ public class Gestor extends javax.swing.JFrame {
     String tipoSeguro, cuit, nombre,telefono, mail;
     String incendio,robo,inundacion;
     String heladera,lavarropas,cocina,notebook,notebookCantidad,consola,televisor,televisorCantidad;
-    String muerte, muerteAccidental,inernacion,internacionDias,paralisis;
+    String muerte, muerteAccidental,internacion,internacionDias,paralisis;
         
     public void getDatosPerosonaHogar(){
         tipoSeguro="Seguro Hogar";
@@ -103,14 +103,58 @@ public class Gestor extends javax.swing.JFrame {
             televisorCantidad= jTextField_televisorCantidad.getText();
         }else{
             televisor="-";
-        }
-        
+        } 
         
         Personas persona = new Personas(tipoSeguro,cuit,nombre,
                 telefono,mail,incendio,robo,inundacion,
-                heladera,lavarropas,cocina,notebook,notebookCantidad,consola,televisor,televisorCantidad);
+                heladera,lavarropas);
         Archivo archivo =new Archivo();
         archivo.escribirArchivo(persona);
+    }
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////
+    public void getDatosPerosonaVida(){
+        tipoSeguro="Seguro Vida";
+        cuit=jTextField_id.getText();
+        nombre=jTextField_nombre.getText();
+        telefono=jTextField_telefono.getText();
+        mail=jTextField_mail.getText();
+        
+         if(jCheckBox_muerte.isSelected()){
+            muerte=jCheckBox_muerte.getText();
+        }else{
+            muerte="-";
+        }
+        if(jCheckBox_muerteAccidental.isSelected()){
+            muerteAccidental=jCheckBox_muerteAccidental.getText();
+        }else{
+            muerteAccidental="-";
+        }
+        if(jCheckBox_internacion.isSelected()){
+            internacion=jCheckBox_internacion.getText();
+            internacionDias=jTextField_internacionDias.getText();
+        }else{
+            internacion="-";
+        }
+        if(jCheckBox_paralisis.isSelected()){
+            paralisis=jCheckBox_paralisis.getText();
+        }else{
+            paralisis="-";
+        }
+        
+        Personas persona = new Personas(tipoSeguro,
+                cuit,
+                nombre,
+                telefono,
+                mail,
+                muerte,
+                muerteAccidental,
+                internacion,
+                internacionDias,
+                paralisis);
+                
+        Archivo archivo =new Archivo();
+        archivo.escribirArchivo(persona);
+        
     }
     
     

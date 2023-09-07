@@ -4,29 +4,25 @@ public class Personas {
     String tipoSeguro, cuit, nombre, telefono, mail,
             incendio,robo,inundacion,
             heladera,lavarropas,cocina,notebook,notebookCantidad,consola,televisor,televisorCantidad;
-    //String muerte, muerteAccidental,inernacion,internacionDias,paralisis;
+    String muerte, muerteAccidental,internacion,internacionDias,paralisis;
     
     public Personas(String tipoSeguro,
             String cuit,
             String nombre,
             String telefono,
             String mail,
-            String incendio,
-            String robo,
-            String inundacion,
-            String heladera,
+            String incendio, 
+            String robo, 
+            String inundacion, 
+            String heladera, 
             String lavarropas,
             String cocina,
             String notebook,
             String notebookCantidad,
-            String conosla,
+            String consola,
             String televisor,
             String televisorCantidad
-//            String muerte,
-//            String muerteAccidental,
-//            String internacion,
-//            String internacionDias,
-//            String paralisis
+    
     ){
         
         this.tipoSeguro=tipoSeguro;
@@ -45,6 +41,28 @@ public class Personas {
         this.consola=consola;
         this.televisor=televisor;
         this.televisorCantidad=televisorCantidad;
+    }
+    
+    public Personas(String tipoSeguro,
+            String cuit,
+            String nombre,
+            String telefono,
+            String mail,
+            String muerte, 
+            String muerteAccidental, 
+            String internacion, 
+            String internacionDias, String paralisis){
+        
+        this.tipoSeguro=tipoSeguro;
+        this.cuit=cuit;
+        this.nombre=nombre;
+        this.telefono=telefono;
+        this.mail=mail;
+        this.muerte=muerte;
+        this.muerteAccidental=muerteAccidental;
+        this.internacion=internacion;
+        this.internacionDias=internacionDias;
+        this.paralisis=paralisis;
     }
 
     public String getTipoSeguro() {
@@ -109,6 +127,26 @@ public class Personas {
 
     public String getTelevisorCantidad() {
         return televisorCantidad;
+    }
+
+    public String getMuerte() {
+        return muerte;
+    }
+
+    public String getMuerteAccidental() {
+        return muerteAccidental;
+    }
+
+    public String getInternacion() {
+        return internacion;
+    }
+
+    public String getInternacionDias() {
+        return internacionDias;
+    }
+
+    public String getParalisis() {
+        return paralisis;
     }
     
 }
