@@ -38,7 +38,7 @@ public class Gestor extends javax.swing.JFrame {
         frasesAleatorias();
     }
     
-    String tipoSeguro, cuit, nombre,telefono, mail;
+    String tipoSeguro, cuit, nombre,telefono, mail,incendio,robo,inundacion;
     
     public void getDatosPerosona(){
         tipoSeguro="Seguro Hogar";
@@ -46,8 +46,14 @@ public class Gestor extends javax.swing.JFrame {
         nombre=jTextField_nombre.getText();
         telefono=jTextField_telefono.getText();
         mail=jTextField_mail.getText();
+        Object modeloObject=jComboBox_incendio.getSelectedItem();
+        if(modeloObject!=null){       
+            incendio=modeloObject.toString();
+        }else{ jComboBox_incendio.setBorder(bordeError);}
+        robo=(String)jComboBox_robo.getItemAt(indice);
+        inundacion=(String)jComboBox_inundacion.getItemAt(indice);
         
-        Personas persona = new Personas(tipoSeguro,cuit,nombre,telefono,mail);
+        Personas persona = new Personas(tipoSeguro,cuit,nombre,telefono,mail,incendio,robo,inundacion);
         Archivo archivo =new Archivo();
         archivo.escribirArchivo(persona);
     }
@@ -73,9 +79,9 @@ public class Gestor extends javax.swing.JFrame {
         jCheckBox2 = new javax.swing.JCheckBox();
         jCheckBox3 = new javax.swing.JCheckBox();
         jPanel9 = new javax.swing.JPanel();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jComboBox2 = new javax.swing.JComboBox<>();
-        jComboBox3 = new javax.swing.JComboBox<>();
+        jComboBox_incendio = new javax.swing.JComboBox<>();
+        jComboBox_robo = new javax.swing.JComboBox<>();
+        jComboBox_inundacion = new javax.swing.JComboBox<>();
         jPanel10 = new javax.swing.JPanel();
         jCheckBox4 = new javax.swing.JCheckBox();
         jCheckBox5 = new javax.swing.JCheckBox();
@@ -209,22 +215,22 @@ public class Gestor extends javax.swing.JFrame {
         jPanel9.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Tipo de Cobertura", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 12), new java.awt.Color(255, 51, 51))); // NOI18N
         jPanel9.setOpaque(false);
 
-        jComboBox1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "Parcial", "Total" }));
-        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+        jComboBox_incendio.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jComboBox_incendio.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "Parcial", "Total" }));
+        jComboBox_incendio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox1ActionPerformed(evt);
+                jComboBox_incendioActionPerformed(evt);
             }
         });
 
-        jComboBox2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "Parcial", "Total" }));
+        jComboBox_robo.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jComboBox_robo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "Parcial", "Total" }));
 
-        jComboBox3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "Parcial", "Total" }));
-        jComboBox3.addActionListener(new java.awt.event.ActionListener() {
+        jComboBox_inundacion.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jComboBox_inundacion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "Parcial", "Total" }));
+        jComboBox_inundacion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox3ActionPerformed(evt);
+                jComboBox_inundacionActionPerformed(evt);
             }
         });
 
@@ -235,20 +241,20 @@ public class Gestor extends javax.swing.JFrame {
             .addGroup(jPanel9Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jComboBox1, 0, 119, Short.MAX_VALUE)
-                    .addComponent(jComboBox2, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jComboBox3, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jComboBox_incendio, 0, 119, Short.MAX_VALUE)
+                    .addComponent(jComboBox_robo, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jComboBox_inundacion, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         jPanel9Layout.setVerticalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel9Layout.createSequentialGroup()
                 .addGap(22, 22, 22)
-                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jComboBox_incendio, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(36, 36, 36)
-                .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jComboBox_robo, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
-                .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jComboBox_inundacion, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(33, 33, 33))
         );
 
@@ -1044,13 +1050,13 @@ public class Gestor extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+    private void jComboBox_incendioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox_incendioActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox1ActionPerformed
+    }//GEN-LAST:event_jComboBox_incendioActionPerformed
 
-    private void jComboBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox3ActionPerformed
+    private void jComboBox_inundacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox_inundacionActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox3ActionPerformed
+    }//GEN-LAST:event_jComboBox_inundacionActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         System.exit(0);
@@ -1235,16 +1241,16 @@ public class Gestor extends javax.swing.JFrame {
     private javax.swing.JCheckBox jCheckBox_terceroCompleto;
     private javax.swing.JCheckBox jCheckBox_todoRiesgoCF;
     private javax.swing.JCheckBox jCheckBox_todoRiesgoSF;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox2;
-    private javax.swing.JComboBox<String> jComboBox3;
     private javax.swing.JComboBox<String> jComboBox4;
     private javax.swing.JComboBox<String> jComboBox5;
     private javax.swing.JComboBox<String> jComboBox6;
     private javax.swing.JComboBox<String> jComboBox7;
     private javax.swing.JComboBox<String> jComboBox_franquicia;
+    private javax.swing.JComboBox<String> jComboBox_incendio;
+    private javax.swing.JComboBox<String> jComboBox_inundacion;
     private javax.swing.JComboBox<String> jComboBox_marcas;
     private javax.swing.JComboBox<String> jComboBox_modelos;
+    private javax.swing.JComboBox<String> jComboBox_robo;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;

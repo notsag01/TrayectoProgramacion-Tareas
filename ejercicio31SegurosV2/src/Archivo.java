@@ -15,20 +15,26 @@ public class Archivo {
     }
     
     public void escribirArchivo(Personas persona){
-        try {
-            BufferedWriter escribir = new BufferedWriter(new FileWriter("seguros.txt",true));
-            escribir.write(persona.getTipoSeguro() + "," +
-                            persona.getCuit() + "," +
-                            persona.getNombre() + "," +
-                            persona.getTelefono() + "," +
-                            persona.getMail());
-                            
-            escribir.newLine();
-            escribir.close();
-            
-        } catch (IOException ex) {
-            System.out.println(ex);
-        }
+        switch(persona.getTipoSeguro()){
+            case "Seguro Hogar":
+            try {
+                BufferedWriter escribir = new BufferedWriter(new FileWriter("seguros.txt",true));
+                escribir.write(persona.getTipoSeguro() + "," +
+                                persona.getCuit() + "," +
+                                persona.getNombre() + "," +
+                                persona.getTelefono() + "," +
+                                persona.getMail()+ "," +
+                                persona.getIncendio() + "," +
+                                persona.getRobo() + "," +
+                                persona.getInundacion());
+
+                escribir.newLine();
+                escribir.close();
+
+            } catch (IOException ex) {
+                System.out.println(ex);
+            }
+        }    
     }   
     
 }
