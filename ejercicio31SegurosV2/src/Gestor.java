@@ -44,13 +44,15 @@ public class Gestor extends javax.swing.JFrame {
         jComboBox_inundacion.setEnabled(false);
         jTextField_notebooksCantidad.setEnabled(false);
         jTextField_televisorCantidad.setEnabled(false);
+        jTextField_internacionDias.setEnabled(false);
     }
     
     String tipoSeguro, cuit, nombre,telefono, mail;
     String incendio,robo,inundacion;
     String heladera,lavarropas,cocina,notebook,notebookCantidad,consola,televisor,televisorCantidad;
+    String muerte, muerteAccidental,inernacion,internacionDias,paralisis;
         
-    public void getDatosPerosona(){
+    public void getDatosPerosonaHogar(){
         tipoSeguro="Seguro Hogar";
         cuit=jTextField_id.getText();
         nombre=jTextField_nombre.getText();
@@ -151,12 +153,12 @@ public class Gestor extends javax.swing.JFrame {
         jPanel4 = new javax.swing.JPanel();
         jPanel12 = new javax.swing.JPanel();
         jPanel13 = new javax.swing.JPanel();
-        jCheckBox10 = new javax.swing.JCheckBox();
-        jCheckBox11 = new javax.swing.JCheckBox();
-        jCheckBox12 = new javax.swing.JCheckBox();
-        jCheckBox13 = new javax.swing.JCheckBox();
+        jCheckBox_muerte = new javax.swing.JCheckBox();
+        jCheckBox_muerteAccidental = new javax.swing.JCheckBox();
+        jCheckBox_internacion = new javax.swing.JCheckBox();
+        jCheckBox_paralisis = new javax.swing.JCheckBox();
         jLabel12 = new javax.swing.JLabel();
-        jTextField7 = new javax.swing.JTextField();
+        jTextField_internacionDias = new javax.swing.JTextField();
         jPanel14 = new javax.swing.JPanel();
         jTextField8 = new javax.swing.JTextField();
         jTextField9 = new javax.swing.JTextField();
@@ -502,23 +504,28 @@ public class Gestor extends javax.swing.JFrame {
         jPanel13.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Coberturas", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14), new java.awt.Color(0, 204, 51))); // NOI18N
         jPanel13.setOpaque(false);
 
-        jCheckBox10.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jCheckBox10.setText("Muerte");
+        jCheckBox_muerte.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jCheckBox_muerte.setText("Muerte");
 
-        jCheckBox11.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jCheckBox11.setText("Muerte Accidental");
+        jCheckBox_muerteAccidental.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jCheckBox_muerteAccidental.setText("Muerte Accidental");
 
-        jCheckBox12.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jCheckBox12.setText("Dias de Internacion");
+        jCheckBox_internacion.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jCheckBox_internacion.setText("Dias de Internacion");
+        jCheckBox_internacion.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jCheckBox_internacionItemStateChanged(evt);
+            }
+        });
 
-        jCheckBox13.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jCheckBox13.setText("Paralisis Total o Parcial");
+        jCheckBox_paralisis.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jCheckBox_paralisis.setText("Paralisis Total o Parcial");
 
         jLabel12.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel12.setText("Dias:");
 
-        jTextField7.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jTextField7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jTextField_internacionDias.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jTextField_internacionDias.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         javax.swing.GroupLayout jPanel13Layout = new javax.swing.GroupLayout(jPanel13);
         jPanel13.setLayout(jPanel13Layout);
@@ -527,30 +534,30 @@ public class Gestor extends javax.swing.JFrame {
             .addGroup(jPanel13Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jCheckBox13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jCheckBox12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jCheckBox11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jCheckBox10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jCheckBox_paralisis, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jCheckBox_internacion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jCheckBox_muerteAccidental, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jCheckBox_muerte, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jTextField_internacionDias, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel13Layout.setVerticalGroup(
             jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel13Layout.createSequentialGroup()
                 .addGap(22, 22, 22)
-                .addComponent(jCheckBox10, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jCheckBox_muerte, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jCheckBox11, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jCheckBox_muerteAccidental, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCheckBox12, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jCheckBox_internacion, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel12)
-                    .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextField_internacionDias, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(jCheckBox13, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jCheckBox_paralisis, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -1253,7 +1260,7 @@ public class Gestor extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton_seguroVehiculosActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        getDatosPerosona();
+        getDatosPerosonaHogar();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jCheckBox_incendioItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jCheckBox_incendioItemStateChanged
@@ -1289,6 +1296,14 @@ public class Gestor extends javax.swing.JFrame {
             jTextField_televisorCantidad.setEnabled(false);
         }
     }//GEN-LAST:event_jCheckBox_televisorItemStateChanged
+
+    private void jCheckBox_internacionItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jCheckBox_internacionItemStateChanged
+        if(jCheckBox_internacion.isSelected()){
+            jTextField_internacionDias.setEnabled(true);
+        }else{
+            jTextField_internacionDias.setEnabled(false);
+        }
+    }//GEN-LAST:event_jCheckBox_internacionItemStateChanged
 
     /**
      * @param args the command line arguments
@@ -1335,18 +1350,18 @@ public class Gestor extends javax.swing.JFrame {
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton_seguroVehiculos;
-    private javax.swing.JCheckBox jCheckBox10;
-    private javax.swing.JCheckBox jCheckBox11;
-    private javax.swing.JCheckBox jCheckBox12;
-    private javax.swing.JCheckBox jCheckBox13;
     private javax.swing.JCheckBox jCheckBox_cocina;
     private javax.swing.JCheckBox jCheckBox_consola;
     private javax.swing.JCheckBox jCheckBox_granizo;
     private javax.swing.JCheckBox jCheckBox_heladera;
     private javax.swing.JCheckBox jCheckBox_incendio;
+    private javax.swing.JCheckBox jCheckBox_internacion;
     private javax.swing.JCheckBox jCheckBox_inundacion;
     private javax.swing.JCheckBox jCheckBox_lavarropas;
+    private javax.swing.JCheckBox jCheckBox_muerte;
+    private javax.swing.JCheckBox jCheckBox_muerteAccidental;
     private javax.swing.JCheckBox jCheckBox_notebooks;
+    private javax.swing.JCheckBox jCheckBox_paralisis;
     private javax.swing.JCheckBox jCheckBox_responsabilidadCivil;
     private javax.swing.JCheckBox jCheckBox_robo;
     private javax.swing.JCheckBox jCheckBox_televisor;
@@ -1407,12 +1422,12 @@ public class Gestor extends javax.swing.JFrame {
     private javax.swing.JTabbedPane jTabbedPane_seguroHogar;
     private javax.swing.JTextField jTextField10;
     private javax.swing.JTextField jTextField11;
-    private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField8;
     private javax.swing.JTextField jTextField9;
     private javax.swing.JTextField jTextField_anio;
     private javax.swing.JTextField jTextField_dominio;
     private javax.swing.JTextField jTextField_id;
+    private javax.swing.JTextField jTextField_internacionDias;
     private javax.swing.JTextField jTextField_mail;
     private javax.swing.JTextField jTextField_nombre;
     private javax.swing.JTextField jTextField_notebooksCantidad;

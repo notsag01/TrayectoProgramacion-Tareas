@@ -4,6 +4,7 @@ public class Personas {
     String tipoSeguro, cuit, nombre, telefono, mail,
             incendio,robo,inundacion,
             heladera,lavarropas,cocina,notebook,notebookCantidad,consola,televisor,televisorCantidad;
+    //String muerte, muerteAccidental,inernacion,internacionDias,paralisis;
     
     public Personas(String tipoSeguro,
             String cuit,
@@ -20,7 +21,14 @@ public class Personas {
             String notebookCantidad,
             String conosla,
             String televisor,
-            String televisorCantidad){
+            String televisorCantidad
+//            String muerte,
+//            String muerteAccidental,
+//            String internacion,
+//            String internacionDias,
+//            String paralisis
+    ){
+        
         this.tipoSeguro=tipoSeguro;
         this.cuit=cuit;
         this.nombre= nombre;

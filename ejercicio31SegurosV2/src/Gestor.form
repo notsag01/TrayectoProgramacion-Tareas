@@ -656,15 +656,15 @@
                               <Group type="102" attributes="0">
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="jCheckBox13" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="jCheckBox12" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="jCheckBox11" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="jCheckBox10" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="jCheckBox_paralisis" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="jCheckBox_internacion" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="jCheckBox_muerteAccidental" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="jCheckBox_muerte" alignment="0" max="32767" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="jLabel12" min="-2" pref="43" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jTextField7" min="-2" pref="71" max="-2" attributes="0"/>
+                                  <Component id="jTextField_internacionDias" min="-2" pref="71" max="-2" attributes="0"/>
                                   <EmptySpace max="32767" attributes="0"/>
                               </Group>
                           </Group>
@@ -673,24 +673,24 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
-                                  <Component id="jCheckBox10" min="-2" pref="25" max="-2" attributes="0"/>
+                                  <Component id="jCheckBox_muerte" min="-2" pref="25" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="jCheckBox11" min="-2" pref="25" max="-2" attributes="0"/>
+                                  <Component id="jCheckBox_muerteAccidental" min="-2" pref="25" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="jCheckBox12" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                                      <Component id="jCheckBox_internacion" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                                       <Component id="jLabel12" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTextField7" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jTextField_internacionDias" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="jCheckBox13" min="-2" pref="25" max="-2" attributes="0"/>
+                                  <Component id="jCheckBox_paralisis" min="-2" pref="25" max="-2" attributes="0"/>
                                   <EmptySpace max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
                       </Layout>
                       <SubComponents>
-                        <Component class="javax.swing.JCheckBox" name="jCheckBox10">
+                        <Component class="javax.swing.JCheckBox" name="jCheckBox_muerte">
                           <Properties>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Segoe UI" size="14" style="1"/>
@@ -698,7 +698,7 @@
                             <Property name="text" type="java.lang.String" value="Muerte"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JCheckBox" name="jCheckBox11">
+                        <Component class="javax.swing.JCheckBox" name="jCheckBox_muerteAccidental">
                           <Properties>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Segoe UI" size="14" style="1"/>
@@ -706,15 +706,18 @@
                             <Property name="text" type="java.lang.String" value="Muerte Accidental"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JCheckBox" name="jCheckBox12">
+                        <Component class="javax.swing.JCheckBox" name="jCheckBox_internacion">
                           <Properties>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Segoe UI" size="14" style="1"/>
                             </Property>
                             <Property name="text" type="java.lang.String" value="Dias de Internacion"/>
                           </Properties>
+                          <Events>
+                            <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="jCheckBox_internacionItemStateChanged"/>
+                          </Events>
                         </Component>
-                        <Component class="javax.swing.JCheckBox" name="jCheckBox13">
+                        <Component class="javax.swing.JCheckBox" name="jCheckBox_paralisis">
                           <Properties>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Segoe UI" size="14" style="1"/>
@@ -730,7 +733,7 @@
                             <Property name="text" type="java.lang.String" value="Dias:"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JTextField" name="jTextField7">
+                        <Component class="javax.swing.JTextField" name="jTextField_internacionDias">
                           <Properties>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Segoe UI" size="14" style="0"/>
