@@ -1,7 +1,0 @@
-Seguro Hogar,777777,gast,45454545,gast@gast
-Seguro Hogar,5,5,5,5,Total,Total,Total
-Seguro Hogar,5,5,5,5,Total,Total,Total
-Seguro Hogar,5,5,5,5,Parcial,,
-Seguro Hogar,5,5,5,5,Total,Total,Total
-Seguro Hogar,6,6,6,6,Parcial,Total,Total
-Seguro Hogar,,,,,,,

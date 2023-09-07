@@ -46,15 +46,25 @@ public class Gestor extends javax.swing.JFrame {
     
     String tipoSeguro, cuit, nombre,telefono, mail,incendio,robo,inundacion;
     
+    
     public void getDatosPerosona(){
         tipoSeguro="Seguro Hogar";
         cuit=jTextField_id.getText();
         nombre=jTextField_nombre.getText();
         telefono=jTextField_telefono.getText();
-        mail=jTextField_mail.getText();
+        mail=jTextField_mail.getText();        
         incendio=(String)jComboBox_incendio.getSelectedItem();
+        if(incendio.equals("")){
+            incendio="-";
+        }
         robo=(String)jComboBox_robo.getSelectedItem();
+        if(robo.equals("")){
+            robo="-";
+        }
         inundacion=(String)jComboBox_inundacion.getSelectedItem();
+        if(inundacion.equals("")){
+            inundacion="-";
+        }
         
         
         Personas persona = new Personas(tipoSeguro,cuit,nombre,telefono,mail,incendio,robo,inundacion);
