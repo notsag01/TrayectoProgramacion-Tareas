@@ -26,7 +26,15 @@ public class Archivo {
                                 persona.getMail()+ "," +
                                 persona.getIncendio() + "," +
                                 persona.getRobo() + "," +
-                                persona.getInundacion());
+                                persona.getInundacion() + "," +
+                                persona.getHeladera()+ "," +
+                                persona.getLavarropas()+ "," +
+                                persona.getCocina()+ "," +
+                                persona.getNotebook()+ "," +
+                                persona.getNotebookCantidad()+ "," +
+                                persona.getConsola()+ "," +
+                                persona.getTelevisor()+ "," +
+                                persona.getTelevisorCantidad());
 
                 escribir.newLine();
                 escribir.close();
