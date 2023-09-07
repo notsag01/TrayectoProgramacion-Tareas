@@ -371,7 +371,7 @@
                                               <Component id="jCheckBox_consola" max="32767" attributes="0"/>
                                           </Group>
                                           <Group type="102" attributes="0">
-                                              <Component id="jCheckBox_helader" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jCheckBox_heladera" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace type="separate" max="-2" attributes="0"/>
                                               <Component id="jCheckBox_notebooks" min="-2" pref="98" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
@@ -388,7 +388,7 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="jCheckBox_helader" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                                      <Component id="jCheckBox_heladera" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                                       <Component id="jCheckBox_notebooks" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                                       <Component id="jTextField_notebooksCantidad" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
@@ -409,7 +409,7 @@
                         </DimensionLayout>
                       </Layout>
                       <SubComponents>
-                        <Component class="javax.swing.JCheckBox" name="jCheckBox_helader">
+                        <Component class="javax.swing.JCheckBox" name="jCheckBox_heladera">
                           <Properties>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Tahoma" size="14" style="1"/>
@@ -417,7 +417,7 @@
                             <Property name="text" type="java.lang.String" value="Heladera"/>
                           </Properties>
                           <Events>
-                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBox_heladerActionPerformed"/>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBox_heladeraActionPerformed"/>
                           </Events>
                         </Component>
                         <Component class="javax.swing.JCheckBox" name="jCheckBox_lavarropas">

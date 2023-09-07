@@ -46,9 +46,10 @@ public class Gestor extends javax.swing.JFrame {
         jTextField_televisorCantidad.setEnabled(false);
     }
     
-    String tipoSeguro, cuit, nombre,telefono, mail,incendio,robo,inundacion;
-    
-    
+    String tipoSeguro, cuit, nombre,telefono, mail;
+    String incendio,robo,inundacion;
+    String heladera,lavarropas,cocina,notebook,notebookCantidad,consola,televisor,televisorCantidad;
+        
     public void getDatosPerosona(){
         tipoSeguro="Seguro Hogar";
         cuit=jTextField_id.getText();
@@ -69,6 +70,11 @@ public class Gestor extends javax.swing.JFrame {
             inundacion="-";
         }
         
+        if(jCheckBox_heladera.isSelected()){
+            heladera=jCheckBox_heladera.getText();
+        }else{
+            heladera="-";
+        }
         
         Personas persona = new Personas(tipoSeguro,cuit,nombre,telefono,mail,incendio,robo,inundacion);
         Archivo archivo =new Archivo();
@@ -100,7 +106,7 @@ public class Gestor extends javax.swing.JFrame {
         jComboBox_robo = new javax.swing.JComboBox<>();
         jComboBox_inundacion = new javax.swing.JComboBox<>();
         jPanel10 = new javax.swing.JPanel();
-        jCheckBox_helader = new javax.swing.JCheckBox();
+        jCheckBox_heladera = new javax.swing.JCheckBox();
         jCheckBox_lavarropas = new javax.swing.JCheckBox();
         jCheckBox_cocina = new javax.swing.JCheckBox();
         jCheckBox_notebooks = new javax.swing.JCheckBox();
@@ -293,11 +299,11 @@ public class Gestor extends javax.swing.JFrame {
         jPanel10.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Elementos Robados/Dañados", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 12), new java.awt.Color(255, 51, 51))); // NOI18N
         jPanel10.setOpaque(false);
 
-        jCheckBox_helader.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jCheckBox_helader.setText("Heladera");
-        jCheckBox_helader.addActionListener(new java.awt.event.ActionListener() {
+        jCheckBox_heladera.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jCheckBox_heladera.setText("Heladera");
+        jCheckBox_heladera.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox_heladerActionPerformed(evt);
+                jCheckBox_heladeraActionPerformed(evt);
             }
         });
 
@@ -349,7 +355,7 @@ public class Gestor extends javax.swing.JFrame {
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                             .addComponent(jCheckBox_consola, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGroup(jPanel10Layout.createSequentialGroup()
-                            .addComponent(jCheckBox_helader)
+                            .addComponent(jCheckBox_heladera)
                             .addGap(18, 18, 18)
                             .addComponent(jCheckBox_notebooks, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -361,7 +367,7 @@ public class Gestor extends javax.swing.JFrame {
             .addGroup(jPanel10Layout.createSequentialGroup()
                 .addGap(25, 25, 25)
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCheckBox_helader, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jCheckBox_heladera, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jCheckBox_notebooks, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextField_notebooksCantidad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(36, 36, 36)
@@ -1116,9 +1122,9 @@ public class Gestor extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_jButton6ActionPerformed
 
-    private void jCheckBox_heladerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox_heladerActionPerformed
+    private void jCheckBox_heladeraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox_heladeraActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox_heladerActionPerformed
+    }//GEN-LAST:event_jCheckBox_heladeraActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
@@ -1306,7 +1312,7 @@ public class Gestor extends javax.swing.JFrame {
     private javax.swing.JCheckBox jCheckBox_cocina;
     private javax.swing.JCheckBox jCheckBox_consola;
     private javax.swing.JCheckBox jCheckBox_granizo;
-    private javax.swing.JCheckBox jCheckBox_helader;
+    private javax.swing.JCheckBox jCheckBox_heladera;
     private javax.swing.JCheckBox jCheckBox_incendio;
     private javax.swing.JCheckBox jCheckBox_inundacion;
     private javax.swing.JCheckBox jCheckBox_lavarropas;
