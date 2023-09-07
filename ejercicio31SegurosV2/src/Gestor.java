@@ -31,11 +31,17 @@ public class Gestor extends javax.swing.JFrame {
          timer.start();
      }
      Border bordeError = BorderFactory.createLineBorder(Color.RED);
+     
+     
 
     public Gestor() {
         initComponents();
         this.setLocationRelativeTo(null);
-        frasesAleatorias();
+        frasesAleatorias(); 
+        
+        jComboBox_incendio.setEnabled(false);
+        jComboBox_robo.setEnabled(false);
+        jComboBox_inundacion.setEnabled(false);
     }
     
     String tipoSeguro, cuit, nombre,telefono, mail,incendio,robo,inundacion;
@@ -73,9 +79,9 @@ public class Gestor extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jPanel7 = new javax.swing.JPanel();
         jPanel8 = new javax.swing.JPanel();
-        jCheckBox1 = new javax.swing.JCheckBox();
-        jCheckBox2 = new javax.swing.JCheckBox();
-        jCheckBox3 = new javax.swing.JCheckBox();
+        jCheckBox_incendio = new javax.swing.JCheckBox();
+        jCheckBox_robo = new javax.swing.JCheckBox();
+        jCheckBox_inundacion = new javax.swing.JCheckBox();
         jPanel9 = new javax.swing.JPanel();
         jComboBox_incendio = new javax.swing.JComboBox<>();
         jComboBox_robo = new javax.swing.JComboBox<>();
@@ -175,14 +181,29 @@ public class Gestor extends javax.swing.JFrame {
         jPanel8.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createTitledBorder(null, "Coberturas", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 12), new java.awt.Color(255, 51, 255)), "Cobertura", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 12), new java.awt.Color(255, 51, 51))); // NOI18N
         jPanel8.setOpaque(false);
 
-        jCheckBox1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jCheckBox1.setText("Incendio");
+        jCheckBox_incendio.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jCheckBox_incendio.setText("Incendio");
+        jCheckBox_incendio.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jCheckBox_incendioItemStateChanged(evt);
+            }
+        });
 
-        jCheckBox2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jCheckBox2.setText("Robo");
+        jCheckBox_robo.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jCheckBox_robo.setText("Robo");
+        jCheckBox_robo.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jCheckBox_roboItemStateChanged(evt);
+            }
+        });
 
-        jCheckBox3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jCheckBox3.setText("Inundacion");
+        jCheckBox_inundacion.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jCheckBox_inundacion.setText("Inundacion");
+        jCheckBox_inundacion.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jCheckBox_inundacionItemStateChanged(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
@@ -191,22 +212,22 @@ public class Gestor extends javax.swing.JFrame {
             .addGroup(jPanel8Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jCheckBox3, javax.swing.GroupLayout.DEFAULT_SIZE, 127, Short.MAX_VALUE)
+                    .addComponent(jCheckBox_inundacion, javax.swing.GroupLayout.DEFAULT_SIZE, 127, Short.MAX_VALUE)
                     .addGroup(jPanel8Layout.createSequentialGroup()
-                        .addComponent(jCheckBox1)
+                        .addComponent(jCheckBox_incendio)
                         .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(jCheckBox2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jCheckBox_robo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel8Layout.createSequentialGroup()
                 .addGap(21, 21, 21)
-                .addComponent(jCheckBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jCheckBox_incendio, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(33, 33, 33)
-                .addComponent(jCheckBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jCheckBox_robo, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jCheckBox3, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jCheckBox_inundacion, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(34, 34, 34))
         );
 
@@ -1176,6 +1197,24 @@ public class Gestor extends javax.swing.JFrame {
         getDatosPerosona();
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void jCheckBox_incendioItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jCheckBox_incendioItemStateChanged
+       if(jCheckBox_incendio.isSelected()){
+            jComboBox_incendio.setEnabled(true);
+        }else{jComboBox_incendio.setEnabled(false);}
+    }//GEN-LAST:event_jCheckBox_incendioItemStateChanged
+
+    private void jCheckBox_roboItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jCheckBox_roboItemStateChanged
+        if(jCheckBox_robo.isSelected()){
+            jComboBox_robo.setEnabled(true);
+        }else{jComboBox_robo.setEnabled(false);}
+    }//GEN-LAST:event_jCheckBox_roboItemStateChanged
+
+    private void jCheckBox_inundacionItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jCheckBox_inundacionItemStateChanged
+        if(jCheckBox_inundacion.isSelected()){
+            jComboBox_inundacion.setEnabled(true);
+        }else{jComboBox_inundacion.setEnabled(false);}
+    }//GEN-LAST:event_jCheckBox_inundacionItemStateChanged
+
     /**
      * @param args the command line arguments
      */
@@ -1221,13 +1260,10 @@ public class Gestor extends javax.swing.JFrame {
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton_seguroVehiculos;
-    private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JCheckBox jCheckBox10;
     private javax.swing.JCheckBox jCheckBox11;
     private javax.swing.JCheckBox jCheckBox12;
     private javax.swing.JCheckBox jCheckBox13;
-    private javax.swing.JCheckBox jCheckBox2;
-    private javax.swing.JCheckBox jCheckBox3;
     private javax.swing.JCheckBox jCheckBox4;
     private javax.swing.JCheckBox jCheckBox5;
     private javax.swing.JCheckBox jCheckBox6;
@@ -1235,7 +1271,10 @@ public class Gestor extends javax.swing.JFrame {
     private javax.swing.JCheckBox jCheckBox8;
     private javax.swing.JCheckBox jCheckBox9;
     private javax.swing.JCheckBox jCheckBox_granizo;
+    private javax.swing.JCheckBox jCheckBox_incendio;
+    private javax.swing.JCheckBox jCheckBox_inundacion;
     private javax.swing.JCheckBox jCheckBox_responsabilidadCivil;
+    private javax.swing.JCheckBox jCheckBox_robo;
     private javax.swing.JCheckBox jCheckBox_terceroCompleto;
     private javax.swing.JCheckBox jCheckBox_todoRiesgoCF;
     private javax.swing.JCheckBox jCheckBox_todoRiesgoSF;
