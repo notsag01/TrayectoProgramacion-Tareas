@@ -1,2 +1,7 @@
-Seguro Hogar,555,Gaston,45454545,gast@gast,Parcial,-,Total,Cocina,-,null,Noteboks,2,null,Televisor,3
-Seguro Vida,7,7,7,7,Muerte,-,Dias de Internacion,7,-
+Seguro Hogar,666,gaston,4545454545,gast@gast,null,null,null,null,null,null,null,null,null,null,null
+Seguro Vida,666,gaston,4545454545,gast@gast,Muerte,-,Dias de Internacion,10,-
+Seguro Hogar,777,val,5656,val,null,null,null,null,null,null,null,null,null,null,null
+Seguro Hogar,papita,patoa,petete,ppaa,null,null,null,null,null,null,null,null,null,null,null
+Seguro Vida,papita,patoa,petete,ppaa,Muerte,Muerte Accidental,-,null,Paralisis Total o Parcial
+Seguro Hogar,11111111,1111111111,111111111111,1111111111111,Total,Parcial,-,Heladera,-,-,-,null,-,Televisor,3
+Seguro Vida,11111111,1111111111,111111111111,1111111111111,Muerte,-,Dias de Internacion,100,-

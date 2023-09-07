@@ -45,7 +45,6 @@ public class Archivo {
             }
             break;
             case "Seguro Vida":
-                System.out.println(persona.tipoSeguro);
             {
                 try {
                     BufferedWriter escribir = new BufferedWriter(new FileWriter("seguros.txt",true));

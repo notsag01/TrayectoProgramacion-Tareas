@@ -105,9 +105,10 @@ public class Gestor extends javax.swing.JFrame {
             televisor="-";
         } 
         
-        Personas persona = new Personas(tipoSeguro,cuit,nombre,
-                telefono,mail,incendio,robo,inundacion,
-                heladera,lavarropas);
+        Personas persona = new Personas(
+                tipoSeguro,cuit,nombre, telefono,mail, 
+                incendio,robo,inundacion,heladera,lavarropas,cocina,notebook,notebookCantidad,consola,televisor,televisorCantidad
+        );
         Archivo archivo =new Archivo();
         archivo.escribirArchivo(persona);
     }
