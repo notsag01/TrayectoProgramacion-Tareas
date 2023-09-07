@@ -46,12 +46,10 @@ public class Gestor extends javax.swing.JFrame {
         nombre=jTextField_nombre.getText();
         telefono=jTextField_telefono.getText();
         mail=jTextField_mail.getText();
-        Object modeloObject=jComboBox_incendio.getSelectedItem();
-        if(modeloObject!=null){       
-            incendio=modeloObject.toString();
-        }else{ jComboBox_incendio.setBorder(bordeError);}
-        robo=(String)jComboBox_robo.getItemAt(indice);
-        inundacion=(String)jComboBox_inundacion.getItemAt(indice);
+        incendio=(String)jComboBox_incendio.getSelectedItem();
+        robo=(String)jComboBox_robo.getSelectedItem();
+        inundacion=(String)jComboBox_inundacion.getSelectedItem();
+        
         
         Personas persona = new Personas(tipoSeguro,cuit,nombre,telefono,mail,incendio,robo,inundacion);
         Archivo archivo =new Archivo();
