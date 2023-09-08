@@ -58,8 +58,7 @@ public class Gestor extends javax.swing.JFrame {
     String beneficiario1,beneficiario2,beneficiario3,beneficiario4;
     String beneficiario1_parentesco,beneficiario2_parentesco,beneficiario3_parentesco,beneficiario4_parentesco;
     String dominio, marcaSelec,modeloSelec,anio;
-    String terceroCompleto,responsabilidadCivil, todoRiesgoCF,todoRiesgoSF,granizo;
-    int franquicia;
+    String terceroCompleto,responsabilidadCivil, todoRiesgoCF,todoRiesgoSF,granizo, franquicia;    
         
     public void getDatosPerosonaHogar(){
         tipoSeguro="Seguro Hogar";
@@ -222,7 +221,7 @@ public class Gestor extends javax.swing.JFrame {
             if(jCheckBox_granizo.isSelected()){
                 granizo=jCheckBox_granizo.getText();
             }else{granizo="-";}
-            franquicia=(int)jComboBox_franquicia.getSelectedItem();
+            franquicia=(String)jComboBox_franquicia.getSelectedItem();
             
             Personas persona = new Personas(
                     tipoSeguro,
@@ -231,8 +230,7 @@ public class Gestor extends javax.swing.JFrame {
                     telefono,
                     mail,
                     dominio,marcaSelec,modeloSelec,anio,
-                    terceroCompleto,responsabilidadCivil,todoRiesgoCF,todoRiesgoSF,granizo,
-                    franquicia
+                    terceroCompleto,responsabilidadCivil,todoRiesgoCF,todoRiesgoSF,granizo, franquicia
             );
             Archivo archivo = new Archivo();
             archivo.escribirArchivo(persona);
@@ -1401,7 +1399,7 @@ public class Gestor extends javax.swing.JFrame {
     }//GEN-LAST:event_jCheckBox_granizoItemStateChanged
 
     private void jButton_seguroVehiculosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_seguroVehiculosActionPerformed
-        
+        getDatosPerosonaVehiculos();
     }//GEN-LAST:event_jButton_seguroVehiculosActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed

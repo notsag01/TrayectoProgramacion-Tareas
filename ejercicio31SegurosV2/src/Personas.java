@@ -9,7 +9,7 @@ public class Personas {
     String beneficiario1_parentesco,beneficiario2_parentesco,beneficiario3_parentesco,beneficiario4_parentesco;
     String dominio, marcaSelec,modeloSelec,anio;
     String terceroCompleto,responsabilidadCivil, todoRiesgoCF,todoRiesgoSF,granizo;
-    int franquicia;
+    String franquicia;
     
     public Personas(String tipoSeguro,
             String cuit,
@@ -106,7 +106,7 @@ public class Personas {
             String todoRiesgoCF,
             String todoRiesgoSF,
             String granizo,
-            int franquicia
+            String franquicia
     ){
         this.tipoSeguro=tipoSeguro;
         this.cuit=cuit;
@@ -277,7 +277,7 @@ public class Personas {
         return granizo;
     }
 
-    public int getFranquicia() {
+    public String getFranquicia() {
         return franquicia;
     }
     

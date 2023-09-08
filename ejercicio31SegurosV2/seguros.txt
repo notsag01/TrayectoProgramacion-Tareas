@@ -1,0 +1,3 @@
+Seguro Hogar,666,gaston,45454545,gast@gast,Parcial,Total,-,Heladera,-,-,Noteboks,2,-,Televisor,4
+Seguro Vida,666,gaston,45454545,gast@gast,Muerte,-,Dias de Internacion,10,-,Roberto,Hijo/a,,,,,,
+Seguro Automotor,888,gast,56565656,gast,555,FIAT,UNO,1000,-,Responsabilidad Civil,Responsabilidad Civil,Todo Riesgo con Franquicia,-,-,40.000
