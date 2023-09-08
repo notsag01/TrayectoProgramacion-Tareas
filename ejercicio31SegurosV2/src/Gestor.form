@@ -766,17 +766,17 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jTextField8" pref="187" max="32767" attributes="0"/>
-                                      <Component id="jTextField9" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="jTextField10" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="jTextField11" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="jTextField_beneficiario1" pref="187" max="32767" attributes="0"/>
+                                      <Component id="jTextField_beneficiario2" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="jTextField_beneficiario3" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="jTextField_beneficiario4" alignment="0" max="32767" attributes="0"/>
                                   </Group>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                      <Component id="jComboBox4" pref="108" max="32767" attributes="0"/>
-                                      <Component id="jComboBox5" alignment="1" max="32767" attributes="0"/>
-                                      <Component id="jComboBox6" alignment="1" max="32767" attributes="0"/>
-                                      <Component id="jComboBox7" alignment="1" max="32767" attributes="0"/>
+                                      <Component id="jComboBox_beneficiario1" pref="108" max="32767" attributes="0"/>
+                                      <Component id="jComboBox_beneficiario2" alignment="1" max="32767" attributes="0"/>
+                                      <Component id="jComboBox_beneficiario3" alignment="1" max="32767" attributes="0"/>
+                                      <Component id="jComboBox_beneficiario4" alignment="1" max="32767" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                               </Group>
@@ -787,23 +787,23 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="jTextField8" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
-                                      <Component id="jComboBox4" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jTextField_beneficiario1" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                                      <Component id="jComboBox_beneficiario1" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="jTextField9" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
-                                      <Component id="jComboBox5" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jTextField_beneficiario2" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                                      <Component id="jComboBox_beneficiario2" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="jTextField10" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
-                                      <Component id="jComboBox6" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jTextField_beneficiario3" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                                      <Component id="jComboBox_beneficiario3" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="jTextField11" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
-                                      <Component id="jComboBox7" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jTextField_beneficiario4" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                                      <Component id="jComboBox_beneficiario4" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace pref="34" max="32767" attributes="0"/>
                               </Group>
@@ -811,54 +811,35 @@
                         </DimensionLayout>
                       </Layout>
                       <SubComponents>
-                        <Component class="javax.swing.JTextField" name="jTextField8">
+                        <Component class="javax.swing.JTextField" name="jTextField_beneficiario1">
                           <Properties>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Segoe UI" size="14" style="0"/>
                             </Property>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JTextField" name="jTextField9">
+                        <Component class="javax.swing.JTextField" name="jTextField_beneficiario2">
                           <Properties>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Segoe UI" size="14" style="0"/>
                             </Property>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JTextField" name="jTextField10">
+                        <Component class="javax.swing.JTextField" name="jTextField_beneficiario3">
                           <Properties>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Segoe UI" size="14" style="0"/>
                             </Property>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JTextField" name="jTextField11">
+                        <Component class="javax.swing.JTextField" name="jTextField_beneficiario4">
                           <Properties>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Segoe UI" size="14" style="0"/>
                             </Property>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JComboBox" name="jComboBox4">
-                          <Properties>
-                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                              <Font name="Segoe UI" size="14" style="0"/>
-                            </Property>
-                            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                              <StringArray count="5">
-                                <StringItem index="0" value=""/>
-                                <StringItem index="1" value="Conyuge"/>
-                                <StringItem index="2" value="Hijo/a"/>
-                                <StringItem index="3" value="Sobrino/a"/>
-                                <StringItem index="4" value="Nieto/a"/>
-                              </StringArray>
-                            </Property>
-                          </Properties>
-                          <AuxValues>
-                            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-                          </AuxValues>
-                        </Component>
-                        <Component class="javax.swing.JComboBox" name="jComboBox5">
+                        <Component class="javax.swing.JComboBox" name="jComboBox_beneficiario1">
                           <Properties>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Segoe UI" size="14" style="0"/>
@@ -877,7 +858,7 @@
                             <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                           </AuxValues>
                         </Component>
-                        <Component class="javax.swing.JComboBox" name="jComboBox6">
+                        <Component class="javax.swing.JComboBox" name="jComboBox_beneficiario2">
                           <Properties>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Segoe UI" size="14" style="0"/>
@@ -896,7 +877,26 @@
                             <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                           </AuxValues>
                         </Component>
-                        <Component class="javax.swing.JComboBox" name="jComboBox7">
+                        <Component class="javax.swing.JComboBox" name="jComboBox_beneficiario3">
+                          <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Segoe UI" size="14" style="0"/>
+                            </Property>
+                            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                              <StringArray count="5">
+                                <StringItem index="0" value=""/>
+                                <StringItem index="1" value="Conyuge"/>
+                                <StringItem index="2" value="Hijo/a"/>
+                                <StringItem index="3" value="Sobrino/a"/>
+                                <StringItem index="4" value="Nieto/a"/>
+                              </StringArray>
+                            </Property>
+                          </Properties>
+                          <AuxValues>
+                            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+                          </AuxValues>
+                        </Component>
+                        <Component class="javax.swing.JComboBox" name="jComboBox_beneficiario4">
                           <Properties>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Segoe UI" size="14" style="0"/>
@@ -912,7 +912,7 @@
                             </Property>
                           </Properties>
                           <Events>
-                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBox7ActionPerformed"/>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBox_beneficiario4ActionPerformed"/>
                           </Events>
                           <AuxValues>
                             <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>

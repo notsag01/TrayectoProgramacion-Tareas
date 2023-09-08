@@ -205,14 +205,14 @@ public class Gestor extends javax.swing.JFrame {
         jLabel12 = new javax.swing.JLabel();
         jTextField_internacionDias = new javax.swing.JTextField();
         jPanel14 = new javax.swing.JPanel();
-        jTextField8 = new javax.swing.JTextField();
-        jTextField9 = new javax.swing.JTextField();
-        jTextField10 = new javax.swing.JTextField();
-        jTextField11 = new javax.swing.JTextField();
-        jComboBox4 = new javax.swing.JComboBox<>();
-        jComboBox5 = new javax.swing.JComboBox<>();
-        jComboBox6 = new javax.swing.JComboBox<>();
-        jComboBox7 = new javax.swing.JComboBox<>();
+        jTextField_beneficiario1 = new javax.swing.JTextField();
+        jTextField_beneficiario2 = new javax.swing.JTextField();
+        jTextField_beneficiario3 = new javax.swing.JTextField();
+        jTextField_beneficiario4 = new javax.swing.JTextField();
+        jComboBox_beneficiario1 = new javax.swing.JComboBox<>();
+        jComboBox_beneficiario2 = new javax.swing.JComboBox<>();
+        jComboBox_beneficiario3 = new javax.swing.JComboBox<>();
+        jComboBox_beneficiario4 = new javax.swing.JComboBox<>();
         jPanel15 = new javax.swing.JPanel();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
@@ -609,28 +609,28 @@ public class Gestor extends javax.swing.JFrame {
         jPanel14.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Beneficiarios", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14), new java.awt.Color(0, 204, 51))); // NOI18N
         jPanel14.setOpaque(false);
 
-        jTextField8.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jTextField_beneficiario1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
 
-        jTextField9.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jTextField_beneficiario2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
 
-        jTextField10.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jTextField_beneficiario3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
 
-        jTextField11.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jTextField_beneficiario4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
 
-        jComboBox4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "Conyuge", "Hijo/a", "Sobrino/a", "Nieto/a" }));
+        jComboBox_beneficiario1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jComboBox_beneficiario1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "Conyuge", "Hijo/a", "Sobrino/a", "Nieto/a" }));
 
-        jComboBox5.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jComboBox5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "Conyuge", "Hijo/a", "Sobrino/a", "Nieto/a" }));
+        jComboBox_beneficiario2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jComboBox_beneficiario2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "Conyuge", "Hijo/a", "Sobrino/a", "Nieto/a" }));
 
-        jComboBox6.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jComboBox6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "Conyuge", "Hijo/a", "Sobrino/a", "Nieto/a" }));
+        jComboBox_beneficiario3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jComboBox_beneficiario3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "Conyuge", "Hijo/a", "Sobrino/a", "Nieto/a" }));
 
-        jComboBox7.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jComboBox7.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "Conyuge", "Hijo/a", "Sobrino/a", "Nieto/a" }));
-        jComboBox7.addActionListener(new java.awt.event.ActionListener() {
+        jComboBox_beneficiario4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jComboBox_beneficiario4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "Conyuge", "Hijo/a", "Sobrino/a", "Nieto/a" }));
+        jComboBox_beneficiario4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox7ActionPerformed(evt);
+                jComboBox_beneficiario4ActionPerformed(evt);
             }
         });
 
@@ -641,16 +641,16 @@ public class Gestor extends javax.swing.JFrame {
             .addGroup(jPanel14Layout.createSequentialGroup()
                 .addGap(10, 10, 10)
                 .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField8, javax.swing.GroupLayout.DEFAULT_SIZE, 187, Short.MAX_VALUE)
-                    .addComponent(jTextField9)
-                    .addComponent(jTextField10)
-                    .addComponent(jTextField11))
+                    .addComponent(jTextField_beneficiario1, javax.swing.GroupLayout.DEFAULT_SIZE, 187, Short.MAX_VALUE)
+                    .addComponent(jTextField_beneficiario2)
+                    .addComponent(jTextField_beneficiario3)
+                    .addComponent(jTextField_beneficiario4))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(jComboBox4, 0, 108, Short.MAX_VALUE)
-                    .addComponent(jComboBox5, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jComboBox6, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jComboBox7, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jComboBox_beneficiario1, 0, 108, Short.MAX_VALUE)
+                    .addComponent(jComboBox_beneficiario2, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jComboBox_beneficiario3, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jComboBox_beneficiario4, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         jPanel14Layout.setVerticalGroup(
@@ -658,20 +658,20 @@ public class Gestor extends javax.swing.JFrame {
             .addGroup(jPanel14Layout.createSequentialGroup()
                 .addGap(19, 19, 19)
                 .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextField_beneficiario1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jComboBox_beneficiario1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBox5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextField_beneficiario2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jComboBox_beneficiario2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBox6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextField_beneficiario3, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jComboBox_beneficiario3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBox7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextField_beneficiario4, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jComboBox_beneficiario4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(34, Short.MAX_VALUE))
         );
 
@@ -1192,9 +1192,9 @@ public class Gestor extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    private void jComboBox7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox7ActionPerformed
+    private void jComboBox_beneficiario4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox_beneficiario4ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox7ActionPerformed
+    }//GEN-LAST:event_jComboBox_beneficiario4ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         System.exit(0);
@@ -1413,10 +1413,10 @@ public class Gestor extends javax.swing.JFrame {
     private javax.swing.JCheckBox jCheckBox_terceroCompleto;
     private javax.swing.JCheckBox jCheckBox_todoRiesgoCF;
     private javax.swing.JCheckBox jCheckBox_todoRiesgoSF;
-    private javax.swing.JComboBox<String> jComboBox4;
-    private javax.swing.JComboBox<String> jComboBox5;
-    private javax.swing.JComboBox<String> jComboBox6;
-    private javax.swing.JComboBox<String> jComboBox7;
+    private javax.swing.JComboBox<String> jComboBox_beneficiario1;
+    private javax.swing.JComboBox<String> jComboBox_beneficiario2;
+    private javax.swing.JComboBox<String> jComboBox_beneficiario3;
+    private javax.swing.JComboBox<String> jComboBox_beneficiario4;
     private javax.swing.JComboBox<String> jComboBox_franquicia;
     private javax.swing.JComboBox<String> jComboBox_incendio;
     private javax.swing.JComboBox<String> jComboBox_inundacion;
@@ -1465,11 +1465,11 @@ public class Gestor extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel9;
     private javax.swing.JPanel jPanel_coberturaVehiculos;
     private javax.swing.JTabbedPane jTabbedPane_seguroHogar;
-    private javax.swing.JTextField jTextField10;
-    private javax.swing.JTextField jTextField11;
-    private javax.swing.JTextField jTextField8;
-    private javax.swing.JTextField jTextField9;
     private javax.swing.JTextField jTextField_anio;
+    private javax.swing.JTextField jTextField_beneficiario1;
+    private javax.swing.JTextField jTextField_beneficiario2;
+    private javax.swing.JTextField jTextField_beneficiario3;
+    private javax.swing.JTextField jTextField_beneficiario4;
     private javax.swing.JTextField jTextField_dominio;
     private javax.swing.JTextField jTextField_id;
     private javax.swing.JTextField jTextField_internacionDias;
