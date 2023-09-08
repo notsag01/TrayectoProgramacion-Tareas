@@ -55,6 +55,8 @@ public class Gestor extends javax.swing.JFrame {
     String incendio,robo,inundacion;
     String heladera,lavarropas,cocina,notebook,notebookCantidad,consola,televisor,televisorCantidad;
     String muerte, muerteAccidental,internacion,internacionDias,paralisis;
+    String beneficiario1,beneficiario2,beneficiario3,beneficiario4;
+    String beneficiario1_parentesco,beneficiario2_parentesco,beneficiario3_parentesco,beneficiario4_parentesco;
         
     public void getDatosPerosonaHogar(){
         tipoSeguro="Seguro Hogar";
@@ -145,6 +147,9 @@ public class Gestor extends javax.swing.JFrame {
         }else{
             paralisis="-";
         }
+        if(!jTextField_beneficiario1.equals("")){
+            beneficiario1=jTextField_beneficiario1.getText();
+        }else{beneficiario1="-";}
         
         Personas persona = new Personas(tipoSeguro,
                 cuit,
