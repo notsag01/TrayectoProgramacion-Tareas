@@ -160,8 +160,14 @@ public class Gestor extends javax.swing.JFrame {
         if(!jTextField_beneficiario4.equals("")){
             beneficiario4=jTextField_beneficiario4.getText();
         }else{beneficiario4="-";}
+        //**********   PARENTESCOS   ********************************************
+        beneficiario1_parentesco=(String)jComboBox_beneficiario1.getSelectedItem();
+        beneficiario2_parentesco=(String)jComboBox_beneficiario2.getSelectedItem();
+        beneficiario3_parentesco=(String)jComboBox_beneficiario3.getSelectedItem();
+        beneficiario4_parentesco=(String)jComboBox_beneficiario4.getSelectedItem();
         
-        Personas persona = new Personas(tipoSeguro,
+        Personas persona = new Personas(
+                tipoSeguro,
                 cuit,
                 nombre,
                 telefono,
@@ -174,7 +180,11 @@ public class Gestor extends javax.swing.JFrame {
                 beneficiario1,
                 beneficiario2,
                 beneficiario3,
-                beneficiario4
+                beneficiario4,
+                beneficiario1_parentesco,
+                beneficiario2_parentesco,
+                beneficiario3_parentesco,
+                beneficiario4_parentesco
         );
                 
         Archivo archivo =new Archivo();

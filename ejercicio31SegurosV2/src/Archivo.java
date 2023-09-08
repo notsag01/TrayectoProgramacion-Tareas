@@ -59,9 +59,13 @@ public class Archivo {
                             persona.getInternacionDias()+ "," +
                             persona.getParalisis()+ "," +
                             persona.getBeneficiario1()+ "," +
+                            persona.getBeneficiario1_parentesco()+ "," +
                             persona.getBeneficiario2()+ "," +
+                            persona.getBeneficiario2_parentesco()+ "," +
                             persona.getBeneficiario3()+ "," +
-                            persona.getBeneficiario4()
+                            persona.getBeneficiario3_parentesco()+ "," +
+                            persona.getBeneficiario4()+ "," +
+                            persona.getBeneficiario4_parentesco()
                     );
 
                 escribir.newLine();

@@ -6,6 +6,7 @@ public class Personas {
             heladera,lavarropas,cocina,notebook,notebookCantidad,consola,televisor,televisorCantidad;
     String muerte, muerteAccidental,internacion,internacionDias,paralisis;
     String beneficiario1,beneficiario2,beneficiario3,beneficiario4;
+    String beneficiario1_parentesco,beneficiario2_parentesco,beneficiario3_parentesco,beneficiario4_parentesco;
     
     public Personas(String tipoSeguro,
             String cuit,
@@ -57,8 +58,11 @@ public class Personas {
             String beneficiario1,            
             String beneficiario2,            
             String beneficiario3,            
-            String beneficiario4            
-    
+            String beneficiario4,
+            String beneficiario1_parentesco,
+            String beneficiario2_parentesco,
+            String beneficiario3_parentesco,
+            String beneficiario4_parentesco            
     ){
         
         this.tipoSeguro=tipoSeguro;
@@ -75,6 +79,10 @@ public class Personas {
         this.beneficiario2=beneficiario2;
         this.beneficiario3=beneficiario3;
         this.beneficiario4=beneficiario4;
+        this.beneficiario1_parentesco=beneficiario1_parentesco;
+        this.beneficiario2_parentesco=beneficiario2_parentesco;
+        this.beneficiario3_parentesco=beneficiario3_parentesco;
+        this.beneficiario4_parentesco=beneficiario4_parentesco;
     }
 
     public String getTipoSeguro() {
@@ -175,6 +183,22 @@ public class Personas {
 
     public String getBeneficiario4() {
         return beneficiario4;
+    }
+
+    public String getBeneficiario1_parentesco() {
+        return beneficiario1_parentesco;
+    }
+
+    public String getBeneficiario2_parentesco() {
+        return beneficiario2_parentesco;
+    }
+
+    public String getBeneficiario3_parentesco() {
+        return beneficiario3_parentesco;
+    }
+
+    public String getBeneficiario4_parentesco() {
+        return beneficiario4_parentesco;
     }
     
 }
