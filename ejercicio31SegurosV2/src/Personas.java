@@ -240,5 +240,45 @@ public class Personas {
     public String getBeneficiario4_parentesco() {
         return beneficiario4_parentesco;
     }
+
+    public String getDominio() {
+        return dominio;
+    }
+
+    public String getMarcaSelec() {
+        return marcaSelec;
+    }
+
+    public String getModeloSelec() {
+        return modeloSelec;
+    }
+
+    public String getAnio() {
+        return anio;
+    }
+
+    public String getTerceroCompleto() {
+        return terceroCompleto;
+    }
+
+    public String getResponsabilidadCivil() {
+        return responsabilidadCivil;
+    }
+
+    public String getTodoRiesgoCF() {
+        return todoRiesgoCF;
+    }
+
+    public String getTodoRiesgoSF() {
+        return todoRiesgoSF;
+    }
+
+    public String getGranizo() {
+        return granizo;
+    }
+
+    public int getFranquicia() {
+        return franquicia;
+    }
     
 }

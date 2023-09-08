@@ -83,7 +83,18 @@ public class Archivo {
                             persona.getCuit() + "," +
                             persona.getNombre() + "," +
                             persona.getTelefono() + "," +
-                            persona.getMail() 
+                            persona.getMail() + "," +
+                            persona.getDominio()+ "," +
+                            persona.getMarcaSelec()+ "," +
+                            persona.getModeloSelec()+ "," +
+                            persona.getAnio()+ "," +
+                            persona.getTerceroCompleto() + "," +
+                            persona.getResponsabilidadCivil()+ "," +
+                            persona.getResponsabilidadCivil()+ "," +
+                            persona.getTodoRiesgoCF()+ "," +
+                            persona.getTodoRiesgoSF()+ "," +
+                            persona.getGranizo()+ "," +
+                            persona.getFranquicia()
                             
                     );
 

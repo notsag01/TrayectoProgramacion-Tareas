@@ -223,6 +223,19 @@ public class Gestor extends javax.swing.JFrame {
                 granizo=jCheckBox_granizo.getText();
             }else{granizo="-";}
             franquicia=(int)jComboBox_franquicia.getSelectedItem();
+            
+            Personas persona = new Personas(
+                    tipoSeguro,
+                    cuit,
+                    nombre,
+                    telefono,
+                    mail,
+                    dominio,marcaSelec,modeloSelec,anio,
+                    terceroCompleto,responsabilidadCivil,todoRiesgoCF,todoRiesgoSF,granizo,
+                    franquicia
+            );
+            Archivo archivo = new Archivo();
+            archivo.escribirArchivo(persona);
         }
     
     
