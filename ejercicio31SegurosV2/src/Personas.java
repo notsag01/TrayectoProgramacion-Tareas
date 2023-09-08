@@ -7,6 +7,9 @@ public class Personas {
     String muerte, muerteAccidental,internacion,internacionDias,paralisis;
     String beneficiario1,beneficiario2,beneficiario3,beneficiario4;
     String beneficiario1_parentesco,beneficiario2_parentesco,beneficiario3_parentesco,beneficiario4_parentesco;
+    String dominio, marcaSelec,modeloSelec,anio;
+    String terceroCompleto,responsabilidadCivil, todoRiesgoCF,todoRiesgoSF,granizo;
+    int franquicia;
     
     public Personas(String tipoSeguro,
             String cuit,
@@ -83,6 +86,43 @@ public class Personas {
         this.beneficiario2_parentesco=beneficiario2_parentesco;
         this.beneficiario3_parentesco=beneficiario3_parentesco;
         this.beneficiario4_parentesco=beneficiario4_parentesco;
+    }
+//    String dominio, marcaSelec,modeloSelec,anio;
+//    String terceroCompleto,responsabilidadCivil, todoRiesgoCF,todoRiesgoSF,granizo;
+//    int franquicia;
+    
+    public Personas(
+            String tipoSeguro,
+            String cuit,
+            String nombre,
+            String telefono,
+            String mail,
+            String dominio,
+            String marcaSelec,
+            String modeloSelec,
+            String anio,
+            String terceroCompleto,
+            String responsabilidadCivil,
+            String todoRiesgoCF,
+            String todoRiesgoSF,
+            String granizo,
+            int franquicia
+    ){
+        this.tipoSeguro=tipoSeguro;
+        this.cuit=cuit;
+        this.nombre=nombre;
+        this.telefono=telefono;
+        this.mail=mail;
+        this.dominio=dominio;
+        this.marcaSelec=marcaSelec;
+        this.modeloSelec=modeloSelec;
+        this.anio=anio;
+        this.terceroCompleto=terceroCompleto;
+        this.responsabilidadCivil=responsabilidadCivil;
+        this.todoRiesgoCF=todoRiesgoCF;
+        this.todoRiesgoSF=todoRiesgoSF;
+        this.granizo=granizo;
+        this.franquicia=franquicia;
     }
 
     public String getTipoSeguro() {

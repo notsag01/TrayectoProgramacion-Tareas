@@ -58,6 +58,8 @@ public class Gestor extends javax.swing.JFrame {
     String beneficiario1,beneficiario2,beneficiario3,beneficiario4;
     String beneficiario1_parentesco,beneficiario2_parentesco,beneficiario3_parentesco,beneficiario4_parentesco;
     String dominio, marcaSelec,modeloSelec,anio;
+    String terceroCompleto,responsabilidadCivil, todoRiesgoCF,todoRiesgoSF,granizo;
+    int franquicia;
         
     public void getDatosPerosonaHogar(){
         tipoSeguro="Seguro Hogar";
@@ -194,7 +196,7 @@ public class Gestor extends javax.swing.JFrame {
     }
         //////////////////////////////////////////////////////////////////////////////
         public void getDatosPerosonaVehiculos(){
-            tipoSeguro="Seguro Vida";
+            tipoSeguro="Seguro Automotor";
             cuit=jTextField_id.getText();
             nombre=jTextField_nombre.getText();
             telefono=jTextField_telefono.getText();
@@ -204,6 +206,23 @@ public class Gestor extends javax.swing.JFrame {
             marcaSelec=(String)jComboBox_marcas.getSelectedItem();
             modeloSelec=(String)jComboBox_modelos.getSelectedItem();
             anio=jTextField_anio.getText();
+            //String terceroCompleto,responsabilidadCivil, trFranquicia,trsFranquicia,granizo;
+            if(jCheckBox_terceroCompleto.isSelected()){
+                terceroCompleto=jCheckBox_terceroCompleto.getText();
+            }else{terceroCompleto="-";}
+            if(jCheckBox_responsabilidadCivil.isSelected()){
+                responsabilidadCivil=jCheckBox_responsabilidadCivil.getText();
+            }else{responsabilidadCivil="-";}
+            if(jCheckBox_todoRiesgoCF.isSelected()){
+                todoRiesgoCF=jCheckBox_todoRiesgoCF.getText();
+            }else{todoRiesgoCF="-";}
+            if(jCheckBox_todoRiesgoSF.isSelected()){
+                todoRiesgoSF=jCheckBox_todoRiesgoSF.getText();
+            }else{todoRiesgoSF="-";}
+            if(jCheckBox_granizo.isSelected()){
+                granizo=jCheckBox_granizo.getText();
+            }else{granizo="-";}
+            franquicia=(int)jComboBox_franquicia.getSelectedItem();
         }
     
     

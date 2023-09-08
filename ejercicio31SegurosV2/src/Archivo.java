@@ -74,6 +74,26 @@ public class Archivo {
                     System.out.println(ex);
                 }
             }
+            break;
+            case "Seguro Automotor":
+            {
+                try {
+                    BufferedWriter escribir = new BufferedWriter(new FileWriter("seguros.txt",true));
+                    escribir.write(persona.getTipoSeguro()+ "," +
+                            persona.getCuit() + "," +
+                            persona.getNombre() + "," +
+                            persona.getTelefono() + "," +
+                            persona.getMail() 
+                            
+                    );
+
+                escribir.newLine();
+                escribir.close();
+                } catch (IOException ex) {
+                    System.out.println(ex);
+                }
+            }
+            break;
         }    
     }   
     
