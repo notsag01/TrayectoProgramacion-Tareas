@@ -1,0 +1,2 @@
+Seguro Hogar,77,77,777,77,Total,Parcial,-,-,-,-,Noteboks,5,-,-,null
+Seguro Vida,77,77,777,77,Muerte,-,Dias de Internacion,77,-,GAston,,,

@@ -5,6 +5,7 @@ public class Personas {
             incendio,robo,inundacion,
             heladera,lavarropas,cocina,notebook,notebookCantidad,consola,televisor,televisorCantidad;
     String muerte, muerteAccidental,internacion,internacionDias,paralisis;
+    String beneficiario1,beneficiario2,beneficiario3,beneficiario4;
     
     public Personas(String tipoSeguro,
             String cuit,
@@ -51,7 +52,14 @@ public class Personas {
             String muerte, 
             String muerteAccidental, 
             String internacion, 
-            String internacionDias, String paralisis){
+            String internacionDias,
+            String paralisis,
+            String beneficiario1,            
+            String beneficiario2,            
+            String beneficiario3,            
+            String beneficiario4            
+    
+    ){
         
         this.tipoSeguro=tipoSeguro;
         this.cuit=cuit;
@@ -63,6 +71,10 @@ public class Personas {
         this.internacion=internacion;
         this.internacionDias=internacionDias;
         this.paralisis=paralisis;
+        this.beneficiario1=beneficiario1;
+        this.beneficiario2=beneficiario2;
+        this.beneficiario3=beneficiario3;
+        this.beneficiario4=beneficiario4;
     }
 
     public String getTipoSeguro() {
@@ -147,6 +159,22 @@ public class Personas {
 
     public String getParalisis() {
         return paralisis;
+    }
+
+    public String getBeneficiario1() {
+        return beneficiario1;
+    }
+
+    public String getBeneficiario2() {
+        return beneficiario2;
+    }
+
+    public String getBeneficiario3() {
+        return beneficiario3;
+    }
+
+    public String getBeneficiario4() {
+        return beneficiario4;
     }
     
 }

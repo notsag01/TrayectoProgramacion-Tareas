@@ -57,7 +57,11 @@ public class Archivo {
                             persona.getMuerteAccidental() + "," +
                             persona.getInternacion()+ "," +
                             persona.getInternacionDias()+ "," +
-                            persona.getParalisis()                                
+                            persona.getParalisis()+ "," +
+                            persona.getBeneficiario1()+ "," +
+                            persona.getBeneficiario2()+ "," +
+                            persona.getBeneficiario3()+ "," +
+                            persona.getBeneficiario4()
                     );
 
                 escribir.newLine();

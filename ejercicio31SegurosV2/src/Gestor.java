@@ -170,7 +170,12 @@ public class Gestor extends javax.swing.JFrame {
                 muerteAccidental,
                 internacion,
                 internacionDias,
-                paralisis);
+                paralisis,
+                beneficiario1,
+                beneficiario2,
+                beneficiario3,
+                beneficiario4
+        );
                 
         Archivo archivo =new Archivo();
         archivo.escribirArchivo(persona);
