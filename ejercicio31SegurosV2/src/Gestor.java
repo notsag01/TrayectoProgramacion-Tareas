@@ -1496,6 +1496,9 @@ public class Gestor extends javax.swing.JFrame {
         if(!(minuscula||espacio||mayuscula)){
             evt.consume();
         }
+        if(jTextField_nombre.getText().length()>=50){
+            evt.consume();
+        }
     }//GEN-LAST:event_jTextField_nombreKeyTyped
 
     /**
