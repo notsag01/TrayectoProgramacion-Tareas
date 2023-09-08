@@ -1157,9 +1157,21 @@ public class Gestor extends javax.swing.JFrame {
         jLabel4.setText("MAIL");
         jLabel4.setPreferredSize(new java.awt.Dimension(150, 20));
 
+        jTextField_id.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextField_idKeyTyped(evt);
+            }
+        });
+
         jTextField_nombre.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 jTextField_nombreKeyTyped(evt);
+            }
+        });
+
+        jTextField_telefono.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextField_telefonoKeyTyped(evt);
             }
         });
 
@@ -1500,6 +1512,30 @@ public class Gestor extends javax.swing.JFrame {
             evt.consume();
         }
     }//GEN-LAST:event_jTextField_nombreKeyTyped
+
+    private void jTextField_idKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField_idKeyTyped
+        int key=evt.getKeyChar();
+        boolean numeros=key>=48 && key<=57;
+        
+        if(!numeros){
+            evt.consume();
+        }
+        if(jTextField_telefono.getText().length()>=11){
+            evt.consume();
+        }
+    }//GEN-LAST:event_jTextField_idKeyTyped
+
+    private void jTextField_telefonoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField_telefonoKeyTyped
+        int key=evt.getKeyChar();
+        boolean numeros=key>=48 && key<=57;
+        
+        if(!numeros){
+            evt.consume();
+        }
+        if(jTextField_telefono.getText().length()>=11){
+            evt.consume();
+        }
+    }//GEN-LAST:event_jTextField_telefonoKeyTyped
 
     /**
      * @param args the command line arguments

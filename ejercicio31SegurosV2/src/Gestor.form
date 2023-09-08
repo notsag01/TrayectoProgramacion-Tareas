@@ -1650,6 +1650,9 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="jTextField_id">
+              <Events>
+                <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTextField_idKeyTyped"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="jTextField_nombre">
               <Events>
@@ -1657,6 +1660,9 @@
               </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="jTextField_telefono">
+              <Events>
+                <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTextField_telefonoKeyTyped"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="jTextField_mail">
             </Component>
