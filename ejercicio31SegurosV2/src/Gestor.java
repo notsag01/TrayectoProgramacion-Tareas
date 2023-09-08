@@ -45,6 +45,10 @@ public class Gestor extends javax.swing.JFrame {
         jTextField_notebooksCantidad.setEnabled(false);
         jTextField_televisorCantidad.setEnabled(false);
         jTextField_internacionDias.setEnabled(false);
+        jComboBox_beneficiario1.setEnabled(false);
+        jComboBox_beneficiario2.setEnabled(false);
+        jComboBox_beneficiario3.setEnabled(false);
+        jComboBox_beneficiario4.setEnabled(false);
     }
     
     String tipoSeguro, cuit, nombre,telefono, mail;
@@ -610,12 +614,32 @@ public class Gestor extends javax.swing.JFrame {
         jPanel14.setOpaque(false);
 
         jTextField_beneficiario1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jTextField_beneficiario1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextField_beneficiario1KeyTyped(evt);
+            }
+        });
 
         jTextField_beneficiario2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jTextField_beneficiario2.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jTextField_beneficiario2KeyPressed(evt);
+            }
+        });
 
         jTextField_beneficiario3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jTextField_beneficiario3.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jTextField_beneficiario3KeyPressed(evt);
+            }
+        });
 
         jTextField_beneficiario4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jTextField_beneficiario4.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jTextField_beneficiario4KeyPressed(evt);
+            }
+        });
 
         jComboBox_beneficiario1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jComboBox_beneficiario1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "Conyuge", "Hijo/a", "Sobrino/a", "Nieto/a" }));
@@ -1349,6 +1373,38 @@ public class Gestor extends javax.swing.JFrame {
             jTextField_internacionDias.setEnabled(false);
         }
     }//GEN-LAST:event_jCheckBox_internacionItemStateChanged
+
+    private void jTextField_beneficiario1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField_beneficiario1KeyTyped
+        if(jTextField_beneficiario1.equals("")){
+            jComboBox_beneficiario1.setEnabled(false);
+        }else{
+            jComboBox_beneficiario1.setEnabled(true);
+        }
+    }//GEN-LAST:event_jTextField_beneficiario1KeyTyped
+
+    private void jTextField_beneficiario2KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField_beneficiario2KeyPressed
+         if(jTextField_beneficiario2.equals("")){
+            jComboBox_beneficiario2.setEnabled(false);
+        }else{
+            jComboBox_beneficiario2.setEnabled(true);
+        }
+    }//GEN-LAST:event_jTextField_beneficiario2KeyPressed
+
+    private void jTextField_beneficiario3KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField_beneficiario3KeyPressed
+         if(jTextField_beneficiario3.equals("")){
+            jComboBox_beneficiario3.setEnabled(false);
+        }else{
+            jComboBox_beneficiario3.setEnabled(true);
+        }
+    }//GEN-LAST:event_jTextField_beneficiario3KeyPressed
+
+    private void jTextField_beneficiario4KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField_beneficiario4KeyPressed
+         if(jTextField_beneficiario4.equals("")){
+            jComboBox_beneficiario4.setEnabled(false);
+        }else{
+            jComboBox_beneficiario4.setEnabled(true);
+        }
+    }//GEN-LAST:event_jTextField_beneficiario4KeyPressed
 
     /**
      * @param args the command line arguments

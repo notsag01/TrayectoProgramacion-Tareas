@@ -817,6 +817,9 @@
                               <Font name="Segoe UI" size="14" style="0"/>
                             </Property>
                           </Properties>
+                          <Events>
+                            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTextField_beneficiario1KeyTyped"/>
+                          </Events>
                         </Component>
                         <Component class="javax.swing.JTextField" name="jTextField_beneficiario2">
                           <Properties>
@@ -824,6 +827,9 @@
                               <Font name="Segoe UI" size="14" style="0"/>
                             </Property>
                           </Properties>
+                          <Events>
+                            <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTextField_beneficiario2KeyPressed"/>
+                          </Events>
                         </Component>
                         <Component class="javax.swing.JTextField" name="jTextField_beneficiario3">
                           <Properties>
@@ -831,6 +837,9 @@
                               <Font name="Segoe UI" size="14" style="0"/>
                             </Property>
                           </Properties>
+                          <Events>
+                            <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTextField_beneficiario3KeyPressed"/>
+                          </Events>
                         </Component>
                         <Component class="javax.swing.JTextField" name="jTextField_beneficiario4">
                           <Properties>
@@ -838,6 +847,9 @@
                               <Font name="Segoe UI" size="14" style="0"/>
                             </Property>
                           </Properties>
+                          <Events>
+                            <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTextField_beneficiario4KeyPressed"/>
+                          </Events>
                         </Component>
                         <Component class="javax.swing.JComboBox" name="jComboBox_beneficiario1">
                           <Properties>
