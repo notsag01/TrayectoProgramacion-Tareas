@@ -57,6 +57,7 @@ public class Gestor extends javax.swing.JFrame {
     String muerte, muerteAccidental,internacion,internacionDias,paralisis;
     String beneficiario1,beneficiario2,beneficiario3,beneficiario4;
     String beneficiario1_parentesco,beneficiario2_parentesco,beneficiario3_parentesco,beneficiario4_parentesco;
+    String dominio, marcaSelec,modeloSelec,anio;
         
     public void getDatosPerosonaHogar(){
         tipoSeguro="Seguro Hogar";
@@ -191,6 +192,19 @@ public class Gestor extends javax.swing.JFrame {
         archivo.escribirArchivo(persona);
         
     }
+        //////////////////////////////////////////////////////////////////////////////
+        public void getDatosPerosonaVehiculos(){
+            tipoSeguro="Seguro Vida";
+            cuit=jTextField_id.getText();
+            nombre=jTextField_nombre.getText();
+            telefono=jTextField_telefono.getText();
+            mail=jTextField_mail.getText();
+            
+            dominio=jTextField_dominio.getText().toUpperCase();
+            marcaSelec=(String)jComboBox_marcas.getSelectedItem();
+            modeloSelec=(String)jComboBox_modelos.getSelectedItem();
+            anio=jTextField_anio.getText();
+        }
     
     
     
