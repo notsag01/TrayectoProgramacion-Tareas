@@ -147,9 +147,19 @@ public class Gestor extends javax.swing.JFrame {
         }else{
             paralisis="-";
         }
+       //**************   BENFICIIARIOS *********************
         if(!jTextField_beneficiario1.equals("")){
             beneficiario1=jTextField_beneficiario1.getText();
         }else{beneficiario1="-";}
+        if(!jTextField_beneficiario2.equals("")){
+            beneficiario2=jTextField_beneficiario2.getText();
+        }else{beneficiario2="-";}
+        if(!jTextField_beneficiario3.equals("")){
+            beneficiario3=jTextField_beneficiario3.getText();
+        }else{beneficiario3="-";}
+        if(!jTextField_beneficiario4.equals("")){
+            beneficiario4=jTextField_beneficiario4.getText();
+        }else{beneficiario4="-";}
         
         Personas persona = new Personas(tipoSeguro,
                 cuit,
