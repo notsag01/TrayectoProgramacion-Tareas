@@ -59,6 +59,7 @@ public class Gestor extends javax.swing.JFrame {
     String beneficiario1_parentesco,beneficiario2_parentesco,beneficiario3_parentesco,beneficiario4_parentesco;
     String dominio, marcaSelec,modeloSelec,anio;
     String terceroCompleto,responsabilidadCivil, todoRiesgoCF,todoRiesgoSF,granizo, franquicia;    
+    boolean arroba=false, punto=false;
         
     public void getDatosPerosonaHogar(){
         tipoSeguro="Seguro Hogar"; 
@@ -1418,6 +1419,25 @@ public class Gestor extends javax.swing.JFrame {
     }//GEN-LAST:event_jCheckBox_granizoItemStateChanged
 
     private void jButton_seguroVehiculosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_seguroVehiculosActionPerformed
+        String cadena=jTextField_mail.getText();
+        
+        
+        for(int i=0; i<cadena.length();i++){
+            char caracter= cadena.charAt(i);
+            System.out.print(caracter);
+            if(caracter=='@'){
+                arroba=true;
+            }else if(caracter=='.'){
+                punto=true;
+            }
+            if(arroba&&punto){
+                System.out.println("la cadena es Valida");
+                break;            
+            }else{
+                System.out.println("la cadena es Invalida");
+            }
+        }
+        
         getDatosPerosonaVehiculos();
     }//GEN-LAST:event_jButton_seguroVehiculosActionPerformed
 

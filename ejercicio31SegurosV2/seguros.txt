@@ -1,3 +1,28 @@
 Seguro Hogar,666,gaston,45454545,gast@gast,Parcial,Total,-,Heladera,-,-,Noteboks,2,-,Televisor,4
 Seguro Vida,666,gaston,45454545,gast@gast,Muerte,-,Dias de Internacion,10,-,Roberto,Hijo/a,,,,,,
 Seguro Automotor,888,gast,56565656,gast,555,FIAT,UNO,1000,-,Responsabilidad Civil,Responsabilidad Civil,Todo Riesgo con Franquicia,-,-,40.000
+Seguro Hogar,,,,gast,-,-,-,-,-,-,-,null,-,-,null
+Seguro Hogar,,,,Gasto@,-,-,-,-,-,-,-,null,-,-,null
+Seguro Hogar,,,,gasto@,-,-,-,-,-,-,-,null,-,-,null
+Seguro Hogar,,,,gasto@,-,-,-,-,-,-,-,null,-,-,null
+Seguro Hogar,,,,gast@,-,-,-,-,-,-,-,null,-,-,null
+Seguro Hogar,,,,gast@,-,-,-,-,-,-,-,null,-,-,null
+Seguro Hogar,,,,gast@,-,-,-,-,-,-,-,null,-,-,null
+Seguro Hogar,,,,gast,-,-,-,-,-,-,-,null,-,-,null
+Seguro Hogar,,,,gast,-,-,-,-,-,-,-,null,-,-,null
+Seguro Hogar,,,,gast,-,-,-,-,-,-,-,null,-,-,null
+Seguro Hogar,,,,juli,-,-,-,-,-,-,-,null,-,-,null
+Seguro Hogar,,,,juli,-,-,-,-,-,-,-,null,-,-,null
+Seguro Hogar,,,,juli,-,-,-,-,-,-,-,null,-,-,null
+Seguro Hogar,,,,juli,-,-,-,-,-,-,-,null,-,-,null
+Seguro Hogar,,,,juli,-,-,-,-,-,-,-,null,-,-,null
+Seguro Hogar,,,,juli,-,-,-,-,-,-,-,null,-,-,null
+Seguro Hogar,,,,gast,-,-,-,-,-,-,-,null,-,-,null
+Seguro Hogar,,,,gast@,-,-,-,-,-,-,-,null,-,-,null
+Seguro Automotor,,,,gast,,,null,,-,-,-,-,-,-,
+Seguro Hogar,,,,juli@,-,-,-,-,-,-,-,null,-,-,null
+Seguro Automotor,,,,juli@,,,null,,-,-,-,-,-,-,
+Seguro Hogar,,,,vale,-,-,-,-,-,-,-,null,-,-,null
+Seguro Automotor,,,,vale,,,null,,-,-,-,-,-,-,
+Seguro Automotor,,,,vale@.,,,null,,-,-,-,-,-,-,
+Seguro Automotor,,,,julieta,,,null,,-,-,-,-,-,-,
