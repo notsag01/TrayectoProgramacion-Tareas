@@ -1431,14 +1431,16 @@ public class Gestor extends javax.swing.JFrame {
                 punto=true;
             }
             if(arroba&&punto){
-                System.out.println("la cadena es Valida");
-                break;            
-            }else{
-                System.out.println("la cadena es Invalida");
+                break;
             }
         }
-        
+        if(arroba && punto){
+            System.out.println("La Cadena es Valida");
+        }else{
+            System.out.println("La Cadena no es Valida");
+        }
         getDatosPerosonaVehiculos();
+        
     }//GEN-LAST:event_jButton_seguroVehiculosActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
