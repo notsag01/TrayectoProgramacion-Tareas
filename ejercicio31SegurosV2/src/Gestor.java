@@ -59,7 +59,7 @@ public class Gestor extends javax.swing.JFrame {
     String beneficiario1_parentesco,beneficiario2_parentesco,beneficiario3_parentesco,beneficiario4_parentesco;
     String dominio, marcaSelec,modeloSelec,anio;
     String terceroCompleto,responsabilidadCivil, todoRiesgoCF,todoRiesgoSF,granizo, franquicia;    
-    boolean arroba=false, punto=false;
+    boolean arroba=false, punto=false, continuar=false;
     
     public void validarMail(){
          String cadena=jTextField_mail.getText();
@@ -77,6 +77,7 @@ public class Gestor extends javax.swing.JFrame {
             }
         }
         if(arroba && punto){
+            continuar=true;
             System.out.println("La Cadena es Valida");
         }else{
             System.out.println("La Cadena no es Valida");
@@ -1441,7 +1442,12 @@ public class Gestor extends javax.swing.JFrame {
     }//GEN-LAST:event_jCheckBox_granizoItemStateChanged
 
     private void jButton_seguroVehiculosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_seguroVehiculosActionPerformed
-        getDatosPerosonaVehiculos();
+        validarMail();
+        if(continuar=true){
+            getDatosPerosonaVehiculos();
+        }else{
+            validarMail();
+        }
         
     }//GEN-LAST:event_jButton_seguroVehiculosActionPerformed
 
