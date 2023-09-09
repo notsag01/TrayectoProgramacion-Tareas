@@ -60,6 +60,28 @@ public class Gestor extends javax.swing.JFrame {
     String dominio, marcaSelec,modeloSelec,anio;
     String terceroCompleto,responsabilidadCivil, todoRiesgoCF,todoRiesgoSF,granizo, franquicia;    
     boolean arroba=false, punto=false;
+    
+    public void validarMail(){
+         String cadena=jTextField_mail.getText();
+                
+        for(int i=0; i<cadena.length();i++){
+            char caracter= cadena.charAt(i);
+            System.out.print(caracter);
+            if(caracter=='@'){
+                arroba=true;
+            }else if(caracter=='.'){
+                punto=true;
+            }
+            if(arroba&&punto){
+                break;
+            }
+        }
+        if(arroba && punto){
+            System.out.println("La Cadena es Valida");
+        }else{
+            System.out.println("La Cadena no es Valida");
+        }
+    }
         
     public void getDatosPerosonaHogar(){
         tipoSeguro="Seguro Hogar"; 
@@ -1419,26 +1441,6 @@ public class Gestor extends javax.swing.JFrame {
     }//GEN-LAST:event_jCheckBox_granizoItemStateChanged
 
     private void jButton_seguroVehiculosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_seguroVehiculosActionPerformed
-        String cadena=jTextField_mail.getText();
-        
-        
-        for(int i=0; i<cadena.length();i++){
-            char caracter= cadena.charAt(i);
-            System.out.print(caracter);
-            if(caracter=='@'){
-                arroba=true;
-            }else if(caracter=='.'){
-                punto=true;
-            }
-            if(arroba&&punto){
-                break;
-            }
-        }
-        if(arroba && punto){
-            System.out.println("La Cadena es Valida");
-        }else{
-            System.out.println("La Cadena no es Valida");
-        }
         getDatosPerosonaVehiculos();
         
     }//GEN-LAST:event_jButton_seguroVehiculosActionPerformed
