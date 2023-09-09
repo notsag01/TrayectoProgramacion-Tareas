@@ -61,7 +61,7 @@ public class Gestor extends javax.swing.JFrame {
     String terceroCompleto,responsabilidadCivil, todoRiesgoCF,todoRiesgoSF,granizo, franquicia;    
         
     public void getDatosPerosonaHogar(){
-        tipoSeguro="Seguro Hogar";
+        tipoSeguro="Seguro Hogar"; 
         cuit=jTextField_id.getText();
         nombre=jTextField_nombre.getText();
         telefono=jTextField_telefono.getText();
