@@ -1,6 +1,1 @@
-
-Seguro Automotor,55555555555,Gaston cordoba,45454545,gas@gas.com,KKKKKK,FIAT,PULSE,2023,Tercero Completo,Responsabilidad Civil,Responsabilidad Civil,-,-,-,
-Seguro Automotor,55555555555,Gaston cordoba,45454545,juli,KKKKKK,FIAT,PULSE,2023,Tercero Completo,Responsabilidad Civil,Responsabilidad Civil,-,-,-,
-Seguro Hogar,555,juli,4444,juli,-,-,-,-,-,-,-,null,-,-,null
-Seguro Hogar,555,juli,4444,juli,-,-,-,-,-,-,-,null,-,-,null
-Seguro Hogar,,,,lala,-,-,-,-,-,-,-,null,-,-,null
+Seguro Automotor,,,,juli@cordoba.com,KPQ250,PEUGEOT,207,2011,Tercero Completo,Responsabilidad Civil,Responsabilidad Civil,-,Todo Riesgo sin Franquicia,-,
