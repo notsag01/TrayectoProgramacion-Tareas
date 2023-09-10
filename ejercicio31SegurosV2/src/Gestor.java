@@ -72,12 +72,13 @@ public class Gestor extends javax.swing.JFrame {
             }else if(caracter=='.'){
                 punto=true;
             }
-            if(arroba&&punto){
-                break;
-            }
+//            if(arroba&&punto){
+//                break;
+//            }
         }
         if(arroba && punto){
             continuar=true;
+            getDatosPerosonaVehiculos();
             System.out.println("La Cadena es Valida");
         }else{
             System.out.println("La Cadena no es Valida");
@@ -1443,11 +1444,6 @@ public class Gestor extends javax.swing.JFrame {
 
     private void jButton_seguroVehiculosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_seguroVehiculosActionPerformed
         validarMail();
-        if(continuar=true){
-            getDatosPerosonaVehiculos();
-        }else{
-            validarMail();
-        }
         
     }//GEN-LAST:event_jButton_seguroVehiculosActionPerformed
 
