@@ -1610,8 +1610,7 @@ public class Gestor extends javax.swing.JFrame {
 
     private void jButton_contratacionesHogarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_contratacionesHogarActionPerformed
         String seguro="seguro hogar";
-        Contrataciones contrataciones = new Contrataciones();
-        contrataciones.cargarFilas(seguro);
+        Contrataciones contrataciones = new Contrataciones(seguro);
         contrataciones.setVisible(true);
         
     }//GEN-LAST:event_jButton_contratacionesHogarActionPerformed

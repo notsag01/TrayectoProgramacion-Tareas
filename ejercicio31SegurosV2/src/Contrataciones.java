@@ -11,12 +11,25 @@ import javax.swing.table.DefaultTableModel;
 public class Contrataciones extends javax.swing.JFrame {
     DefaultTableModel modelo = new DefaultTableModel();
 
-    public Contrataciones() {
+    public Contrataciones(String seguro) {
         initComponents();
-        crearTabla();
+        crearTabla(seguro);
+    }
+
+    private Contrataciones() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
     
-    public void crearTabla(){
+    public void crearTabla(String seguro){
+        
+        switch(seguro){
+            case"seguro hogar": getSeguroHogar();
+        }
+        
+        
+    }
+    public void getSeguroHogar(){
+        
         modelo.addColumn("CUIT");
         modelo.addColumn("NOMBRE Y APELLIDO");
         modelo.addColumn("TELEFONO");
@@ -25,8 +38,7 @@ public class Contrataciones extends javax.swing.JFrame {
         jTable_tabla.setModel(modelo);
         
         //cargarFilas();
-    }
-    public void cargarFilas(String seguro){
+        
         String fila[];
         String linea;
         try {
@@ -137,7 +149,7 @@ public class Contrataciones extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Contrataciones().setVisible(true);
+                new Contrataciones().setVisible(false);
             }
         });
     }
