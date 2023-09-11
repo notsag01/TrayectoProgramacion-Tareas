@@ -24,9 +24,9 @@ public class Contrataciones extends javax.swing.JFrame {
         
         jTable_tabla.setModel(modelo);
         
-        cargarFilas();
+        //cargarFilas();
     }
-    public void cargarFilas(){
+    public void cargarFilas(String seguro){
         String fila[];
         String linea;
         try {

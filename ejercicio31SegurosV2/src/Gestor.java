@@ -160,6 +160,8 @@ public class Gestor extends javax.swing.JFrame {
         );
         Archivo archivo =new Archivo();
         archivo.escribirArchivo(persona);
+        
+        
     }
     //////////////////////////////////////////////////////////////////////////////////////////////////////////
     public void getDatosPerosonaVida(){
@@ -313,7 +315,7 @@ public class Gestor extends javax.swing.JFrame {
         jPanel11 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
+        jButton_contratacionesHogar = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         jPanel12 = new javax.swing.JPanel();
@@ -601,11 +603,11 @@ public class Gestor extends javax.swing.JFrame {
             }
         });
 
-        jButton5.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jButton5.setText("Contrataciones");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        jButton_contratacionesHogar.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jButton_contratacionesHogar.setText("Contrataciones");
+        jButton_contratacionesHogar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                jButton_contratacionesHogarActionPerformed(evt);
             }
         });
 
@@ -615,7 +617,7 @@ public class Gestor extends javax.swing.JFrame {
             jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel11Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton5)
+                .addComponent(jButton_contratacionesHogar)
                 .addGap(18, 18, 18)
                 .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
@@ -629,7 +631,7 @@ public class Gestor extends javax.swing.JFrame {
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jButton_contratacionesHogar, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
 
@@ -1606,9 +1608,13 @@ public class Gestor extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField_idActionPerformed
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton5ActionPerformed
+    private void jButton_contratacionesHogarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_contratacionesHogarActionPerformed
+        String seguro="seguro hogar";
+        Contrataciones contrataciones = new Contrataciones();
+        contrataciones.cargarFilas(seguro);
+        contrataciones.setVisible(true);
+        
+    }//GEN-LAST:event_jButton_contratacionesHogarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1653,8 +1659,8 @@ public class Gestor extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton_contratacionesHogar;
     private javax.swing.JButton jButton_seguroVehiculos;
     private javax.swing.JCheckBox jCheckBox_cocina;
     private javax.swing.JCheckBox jCheckBox_consola;
