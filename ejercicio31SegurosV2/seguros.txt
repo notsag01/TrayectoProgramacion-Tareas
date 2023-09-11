@@ -1,1 +1,2 @@
 Seguro Automotor,,,,juli@cordoba.com,KPQ250,PEUGEOT,207,2011,Tercero Completo,Responsabilidad Civil,Responsabilidad Civil,-,Todo Riesgo sin Franquicia,-,
+Seguro Automotor,,,,gaston@gaston.com,555555,RENAULT,KANGOO,,Tercero Completo,Responsabilidad Civil,Responsabilidad Civil,-,-,-,

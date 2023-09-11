@@ -61,7 +61,7 @@ public class Gestor extends javax.swing.JFrame {
     String terceroCompleto,responsabilidadCivil, todoRiesgoCF,todoRiesgoSF,granizo, franquicia;    
     boolean arroba=false, punto=false;
     
-    public void validarMail(){
+    public void validarMail(String seguro){
          String cadena=jTextField_mail.getText();
                 
         for(int i=0; i<cadena.length();i++){
@@ -72,15 +72,16 @@ public class Gestor extends javax.swing.JFrame {
             }else if(caracter=='.'){
                 punto=true;
             }
-//            if(arroba&&punto){
-//                break;
-//            }
-        }
-        if(arroba && punto){
             
-            getDatosPerosonaVehiculos();
-            System.out.println("La Cadena es Valida");
-            invalidarMail();
+        }
+        
+        if(arroba && punto){
+            switch(seguro){
+                case "seguro vehicular":
+                        getDatosPerosonaVehiculos();
+                        System.out.println("La Cadena es Valida");
+                        invalidarMail();
+            }
             
         }else{
             System.out.println("La Cadena no es Valida");
@@ -1449,7 +1450,8 @@ public class Gestor extends javax.swing.JFrame {
     }//GEN-LAST:event_jCheckBox_granizoItemStateChanged
 
     private void jButton_seguroVehiculosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_seguroVehiculosActionPerformed
-        validarMail();
+        String seguro= "seguro vehicular";
+        validarMail(seguro);
         
     }//GEN-LAST:event_jButton_seguroVehiculosActionPerformed
 
