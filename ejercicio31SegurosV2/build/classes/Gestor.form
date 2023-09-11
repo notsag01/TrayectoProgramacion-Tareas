@@ -584,8 +584,8 @@
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-                  <JTabbedPaneConstraints tabName="VIDA">
-                    <Property name="tabTitle" type="java.lang.String" value="VIDA"/>
+                  <JTabbedPaneConstraints tabName="SEGURO VIDA">
+                    <Property name="tabTitle" type="java.lang.String" value="SEGURO VIDA"/>
                   </JTabbedPaneConstraints>
                 </Constraint>
               </Constraints>
@@ -1013,8 +1013,8 @@
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-                  <JTabbedPaneConstraints tabName="VEHICULO">
-                    <Property name="tabTitle" type="java.lang.String" value="VEHICULO"/>
+                  <JTabbedPaneConstraints tabName="SEGURO VEHICULO">
+                    <Property name="tabTitle" type="java.lang.String" value="SEGURO VEHICULO"/>
                   </JTabbedPaneConstraints>
                 </Constraint>
               </Constraints>

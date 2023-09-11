@@ -85,6 +85,10 @@ public class Gestor extends javax.swing.JFrame {
                         getDatosPerosonaHogar();
                         System.out.println("La Cadena es Valida");
                 break;
+                case"seguro vida":
+                        getDatosPerosonaVida();
+                        System.out.println("La Cadena es Valida");
+                break;
             }
                 invalidarMail();
             
@@ -882,7 +886,7 @@ public class Gestor extends javax.swing.JFrame {
         jLabel7.setToolTipText("");
         jPanel4.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 750, 360));
 
-        jTabbedPane_seguroHogar.addTab("VIDA", jPanel4);
+        jTabbedPane_seguroHogar.addTab("SEGURO VIDA", jPanel4);
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -1174,7 +1178,7 @@ public class Gestor extends javax.swing.JFrame {
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/vehiculos.jpg"))); // NOI18N
         jPanel3.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 750, 386));
 
-        jTabbedPane_seguroHogar.addTab("VEHICULO", jPanel3);
+        jTabbedPane_seguroHogar.addTab("SEGURO VEHICULO", jPanel3);
 
         jPanel5.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -1363,7 +1367,8 @@ public class Gestor extends javax.swing.JFrame {
     }//GEN-LAST:event_jCheckBox_heladeraActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        getDatosPerosonaVida();
+        String seguro= "seguro vida";
+        validarMail(seguro);        
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jComboBox_marcasItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jComboBox_marcasItemStateChanged
