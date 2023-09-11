@@ -1262,7 +1262,7 @@ public class Gestor extends javax.swing.JFrame {
         jLabel_frases.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
         jLabel20.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel20.setText("CUIT");
+        jLabel20.setText("CUIT/CUIL");
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -1576,15 +1576,15 @@ public class Gestor extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField_nombreKeyTyped
 
     private void jTextField_idKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField_idKeyTyped
-        int key=evt.getKeyChar();
-        boolean numeros=key>=48 && key<=57;
-        
-        if(!numeros){
-            evt.consume();
-        }
-        if(jTextField_telefono.getText().length()>=11){
-            evt.consume();
-        }
+       int key = evt.getKeyChar();
+       boolean numeros=key>=48&&key<=57;
+       
+       if(!numeros){
+           evt.consume();
+       }
+       if(jTextField_id.getText().length()>=11){
+           evt.consume();
+       }
     }//GEN-LAST:event_jTextField_idKeyTyped
 
     private void jTextField_telefonoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField_telefonoKeyTyped

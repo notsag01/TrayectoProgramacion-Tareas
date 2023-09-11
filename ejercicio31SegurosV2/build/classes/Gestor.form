@@ -1774,7 +1774,7 @@
             <Component class="javax.swing.JLabel" name="jLabel20">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="4"/>
-                <Property name="text" type="java.lang.String" value="CUIT"/>
+                <Property name="text" type="java.lang.String" value="CUIT/CUIL"/>
               </Properties>
             </Component>
           </SubComponents>
