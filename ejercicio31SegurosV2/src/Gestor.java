@@ -80,8 +80,13 @@ public class Gestor extends javax.swing.JFrame {
                 case "seguro vehicular":
                         getDatosPerosonaVehiculos();
                         System.out.println("La Cadena es Valida");
-                        invalidarMail();
+                break;
+                case "seguro hogar":
+                        getDatosPerosonaHogar();
+                        System.out.println("La Cadena es Valida");
+                break;
             }
+                invalidarMail();
             
         }else{
             System.out.println("La Cadena no es Valida");
@@ -1456,7 +1461,8 @@ public class Gestor extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton_seguroVehiculosActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        getDatosPerosonaHogar();
+        String seguro= "seguro hogar";
+        validarMail(seguro);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jCheckBox_incendioItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jCheckBox_incendioItemStateChanged
