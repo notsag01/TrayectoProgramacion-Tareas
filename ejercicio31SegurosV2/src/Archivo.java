@@ -123,6 +123,7 @@ public class Archivo {
             {
                 try {
                     BufferedWriter escribir = new BufferedWriter(new FileWriter("seguros.txt",true));
+                    BufferedWriter escribirAutomotor = new BufferedWriter(new FileWriter("segurosAutomotor.txt",true));
                     escribir.write(persona.getTipoSeguro()+ "," +
                             persona.getCuit() + "," +
                             persona.getNombre() + "," +
@@ -144,6 +145,27 @@ public class Archivo {
 
                 escribir.newLine();
                 escribir.close();
+                    escribirAutomotor.write(persona.getTipoSeguro()+ "," +
+                            persona.getCuit() + "," +
+                            persona.getNombre() + "," +
+                            persona.getTelefono() + "," +
+                            persona.getMail() + "," +
+                            persona.getDominio()+ "," +
+                            persona.getMarcaSelec()+ "," +
+                            persona.getModeloSelec()+ "," +
+                            persona.getAnio()+ "," +
+                            persona.getTerceroCompleto() + "," +
+                            persona.getResponsabilidadCivil()+ "," +
+                            persona.getResponsabilidadCivil()+ "," +
+                            persona.getTodoRiesgoCF()+ "," +
+                            persona.getTodoRiesgoSF()+ "," +
+                            persona.getGranizo()+ "," +
+                            persona.getFranquicia()
+                            
+                    );
+
+                escribirAutomotor.newLine();
+                escribirAutomotor.close();
                 } catch (IOException ex) {
                     System.out.println(ex);
                 }
