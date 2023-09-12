@@ -2,3 +2,4 @@ Seguro Hogar,01234567890,Juan pelotas,555555555,juan@pelotas.com,Parcial,Total,-
 Seguro Vida,09876543210,Pedro pelotas,56565656,pedro@pelotas.com,Muerte,-,Dias de Internacion,7,-,Juan pelotas,Hijo/a,,,,,,
 Seguro Automotor,11111111111,Homer simpson,55555555555,homer@simpson.com,666,FIAT,PULSE,2015,Tercero Completo,Responsabilidad Civil,Responsabilidad Civil,-,-,-,
 Seguro Automotor,88888888888,Fulano de Tal,78787878,fulano@deTal.com,666,PEUGEOT,207,2023,Tercero Completo,Responsabilidad Civil,-,-,-,
+Seguro Hogar,66666666666,poe edgar alan,66666666666,poe@edgar.com,Parcial,Parcial,Parcial,Lavarropas,null,-,-,null,-,Televisor,1

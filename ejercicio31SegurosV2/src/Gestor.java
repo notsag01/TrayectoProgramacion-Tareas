@@ -161,6 +161,8 @@ public class Gestor extends javax.swing.JFrame {
         Archivo archivo =new Archivo();
         archivo.escribirArchivo(persona);
         
+        limpiarDatosPersonaHogar();
+        
         
     }
     //////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -285,7 +287,24 @@ public class Gestor extends javax.swing.JFrame {
         jTextField_telefono.setText("");
         jTextField_mail.setText("");
         }
-    
+        public void limpiarDatosPersonaHogar(){
+           jCheckBox_incendio.setSelected(false);
+           jCheckBox_robo.setSelected(false);
+           jCheckBox_inundacion.setSelected(false);
+           jComboBox_incendio.setEnabled(false);
+           jComboBox_robo.setEnabled(false);
+           jComboBox_inundacion.setEnabled(false);
+           jCheckBox_heladera.setSelected(false);
+           jCheckBox_lavarropas.setSelected(false);
+           jCheckBox_cocina.setSelected(false);
+           jCheckBox_notebooks.setSelected(false);
+           jCheckBox_consola.setSelected(false);
+           jCheckBox_televisor.setSelected(false);
+           jTextField_notebooksCantidad.setEnabled(false);
+           jTextField_televisorCantidad.setEnabled(false);
+           jTextField_notebooksCantidad.setText("");
+           jTextField_televisorCantidad.setText("");
+        }
     
     
 
