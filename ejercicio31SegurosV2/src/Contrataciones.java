@@ -30,6 +30,7 @@ public class Contrataciones extends javax.swing.JFrame {
     }
     public void getSeguroHogar(){
         
+        modelo.addColumn("TIPO SEGURO");
         modelo.addColumn("CUIT");
         modelo.addColumn("NOMBRE Y APELLIDO");
         modelo.addColumn("TELEFONO");
