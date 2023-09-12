@@ -19,6 +19,7 @@ public class Archivo {
             case "Seguro Hogar":
             try {
                 BufferedWriter escribir = new BufferedWriter(new FileWriter("seguros.txt",true));
+                BufferedWriter escribirHogar = new BufferedWriter(new FileWriter("segurosHogar.txt",true));
                 escribir.write(persona.getTipoSeguro() + "," +
                                 persona.getCuit() + "," +
                                 persona.getNombre() + "," +
@@ -39,6 +40,26 @@ public class Archivo {
 
                 escribir.newLine();
                 escribir.close();
+                escribirHogar.write(persona.getTipoSeguro() + "," +
+                                persona.getCuit() + "," +
+                                persona.getNombre() + "," +
+                                persona.getTelefono() + "," +
+                                persona.getMail()+ "," +
+                                persona.getIncendio() + "," +
+                                persona.getRobo() + "," +
+                                persona.getInundacion() + "," +
+                                persona.getHeladera()+ "," +
+                                persona.getLavarropas()+ "," +
+                                persona.getCocina()+ "," +
+                                persona.getNotebook()+ "," +
+                                persona.getNotebookCantidad()+ "," +
+                                persona.getConsola()+ "," +
+                                persona.getTelevisor()+ "," +
+                                persona.getTelevisorCantidad()
+                );
+
+                escribirHogar.newLine();
+                escribirHogar.close();
 
             } catch (IOException ex) {
                 System.out.println(ex);
