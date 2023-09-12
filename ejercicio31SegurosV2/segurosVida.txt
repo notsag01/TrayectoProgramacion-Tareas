@@ -1,1 +1,3 @@
 Seguro Vida,09876543210,Pedro pelotas,56565656,pedro@pelotas.com,Muerte,-,Dias de Internacion,7,-,Juan pelotas,Hijo/a,,,,,,
+Seguro Vida,10101010110,messi lionel,10101010101,messi@leo.com,Muerte,-,Dias de Internacion,7,-,rocuzzo,Conyuge,,,,,,
+Seguro Vida,99999999999,palermo martn,99999999999,palermo@martin.com,Muerte,-,-,null,-,Riquelme roman,Conyuge,,,,,,

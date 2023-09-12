@@ -237,6 +237,8 @@ public class Gestor extends javax.swing.JFrame {
         Archivo archivo =new Archivo();
         archivo.escribirArchivo(persona);
         
+        limpiarDatosPerosonaVida();
+        
     }
         //////////////////////////////////////////////////////////////////////////////
         public void getDatosPerosonaVehiculos(){
@@ -279,6 +281,8 @@ public class Gestor extends javax.swing.JFrame {
             );
             Archivo archivo = new Archivo();
             archivo.escribirArchivo(persona);
+            
+            limpiarDatosPerosonaVehiculos();
         }
         
         public void limpiarDatos(){
@@ -305,7 +309,41 @@ public class Gestor extends javax.swing.JFrame {
            jTextField_notebooksCantidad.setText("");
            jTextField_televisorCantidad.setText("");
         }
-    
+        public void limpiarDatosPerosonaVida(){
+            jCheckBox_muerte.setSelected(false); 
+            jCheckBox_muerteAccidental.setSelected(false); 
+            jCheckBox_internacion.setSelected(false); 
+            jCheckBox_paralisis.setSelected(false); 
+            jTextField_internacionDias.setEnabled(false);
+            jTextField_internacionDias.setText("");
+            jTextField_beneficiario1.setText("");
+            jTextField_beneficiario2.setText("");
+            jTextField_beneficiario3.setText("");
+            jTextField_beneficiario4.setText("");
+            jComboBox_beneficiario1.setEnabled(false);
+            jComboBox_beneficiario2.setEnabled(false);
+            jComboBox_beneficiario3.setEnabled(false);
+            jComboBox_beneficiario4.setEnabled(false);
+            jComboBox_beneficiario1.setSelectedIndex(0);
+            jComboBox_beneficiario2.setSelectedIndex(0);
+            jComboBox_beneficiario3.setSelectedIndex(0);
+            jComboBox_beneficiario4.setSelectedIndex(0);
+        }
+        public void limpiarDatosPerosonaVehiculos(){
+            jTextField_dominio.setText("");
+            jComboBox_marcas.setSelectedIndex(0);
+            jComboBox_modelos.setSelectedIndex(0);
+            jComboBox_franquicia.setSelectedIndex(0);
+            jComboBox_franquicia.setEnabled(false);
+            jLabel_premio.setText("");
+            jLabel_prima.setText("");
+            jCheckBox_terceroCompleto.setSelected(false);
+            jCheckBox_responsabilidadCivil.setSelected(false);
+            jCheckBox_todoRiesgoSF.setSelected(false);
+            jCheckBox_todoRiesgoCF.setSelected(false);
+            jCheckBox_granizo.setSelected(false);
+            jTextField_anio.setText("");
+        }
     
 
     /**
@@ -379,8 +417,8 @@ public class Gestor extends javax.swing.JFrame {
         jComboBox_marcas = new javax.swing.JComboBox<>();
         jComboBox_modelos = new javax.swing.JComboBox<>();
         jComboBox_franquicia = new javax.swing.JComboBox<>();
-        jLabel17 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
+        jLabel_premio = new javax.swing.JLabel();
+        jLabel_prima = new javax.swing.JLabel();
         jPanel_coberturaVehiculos = new javax.swing.JPanel();
         jCheckBox_terceroCompleto = new javax.swing.JCheckBox();
         jCheckBox_responsabilidadCivil = new javax.swing.JCheckBox();
@@ -985,9 +1023,9 @@ public class Gestor extends javax.swing.JFrame {
         jComboBox_franquicia.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "20.000", "40.000", "60.000", "80.000" }));
         jComboBox_franquicia.setEnabled(false);
 
-        jLabel17.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel_premio.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
 
-        jLabel18.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel_prima.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
 
         javax.swing.GroupLayout jPanel17Layout = new javax.swing.GroupLayout(jPanel17);
         jPanel17.setLayout(jPanel17Layout);
@@ -1020,11 +1058,11 @@ public class Gestor extends javax.swing.JFrame {
                                     .addGroup(jPanel17Layout.createSequentialGroup()
                                         .addComponent(jLabel15, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
                                         .addGap(20, 20, 20)))
-                                .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(jLabel_premio, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel17Layout.createSequentialGroup()
                                 .addComponent(jLabel16)
                                 .addGap(18, 18, 18)
-                                .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(jLabel_prima, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(0, 50, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -1050,11 +1088,11 @@ public class Gestor extends javax.swing.JFrame {
                 .addGap(15, 15, 15)
                 .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel_premio, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(5, 5, 5)
                 .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel_prima, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -1462,11 +1500,11 @@ public class Gestor extends javax.swing.JFrame {
 
     private void jComboBox_marcasItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jComboBox_marcasItemStateChanged
         ////////////   SECCION VEHICULOS   ///////////////////////////////
-        String modelosFiat []= {"PULSE", "CRONOS", "TORO", "UNO", "500", "STRADA", "FIORINO"};
-        String modelosRenault []= {"SANDERO", "LOGAN", "KANGOO", "KWID", "STEPWEY", "ALASKAN", "DUSTER"};
-        String modelosChevrolet []= {"CRUEZE", "ONIX", "TRACKER", "S10", "SPIN", "PRISMA", "COBALT"};
-        String modelosFord []= {"RANGER", "ECOSPORT", "KA", "FIESTA", "FOCUS", "MONDEO", "MUSTANG"};
-        String modelosPeugeot []= {"208", "207", "308", "408", "PARTNER", "PATAGONIC", "EXPERT"};
+        String modelosFiat []= {" ","PULSE", "CRONOS", "TORO", "UNO", "500", "STRADA", "FIORINO"};
+        String modelosRenault []= {" ","SANDERO", "LOGAN", "KANGOO", "KWID", "STEPWEY", "ALASKAN", "DUSTER"};
+        String modelosChevrolet []= {" ","CRUEZE", "ONIX", "TRACKER", "S10", "SPIN", "PRISMA", "COBALT"};
+        String modelosFord []= {" ","RANGER", "ECOSPORT", "KA", "FIESTA", "FOCUS", "MONDEO", "MUSTANG"};
+        String modelosPeugeot []= {" ","208", "207", "308", "408", "PARTNER", "PATAGONIC", "EXPERT"};
         
         // El evento ItemEvent tiene dos estados posibles: ItemEvent.SELECTED y ItemEvent.DESELECTED, y ambos estados se generan cuando se 
         //selecciona o deselecciona un ítem en el JComboBox.
@@ -1781,8 +1819,6 @@ public class Gestor extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
@@ -1794,6 +1830,8 @@ public class Gestor extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JLabel jLabel_frases;
+    private javax.swing.JLabel jLabel_premio;
+    private javax.swing.JLabel jLabel_prima;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;

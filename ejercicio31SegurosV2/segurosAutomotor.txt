@@ -1,1 +1,3 @@
 Seguro Automotor,88888888888,Fulano de Tal,78787878,fulano@deTal.com,666,PEUGEOT,207,2023,Tercero Completo,Responsabilidad Civil,-,-,-,
+Seguro Automotor,44444444444,Fangio Juan Manuel,44444444444,fangio@jm.com,444444,FORD,KA,2023,Tercero Completo,Responsabilidad Civil,-,-,-,
+Seguro Automotor,55555555555,chumi roberto,55555555555,chumi@roberto.com,555555,PEUGEOT,PARTNER,2021,-,Responsabilidad Civil,Todo Riesgo con Franquicia,-,-,
