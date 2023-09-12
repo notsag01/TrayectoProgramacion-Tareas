@@ -367,6 +367,7 @@ public class Gestor extends javax.swing.JFrame {
         jPanel20 = new javax.swing.JPanel();
         jButton_seguroVehiculos = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
+        jButton_contratacinonesVehiculos = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
@@ -584,7 +585,7 @@ public class Gestor extends javax.swing.JFrame {
 
         jPanel11.setBackground(new java.awt.Color(255, 255, 255));
 
-        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jButton1.setText("Contratar");
         jButton1.setMaximumSize(new java.awt.Dimension(72, 27));
         jButton1.setMinimumSize(new java.awt.Dimension(72, 27));
@@ -594,7 +595,7 @@ public class Gestor extends javax.swing.JFrame {
             }
         });
 
-        jButton2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jButton2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jButton2.setText("Salir");
         jButton2.setMaximumSize(new java.awt.Dimension(72, 27));
         jButton2.setMinimumSize(new java.awt.Dimension(72, 27));
@@ -604,7 +605,7 @@ public class Gestor extends javax.swing.JFrame {
             }
         });
 
-        jButton_contratacionesHogar.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jButton_contratacionesHogar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jButton_contratacionesHogar.setText("Contrataciones");
         jButton_contratacionesHogar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -847,7 +848,7 @@ public class Gestor extends javax.swing.JFrame {
             }
         });
 
-        jButton_contratacionesVida.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jButton_contratacionesVida.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jButton_contratacionesVida.setText("Contrataciones");
         jButton_contratacionesVida.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -902,7 +903,7 @@ public class Gestor extends javax.swing.JFrame {
                     .addComponent(jPanel14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addComponent(jPanel15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(17, Short.MAX_VALUE))
+                .addContainerGap(18, Short.MAX_VALUE))
         );
 
         jPanel4.add(jPanel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 750, 360));
@@ -1148,12 +1149,22 @@ public class Gestor extends javax.swing.JFrame {
             }
         });
 
+        jButton_contratacinonesVehiculos.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jButton_contratacinonesVehiculos.setText("Contrataciones");
+        jButton_contratacinonesVehiculos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_contratacinonesVehiculosActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel20Layout = new javax.swing.GroupLayout(jPanel20);
         jPanel20.setLayout(jPanel20Layout);
         jPanel20Layout.setHorizontalGroup(
             jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel20Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton_contratacinonesVehiculos)
+                .addGap(18, 18, 18)
                 .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jButton_seguroVehiculos, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1165,7 +1176,8 @@ public class Gestor extends javax.swing.JFrame {
                 .addGap(15, 15, 15)
                 .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton_seguroVehiculos)
-                    .addComponent(jButton6))
+                    .addComponent(jButton6)
+                    .addComponent(jButton_contratacinonesVehiculos))
                 .addContainerGap(11, Short.MAX_VALUE))
         );
 
@@ -1632,6 +1644,12 @@ public class Gestor extends javax.swing.JFrame {
         contrataciones.setVisible(true);        
     }//GEN-LAST:event_jButton_contratacionesVidaActionPerformed
 
+    private void jButton_contratacinonesVehiculosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_contratacinonesVehiculosActionPerformed
+        String seguro="seguro vehiculos";
+        Contrataciones contrataciones = new Contrataciones(seguro);
+        contrataciones.setVisible(true);        
+    }//GEN-LAST:event_jButton_contratacinonesVehiculosActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1676,6 +1694,7 @@ public class Gestor extends javax.swing.JFrame {
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton_contratacinonesVehiculos;
     private javax.swing.JButton jButton_contratacionesHogar;
     private javax.swing.JButton jButton_contratacionesVida;
     private javax.swing.JButton jButton_seguroVehiculos;

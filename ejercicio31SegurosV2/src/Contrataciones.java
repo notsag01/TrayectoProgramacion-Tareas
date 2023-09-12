@@ -27,6 +27,8 @@ public class Contrataciones extends javax.swing.JFrame {
             break;
             case"seguro vida": getSeguroVida();
             break;
+            case"seguro vehiculos": getSeguroVehiculos();
+            break;
         }
         
         
@@ -102,6 +104,47 @@ public class Contrataciones extends javax.swing.JFrame {
         String linea;
         try {
             BufferedReader escribir = new BufferedReader(new FileReader("segurosVida.txt"));            
+            try {
+                linea=escribir.readLine();
+                while(linea!=null){
+                    fila=linea.split(",");
+                    modelo.addRow(fila);
+                    linea=escribir.readLine();
+                }
+            } catch (IOException ex) {
+                System.out.println(ex);
+            }            
+        } catch (FileNotFoundException ex) {
+            System.out.println(ex);
+        }
+    }
+    public void getSeguroVehiculos(){
+        
+        modelo.addColumn("TIPO SEGURO");
+        modelo.addColumn("CUIT");
+        modelo.addColumn("NOMBRE Y APELLIDO");
+        modelo.addColumn("TELEFONO");
+        modelo.addColumn("MAIL");
+        modelo.addColumn("DOMINIO");
+        modelo.addColumn("MARCA");
+        modelo.addColumn("MODELO");
+        modelo.addColumn("AÑO");
+        modelo.addColumn("TERCERO COMPLETO");
+        modelo.addColumn("RESP. CIVIL");
+        modelo.addColumn("TODO RIESGO CF");
+        modelo.addColumn("TODO RIESGO SF");
+        modelo.addColumn("GRANIZO");
+        modelo.addColumn("FRANQUICIA");
+        
+
+        jTable_tabla.setModel(modelo);
+        
+        //cargarFilas();
+        
+        String fila[];
+        String linea;
+        try {
+            BufferedReader escribir = new BufferedReader(new FileReader("segurosAutomotor.txt"));            
             try {
                 linea=escribir.readLine();
                 while(linea!=null){

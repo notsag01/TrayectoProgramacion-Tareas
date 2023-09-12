@@ -135,7 +135,6 @@ public class Archivo {
                             persona.getAnio()+ "," +
                             persona.getTerceroCompleto() + "," +
                             persona.getResponsabilidadCivil()+ "," +
-                            persona.getResponsabilidadCivil()+ "," +
                             persona.getTodoRiesgoCF()+ "," +
                             persona.getTodoRiesgoSF()+ "," +
                             persona.getGranizo()+ "," +
@@ -155,7 +154,6 @@ public class Archivo {
                             persona.getModeloSelec()+ "," +
                             persona.getAnio()+ "," +
                             persona.getTerceroCompleto() + "," +
-                            persona.getResponsabilidadCivil()+ "," +
                             persona.getResponsabilidadCivil()+ "," +
                             persona.getTodoRiesgoCF()+ "," +
                             persona.getTodoRiesgoSF()+ "," +

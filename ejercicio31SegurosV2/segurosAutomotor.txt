@@ -1,1 +1,1 @@
-Seguro Automotor,11111111111,Homer simpson,55555555555,homer@simpson.com,666,FIAT,PULSE,2015,Tercero Completo,Responsabilidad Civil,Responsabilidad Civil,-,-,-,
+Seguro Automotor,88888888888,Fulano de Tal,78787878,fulano@deTal.com,666,PEUGEOT,207,2023,Tercero Completo,Responsabilidad Civil,-,-,-,
