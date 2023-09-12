@@ -24,6 +24,9 @@ public class Contrataciones extends javax.swing.JFrame {
         
         switch(seguro){
             case"seguro hogar": getSeguroHogar();
+            break;
+            case"seguro vida": getSeguroVida();
+            break;
         }
         
         
@@ -55,6 +58,50 @@ public class Contrataciones extends javax.swing.JFrame {
         String linea;
         try {
             BufferedReader escribir = new BufferedReader(new FileReader("segurosHogar.txt"));            
+            try {
+                linea=escribir.readLine();
+                while(linea!=null){
+                    fila=linea.split(",");
+                    modelo.addRow(fila);
+                    linea=escribir.readLine();
+                }
+            } catch (IOException ex) {
+                System.out.println(ex);
+            }            
+        } catch (FileNotFoundException ex) {
+            System.out.println(ex);
+        }
+    }
+    public void getSeguroVida(){
+        
+        modelo.addColumn("TIPO SEGURO");
+        modelo.addColumn("CUIT");
+        modelo.addColumn("NOMBRE Y APELLIDO");
+        modelo.addColumn("TELEFONO");
+        modelo.addColumn("MAIL");
+        modelo.addColumn("MUERTE");
+        modelo.addColumn("MUERTE ACCIDENTAL");
+        modelo.addColumn("INTERNACION");
+        modelo.addColumn("DIAS INTERNACION");
+        modelo.addColumn("PARALISIS");
+        modelo.addColumn("BEENFICIARIO 1");
+        modelo.addColumn("PARENTESCO");
+        modelo.addColumn("BEENFICIARIO 2");
+        modelo.addColumn("PARENTESCO");
+        modelo.addColumn("BEENFICIARIO 3");
+        modelo.addColumn("PARENTESCO");
+        modelo.addColumn("BEENFICIARIO 4");
+        modelo.addColumn("PARENTESCO");
+        
+        
+        jTable_tabla.setModel(modelo);
+        
+        //cargarFilas();
+        
+        String fila[];
+        String linea;
+        try {
+            BufferedReader escribir = new BufferedReader(new FileReader("segurosVida.txt"));            
             try {
                 linea=escribir.readLine();
                 while(linea!=null){
