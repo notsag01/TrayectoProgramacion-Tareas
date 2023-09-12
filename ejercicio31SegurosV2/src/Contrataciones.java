@@ -58,10 +58,8 @@ public class Contrataciones extends javax.swing.JFrame {
                 linea=escribir.readLine();
                 while(linea!=null){
                     fila=linea.split(",");
-                    if(fila.length<1&&fila[0].trim().equalsIgnoreCase("seguro hogar")){
-                        modelo.addRow(fila);
-                        linea=escribir.readLine();
-                    } 
+                    modelo.addRow(fila);
+                    linea=escribir.readLine();
                 }
             } catch (IOException ex) {
                 System.out.println(ex);
