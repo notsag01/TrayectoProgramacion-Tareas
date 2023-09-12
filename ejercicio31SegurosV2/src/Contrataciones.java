@@ -34,6 +34,17 @@ public class Contrataciones extends javax.swing.JFrame {
         modelo.addColumn("NOMBRE Y APELLIDO");
         modelo.addColumn("TELEFONO");
         modelo.addColumn("MAIL");
+        modelo.addColumn("INCENDIO");
+        modelo.addColumn("ROBO");
+        modelo.addColumn("INUNDACION");
+        modelo.addColumn("HELADERA");
+        modelo.addColumn("LAVARROPAS");
+        modelo.addColumn("COCINA");
+        modelo.addColumn("NOTEBOOKS");
+        modelo.addColumn("NOTEBOOKS CANT");
+        modelo.addColumn("CONSOLAS");
+        modelo.addColumn("TELEVISOR");
+        modelo.addColumn("TELEVISOR CANT");
         
         jTable_tabla.setModel(modelo);
         
@@ -47,8 +58,10 @@ public class Contrataciones extends javax.swing.JFrame {
                 linea=escribir.readLine();
                 while(linea!=null){
                     fila=linea.split(",");
-                    modelo.addRow(fila);
-                    linea=escribir.readLine();
+                    if(fila.length<1&&fila[0].trim().equalsIgnoreCase("seguro hogar")){
+                        modelo.addRow(fila);
+                        linea=escribir.readLine();
+                    } 
                 }
             } catch (IOException ex) {
                 System.out.println(ex);

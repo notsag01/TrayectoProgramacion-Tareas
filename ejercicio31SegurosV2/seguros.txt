@@ -1,0 +1,1 @@
+Seguro Hogar,01234567890,CORDOBA GASTON,545454545,gas@gas.com,Parcial,Parcial,-,Cocina,null,null,Noteboks,1,-,Televisor,2
