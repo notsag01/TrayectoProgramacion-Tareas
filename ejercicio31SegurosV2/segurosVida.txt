@@ -1,2 +1,1 @@
-Seguro Hogar,01234567890,Juan pelotas,555555555,juan@pelotas.com,Parcial,Total,-,Heladera,-,-,Noteboks,1,-,Televisor,1
 Seguro Vida,09876543210,Pedro pelotas,56565656,pedro@pelotas.com,Muerte,-,Dias de Internacion,7,-,Juan pelotas,Hijo/a,,,,,,

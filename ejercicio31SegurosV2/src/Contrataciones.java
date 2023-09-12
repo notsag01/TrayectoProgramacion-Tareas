@@ -53,7 +53,7 @@ public class Contrataciones extends javax.swing.JFrame {
         String fila[];
         String linea;
         try {
-            BufferedReader escribir = new BufferedReader(new FileReader("seguros.txt"));            
+            BufferedReader escribir = new BufferedReader(new FileReader("segurosHogar.txt"));            
             try {
                 linea=escribir.readLine();
                 while(linea!=null){

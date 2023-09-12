@@ -69,6 +69,7 @@ public class Archivo {
             {
                 try {
                     BufferedWriter escribir = new BufferedWriter(new FileWriter("seguros.txt",true));
+                    BufferedWriter escribirVida = new BufferedWriter(new FileWriter("segurosVida.txt",true));
                     escribir.write(persona.getTipoSeguro()+ "," +
                             persona.getCuit() + "," +
                             persona.getNombre() + "," +
@@ -91,6 +92,28 @@ public class Archivo {
 
                 escribir.newLine();
                 escribir.close();
+                    escribirVida.write(persona.getTipoSeguro()+ "," +
+                            persona.getCuit() + "," +
+                            persona.getNombre() + "," +
+                            persona.getTelefono() + "," +
+                            persona.getMail() + "," +
+                            persona.getMuerte() + "," +
+                            persona.getMuerteAccidental() + "," +
+                            persona.getInternacion()+ "," +
+                            persona.getInternacionDias()+ "," +
+                            persona.getParalisis()+ "," +
+                            persona.getBeneficiario1()+ "," +
+                            persona.getBeneficiario1_parentesco()+ "," +
+                            persona.getBeneficiario2()+ "," +
+                            persona.getBeneficiario2_parentesco()+ "," +
+                            persona.getBeneficiario3()+ "," +
+                            persona.getBeneficiario3_parentesco()+ "," +
+                            persona.getBeneficiario4()+ "," +
+                            persona.getBeneficiario4_parentesco()
+                    );
+
+                escribirVida.newLine();
+                escribirVida.close();
                 } catch (IOException ex) {
                     System.out.println(ex);
                 }
