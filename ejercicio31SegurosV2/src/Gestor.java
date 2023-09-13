@@ -606,6 +606,16 @@ public class Gestor extends javax.swing.JFrame {
         });
 
         jTextField_televisorCantidad.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jTextField_televisorCantidad.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField_televisorCantidadActionPerformed(evt);
+            }
+        });
+        jTextField_televisorCantidad.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextField_televisorCantidadKeyTyped(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
         jPanel10.setLayout(jPanel10Layout);
@@ -1748,6 +1758,21 @@ public class Gestor extends javax.swing.JFrame {
             evt.consume();
         }
     }//GEN-LAST:event_jTextField_notebooksCantidadKeyTyped
+
+    private void jTextField_televisorCantidadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField_televisorCantidadActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField_televisorCantidadActionPerformed
+
+    private void jTextField_televisorCantidadKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField_televisorCantidadKeyTyped
+        int key = evt.getKeyChar();
+        boolean numeros = key>=48&&key<=57;
+        if(!numeros){
+            evt.consume();
+        }
+        if(jTextField_televisorCantidad.getText().length()>=2){
+            evt.consume();
+        }
+    }//GEN-LAST:event_jTextField_televisorCantidadKeyTyped
 
     /**
      * @param args the command line arguments
