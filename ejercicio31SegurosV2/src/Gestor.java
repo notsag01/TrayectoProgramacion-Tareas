@@ -1181,6 +1181,11 @@ public class Gestor extends javax.swing.JFrame {
         jPanel19.setOpaque(false);
 
         jTextField_anio.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jTextField_anio.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextField_anioKeyTyped(evt);
+            }
+        });
 
         jLabel9.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel9.setText("Año: ");
@@ -1773,6 +1778,15 @@ public class Gestor extends javax.swing.JFrame {
             evt.consume();
         }
     }//GEN-LAST:event_jTextField_televisorCantidadKeyTyped
+
+    private void jTextField_anioKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField_anioKeyTyped
+        int key=evt.getKeyChar();
+        boolean numeros=key>=48&&key<=57;
+        
+        if(!numeros){
+            evt.consume();
+        }
+    }//GEN-LAST:event_jTextField_anioKeyTyped
 
     /**
      * @param args the command line arguments
