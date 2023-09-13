@@ -1786,6 +1786,9 @@ public class Gestor extends javax.swing.JFrame {
         if(!numeros){
             evt.consume();
         }
+        if(jTextField_anio.getText().length()>=4){
+            evt.consume();
+        }
     }//GEN-LAST:event_jTextField_anioKeyTyped
 
     /**
