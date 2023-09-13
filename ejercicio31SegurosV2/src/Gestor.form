@@ -474,6 +474,9 @@
                               </Border>
                             </Property>
                           </Properties>
+                          <Events>
+                            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTextField_notebooksCantidadKeyTyped"/>
+                          </Events>
                         </Component>
                         <Component class="javax.swing.JTextField" name="jTextField_televisorCantidad">
                           <Properties>
@@ -545,12 +548,6 @@
                               <Font name="Segoe UI" size="14" style="1"/>
                             </Property>
                             <Property name="text" type="java.lang.String" value="Salir"/>
-                            <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                              <Dimension value="[72, 27]"/>
-                            </Property>
-                            <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                              <Dimension value="[72, 27]"/>
-                            </Property>
                           </Properties>
                           <Events>
                             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>

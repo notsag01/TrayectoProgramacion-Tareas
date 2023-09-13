@@ -599,6 +599,11 @@ public class Gestor extends javax.swing.JFrame {
         });
 
         jTextField_notebooksCantidad.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jTextField_notebooksCantidad.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextField_notebooksCantidadKeyTyped(evt);
+            }
+        });
 
         jTextField_televisorCantidad.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
@@ -662,8 +667,6 @@ public class Gestor extends javax.swing.JFrame {
 
         jButton2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jButton2.setText("Salir");
-        jButton2.setMaximumSize(new java.awt.Dimension(72, 27));
-        jButton2.setMinimumSize(new java.awt.Dimension(72, 27));
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -1734,6 +1737,17 @@ public class Gestor extends javax.swing.JFrame {
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         limpiarDatos();
     }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jTextField_notebooksCantidadKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField_notebooksCantidadKeyTyped
+        int key=evt.getKeyChar();
+        boolean numeros= key>=48&&key<=57;
+        if(!numeros){
+            evt.consume();
+        }
+        if(jTextField_notebooksCantidad.getText().length()>=2){
+            evt.consume();
+        }
+    }//GEN-LAST:event_jTextField_notebooksCantidadKeyTyped
 
     /**
      * @param args the command line arguments
