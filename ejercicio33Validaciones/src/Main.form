@@ -96,7 +96,7 @@
                       <Group type="102" attributes="0">
                           <Component id="jLabel2" min="-2" pref="150" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="jTextField2" min="-2" pref="250" max="-2" attributes="0"/>
+                          <Component id="jTextField_apellido" min="-2" pref="250" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" attributes="0">
                           <Component id="jLabel1" min="-2" pref="150" max="-2" attributes="0"/>
@@ -120,7 +120,7 @@
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel2" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
-                      <Component id="jTextField2" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                      <Component id="jTextField_apellido" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
@@ -243,7 +243,7 @@
         </Component>
         <Component class="javax.swing.JTextField" name="jTextField_nombre">
         </Component>
-        <Component class="javax.swing.JTextField" name="jTextField2">
+        <Component class="javax.swing.JTextField" name="jTextField_apellido">
         </Component>
         <Component class="javax.swing.JTextField" name="jTextField3">
         </Component>
