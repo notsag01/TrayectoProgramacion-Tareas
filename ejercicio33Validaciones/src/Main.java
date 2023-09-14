@@ -3,15 +3,26 @@ import javax.swing.JOptionPane;
 
 
 public class Main extends javax.swing.JFrame {
-    String nombre, apellido;
+    String nombre, apellido,fechaNacimiento;
     int validados=0;
     public void validarTexto(String texto, int minimo,int maximo, String input){
         if(texto.matches("[A-Za-z ]+")&&texto.length()>=minimo&&texto.length()<=maximo){
             validados+=1;
             System.out.println(validados);
         }else{
-            JOptionPane.showMessageDialog(null, "El " + input + " no es Valido. Por favor, ingrelo nuevamente",
+            JOptionPane.showMessageDialog(null, "El campo " + input + " no es Valido. Por favor, ingrelo nuevamente",
                     "Error", HEIGHT);
+            validados=0;
+        }
+    }
+    public void validarNumero(String texto, int minimo,int maximo, String input){
+        if(texto.matches("[0-9]+")&&texto.length()>=minimo&&texto.length()<=maximo){
+            validados+=1;
+            System.out.println(validados);
+        }else{
+            JOptionPane.showMessageDialog(null, "El campo " + input + " no es Valido." + "\n" + " Por favor, ingrelo nuevamente",
+                    "Error", HEIGHT);
+            validados=0;
         }
     }
     
@@ -21,6 +32,9 @@ public class Main extends javax.swing.JFrame {
         
         apellido=jTextField_apellido.getText();
         validarTexto(apellido,2,25,"Apellido");
+        
+        fechaNacimiento=jTextField_apellido.getText();
+        validarNumero(fechaNacimiento,1,10,"Fecha de Nacimiento");
         
     }
 
@@ -52,7 +66,7 @@ public class Main extends javax.swing.JFrame {
         jLabel11 = new javax.swing.JLabel();
         jTextField_nombre = new javax.swing.JTextField();
         jTextField_apellido = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
+        jTextField_fechaNacimiento = new javax.swing.JTextField();
         jComboBox1 = new javax.swing.JComboBox<>();
         jTextField4 = new javax.swing.JTextField();
         jTextField5 = new javax.swing.JTextField();
@@ -201,7 +215,7 @@ public class Main extends javax.swing.JFrame {
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jTextField_fechaNacimiento, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
@@ -227,7 +241,7 @@ public class Main extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextField_fechaNacimiento, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -350,13 +364,13 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField6;
     private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField8;
     private javax.swing.JTextField jTextField_apellido;
+    private javax.swing.JTextField jTextField_fechaNacimiento;
     private javax.swing.JTextField jTextField_nombre;
     // End of variables declaration//GEN-END:variables
 }
