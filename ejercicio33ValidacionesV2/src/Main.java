@@ -10,9 +10,41 @@ import javax.swing.JOptionPane;
 public class Main extends javax.swing.JFrame {
     boolean arroba=false,punto=false;       
     String mail;
+    
+    
     public Main() {
         initComponents();
         this.setLocationRelativeTo(null);
+        String[] provincias = new String[]{
+               "", 
+               "Buenos Aires",
+               "Catamarca",
+               "Chaco",
+               "Chubut",
+               "Córdoba",
+               "Corrientes",
+               "Entre Ríos",
+               "Formosa",
+               "Jujuy",
+               "La Pampa",
+               "La Rioja",
+               "Mendoza",
+               "Misiones",
+               "Neuquén",
+               "Río Negro",
+               "Salta",
+               "San Juan",
+               "San Luis",
+               "Santa Cruz",
+               "Santa Fe",
+               "Santiago del Estero",
+               "Tierra del Fuego",
+               "Tucumán"
+           };
+
+        for(String provincia : provincias){
+           jComboBox_provincias.addItem(provincia);
+        }
     }
     
     public void validarMail(){
@@ -68,7 +100,7 @@ public class Main extends javax.swing.JFrame {
         jTextField4 = new javax.swing.JTextField();
         jTextField5 = new javax.swing.JTextField();
         jTextField6 = new javax.swing.JTextField();
-        jComboBox2 = new javax.swing.JComboBox<>();
+        jComboBox_provincias = new javax.swing.JComboBox<>();
         jComboBox3 = new javax.swing.JComboBox<>();
         jTextField7 = new javax.swing.JTextField();
         jTextField_mail = new javax.swing.JTextField();
@@ -136,9 +168,7 @@ public class Main extends javax.swing.JFrame {
             }
         });
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "MASCULINO", "FEMENINO" }));
 
         jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
@@ -209,7 +239,7 @@ public class Main extends javax.swing.JFrame {
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jComboBox_provincias, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
@@ -275,7 +305,7 @@ public class Main extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jComboBox_provincias, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -389,8 +419,8 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton_comenzar;
     private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JComboBox<String> jComboBox3;
+    private javax.swing.JComboBox<String> jComboBox_provincias;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
