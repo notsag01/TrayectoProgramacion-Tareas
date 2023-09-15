@@ -47,6 +47,21 @@ public class Main extends javax.swing.JFrame {
         }
     }
     
+    public void validarFormulario(){
+        if(jTextField_nombre.getText().equals("")||
+            jTextField_apellido.getText().equals(" ")||
+            jTextField_fechaNacimiento.getText().equals(" ")||
+            jTextField_cuil.getText().equals(" ")||
+            jTextField_domicilio.getText().equals(" ")||
+            jTextField_localidad.getText().equals(" ")||
+            jTextField_hijos.getText().equals(" ")||
+            jTextField_mail.getText().equals(" ")
+                ){
+        JOptionPane.showMessageDialog(null, "Todos los campos del formulario \n debes ser completados",
+                "ERROR DE VALIDACION", HEIGHT);
+        }
+    }
+    
     public void validarMail(){
         mail=jTextField_mail.getText();
         
@@ -98,8 +113,8 @@ public class Main extends javax.swing.JFrame {
         jTextField_fechaNacimiento = new javax.swing.JTextField();
         jComboBox1 = new javax.swing.JComboBox<>();
         jTextField_cuil = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
-        jTextField6 = new javax.swing.JTextField();
+        jTextField_domicilio = new javax.swing.JTextField();
+        jTextField_localidad = new javax.swing.JTextField();
         jComboBox_provincias = new javax.swing.JComboBox<>();
         jComboBox3 = new javax.swing.JComboBox<>();
         jTextField_hijos = new javax.swing.JTextField();
@@ -254,11 +269,11 @@ public class Main extends javax.swing.JFrame {
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jTextField_localidad, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jTextField_domicilio, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
@@ -308,11 +323,11 @@ public class Main extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextField_domicilio, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextField_localidad, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -360,7 +375,8 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton_comenzarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_comenzarActionPerformed
-        validarMail();
+        validarFormulario();
+        //validarMail();
     }//GEN-LAST:event_jButton_comenzarActionPerformed
 
     private void jTextField_nombreKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField_nombreKeyTyped
@@ -470,12 +486,12 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
     private javax.swing.JTextField jTextField_apellido;
     private javax.swing.JTextField jTextField_cuil;
+    private javax.swing.JTextField jTextField_domicilio;
     private javax.swing.JTextField jTextField_fechaNacimiento;
     private javax.swing.JTextField jTextField_hijos;
+    private javax.swing.JTextField jTextField_localidad;
     private javax.swing.JTextField jTextField_mail;
     private javax.swing.JTextField jTextField_nombre;
     // End of variables declaration//GEN-END:variables
