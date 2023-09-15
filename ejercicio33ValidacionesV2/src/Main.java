@@ -90,7 +90,21 @@ public class Main extends javax.swing.JFrame {
         }
         arroba=false;
         punto=false;
-        
+        limpiarFormulario();
+    }
+    
+    public void limpiarFormulario(){
+        jTextField_nombre.setText("");
+        jTextField_apellido.setText("");
+        jTextField_fechaNacimiento.setText("");
+        jTextField_cuil.setText("");
+        jTextField_domicilio.setText("");
+        jTextField_localidad.setText("");
+        jTextField_hijos.setText("");
+        jTextField_mail.setText("");
+        jComboBox_genero.setSelectedIndex(0);
+        jComboBox_provincias.setSelectedIndex(0);
+        jComboBox_estadoCivil.setSelectedIndex(0);
     }
 
     /**
