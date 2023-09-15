@@ -57,10 +57,14 @@ public class Main extends javax.swing.JFrame {
             jTextField_localidad.getText().equals(" ")||
             jTextField_hijos.getText().equals(" ")||
             jTextField_mail.getText().equals(" ")||
-            jComboBox_genero.getSelectedIndex()==0
+            jComboBox_genero.getSelectedIndex()==0||
+            jComboBox_provincias.getSelectedIndex()==0||
+            jComboBox_estadoCivil.getSelectedIndex()==0
                 ){
         JOptionPane.showMessageDialog(null, "Todos los campos del formulario \n debes ser completados",
                 "ERROR DE VALIDACION", HEIGHT);
+        }else{
+            validarMail();
         }
     }
     
@@ -118,7 +122,7 @@ public class Main extends javax.swing.JFrame {
         jTextField_domicilio = new javax.swing.JTextField();
         jTextField_localidad = new javax.swing.JTextField();
         jComboBox_provincias = new javax.swing.JComboBox<>();
-        jComboBox3 = new javax.swing.JComboBox<>();
+        jComboBox_estadoCivil = new javax.swing.JComboBox<>();
         jTextField_hijos = new javax.swing.JTextField();
         jTextField_mail = new javax.swing.JTextField();
         jPanel3 = new javax.swing.JPanel();
@@ -193,10 +197,10 @@ public class Main extends javax.swing.JFrame {
             }
         });
 
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "SOLTERO", "CASADO" }));
-        jComboBox3.addKeyListener(new java.awt.event.KeyAdapter() {
+        jComboBox_estadoCivil.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "SOLTERO", "CASADO" }));
+        jComboBox_estadoCivil.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
-                jComboBox3KeyTyped(evt);
+                jComboBox_estadoCivilKeyTyped(evt);
             }
         });
 
@@ -263,7 +267,7 @@ public class Main extends javax.swing.JFrame {
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jComboBox_estadoCivil, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
@@ -337,7 +341,7 @@ public class Main extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jComboBox_estadoCivil, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(26, 26, 26)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -378,7 +382,6 @@ public class Main extends javax.swing.JFrame {
 
     private void jButton_comenzarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_comenzarActionPerformed
         validarFormulario();
-        //validarMail();
     }//GEN-LAST:event_jButton_comenzarActionPerformed
 
     private void jTextField_nombreKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField_nombreKeyTyped
@@ -420,7 +423,7 @@ public class Main extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jTextField_cuilKeyTyped
 
-    private void jComboBox3KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jComboBox3KeyTyped
+    private void jComboBox_estadoCivilKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jComboBox_estadoCivilKeyTyped
         int key=evt.getKeyChar();
         boolean numeros=key>=48&&key<=57;
         
@@ -430,7 +433,7 @@ public class Main extends javax.swing.JFrame {
         if(jTextField_hijos.getText().length()>1){
             evt.consume();
         }
-    }//GEN-LAST:event_jComboBox3KeyTyped
+    }//GEN-LAST:event_jComboBox_estadoCivilKeyTyped
 
     /**
      * @param args the command line arguments
@@ -471,7 +474,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton_comenzar;
-    private javax.swing.JComboBox<String> jComboBox3;
+    private javax.swing.JComboBox<String> jComboBox_estadoCivil;
     private javax.swing.JComboBox<String> jComboBox_genero;
     private javax.swing.JComboBox<String> jComboBox_provincias;
     private javax.swing.JLabel jLabel1;
