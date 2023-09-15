@@ -8,11 +8,36 @@ import javax.swing.JOptionPane;
 
 
 public class Main extends javax.swing.JFrame {
-    
-
+    boolean arroba=false,punto=false;       
+    String mail;
     public Main() {
         initComponents();
         this.setLocationRelativeTo(null);
+    }
+    
+    public void validarMail(){
+        mail=jTextField_mail.getText();
+        
+        for(int i=0; i<mail.length();i++){
+            char caracter=mail.charAt(i);
+            
+            if(caracter=='@'){
+                arroba=true;
+            }else if(caracter=='.'){
+                punto=true;
+            }
+            
+        }
+        if(arroba&&punto){
+            JOptionPane.showMessageDialog(null, "El formularioa fue ingresado correctamente",
+                    "Validacion Confirmada",JOptionPane.INFORMATION_MESSAGE);
+        }else{
+            JOptionPane.showMessageDialog(null, "El mail ingresado no es correcto. \n Ingrese un nuevo mail",
+                    "Validacion Incorrecta", HEIGHT);
+        }
+        arroba=false;
+        punto=false;
+        
     }
 
     /**
@@ -46,7 +71,7 @@ public class Main extends javax.swing.JFrame {
         jComboBox2 = new javax.swing.JComboBox<>();
         jComboBox3 = new javax.swing.JComboBox<>();
         jTextField7 = new javax.swing.JTextField();
-        jTextField8 = new javax.swing.JTextField();
+        jTextField_mail = new javax.swing.JTextField();
         jPanel3 = new javax.swing.JPanel();
         jButton_comenzar = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
@@ -172,7 +197,7 @@ public class Main extends javax.swing.JFrame {
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jTextField_mail, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
@@ -262,7 +287,7 @@ public class Main extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextField_mail, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
@@ -294,7 +319,7 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton_comenzarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_comenzarActionPerformed
-        
+        validarMail();
     }//GEN-LAST:event_jButton_comenzarActionPerformed
 
     private void jTextField_nombreKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField_nombreKeyTyped
@@ -321,19 +346,7 @@ public class Main extends javax.swing.JFrame {
         
         if(!numeros){
             evt.consume();
-        }
-        String fechaIngresada=jTextField_fechaNacimiento.getText();
-        SimpleDateFormat sdf= new SimpleDateFormat("yyyy-MM-dd");
-        
-        try {
-            Date fecha= sdf.parse(fechaIngresada);
-            String fechaFormateada=sdf.format(fecha);
-            
-            
-            jTextField_fechaNacimiento.setText(fechaFormateada);
-        } catch (ParseException ex) {
-            System.out.println(ex);
-        }
+        }        
     }//GEN-LAST:event_jTextField_fechaNacimientoKeyTyped
 
     /**
@@ -396,9 +409,9 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField6;
     private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
     private javax.swing.JTextField jTextField_apellido;
     private javax.swing.JTextField jTextField_fechaNacimiento;
+    private javax.swing.JTextField jTextField_mail;
     private javax.swing.JTextField jTextField_nombre;
     // End of variables declaration//GEN-END:variables
 }
