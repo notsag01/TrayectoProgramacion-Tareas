@@ -83,7 +83,7 @@
                       <Group type="102" attributes="0">
                           <Component id="jLabel4" min="-2" pref="150" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="jComboBox1" min="-2" pref="250" max="-2" attributes="0"/>
+                          <Component id="jComboBox_genero" min="-2" pref="250" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" attributes="0">
                           <Component id="jLabel3" min="-2" pref="150" max="-2" attributes="0"/>
@@ -127,7 +127,7 @@
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel4" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
-                      <Component id="jComboBox1" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                      <Component id="jComboBox_genero" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
@@ -253,7 +253,7 @@
             <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTextField_fechaNacimientoKeyTyped"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JComboBox" name="jComboBox1">
+        <Component class="javax.swing.JComboBox" name="jComboBox_genero">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="3">

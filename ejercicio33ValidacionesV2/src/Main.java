@@ -41,6 +41,7 @@ public class Main extends javax.swing.JFrame {
                "Tierra del Fuego",
                "Tucumán"
            };
+        
 
         for(String provincia : provincias){
            jComboBox_provincias.addItem(provincia);
@@ -55,7 +56,8 @@ public class Main extends javax.swing.JFrame {
             jTextField_domicilio.getText().equals(" ")||
             jTextField_localidad.getText().equals(" ")||
             jTextField_hijos.getText().equals(" ")||
-            jTextField_mail.getText().equals(" ")
+            jTextField_mail.getText().equals(" ")||
+            jComboBox_genero.getSelectedIndex()==0
                 ){
         JOptionPane.showMessageDialog(null, "Todos los campos del formulario \n debes ser completados",
                 "ERROR DE VALIDACION", HEIGHT);
@@ -111,7 +113,7 @@ public class Main extends javax.swing.JFrame {
         jTextField_nombre = new javax.swing.JTextField();
         jTextField_apellido = new javax.swing.JTextField();
         jTextField_fechaNacimiento = new javax.swing.JTextField();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        jComboBox_genero = new javax.swing.JComboBox<>();
         jTextField_cuil = new javax.swing.JTextField();
         jTextField_domicilio = new javax.swing.JTextField();
         jTextField_localidad = new javax.swing.JTextField();
@@ -183,7 +185,7 @@ public class Main extends javax.swing.JFrame {
             }
         });
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "MASCULINO", "FEMENINO" }));
+        jComboBox_genero.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "MASCULINO", "FEMENINO" }));
 
         jTextField_cuil.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
@@ -281,7 +283,7 @@ public class Main extends javax.swing.JFrame {
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jComboBox_genero, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
@@ -315,7 +317,7 @@ public class Main extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jComboBox_genero, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -469,8 +471,8 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton_comenzar;
-    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox3;
+    private javax.swing.JComboBox<String> jComboBox_genero;
     private javax.swing.JComboBox<String> jComboBox_provincias;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
